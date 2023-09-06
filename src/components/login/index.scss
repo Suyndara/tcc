@@ -8,7 +8,7 @@
     src: url(../../../public/assets/fonts/fonte1.ttf);
 }
 
-.pagina-app{
+.pagina-login{
     display: flex;
 
     height: auto;
@@ -95,5 +95,17 @@
         width: auto;
 
         flex-direction: column;
+    }
+
+    .bt-a{
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        a{
+            color: #535353;
+        }
     }
 }

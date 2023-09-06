@@ -1,0 +1,28 @@
+.Carrosseles{
+    display: flex;
+
+    height: 100px;
+    width: 100%;
+
+    .aa{
+        transition: 1s;
+    }
+
+    .slide-principal{
+        height: auto;
+        width: 100vw;
+    
+        .img1{
+            display: flex;
+
+            height: auto;
+            width: auto;
+
+            img{
+                height: 30vh;
+                width: 100%;
+            }
+        }
+
+    }
+}

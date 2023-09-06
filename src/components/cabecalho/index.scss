@@ -4,10 +4,114 @@
     height: 15vh;
     width: 100%;
 
-    background-color: brown;
+    align-items: center;
+    justify-content: space-between;
 
+    box-shadow: 0px 1px 20px 0px;
+
+    background-color: white;
+    
     .logo{
-        height: 100px;
+        height: 143px;
+    }
+
+    .meio{
+        display: flex;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 9vh;
+        width: auto;
+    }
+
+    .pesquisa{
+        display: flex;
+
+        height: 45px;
+        position: relative;
+        width: auto;
+
+        input{
+            border-radius: 50px;
+            border: none;
+
+            width: 280px;
+            padding-left: 13px;
+
+            background-color: #E2E2E2;
+        }
+
+        input:focus-visible{
+            outline: none;
+        }
+
+        .lupa{
+            position: absolute;
+
+            height: 4vh;    
+            width: 4vh;
+
+            right: 21%;
+            bottom: 10%;
+
+            transition: .3s;
+        }
+
+        .lupa:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    .opcoes{
+        display: flex;
+
+        justify-content: space-between;
+        
+        width: 350px;
+
+        a{
+            font-family:"inder";
+
+            transition: .3s;
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .icones{
+        display: flex;
+
+        width: 120px;
+        height: auto;
+
+        margin-right: 6vw;
+
+        justify-content: space-between;
+
+        img{
+            height: 3vh;
+
+            transition: .1s;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 740px) {
+        .comp-cabecalho{
+            min-width: 740px;
+
+            
+        }
+
         
     }
 }

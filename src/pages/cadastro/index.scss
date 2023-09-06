@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'fonte1';
+    src: url(../../../public/assets/fonts/fonte1.ttf);
+}
+
+@font-face {
+    font-family: "inder";
+    src: url(../../../public/assets/fonts/inder.ttf);
+}
+
+.pagina-cadastro{
+    display: flex;
+
+    height: auto;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f5f5f5;
+
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 10vh;
+    }
+
+    h1{
+        font-family: 'fonte1';
+        font-size: 60px;
+        letter-spacing: 15px;
+
+        height: auto;
+    }
+
+    h2{
+        font-family: 'fonte1';
+        font-size: 40px;
+        letter-spacing: 10px;
+        
+        margin-top: 10vh;
+    }
+
+    h3{
+        font-family: 'fonte1';
+        font-size: 40px;
+
+        letter-spacing: 10px;
+        text-align: center;
+
+        width: 28vw;
+    }
+
+    main{
+        display: flex;
+
+        height: 70vh;
+        width: 50vh;
+
+        background-color: #7d7d7d38;
+        box-shadow: 0px 0px 20px 0px #7d7d7d8a;
+        border-bottom: 3px solid black;
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        flex-direction: column;
+        border-radius: 20px;
+    }    
+
+    .scs{
+        height: 7vh;
+        width: 25vw;
+
+        border-radius: 10px;
+        border: none;
+        border-bottom: 1px solid black;
+
+        background-color: #ffffff8a;
+
+        padding-left: 20px;
+
+        transition: 0.3s;
+    }
+
+    .botones{
+        height: 7vh;
+        width: 15vw;
+
+        border-radius: 20px;
+        border: none;
+
+        background-color: black;
+        color: white;
+
+        transition: .3s;
+    }
+
+    .botones:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 10px 20px 12px grey;
+    }
+
+    .input{
+        display: flex;
+
+        height: 50vh;
+        width: auto;
+
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .scs:focus-visible{
+        outline: none;
+    }
+
+    .scs:active{
+        box-shadow: 0px 3px 9px 1px black;
+    }
+
+    .bt-a{
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
