@@ -1,8 +1,9 @@
 .comp-cabecalho{
     display: flex;
 
-    height: 15vh;
+    max-height: 15vh;
     width: 100%;
+    min-width: 320px;
 
     align-items: center;
     justify-content: space-between;
@@ -12,7 +13,7 @@
     background-color: white;
     
     .logo{
-        height: 143px;
+        height: 140px;
     }
 
     .meio{
@@ -97,7 +98,7 @@
         img{
             height: 3vh;
 
-            transition: .1s;
+            transition: .3s;
         }
 
         img:hover{
@@ -105,13 +106,33 @@
         }
     }
 
-    @media (max-width: 740px) {
-        .comp-cabecalho{
-            min-width: 740px;
+    @media (width: 740px) {
 
-            
+        .logo{
+            height: 120px;
         }
 
+        .meio{
+            width: 110px;
+        }
         
+        .pesquisa{
+            .lupa{
+               left: 140px;
+            }
+        }
+
+        .opcoes{
+            width: 240px;
+
+            .Voltar{
+                font-size: 12px;
+            }
+        }
+
+        .icones{
+            width: 80px;
+            margin-left: 19vw;
+        }
     }
 }
