@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import './index.scss';
 import Cabecalho from '../cabecalho';
 
-function App() {
+export default function Login() {
   return (
     <div className="pagina-login">
       <Cabecalho />
@@ -24,10 +23,6 @@ function App() {
           <a>Esqueceu sua senha ?</a>
         </div>
       </main>
-
-      <Link className='Voltar' to='/'> Volta </Link>    
     </div>
   );
 }
-
-export default App;

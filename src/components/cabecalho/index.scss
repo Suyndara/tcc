@@ -1,7 +1,7 @@
 .comp-cabecalho{
     display: flex;
 
-    max-height: 15vh;
+    height: 164.872px;
     width: 100%;
     min-width: 320px;
 
@@ -13,7 +13,7 @@
     background-color: white;
     
     .logo{
-        height: 140px;
+        height: 200px;
     }
 
     .meio{
@@ -21,9 +21,13 @@
 
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+
 
         height: 9vh;
         width: auto;
+
+        padding-top: 10px;
     }
 
     .pesquisa{
@@ -35,9 +39,9 @@
 
         input{
             border-radius: 50px;
-            border: none;
+            border: 1px solid black;
 
-            width: 280px;
+            width: 700px;
             padding-left: 13px;
 
             background-color: #E2E2E2;
@@ -53,7 +57,7 @@
             height: 4vh;    
             width: 4vh;
 
-            right: 21%;
+            right: 1%;
             bottom: 10%;
 
             transition: .3s;
@@ -69,7 +73,7 @@
 
         justify-content: space-between;
         
-        width: 350px;
+        width: 500px;
 
         a{
             font-family:"inder";
@@ -88,10 +92,10 @@
     .icones{
         display: flex;
 
-        width: 120px;
+        width: 100px;
         height: auto;
 
-        margin-right: 6vw;
+        margin-right: 3vw;
 
         justify-content: space-between;
 
@@ -106,7 +110,7 @@
         }
     }
 
-    @media (width: 740px) {
+    @media (max-width: 740px) {
 
         .logo{
             height: 120px;
@@ -114,7 +118,7 @@
 
         .meio{
             width: 110px;
-        }
+        }   
         
         .pesquisa{
             .lupa{
