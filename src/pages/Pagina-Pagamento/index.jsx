@@ -7,8 +7,8 @@ export default function PaginaPagamento() {
 
     return (
         <section className="Pagina-Pagamento">
-            
             <Cabecalho />
+            
 
         </section>
     );
