@@ -1,26 +1,33 @@
 import './index.scss';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { register } from 'swiper/element/bundle';
+import { useState } from 'react';
 
-export default function Carrossel(){
-    return (
-      <div className='Carrosseles'>
+register();
 
-        <CarouselProvider
-        className='aa'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-        totalSlides={2}
-      >
+export default function Carrossel() {
+  const [SliderPerView, setSliderPerView] = useState(2);
 
-        <Slider className='slide-principal'>
-          <Slide index={0} className='img1'>
-                <img src="/assets/img/banner12.png"/>
-                <img src="/assets/img/banner1.png"/>
-          </Slide>
-        </Slider>
+  const data = [
+    {id: '1', image: 'https://imgs.search.brave.com/z_j0qBpDAGHLWFp4BvvtySk9Y9b5w6abxb9zv3JEjDc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/Ny5tb3RvcnNwb3J0/LmNvbS9pbWFnZXMv/YW1wL1l2OGp2V3gw/L3MzMDAvZGF2aWQt/YWxvbnNvLWdhc2dh/cy1hc3Bhci10ZWFt/LmpwZw'},
+    {id: '2', image: 'https://imgs.search.brave.com/aN5DlwsBZZera1AHUahmdE90nGchaE_HQAzKGb_yhmE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/OC5tb3RvcnNwb3J0/LmNvbS9pbWFnZXMv/YW1wL1lwTnlEM00w/L3M3MDAvZGVubmlz/LWZvZ2dpYS1sZW9w/YXJkLXJhY2luZy0x/LmpwZw'},
+  ]
 
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider> 
-      </div>
-    );
+
+  return(
+    <div className='comp-carrossel'>
+      <h1>aaaaaaaaaaaaaaaaa</h1>
+
+      <Swiper>
+        <SwiperSlide>
+
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  )
 }

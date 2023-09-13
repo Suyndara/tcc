@@ -1,28 +1,10 @@
-.Carrosseles{
+.comp-carrossel{
     display: flex;
 
-    height: 100px;
+    height: 1080px;
     width: 100%;
 
-    .aa{
-        transition: 1s;
-    }
+    align-items: center;
+    justify-content: center;
 
-    .slide-principal{
-        height: auto;
-        width: 100vw;
-    
-        .img1{
-            display: flex;
-
-            height: auto;
-            width: auto;
-
-            img{
-                height: 30vh;
-                width: 100%;
-            }
-        }
-
-    }
 }
