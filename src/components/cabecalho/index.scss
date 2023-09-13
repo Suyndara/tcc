@@ -1,142 +1,84 @@
-.comp-cabecalho{
+.comp-cabecalho {
     display: flex;
-
-    height: 164.872px;
+    height: 130px;
     width: 100%;
-    min-width: 320px;
 
-    align-items: center;
     justify-content: space-between;
-
-    box-shadow: 0px 1px 20px 0px;
+    align-items: center;
+    padding: 0px 10px;
+    box-shadow: 0px 5px 5px #686868b0;
 
     background-color: white;
-    
-    .logo{
-        height: 200px;
+
+    img {
+        height:90%;
+        width: 15%;
     }
 
-    .meio{
+    .atributo {
         display: flex;
-
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-
-
-        height: 9vh;
-        width: auto;
-
-        padding-top: 10px;
     }
 
-    .pesquisa{
-        display: flex;
+    .barra-pesquisa > input{
+        border: none;
+        background-color: transparent;
+        padding: 10px 10px;
+        width: 100%;
+    }
 
-        height: 45px;
+    .barra-pesquisa > input:focus-visible{
+        outline: none;
+    }
+
+    .barra-pesquisa > img{
+        height: 40px;
+        width: 50px;
+        padding: 5px 10px;
+        cursor: pointer;
         position: relative;
-        width: auto;
-
-        input{
-            border-radius: 50px;
-            border: 1px solid black;
-
-            width: 700px;
-            padding-left: 13px;
-
-            background-color: #E2E2E2;
-        }
-
-        input:focus-visible{
-            outline: none;
-        }
-
-        .lupa{
-            position: absolute;
-
-            height: 4vh;    
-            width: 4vh;
-
-            right: 1%;
-            bottom: 10%;
-
-            transition: .3s;
-        }
-
-        .lupa:hover{
-            transform: scale(1.1);
-        }
+        bottom: 2px;
+        right: 2px;
     }
 
-    .opcoes{
+    .barra-pesquisa{
         display: flex;
-
+        flex-direction: row;
         justify-content: space-between;
-        
-        width: 500px;
-
-        a{
-            font-family:"inder";
-
-            transition: .3s;
-            color: black;
-            text-decoration: none;
-        }
-
-        a:hover{
-            text-decoration: underline;
-            cursor: pointer;
-        }
+        border: 1px solid #000;
+        width: 700px;
+        background-color: #E2E2E2;
+        height: 40px;
+        border-radius: 15px;
     }
 
+    .navegacao{
+        display: flex;
+        margin-top: 5px;
+        justify-content: space-between;
+        width: 550px;
+    }
+
+    .navegacao > a{
+        text-decoration: none;
+        color: #000;
+        font-family: 'inder';
+        transition: 0.5s;
+    }
+
+ 
     .icones{
-        display: flex;
-
-        width: 100px;
-        height: auto;
-
-        margin-right: 3vw;
-
+        width: 115px;
         justify-content: space-between;
-
-        img{
-            height: 3vh;
-
-            transition: .3s;
-        }
-
-        img:hover{
-            transform: scale(1.1);
-        }
+        display: flex;
+        margin-right: 10px;
     }
 
-    @media (max-width: 740px) {
-
-        .logo{
-            height: 120px;
-        }
-
-        .meio{
-            width: 110px;
-        }   
-        
-        .pesquisa{
-            .lupa{
-               left: 140px;
-            }
-        }
-
-        .opcoes{
-            width: 240px;
-
-            .Voltar{
-                font-size: 12px;
-            }
-        }
-
-        .icones{
-            width: 80px;
-            margin-left: 19vw;
-        }
+    .icones > img{
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
     }
 }
+

@@ -12,7 +12,7 @@ export default function Cabecalho () {
 
     return(
         <div className='comp-cabecalho' >
-            
+
             <img className='logo' src={Logo} />
 
             <article className="atributo">
