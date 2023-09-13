@@ -14,11 +14,13 @@ export default function Cadastro() {
             </article>
             
             <article className='input'>
-                <input type="text" placeholder='NOME COMPLETO' />
+                <input className="top" type="text" placeholder='NOME COMPLETO' />
                 <input type="text" placeholder='EMAIL'/>
                 <input type="text" placeholder='SENHA' />
                 <input type="text" placeholder='CONFIRMAR SENHA' />
-                <input type="text" placeholder='CPF' />
+                <input className="bottom"type="text" placeholder='CPF' />
+
+                <button> REGISTRAR </button>
             </article>
 
         </div>
