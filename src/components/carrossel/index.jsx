@@ -26,11 +26,11 @@ export default function Carrossel() {
   useEffect(() => {
 
     function handleResize() {
-      if(window.innerWidth < 1200) {
-        setSlidePerView(1);
+      if(window.innerWidth > 1200) {
+        setSlidePerView(2);
       }
       else{
-        setSlidePerView(2);
+        setSlidePerView(1);
       }
     }
 
