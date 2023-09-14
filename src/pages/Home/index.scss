@@ -13,4 +13,49 @@
         width: 100%;
     }
     
+    .bt-joia{
+        border-radius: 20px;
+
+        height: 50px;
+        width: 200px;
+
+        position: absolute;
+        right: 77%;
+        bottom: 10%;
+
+        font-family: "fonte1";
+        font-size: 13px;
+
+        transition: .3s;
+        background-color: transparent;    
+
+        animation: btn;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    .bt-joia:hover{
+        box-shadow: 0px 5px 20px 5px white;
+    }
+
+    .main{
+        position: relative;
+    }
+
+    .main > .slide-item{
+        position: relative;
+    }
+
+    @keyframes btn{
+        from{
+            color: black;
+            border: 3px solid black;
+
+        }
+        to{
+            color: white;
+            border: 3px solid white;
+        }
+    }
 }
