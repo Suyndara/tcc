@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cadastro from './pages/cadastro';
 import Home from './pages/Home';
 import PaginaPagamento from './pages/Pagina-Pagamento';
+import LoginAdm from './pages/login-adm';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
         <Route path='/' element={<Home/>} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/pagamento' element={< PaginaPagamento />} />
+        <Route path='/login-adm' element={< LoginAdm />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

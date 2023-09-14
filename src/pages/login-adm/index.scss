@@ -1,0 +1,61 @@
+.pagina-loginAdm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 917px;
+    background-color: #F2F2F2;
+    width: 100%;
+
+    > img{
+        height: 35%;
+        margin-bottom: 20px;
+    }
+
+    .atributo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 2px solid #B0B0B0;
+        width: 400px;
+        background-color: #F2F2F2;
+        height: 50px;
+        border-radius: 30px;
+        margin: 25px;
+    }
+
+    .atributo > input{
+        border: none;
+        background-color: transparent;
+        padding: 10px 10px;
+        width: 100%;
+    }
+    
+     .atributo > input:focus-visible{
+        outline: none;
+    }
+
+    button{
+        padding: 15px 100px;
+        border-radius: 80px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: 'fonte1';
+        letter-spacing: 2px;
+        transition: .3s;
+    }
+
+    button:hover{
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        font-weight: bolder;
+    }
+}
+
+@font-face {
+    font-family: 'fonte1';
+    src: url(../../../public/assets/fonts/fonte1.ttf);
+}
