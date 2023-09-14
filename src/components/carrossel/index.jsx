@@ -3,13 +3,14 @@ import React from 'react';
 
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation, Pagination, Autoplay} from 'swiper';
+import { Navigation, Pagination, Autoplay} from 'swiper/modules';
 import { register } from 'swiper/element/bundle';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
 
 register();
@@ -44,9 +45,9 @@ export default function Carrossel() {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={slidePerView}
+        Autoplay={{delay: 10}}
         pagination={{clickable: true}}
         navigation={true}
-        Autoplay={{delay: 1000}}
       >
         {data.map( (item) => (
           <SwiperSlide key={item.id}>
@@ -55,7 +56,7 @@ export default function Carrossel() {
                 alt='sas'
                 className='slide-item'
               />
-              <button></button>
+              <button className='bt-joia' href=''>CONFIRA NOSSA JOIAS</button>
           </SwiperSlide>
         ))}
       </Swiper>
