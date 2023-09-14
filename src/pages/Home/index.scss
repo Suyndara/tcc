@@ -16,15 +16,15 @@
     .bt-joia{
         border-radius: 20px;
 
-        height: 50px;
-        width: 200px;
+        height: 46px;
+        width: 240px;
 
         position: absolute;
         right: 77%;
         bottom: 10%;
 
         font-family: "fonte1";
-        font-size: 13px;
+        font-size: 14px;
 
         transition: .3s;
         background-color: transparent;    
@@ -50,12 +50,46 @@
     @keyframes btn{
         from{
             color: black;
-            border: 3px solid black;
+            border: 1px solid black;
 
         }
         to{
             color: white;
-            border: 3px solid white;
+            border: 1px solid white;
+        }
+    }
+
+    .s2{
+        display: flex;
+
+        height: 200px;
+        width: 100%;
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        article{
+            display: flex;
+
+            height: auto;
+            width: auto;
+
+            flex-direction: column;
+            align-items: center;
+
+            padding: 30px;
+
+            img{
+                height: 50px;
+                width: 50px;
+            }
+
+            h1{
+                font-size: 15px;
+                font-family: "fonte1";
+                width: 150px;
+                text-align: center;
+            }
         }
     }
 }

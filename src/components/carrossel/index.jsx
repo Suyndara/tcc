@@ -3,7 +3,7 @@ import React from 'react';
 
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation, Pagination, Autoplay} from 'swiper/modules';
+import { Navigation, Autoplay} from 'swiper/modules';
 import { register } from 'swiper/element/bundle';
 
 import 'swiper/css';
@@ -12,9 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
-
 register();
-
 
 export default function Carrossel() {
   const [slidePerView, setSlidePerView] = useState(1)
@@ -43,11 +41,10 @@ export default function Carrossel() {
   return(
     <div className='comp-carrossele'>  
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Autoplay]}
         slidesPerView={slidePerView}
         autoplay={{delay: 1200}}
         loop={true}
-        pagination={{clickable: true}}
         navigation={true}
       >
         {data.map( (item) => (
@@ -59,13 +56,11 @@ export default function Carrossel() {
                   className='slide-item'
                 />
 
-                <button className='bt-joia' href=''><strong>CONFIRA NOSSAS JOIAS</strong></button>
+                <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
               </main>
           </SwiperSlide>
         ))}
       </Swiper>
-
-
     </div>
   )
 }
