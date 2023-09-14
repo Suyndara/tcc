@@ -92,4 +92,24 @@
             }
         }
     }
+
+    .s3{
+        display: flex;
+
+        height: 200px;
+        width: 100%;
+
+        article{
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+            img{
+                height: 140px;
+
+            }
+        }
+    }
 }

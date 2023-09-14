@@ -35,23 +35,23 @@ export default function Home() {
 
             <main className='s3'>
                 <article>
-                    <img src=""/>
-                    <button></button>
+                    <img src="/assets/img/anel.png"/>
+                    <button>ANÉIS</button>
                 </article>
 
                 <article>
-                    <img src=""/>
-                    <button></button>
+                    <img src="/assets/img/colar.png"/>
+                    <button>COLARES</button>
                 </article>
 
                 <article>
-                    <img src=""/>
-                    <button></button>
+                    <img src="/assets/img/brinco.png"/>
+                    <button>BRINCOS</button>
                 </article>
 
                 <article>
-                    <img src=""/>
-                    <button></button>
+                    <img src="/assets/img/infantil.png"/>
+                    <button>INFANTIL</button>
                 </article>
             </main>
         </div>

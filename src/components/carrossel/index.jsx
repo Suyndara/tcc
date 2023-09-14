@@ -27,9 +27,9 @@ export default function Carrossel() {
 
     function handleResize() {
       if(window.innerWidth > 1200) {
-        setSlidePerView(2);
+        setSlidePerView(1);
       }
-      else{
+      else {
         setSlidePerView(1);
       }
     }
