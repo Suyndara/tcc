@@ -1,5 +1,5 @@
 .comp-carrossele{
-    height: 1080px;
+    height: auto;
     width: 100%;
 
     align-items: center;
@@ -9,5 +9,9 @@
         height: 300px;
         width: 100%;
         object-fit: cover;
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after{
+        color: white;
     }
 }
