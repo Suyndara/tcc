@@ -13,12 +13,12 @@ export default function Cabecalho () {
     return(
         <div className='comp-cabecalho' >
 
-            <img className='logo' src={Logo} />
+            <img alt='a-logo' src={Logo} />
 
             <article className="atributo">
                 <section className='barra-pesquisa'>
                     <input type="text" placeholder='Pesquisar' />
-                    <img src={Lupa} />
+                    <img alt='lupa' src={Lupa} />
                 </section>
 
                 <section className="navegacao">
@@ -30,8 +30,13 @@ export default function Cabecalho () {
             </article>
 
             <article className='icones'>
-                <img src={Pessoa} />
-                <img src={Carrinho} alt="" />
+                <Link className='login' to='/cadastro'>
+                    <img alt='icone-pessoa' src={Pessoa}/>
+                </Link>
+                
+                <Link className='carrinho' to='/'>
+                    <img src={Carrinho} alt="" />
+                </Link>
             </article>
 
         </div>

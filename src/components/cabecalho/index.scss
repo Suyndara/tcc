@@ -37,10 +37,18 @@
         height: 40px;
         width: 50px;
         padding: 5px 10px;
+
         cursor: pointer;
         position: relative;
+
         bottom: 2px;
         right: 2px;
+
+        transition: .3s;
+    }
+
+    .barra-pesquisa > img:hover{
+        transform: scale(1.1);    
     }
 
     .barra-pesquisa{
@@ -56,9 +64,12 @@
 
     .navegacao{
         display: flex;
+        
         margin-top: 5px;
         justify-content: space-between;
         width: 550px;
+
+        transition: .3s;
     }
 
     .navegacao > a{
@@ -68,6 +79,9 @@
         transition: 0.5s;
     }
 
+    .navegacao > a:hover{
+        text-decoration: underline;
+    }
  
     .icones{
         width: 115px;
@@ -76,10 +90,17 @@
         margin-right: 10px;
     }
 
-    .icones > img{
+    .icones > .login > img{
         height: 35px;
         width: 35px;
         cursor: pointer;
     }
+
+    .icones > .carrinho > img{
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+    }
+    
 }
 
