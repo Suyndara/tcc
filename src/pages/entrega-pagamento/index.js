@@ -49,7 +49,7 @@ export default function EntregaPagamento() {
                     <h1>PAGAMENTO</h1>
                     
                     <div className='resumo'>
-                        <h2>RESUMO DO PEDIDO</h2>
+                        <h2><b>RESUMO DO PEDIDO</b></h2>
 
                         <div className='produto-valor'>
                             <p>4 produtos</p>
@@ -61,20 +61,20 @@ export default function EntregaPagamento() {
                             <p>Grátis</p>
                         </div>
 
-                        <hr/>
+                        
                         <div className='total'>
-                            <h2>TOTAL</h2>
-                            <h2>R$ 17.850,00</h2>
+                            <h2><b>TOTAL</b></h2>
+                            <h2><b>R$ 17.850,00</b></h2>
                         </div>
-                        <hr/>
+                        
 
-                        <div className='cupom'>
+                        
                             <input type='text' placeholder='Digite um cupom promocional'/>
-                        </div>
+                        
                     </div>
 
-                    <div className='cartao-informacao'>
-                        <div className='head-cartao'>
+                    <div>
+                    <div className='head-cartao'>
                             <div className='credito'>
                                 <p>Cartão de crédito</p>
                             </div>
@@ -85,6 +85,9 @@ export default function EntregaPagamento() {
                                 <p>Débito</p>
                             </div>
                         </div>
+                    </div>
+                    <div className='cartao-informacao'>
+                        
 
                         <div className='credito-informacao'>
                             <div className='credito-input'>
