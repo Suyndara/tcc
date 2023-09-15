@@ -1,0 +1,94 @@
+.pagina-entrega{
+    background-color: #F0EFEF;
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+
+    main{
+        display: flex;
+        flex-direction: row;
+        padding: 80px 20px;
+    }
+
+    .entrega{
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+
+    .informacoes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cep{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bairro{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cidade{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contato{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagamento{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resumo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produto-valor{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .entrega-frete{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .total{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartao-informacao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head-cartao{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .credito-informacao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .credito-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .date-verificacao{
+        display: flex;
+        flex-direction: row;
+    }
+}
