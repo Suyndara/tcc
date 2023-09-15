@@ -4,11 +4,12 @@
     height: 950px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     main{
         display: flex;
         flex-direction: row;
-        padding: 80px 20px;
+        padding: 90px 60px;
     }
 
     .entrega{
@@ -17,9 +18,23 @@
         margin-right: 50px;
     }
 
+    .entrega > h1{
+        font-family: 'inder';
+        margin-bottom: 60px;
+    }
+
     .informacoes{
         display: flex;
         flex-direction: column;
+    }
+
+    .informacoes > input{
+        width: 420px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: transparent;
+        border: 1px solid black;
     }
 
     .cep{
@@ -27,9 +42,29 @@
         flex-direction: row;
     }
 
+    .cep > input{
+        width: 189px;
+        margin-right: 40px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 8px 10px;
+        margin-bottom: 20px;
+    }
+
     .bairro{
         display: flex;
         flex-direction: row;
+    }
+
+    .bairro > input{
+        width: 189px;
+        margin-right: 40px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 8px 10px;
+        margin-bottom: 20px; 
     }
 
     .cidade{
@@ -37,9 +72,33 @@
         flex-direction: row;
     }
 
+    .cidade > input{
+        width: 189px;
+        margin-right: 40px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 8px 10px;
+        margin-bottom: 60px;
+    }
+
     .contato{
         display: flex;
         flex-direction: column;
+    }
+
+    .contato > input{
+        width: 420px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: transparent;
+        border: 1px solid black;
+    }
+
+    .contato > h1{
+        font-family: 'inder';
+        margin-bottom: 60px;
     }
 
     .pagamento{
@@ -47,34 +106,89 @@
         flex-direction: column;
     }
 
+    .pagamento > h1{
+        font-family: 'inder';
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
     .resumo{
         display: flex;
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .resumo > h2{
+        font: 15px 'inder';
     }
 
     .produto-valor{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .produto-valor > p{
+        font: 15px 'inder';
     }
 
     .entrega-frete{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5px  ;
+    }
+
+    .entrega-frete > p{
+        font: 15px 'inder';
     }
 
     .total{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    .total > h2{
+        font: 14px 'inder';
+    }
+
+    .resumo > input{
+        background-color: transparent;
+        border: 1px solid #000;
+        padding: 12px 10px;
+        border-radius: 5px;
+        margin-bottom: 30px;
     }
 
     .cartao-informacao{
         display: flex;
         flex-direction: column;
+        border: 2px solid aqua;
+        background-color: #fff;
+        padding: 10px 25px;
     }
 
     .head-cartao{
         display: flex;
         flex-direction: row;
+        border: 2px solid aqua;
+        justify-content: space-between;
+        height: 40px;
+        align-items: center;
+    }
+
+    .credito{
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    .credito > p{
+        font-family: "inder";
     }
     
     .credito-informacao{
