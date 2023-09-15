@@ -30,7 +30,7 @@ export default function Cabecalho () {
             </article>
 
             <article className='icones'>
-                <Link className='login' to='/cadastro'>
+                <Link className='login' to='/login'>
                     <img alt='icone-pessoa' src={Pessoa}/>
                 </Link>
                 

@@ -75,7 +75,12 @@
     .navegacao > a{
         text-decoration: none;
         color: #000;
-        font-family: 'inder';
+        
+        padding-top: 20px;
+
+        font-family: "fonte1";
+        font-weight: bolder;
+
         transition: 0.5s;
     }
 
@@ -88,6 +93,7 @@
         justify-content: space-between;
         display: flex;
         margin-right: 10px;
+
     }
 
     .icones > .login > img{
@@ -101,6 +107,17 @@
         width: 35px;
         cursor: pointer;
     }
-    
+
+    .icones > .login, .carrinho{
+        transition: .1s;
+    }
+
+    .icones > .login:hover{
+        transform: scale(1.1);
+    }
+
+    .icones > .carrinho:hover{
+        transform: scale(1.1);
+    }
 }
 

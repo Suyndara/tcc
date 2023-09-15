@@ -1,5 +1,5 @@
 import './index.scss';
-import Cabecalho from '../cabecalho';
+import Cabecalho from '../../components/cabecalho';
 
 export default function Login() {
   return (
@@ -20,7 +20,8 @@ export default function Login() {
 
         <div className='bt-a'>
           <button className='botones'>Entrar</button>
-          <a>Esqueceu sua senha ?</a>
+          <a href='/cadastro'><strong>Não tem cadastro ?</strong></a>
+          <a href='/'>Esqueceu sua senha ?</a>
         </div>
       </main>
     </div>

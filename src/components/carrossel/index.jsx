@@ -26,7 +26,7 @@ export default function Carrossel() {
   useEffect(() => {
 
     function handleResize() {
-      if(window.innerWidth > 1200) {
+      if(window.innerWidth > 2200) {
         setSlidePerView(1);
       }
       else {
@@ -43,7 +43,7 @@ export default function Carrossel() {
       <Swiper
         modules={[Navigation, Autoplay]}
         slidesPerView={slidePerView}
-        autoplay={{delay: 1200}}
+        autoplay={{delay: 2400}}
         loop={true}
         navigation={true}
       >

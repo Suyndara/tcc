@@ -17,15 +17,15 @@ export default function Home() {
     const [slidePerView, setSlidePerView] = useState(1)
     const data = [
       {id: '1', image: '/assets/img/banner6.png'},
+      {id: '2', image: '/assets/img/banner7.jpg'},
+      {id: '3', image: '/assets/img/banner8.jpg'},
+      {id: '4', image: '/assets/img/banner9.jpg'},
     ]
   
     useEffect(() => {
   
       function handleResize() {
         if(window.innerWidth > 1200) {
-          setSlidePerView(1);
-        }
-        else {
           setSlidePerView(1);
         }
       }
