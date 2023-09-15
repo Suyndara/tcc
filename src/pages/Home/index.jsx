@@ -2,9 +2,38 @@ import Carrossel from '../../components/carrossel';
 import Cabecalho from '../../components/cabecalho';
 import './index.scss';
 
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Autoplay} from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
+
 
 export default function Home() {
-    
+    const [slidePerView, setSlidePerView] = useState(1)
+    const data = [
+      {id: '1', image: '/assets/img/banner6.png'},
+    ]
+  
+    useEffect(() => {
+  
+      function handleResize() {
+        if(window.innerWidth > 1200) {
+          setSlidePerView(1);
+        }
+        else {
+          setSlidePerView(1);
+        }
+      }
+  
+      handleResize();
+  
+    }, [])
+
     return(
         <div className='pagina-home'>
             <Cabecalho/>
@@ -53,6 +82,39 @@ export default function Home() {
                     <button>INFANTIL</button>
                 </article>
             </main>
+
+            <main className='s4'>
+                <article>
+                    <img src="/assets/img/ring.png" alt="anelson" />
+                    <p>BEM-VINDO À NOSSA JOALHERIA EXCLUSIVA, ONDE A ELEGÂNCIA ENCONTRA O BRILHO EM CADA DETALHE PRECIOSO.</p>
+                </article>
+            </main>
+
+            <main className='s5'>
+            <Swiper
+                    modules={[Navigation, Autoplay]}
+                    slidesPerView={slidePerView}
+                    autoplay={{delay: 1200}}
+                    loop={true}
+                    navigation={true}
+                >
+                    {data.map( (item) => (
+                    <SwiperSlide key={item.id}>
+                        <main className='main'>
+                            <img
+                            src={item.image}
+                            alt='sas'
+                            className='slide-item'
+                            />
+
+                            <p>CONFIRA NOSSOS DIAMANTES</p>
+                        </main>
+                    </SwiperSlide>
+                    ))}
+                </Swiper>
+            </main>
+
+            
         </div>
     )
 }
