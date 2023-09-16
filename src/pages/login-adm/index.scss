@@ -1,13 +1,14 @@
 .pagina-loginAdm{
     display: flex;
     align-items: center;
+
     justify-content: center;
     flex-direction: column;
-    height: 917px;
+    height: 100%;
     background-color: #F2F2F2;
     width: 100%;
 
-    > img{
+     img{
         height: 35%;
         margin-bottom: 20px;
     }
@@ -53,9 +54,4 @@
         border: 1px solid black;
         font-weight: bolder;
     }
-}
-
-@font-face {
-    font-family: 'fonte1';
-    src: url(../../../public/assets/fonts/fonte1.ttf);
 }

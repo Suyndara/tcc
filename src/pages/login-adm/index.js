@@ -2,7 +2,6 @@ import './index.scss';
 import Joyeria from '../../assets/img/logo.svg';
 
 
-
 export default function LoginAdm (){
 
 
@@ -18,7 +17,7 @@ export default function LoginAdm (){
             </article>
 
             <article className="atributo">
-            <input type='text' placeholder='Senha' />
+                <input type='text' placeholder='Senha' />
             </article>
             </section>
 
