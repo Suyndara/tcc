@@ -15,8 +15,8 @@ export default function Rotas() {
     return ( 
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/login' element={<Login/>} />
+                <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/pagamento' element={< PaginaPagamento />} />
                 <Route path='/login-adm' element={< LoginAdm />} />
