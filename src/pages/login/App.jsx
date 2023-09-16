@@ -14,7 +14,6 @@ export default function Login() {
       <main>
         <article className='input'>
           <input className='scs' type="text" placeholder='email'/>
-
           <input className='scs' type="text" placeholder='senha' />
         </article>
 
