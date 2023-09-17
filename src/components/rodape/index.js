@@ -1,10 +1,14 @@
-import Email from '../../assets/img/email.png'
-import Facebook from '../../assets/img/facebook.png'
-import Instagram from '../../assets/img/instagram.png'
-import Twitter from '../../assets/img/twitter.png'
-import Pinterest from '../../assets/img/pinterest.png'
-import Biriri from '../../assets/img/biriri.png'
-import Telefone from '../../assets/img/telefone.png'
+import Email from '../../assets/img/email.png';
+import Facebook from '../../assets/img/facebook.png';
+import Instagram from '../../assets/img/instagram.png';
+import Twitter from '../../assets/img/twitter.png';
+import Pinterest from '../../assets/img/pinterest.png';
+import Biriri from '../../assets/img/biriri.png';
+import Telefone from '../../assets/img/telefone.png';
+
+import './index.scss';
+
+
 
 
 export default function Rodape() {
