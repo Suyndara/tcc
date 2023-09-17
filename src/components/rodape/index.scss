@@ -72,7 +72,7 @@
             display: flex;
             flex-direction: row;
 
-            align-items: end;
+            align-items: flex-end;
             justify-content: space-between;
 
             margin-bottom: 2px;
@@ -127,14 +127,12 @@
             text-align: center;
         }
 
-
-
         div {
             display: flex;
             flex-direction: row;
 
             justify-content: space-between;
-            align-items: end;
+            align-items: flex-end;
 
             margin: 10px 0px 0px 10px;
 
