@@ -25,7 +25,6 @@ export default function Rodape() {
                 <p> Garantias, trocas e devoluções </p>
 
             </div>
-            <br/>
             <div className="Newsletter">
 
                 <h1> NEWSLETTER </h1>
@@ -36,10 +35,12 @@ export default function Rodape() {
                     <img src={Email} alt="email" />
                 </div>
 
-                    <img src={Facebook} alt="facebook" />
-                    <img src={Instagram} alt="instagram" />
-                    <img src={Twitter} alt="twitter" />
-                    <img src={Pinterest} alt="pinterest" />
+                    <div className="Redes-Sociais">
+                        <img src={Facebook} alt="facebook" />
+                        <img src={Instagram} alt="instagram" />
+                        <img src={Twitter} alt="twitter" />
+                        <img src={Pinterest} alt="pinterest" />
+                    </div>
 
             </div>
             <div className="Atendimento">

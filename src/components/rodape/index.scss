@@ -1,0 +1,118 @@
+.Rodape {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
+    width: 100%;
+
+    .Duvidas {
+        display: flex;
+        flex-direction: column;
+
+        height: 80%;
+        width: 25%;
+
+        margin: 0px 20px 0px 0px;
+
+        border-right: 1px solid #535353;
+
+        h1 {
+            font-size: 26px;
+            font-family: 'inder';
+
+            letter-spacing: 2px;
+
+            text-align: start;
+
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+            font-family: 'inter';
+
+            margin: 2px;
+            text-align: start;  
+        }
+    }
+
+
+
+    .Newsletter {
+        display: flex;
+        flex-direction: column;
+
+        height: 80%;
+        width: 25%;
+
+
+        h1 {
+            font-size: 26px;
+            font-family: 'inder';
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-family: 'inter';
+
+            margin: 2px;
+            text-align: center; 
+        }
+
+        .Email {
+            display: flex;
+            flex-direction: row;
+
+            align-items: end;
+            justify-content: space-between;
+
+            margin-bottom: 2px;
+
+            border-bottom: 1px solid #535353;
+
+            h3 {
+                font-size: 13px;
+                font-family: 'inder';
+
+                color: #6d6d6d;
+            }
+
+            img {
+                height: 25px;
+                width: 25px;
+            }
+        }
+
+        .Redes-Sociais {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-between;
+
+            img {
+                height: 90%;
+                width: 9%;
+            }
+        }
+    }
+
+
+    .Atendimento {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

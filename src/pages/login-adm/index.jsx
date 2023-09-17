@@ -9,7 +9,7 @@ export default function LoginAdm(){
         
         
         <div className='pagina-loginAdm'>
-            <img src={Joyeria} />
+            <img src={Joyeria} alt='joyeria'/>
 
             <section className='inputs'>
             <article className="atributo">

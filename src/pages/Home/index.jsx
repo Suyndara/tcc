@@ -1,5 +1,6 @@
 import Carrossel from '../../components/carrossel';
 import Cabecalho from '../../components/cabecalho';
+import Rodape from '../../components/rodape';
 import './index.scss';
 
 import { useState, useEffect } from 'react';
@@ -114,7 +115,7 @@ export default function Home() {
                 </Swiper>
             </main>
 
-            
+            <Rodape /> 
         </div>
     )
 }
