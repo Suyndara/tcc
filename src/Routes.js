@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Cadastro from './pages/cadastro';
 import Home from './pages/Home';
+import Cadastro from './pages/cadastro';
 import PaginaPagamento from './pages/Pagina-Pagamento';
-import Login from './pages/login/App';
 import EntregaPagamento from './pages/entrega-pagamento';
+import Login from './pages/login/App';
+
+
+
 
 
 import LoginAdm from './pages/login-adm';
