@@ -18,7 +18,7 @@ export default function Home() {
     const data = [
       {id: '1', image: '/assets/img/banner6.png'},
       {id: '2', image: '/assets/img/banner7.jpg'},
-      {id: '3', image: '/assets/img/banner8.jpg'},
+      {id: '4', image: '/assets/img/banner8.jpg'},
       {id: '4', image: '/assets/img/banner9.jpg'},
     ]
   
@@ -41,7 +41,7 @@ export default function Home() {
 
             <main className='s2'>
                 <article>
-                    <img alt='truck' src="/assets/img/i-truck.png"/>
+                    <img className='a' alt='truck' src="/assets/img/i-truck.png"/>
                      <h1>COMPRA SEGURA, ENTREGA RÁPIDA</h1>
                 </article>
 

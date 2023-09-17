@@ -1,0 +1,71 @@
+.comp-opcoes{
+    display: flex;
+
+    height: 200px;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #EBEBEB;
+
+    margin-top: 10px;
+
+    article{
+        display: flex;
+
+        height: 150px;
+        width: 250px;
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        border-radius: 20px;
+
+        background-color: white;
+
+        transition: .1s;
+        
+        .a1{
+            height: 100px;
+            width: 100px;
+
+            background-image: url(../../assets/img/i-money.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 100%;
+        }
+
+        .a2{
+            height: 100px;
+            width: 100px;
+
+            background-image: url(../../assets/img/i-graph.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 100%;
+        }
+
+        .a3{
+            height: 100px;
+            width: 100px;
+
+            background-image: url(../../assets/img/i-graph2.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 100%;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+    article:hover{
+        transform: scale(1.1);
+    }
+
+    article:active{
+        border: 0.5px solid black;
+    }
+}

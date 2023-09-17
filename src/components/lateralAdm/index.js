@@ -1,24 +1,17 @@
+import './index.scss';
 
+export default function Lateral(){
+    
+    return(
+        <div className='comp-lateral'>
+            <nav>
+                <img src="/assets/img/i-pessoinha.png" alt="pes" />
+            </nav>
 
-
-
-
-
-export default function LateralAdm() {
-    return (
-        <section className="Lateral-Adm">
-                <div>
-
-                    <div className="Imagem">
-
-                    </div>
-
-                    <div className="Sair">
-
-                        <p> Sair </p>
-                    </div>  
-
-                </div>
-        </section>
-    );
+            <footer>
+                <img src="/assets/img/i-exit.png" alt="sair" />
+                <p>Sair</p>
+            </footer>
+        </div>
+    )
 }

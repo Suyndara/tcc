@@ -1,0 +1,27 @@
+.Pagina-HomeAdm{
+    display: flex;
+
+    height: 1000px;
+    width: 100%;
+
+    main{
+        display: flex;
+
+        height: 900px;
+        width: 100%;
+
+        flex-direction: column;
+
+        section{
+            display: flex;
+
+            height: 500px;
+            width: 100%;
+
+            background-image: url(../../assets/img/logo.svg);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    }
+}

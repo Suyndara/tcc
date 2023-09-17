@@ -1,0 +1,54 @@
+.comp-lateral{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 19%;
+
+    background-color: black;
+
+    nav{
+        display: flex;
+
+        height: 130px;
+        width: 130px;
+
+        background-color: white;
+        border-radius: 50%;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 20px;
+        margin-left: 10px;
+
+        img{
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    footer{
+        display: flex;
+
+        height: auto;
+        width: auto;
+
+        align-items: center;
+
+        img{
+            height: 50px;
+            padding-left: 10px;
+        }
+
+        p{
+            color: white;
+
+            padding: 20px;
+
+            font-family: 'inter';
+        }
+    }
+}

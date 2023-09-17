@@ -19,7 +19,7 @@ export default function Carrossel() {
   const data = [
     {id: '1', image: '/assets/img/banner1.png'},
     {id: '2', image: '/assets/img/banner2.png'},
-    {id: '3', image: 'assets/img/banner3.jpeg'},
+    {id: '3', image: 'assets/img/banner3.jpg'},
     {id: '4', image: '/assets/img/banner4.png'},
   ]
 

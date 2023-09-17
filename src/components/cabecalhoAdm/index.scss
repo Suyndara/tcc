@@ -1,0 +1,40 @@
+.comp-CabecalhoAdm{
+    display: flex;
+
+    height: auto;
+    width: auto;
+
+
+    span{
+        height: 50px;
+        width: 50px;
+
+        background-image: url(../../assets/img/barras.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 140% 100%;
+        margin-right: 40px;
+    }
+
+    nav{
+        display: flex;
+
+        height: 80px;
+        width: 100%;
+
+        align-items: center;
+
+        background-color: #EBEBEB;
+        box-shadow: 0px 0px 5px 0px;
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+
+        p{
+            color: #7D7878;
+            font-family: 'inter';
+        }
+    }
+}
