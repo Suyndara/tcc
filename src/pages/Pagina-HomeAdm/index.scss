@@ -1,27 +1,28 @@
 .Pagina-HomeAdm{
     display: flex;
 
-    height: 100%;
+    height: auto;
     width: 100%;
 
     main{
         display: flex;
 
-        height: 90%;
+        height: 688px;
         width: 100%;
+
+        background-color: white;
 
         flex-direction: column;
 
         section{
+            margin-top: 5px;
+
             display: flex;
 
-            height: 500px;
+            height: 412px;
             width: 100%;
 
-            background-image: url(../../assets/img/logo.svg);
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
+            background-color: #ebebeb;
         }
     }
 }

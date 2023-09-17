@@ -6,30 +6,41 @@
 
 
     span{
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
 
         background-image: url(../../assets/img/barras.png);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: 140% 100%;
         margin-right: 40px;
+
+        transition: .1s;
+    }
+
+    span:hover{
+        transform: scale(1.1);
     }
 
     nav{
         display: flex;
 
-        height: 80px;
+        height: 60px;
         width: 100%;
 
         align-items: center;
 
         background-color: #EBEBEB;
-        box-shadow: 0px 0px 5px 0px;
 
         img{
             height: 50px;
             width: 50px;
+
+            transition: .1s;
+        }
+
+        img:hover{
+            transform: scale(1.1);
         }
 
         p{

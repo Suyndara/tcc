@@ -1,6 +1,7 @@
 import './index.scss';
 import Lateral from "../../components/lateralAdm";
 import CabecalhoAdm from '../../components/cabecalhoAdm';
+import Opcoes from '../../components/opcoes';
 
 export default function HomeAdm() {
     
@@ -11,6 +12,8 @@ export default function HomeAdm() {
 
             <main>
                 <CabecalhoAdm/>
+
+                <Opcoes/>
                 <section>
 
                 </section>

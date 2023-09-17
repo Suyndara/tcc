@@ -13,7 +13,9 @@ export default function Cabecalho () {
     return(
         <div className='comp-cabecalho' >
 
-            <img alt='a-logo' src={Logo} />
+            <Link className='logo'>
+                <img alt='a-logo' src={Logo} />
+            </Link>
 
             <article className="atributo">
                 <section className='barra-pesquisa'>
