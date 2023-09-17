@@ -48,15 +48,15 @@ export default function Rodape() {
                 <h1> ATENDIMENTO </h1>
 
                 <div>
-                    <h1> +55 11 912345678 </h1>
+                    <h2> +55 11 912345678 </h2>
                     <img src={Biriri} alt="biriri" />
                 </div>
                 <div>
-                    <h1 >+55 5922-0635 </h1>
+                    <h2>+55 5922-0635 </h2>
                     <img src={Telefone} alt="telefone" />
                 </div>
                 <div>
-                    <h1> concierge@joyeriacristallo.com.br </h1>
+                    <h2> concierge@joyeriacristallo.com.br </h2>
                     <img src={Email} alt="email" />
                 </div>
 
