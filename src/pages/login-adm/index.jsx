@@ -2,7 +2,7 @@ import './index.scss';
 import Joyeria from '../../assets/img/logo.svg';
 
 
-export default function LoginAdm (){
+export default function LoginAdm(){
 
 
     return(
