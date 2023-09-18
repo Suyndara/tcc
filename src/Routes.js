@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Cadastro from './pages/cadastro';
 import EntregaPagamento from './pages/entrega-pagamento';
 import Login from './pages/login/App';
-
+import Edicao from './pages/edicao-adm';
 
 
 
@@ -22,7 +22,7 @@ export default function Rotas() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/entrega' element={< EntregaPagamento />} />
-
+                <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/login-adm' element={< LoginAdm />} />
                 <Route path='/home-adm' element={< HomeAdm />} />
             </Routes>
