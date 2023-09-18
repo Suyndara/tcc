@@ -89,7 +89,7 @@
                             -6px -6px 12px #ffffff;
 
                 transition: .3s;
-               }
+            }
                
                button::before {
                 content: '';
@@ -104,16 +104,16 @@
                 transition: .5s ease;
                 display: block;
                 z-index: -1;
-               }
+            }
                
-               button:hover::before {
+            button:hover::before {
                 width: 9em;
-               }
+            }
 
-               button:hover{
+            button:hover{
                 transform: scale(1.1);
                 box-shadow: 10px 5px 20px 0px black;
-               }
+            }
         }
     }
 
