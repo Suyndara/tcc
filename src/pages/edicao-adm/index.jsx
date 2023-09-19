@@ -26,12 +26,20 @@ export default function Edicao(){
                             <input type="text" placeholder='Composição'/>
                             <input type="text" placeholder='Detalhes'/>
 
-                            <button></button>
+                            <button>ADICIONAR</button>
                         </section>
 
-                        <span>
-                            
-                        </span>
+                        <aside>
+                            <article>
+                                <h1>imagens.png</h1>
+
+                               <div className='bt-img'>
+                                    <button>
+                                        <img src="/assets/img/plus.png" alt="" />
+                                    </button>
+                                </div> 
+                            </article>
+                        </aside>
                     </article>
                 </div>
             </main>

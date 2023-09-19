@@ -12,7 +12,6 @@ export default function Cabecalho () {
 
     return(
         <div className='comp-cabecalho' >
-
             <Link className='logo'>
                 <img alt='a-logo' src={Logo} />
             </Link>
@@ -40,7 +39,6 @@ export default function Cabecalho () {
                     <img src={Carrinho} alt="" />
                 </Link>
             </article>
-
         </div>
     )
 }

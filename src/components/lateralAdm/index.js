@@ -9,8 +9,16 @@ export default function Lateral(){
             </nav>
 
             <footer>
-                <img src="/assets/img/i-exit.png" alt="sair" />
-                <p>Sair</p>
+                <div className='rodape'>  
+                    <img src="/assets/img/i-exit.png" alt="sair" />
+                    <p>Sair</p>
+                </div>
+
+                <div className='rodape2'>  
+                    <img src="/assets/img/i-home.png" alt="sair" />
+                    <p>Home</p>
+                </div>
+
             </footer>
         </div>
     )
