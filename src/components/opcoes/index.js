@@ -27,7 +27,6 @@ export default function Opcoes() {
 
                 <p>Gráficos</p>
             </article>
-
         </div>
     )
 }

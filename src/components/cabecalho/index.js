@@ -12,7 +12,8 @@ export default function Cabecalho () {
 
     return(
         <div className='comp-cabecalho' >
-            <Link className='logo'>
+            
+            <Link className='logo' to='/'>
                 <img alt='a-logo' src={Logo} />
             </Link>
 

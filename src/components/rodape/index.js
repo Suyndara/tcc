@@ -10,7 +10,6 @@ import './index.scss';
 
 
 
-
 export default function Rodape() {
     return (
         <section className="Rodape">
@@ -55,6 +54,7 @@ export default function Rodape() {
                     <h2>+55 5922-0635 </h2>
                     <img src={Telefone} alt="telefone" />
                 </div>
+                
                 <div>
                     <h2> concierge@joyeriacristallo.com.br </h2>
                     <img src={Email} alt="email" />

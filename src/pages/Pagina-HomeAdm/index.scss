@@ -11,16 +11,91 @@
         width: 100%;
 
         flex-direction: column;
+    }
 
-        section{
-            margin-top: 5px;
+    section{
+        display: flex;
 
+        height: 20vh;
+        width: 100%;
+    
+        align-items: center;
+        justify-content: space-evenly;
+    
+        background-color: #EBEBEB;
+
+        article{
             display: flex;
 
-            height: 100%;
-            width: 100%;
+            height: 150px;
+            width: 250px;
 
-            background-color: #ebebeb;
+            align-items: center;
+            justify-content: space-evenly;
+
+            border-radius: 15px;
+
+            background-color: white;
+
+            transition: .1s;
+            
+            .a1{
+                height: 100px;
+                width: 100px;
+
+                background-image: url(../../../public/assets/img/edit.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 100%;
+            }
+
+            .a2{
+                height: 100px;
+                width: 100px;
+
+                background-image: url(../../../public/assets/img/i-plus.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 100%;
+            }
+
+            .a3{
+                height: 100px;
+                width: 100px;
+
+                background-image: url(../../../public/assets/img/i-sair.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 100%;
+            }
+
+            p{
+                font-size: 20px;
+            }
         }
+
+        article:hover{
+            transform: scale(1.1);
+        }
+
+        article:active{
+            border: 0.5px solid black;
+        }
+    }
+
+    .footer{
+        display: flex;
+
+        height: 52%;
+        width: 100%;
+
+        background-color: #EBEBEB;
+
+        margin-top: 5px;
+
+        background-image: url(../../../public/assets/img/logo2.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 60%;
     }
 }

@@ -7,17 +7,44 @@ export default function HomeAdm() {
     
 
     return (
-        <section className="Pagina-HomeAdm">
+        <div className="Pagina-HomeAdm">
            <Lateral/>
 
             <main>
                 <CabecalhoAdm/>
 
                 <Opcoes/>
-                <section>
 
+                <section>
+                        <article>
+                        <span className='a1'>
+
+                        </span>
+                        
+                        <p>Editor</p>
+                    </article>
+
+                    <article>
+                        <span className='a2'>
+
+                        </span>
+
+                        <p>Adicionar</p>
+                    </article>
+
+                    <article>
+                        <span className='a3'>
+
+                        </span>
+
+                        <p>Sair</p>
+                    </article>
                 </section>
+
+                <div className="footer">
+                    
+                </div>              
             </main>
-        </section>
+        </div>
     );
 }
