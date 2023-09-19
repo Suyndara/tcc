@@ -14,7 +14,7 @@ export default function Edicao(){
                 <div className='s1'>
 
                     <article className='cont-1'>
-                                <h1>ANEXAGEM DOS PRODUTOS NO BANCO DE DADOS</h1>
+                        <h1>ANEXAGEM DOS PRODUTOS NO BANCO DE DADOS</h1>
                     </article>
 
                     <article className='cont-2'>
@@ -25,6 +25,8 @@ export default function Edicao(){
                             <input type="text" placeholder='Qtd. Inicial'/>
                             <input type="text" placeholder='Composição'/>
                             <input type="text" placeholder='Detalhes'/>
+
+                            <button></button>
                         </section>
 
                         <span>

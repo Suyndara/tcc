@@ -57,35 +57,70 @@
             border-bottom-right-radius: 20px;
             border-bottom-left-radius: 20px;
 
-            background-color: white;
+            background-color: aqua;
             align-items: center;
+            justify-content: center;
 
             section{
                 display: flex;
 
-                height: 400px;
-                width: auto;
+                height: 500px;
+                width: 400px;
 
                 flex-direction: column;
                 justify-content: space-between;
+
+                background-color: brown;
 
                 input{
                     height: 50px;
                     width: 300px;
 
+                    border-radius: 5px;
                     background-color: #bbbbbb;
+                    border: none;
+
+                    font-size: 18px;
+                    padding-left: 10px;
+                }
+
+                input:focus-visible{
+                    outline: none;
+                }
+
+                button{
+                    display: flex;
+
+                    height: 50px;
+                    width: 200px;
+
+                    align-self: flex-end;
+
+                    border-radius: 15px;
+                    border: none;
+
+                    background-color: black;
+                    color: white;
+
+                    transition: .3s;
+                }
+
+                button:hover{
+                    background-color: white;
+                    color: black;
                 }
             }
 
             span{
                 display: flex;
 
-                height: 100px;
-                width: 100px;
+                height: 220px;
+                width: 220px;
 
                 background-color: #ebebeb;
-
                 margin: 10px;
+
+                align-self: center;
             }
         }
     }
