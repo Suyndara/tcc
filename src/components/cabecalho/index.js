@@ -11,8 +11,7 @@ import Carrinho from '../../assets/img/carrinho.png'
 export default function Cabecalho () {
 
     return(
-        <div className='comp-cabecalho' >
-            
+        <div className='comp-cabecalho' > 
             <Link className='logo' to='/'>
                 <img alt='a-logo' src={Logo} />
             </Link>

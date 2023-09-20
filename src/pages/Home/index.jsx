@@ -92,10 +92,10 @@ export default function Home() {
             </main>
 
             <main className='s5'>
-            <Swiper
+                <Swiper
                     modules={[Navigation, Autoplay]}
                     slidesPerView={slidePerView}
-                    autoplay={{delay: 1200}}
+                    autoplay={{delay: 3000}}
                     loop={true}
                     navigation={true}
                 >

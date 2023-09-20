@@ -27,19 +27,17 @@
             font-size: 38px;
 
             letter-spacing: 11px;
-
             text-align: center;
 
             margin: 0px 0px 10px 0px;
         }
 
         h2 {
-            font-family: 'fonte1';
-
             width: 650px;
 
             font-size: 30px;
             text-align: center;
+            font-family: 'fonte1';
 
             letter-spacing: 10px;
         }
@@ -52,41 +50,26 @@
         align-items: center;
         justify-content: space-around;
 
-        height: 390px;
+        height: 450px;
         width: 430px;
 
         border-radius: 33px;
 
         background-color: #d7d7d7;
         border-bottom: 2px solid black;
-        box-shadow: 0px 0px 10px 5px #d7d7d7;
-
-        .top {
-            height: 40px;
-            width: 400px;
-
-            border-radius: 9px;
-            margin-top: 30px;
-        }
-
-        .bottom {
-            height: 40px;
-            width: 400px;
-
-            border-radius: 9px;
-            margin-bottom: 30px;
-        }
+        box-shadow: 0px 0px 10px 1px #d7d7d7;
 
         input {
-            height: 40px;
-            width: 400px;
+            height: 50px;
+            width: 300px;
 
             border-radius: 9px;
             border: none;
 
             margin: 5px;
+            padding-left: 20px;
 
-            border: 1px solid #747474;
+            background-color: #ffffff8a;
         }
 
         button {
@@ -97,7 +80,6 @@
             color: #fff;
 
             border-radius: 11px;
-
             border: none;
         }
 
@@ -109,10 +91,9 @@
 
             border-radius: 10px;
 
-            transition: .3s ease-in-out;
+            transition: .3s;
 
             border: 1px solid #616161;
-
         }
 
         input:focus-visible{
@@ -120,5 +101,25 @@
         }
     }
 
+    
+    .input > input:nth-child(1){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(2){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(3){
+        border-bottom: 1px solid black;
+    }
+
+    .input > input:nth-child(4){
+        border-bottom: 1px solid black;
+    }
+    
+    .input > input:nth-child(5){
+        border-bottom: 1px solid black;
+    }
 }
 

@@ -43,7 +43,7 @@ export default function Carrossel() {
       <Swiper
         modules={[Navigation, Autoplay]}
         slidesPerView={slidePerView}
-        autoplay={{delay: 2400}}
+        autoplay={{delay: 3000}}
         loop={true}
         navigation={true}
       >

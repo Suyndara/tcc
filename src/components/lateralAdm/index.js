@@ -1,4 +1,5 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 export default function Lateral(){
     
@@ -15,10 +16,11 @@ export default function Lateral(){
                 </div>
 
                 <div className='rodape2'>  
+                <Link to='/'>
                     <img src="/assets/img/i-home.png" alt="sair" />
+                </Link>
                     <p>Home</p>
                 </div>
-
             </footer>
         </div>
     )

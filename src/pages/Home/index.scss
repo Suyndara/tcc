@@ -50,6 +50,56 @@
         }
     }
 
+    .s2 > article:nth-child(1) > img:hover{
+        margin-left: 20px;    
+    }
+
+    .s2 > article:nth-child(2) > img:hover{
+        animation: imgs linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: .2s; 
+    }
+
+    .s2 > article:nth-child(3) > img:hover{
+        animation: spin infinite 1s linear; 
+        cursor: wait;  
+    }
+
+    .s2 > article:nth-child(4) > img:hover{
+        animation: lock linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: .1s; 
+    }
+
+    @keyframes imgs {
+        from{
+            margin-left: 5px;
+        }
+        to{
+            margin-left: -5px;
+        }
+    }
+
+    @keyframes spin {
+        from{
+            transform: rotate(0deg);
+        }   
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes lock {
+        from{
+            margin-left: 2px;
+        }   
+        to{
+            margin-left: -2px;
+        }
+    }
+
     .s3{
         display: flex;
 
@@ -85,10 +135,12 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
+                
                 box-shadow: 6px 6px 12px #c5c5c5,
                             -6px -6px 12px #ffffff;
 
                 transition: .3s;
+                cursor: pointer;
             }
                
                button::before {

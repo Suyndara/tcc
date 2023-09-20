@@ -125,19 +125,18 @@
     }
 }
 
- @media  (max-width: 360px){
-        .comp-cabecalho{
-            height: 50px;
-            width: 360px;
+ @media (max-width: 360px){
+    .comp-cabecalho{
+        height: 50px;
+        width: 360px;
 
-             img {
-                height:10%;
-                width: 10%;
-            }
-
-            .barra-pesquisa{
-                display: none;
-            }
+            img {
+            height:10%;
+            width: 10%;
         }
-}
 
+        .barra-pesquisa{
+            display: none;
+        }
+    }
+}
