@@ -6,13 +6,8 @@ import EntregaPagamento from './pages/entrega-pagamento';
 import Login from './pages/login/App';
 import Edicao from './pages/edicao-adm';
 
-
-
-
 import LoginAdm from './pages/login-adm';
 import HomeAdm from './pages/Pagina-HomeAdm';
-
-
 
 export default function Rotas() {
     return ( 

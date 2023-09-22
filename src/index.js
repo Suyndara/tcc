@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import Rotas from './Routes';
-
 import './index.scss';
 
 
