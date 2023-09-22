@@ -62,8 +62,7 @@
     }
 
     .s2 > article:nth-child(3) > img:hover{
-        animation: spin infinite 1s linear; 
-        cursor: wait;  
+        animation: spin infinite 1s linear;   
     }
 
     .s2 > article:nth-child(4) > img:hover{
@@ -228,12 +227,11 @@
 
             p{
                 color: white;
-    
-                position: absolute;
+                
                 font-family: "fonte1";
-    
                 font-size: 40px;
 
+                position: absolute;
                 top: 2%;
                 right: 20%;
             }
