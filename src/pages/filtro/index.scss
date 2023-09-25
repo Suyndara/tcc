@@ -1,0 +1,160 @@
+.pagina-filtro{
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 190vh;
+
+    .Rodape{
+        margin-top: 80px;
+    }
+
+    .conteudo{
+        padding: 20px 50px;
+    }
+
+    .select-filtro{
+        display: flex;
+        justify-content: flex-end;
+
+
+        select{
+            background-color: transparent;
+            width: 230px;
+            border-radius: 10px;
+            padding: 10px 10px;
+            border: 1.8px solid #4E4C4C;
+            font-family: 'inder';
+            margin-bottom: 60px;
+        }
+    }
+
+    .texto{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1{
+            font: 38px 'inter';
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            font: 20px 'inter';
+            margin-bottom: 40px;
+        }
+    }
+
+
+    .filtros-produtos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filtros{
+        display: flex;
+        flex-direction: column;
+        margin-right: 260px;
+
+        h1{
+            font: 27px 'inder';
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        h2{
+            font: 20px 'inder';
+            margin-bottom: 25px;
+            margin-top: 5px;
+        }
+    }
+
+    .input{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 8px;
+
+        input{
+            margin-right: 5px;
+        }
+
+        p{
+            font: 18px 'inder';
+        }
+    }
+
+    .preco{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        input{
+            width: 50px;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px 0px;
+        }
+
+        p{
+            font: 17px 'inder';
+            margin-bottom: 5px;
+        }
+    }
+
+    .produtos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produtos-row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .relogio{
+        border: 2px solid black;
+        border-radius: 10px;
+        display: flex;
+        height: 350px;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        background-color: #D9D9D9;
+        margin-right: 40px;
+        margin-bottom: 60px;
+
+        p{
+            width: 200px;
+            text-align: center;
+            font: 15px 'inder';
+            margin-bottom: 10px;
+        }
+
+        button{
+            background-color: #000;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;          
+        }
+    }
+
+    .imagem{
+       border-bottom: 2px solid black;
+        width: 100%;
+        display: flex;
+        height: 53%;
+        justify-content: center;
+        background-color: #fff;
+        padding: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        margin-bottom: 15px;
+
+        img{
+            height: 150px;
+        }
+    }
+}
