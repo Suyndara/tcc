@@ -1,0 +1,66 @@
+.resumo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resumo > h2{
+    font: 15px 'inder';
+}
+
+.produto-valor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.produto-valor > p{
+    font: 15px 'inder';
+}
+
+.entrega-frete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px  ;
+}
+
+.entrega-frete > p{
+    font: 15px 'inder';
+}
+
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.total > h2{
+    font: 14px 'inder';
+}
+
+.cupom{
+    
+
+    input{
+        padding: 12px 20px;
+        background-color: transparent;
+        width: 515px;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+}
+
+.resumo > input{
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: 12px 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
