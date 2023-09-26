@@ -13,167 +13,165 @@ export default function Filtro() {
 
     return (
 
-
-
         <div className='pagina-filtro'>
             <Cabecalho />
 
             <section className='conteudo'>
-            <div className='texto'>
-                <h1>Joias</h1>
-                <h2>Joias de alta qualidade só aqui!</h2>
-            </div>
-
-            <div className='select-filtro'>
-            <select>
-                <option value="vendidos" key="">Mais vendidos</option>
-            </select>
-            </div>
-
-            <main className='filtros-produtos'>
-                <div className='filtros'>
-                    <h1>Filtrar por</h1>
-                    <h2>Acessórios</h2>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Pulseiras</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Anéis</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Colares</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Correntes</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Relógios</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Brincos</p>
-                    </div>
-
-                    <div className='input'>
-                        <input type="checkbox" />
-                        <p>Pingentes</p>
-                    </div>
-
-                    <h2>Preço</h2>
-
-                    <div className="preco">
-                        <div>
-                            <p>De</p>
-                            <input type="text" />
-                        </div>
-                        <div>
-                            <p>Até</p>
-                            <input type="text" />
-                        </div>
-                        <div><p></p></div>
-                    </div>
+                <div className='texto'>
+                    <h1>Joias</h1>
+                    <h2>Joias de alta qualidade só aqui!</h2>
                 </div>
 
-                <div className='produtos'>
-                    <div className='produtos-row'>
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Relogio} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Escapulario} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Pulseira} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-                    </div>
-
-                    <div className='produtos-row'>
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={PulseiraOuro} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Pingente} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Relogio} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-                    </div>
-
-                    <div className='produtos-row'>
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Relogio} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Relogio} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-
-                        <div className='relogio'>
-                            <div className='imagem'>
-                            <img src={Relogio} />
-                            </div>
-                            <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                            <p><b>R$ 9.499,00</b></p>
-                            <button>ADICIONAR AO CARRINHO</button>
-                        </div>
-                    </div>
+                <div className='select-filtro'>
+                    <select>
+                        <option value="vendidos" key="">Mais vendidos</option>
+                    </select>
                 </div>
-            </main>
+
+                <main className='filtros-produtos'>
+                    <div className='filtros'>
+                        <h1>Filtrar por</h1>
+                        <h2>Acessórios</h2>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Pulseiras</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Anéis</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Colares</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Correntes</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Relógios</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Brincos</p>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" />
+                            <p>Pingentes</p>
+                        </div>
+
+                        <h2>Preço</h2>
+
+                        <div className="preco">
+                            <div>
+                                <p>De</p>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <p>Até</p>
+                                <input type="text" />
+                            </div>
+                            <div><p></p></div>
+                        </div>
+                    </div>
+
+                    <div className='produtos'>
+                        <div className='produtos-row'>
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Escapulario} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Pulseira} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+                        </div>
+
+                        <div className='produtos-row'>
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={PulseiraOuro} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Pingente} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+                        </div>
+
+                        <div className='produtos-row'>
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                <img src={Relogio} />
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </section>
 
             <Rodape />

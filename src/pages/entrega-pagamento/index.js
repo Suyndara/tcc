@@ -7,7 +7,6 @@ import Resumo from '../../components/resumo';
 export default function EntregaPagamento() {
 
 
-
     return(
 
 

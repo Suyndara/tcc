@@ -115,7 +115,7 @@ export default function Home() {
                 </Swiper>
             </main>
 
-            <Rodape /> 
+            <Rodape/> 
         </div>
     )
 }
