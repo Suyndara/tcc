@@ -21,8 +21,6 @@ export default function Carrinho(){
             <Cabecalho />
 
             <main>
-                <h1>Amo peitos de loiras</h1>
-                
                 <div className='carrinho-produtos'>
                     <h1>SEU CARRINHO</h1>
                     <p>TOTAL (0 produto)  <b>R$ 0,00</b> </p>
