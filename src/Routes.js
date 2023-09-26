@@ -9,6 +9,7 @@ import Edicao from './pages/edicao-adm';
 import LoginAdm from './pages/login-adm';
 import HomeAdm from './pages/Pagina-HomeAdm';
 import Filtro from './pages/filtro';
+import Carrinho from './pages/carrinho';
 
 export default function Rotas() {
     return ( 
@@ -23,6 +24,7 @@ export default function Rotas() {
                 <Route path='/login-adm' element={< LoginAdm />} />
                 <Route path='/home-adm' element={< HomeAdm />} />
                 <Route path='/filtro' element={< Filtro />} />
+                <Route path='/carrinho' element={< Carrinho />} />
             </Routes>
         </BrowserRouter>
     )
