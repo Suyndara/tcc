@@ -6,7 +6,6 @@ import Rodape from '../../components/rodape';
 export default function EntregaPagamento() {
 
 
-
     return(
 
 

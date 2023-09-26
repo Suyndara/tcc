@@ -1,9 +1,10 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 import { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation, Autoplay} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { register } from 'swiper/element/bundle';
 
 import 'swiper/css';
@@ -56,7 +57,9 @@ export default function Carrossel() {
                   className='slide-item'
                 />
 
-                <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
+                <Link to='/filtro'>
+                  <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
+                </Link>
               </main>
           </SwiperSlide>
         ))}
