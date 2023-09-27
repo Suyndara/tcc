@@ -26,25 +26,24 @@ export default function Carrinho(){
                     <p>TOTAL (0 produto)  <b>R$ 0,00</b> </p>
                     <p>Os itens do seu carrinho não estão reservados. Finalize a compra para torná-los seus itens pessoais.</p>
                 
-                    <div>
-                        <div>
-                            <img src={Anel} />
-
-                            <div>
-                                <div>
-                                    <h1>Anel solitário de ouro 18k</h1>
-                                    <img src={Lixo} />
-                                </div>
+                    <div className='produto'>
+                        <div className='informacao-produto'>
+                            <img src={Anel}/>
+                            <div className='informacao'>
+                                <h1><b>Anel solitário de ouro 18k</b></h1>
                                 <p>tamanho de aro: 9</p>
-                                <div>
+
+                                <div className='contador'>
                                     <div>
-                                        <div>
-                                            <img src={Mais} />
-                                            <div>1</div>
-                                            <img src={Menos} />
-                                        </div>
+                                        <img src={Mais}/>
+                                        <p>1</p>
+                                        <img src={Menos}/>
                                     </div>
                                 </div>
+                            </div>
+                            <div className='preco'>
+                                <img src={Lixo}/>
+                                <p><b>R$ 2.600,00</b></p>
                             </div>
                         </div>
                     </div>
@@ -55,7 +54,7 @@ export default function Carrinho(){
                     <div>
                     <Link to='/entrega'>FINALIZAR</Link>
                     </div>
-                    <img src={Seta}/>
+                        <i className="fa-solid fa-arrow-right" style={{color: "#ffffff"}}></i>
                     </div>
                     
                 <Resumo />
