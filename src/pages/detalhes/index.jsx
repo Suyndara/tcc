@@ -2,34 +2,14 @@ import './index.scss';
 
 import Cabecalho from '../../components/cabecalho';
 
-import { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 export default function Detalhes(){
 
-    const [slidePerView, setSlidePerView] = useState(1)
-    const data = [
-      {id: '1', image: '/assets/img/banner6.png'},
-      {id: '2', image: '/assets/img/banner7.jpg'},
-    ]
-  
-    useEffect(() => {
-  
-      function handleResize() {
-        if(window.innerWidth > 1200) {
-          setSlidePerView(1);
-        }
-      }
-  
-      handleResize();
-  
-    }, [])
     
 
     return(
@@ -57,7 +37,6 @@ export default function Detalhes(){
                             <input type="text" placeholder='Digite o CEP'/>
                             <button>OK</button>
                         </label>
-                    {/* nth-child(4) */}
                         <p>Não sei meu CEP</p>
                     </section>
                 </aside>
@@ -69,20 +48,27 @@ export default function Detalhes(){
                 <section>
                     <Swiper
                         modules={[Navigation]}
-                        slidesPerView={slidePerView}
-                        loop={true}
                         navigation={true}
                     >
-                        {data.map( (item) => (
-                        <SwiperSlide key={item.id}>
+                        <SwiperSlide>
+                                <label>
+                                    <article>
+                                        <section>
+                                            <img src="./assets/img/item1.png" alt="" />
+                                        </section>
 
-                            <article className='slide-tem'>
-                                <img 
-                                 src={item.image}/>
-                            </article>
+                                        <section>
+                                            
+                                        </section>
+                                    </article>
+                                </label>
+                        </SwiperSlide>        
 
+                        <SwiperSlide>
+                                <label>
+                                    <h1>teste</h1>
+                                </label>
                         </SwiperSlide>
-                        ))}
                     </Swiper>
                 </section>
             </main>
