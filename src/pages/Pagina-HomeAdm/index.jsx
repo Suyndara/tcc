@@ -3,6 +3,8 @@ import Lateral from "../../components/lateralAdm";
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 import Opcoes from '../../components/opcoes';
 
+import { Link } from 'react-router-dom';
+
 export default function HomeAdm() {
     
 
@@ -16,13 +18,15 @@ export default function HomeAdm() {
                 <Opcoes/>
 
                 <section>
+                    <Link to='/edicao'>
                         <article>
-                        <span className='a1'>
+                            <span className='a1'>
 
-                        </span>
-                        
-                        <p>Editor</p>
-                    </article>
+                            </span>
+                            
+                            <p>Editor</p>
+                        </article>
+                    </Link>
 
                     <article>
                         <span className='a2'>
