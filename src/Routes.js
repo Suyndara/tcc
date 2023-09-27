@@ -10,6 +10,7 @@ import LoginAdm from './pages/login-adm';
 import HomeAdm from './pages/Pagina-HomeAdm';
 import Filtro from './pages/filtro';
 import Carrinho from './pages/carrinho';
+import Detalhes from './pages/detalhes';
 
 export default function Rotas() {
     return ( 
