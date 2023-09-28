@@ -1,0 +1,11 @@
+.pagina-vendasADM{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+
+    > section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

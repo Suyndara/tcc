@@ -11,6 +11,7 @@ import HomeAdm from './pages/Pagina-HomeAdm';
 import Filtro from './pages/filtro';
 import Carrinho from './pages/carrinho';
 import Detalhes from './pages/detalhes';
+import VendasADM from './pages/vendas-adm';
 
 export default function Rotas() {
     return ( 
@@ -27,6 +28,7 @@ export default function Rotas() {
                 <Route path='/home-adm' element={< HomeAdm />} />
                 <Route path='/filtro' element={< Filtro />} />
                 <Route path='/carrinho' element={< Carrinho />} />
+                <Route path='/vendas-adm' element={< VendasADM />} />
             </Routes>
         </BrowserRouter>
     )

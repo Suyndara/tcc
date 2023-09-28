@@ -10,7 +10,7 @@ export default function CabecalhoAdm(){
                 </span>
 
                 <img src="/assets/img/i-settings.png" alt="" />
-                <p>Procure o Pin</p>
+                <input type='text' placeholder='Procure o Pin'/>
             </nav>
         </div>
     )

@@ -43,9 +43,15 @@
             transform: scale(1.1);
         }
 
-        p{
+        input{
             color: #7D7878;
             font-family: 'inter';
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+            height: 100%;
         }
     }
 }
