@@ -12,7 +12,7 @@ export default function Resumo(){
                         <h2>RESUMO DO PEDIDO</h2>
 
                         <div className='produto-valor'>
-                            <p>1 produtos</p>
+                            <p>1 produto</p>
                             <p>R$ 2.600,00</p>
                         </div>
 
