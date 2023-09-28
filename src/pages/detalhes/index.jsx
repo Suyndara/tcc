@@ -1,6 +1,7 @@
 import './index.scss';
 
 import Cabecalho from '../../components/cabecalho';
+import Rodape from '../../components/rodape';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -143,6 +144,8 @@ export default function Detalhes(){
                     </Swiper>
                 </section>
             </main>
+
+            <Rodape/>
         </div>
     )
 }
