@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 
 export default function Detalhes(){
 
-    
 
     return(
         <div className='pagina-detalhes'>
@@ -43,7 +42,7 @@ export default function Detalhes(){
             </main>
 
             <main className='s2'>
-                <p>Relacionados</p>
+                <p className='a'>Relacionados</p>
                 
                 <section>
                     <Swiper
@@ -53,20 +52,92 @@ export default function Detalhes(){
                         <SwiperSlide>
                                 <label>
                                     <article>
-                                        <section>
-                                            <img src="./assets/img/item1.png" alt="" />
-                                        </section>
+                                        <footer className='f1'>
 
-                                        <section>
-                                            
-                                        </section>
+                                        </footer>
+
+                                        <footer>
+                                            <p>Brinco Ouro Rodolita E Diamantes</p>
+                                            <p>R$ 20.350,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
+                                    </article>
+
+                                    <article>
+                                        <footer className='f2'>
+
+                                        </footer>
+
+                                        <footer>
+                                            <p>Anel Ouro Branco E Diamantes Grandes</p>
+                                            <p>R$ 8.450,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
+                                    </article>
+
+                                    <article>
+                                        <footer className='f3'>
+
+                                        </footer>
+
+                                        <footer>
+                                            <p>Escapulário Ouro Amarelo</p>
+                                            <p>R$ 3.350,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
                                     </article>
                                 </label>
                         </SwiperSlide>        
 
                         <SwiperSlide>
                                 <label>
-                                    <h1>teste</h1>
+                                    <article>
+                                        <footer className='f4'>
+
+                                        </footer>
+
+                                        <footer>
+                                            <p>Escapulario de Prata 60cm</p>
+                                            <p>R$ 850,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
+                                    </article>
+
+                                    <article>
+                                        <footer className='f5'>
+
+                                        </footer>
+
+                                        <footer>
+                                            <p>Colar Life Unique Prata e Ágata Verde</p>
+                                            <p>R$ 550,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
+                                    </article>
+
+                                    <article>
+                                        <footer className='f6'>
+
+                                        </footer>
+
+                                        <footer>
+                                            <p>Escapulario Ouro Branco</p>
+                                            <p>R$ 4.150,00</p>
+
+
+                                            <a>ADICIONAR AO CARRINHO</a>
+                                        </footer>
+                                    </article>
                                 </label>
                         </SwiperSlide>
                     </Swiper>
