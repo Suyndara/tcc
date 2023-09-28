@@ -8,6 +8,11 @@
 
     flex-direction: column;
 
+
+    .swiper-button-prev::after, .swiper-button-next::after{
+        color: rgb(0, 0, 0);
+    }
+
     .s1{
         display: flex;
 
@@ -187,15 +192,14 @@
             label{
                 display: flex;
 
-                height: auto;
+                height: 320px;
                 width: 100%;
 
-                background-color: #F0EFEF;
+
+                background-color: #D8D8D8;
 
                 justify-content: space-evenly;
                 align-items: center;
-
-                border: 1px solid pink;
 
                 article{
                     display: flex;
