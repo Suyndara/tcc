@@ -104,7 +104,7 @@ export default function Home() {
                         <main className='main'>
                             <img
                             src={item.image}
-                            alt='sas'
+                            alt='slider'
                             className='slide-item'
                             />
 

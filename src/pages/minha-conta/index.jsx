@@ -29,7 +29,7 @@ export default function Conta(){
                         <section>
                             <h1>Sair</h1>
                             <Link to='/'>
-                                <img src="/assets/img/icone-de-sair.png" alt="" />
+                                <img src="/assets/img/icone-de-sair.png" alt="i-exit" />
                             </Link>
                         </section>
                 </article>
