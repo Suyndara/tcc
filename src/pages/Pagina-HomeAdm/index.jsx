@@ -18,7 +18,7 @@ export default function HomeAdm() {
                 <Opcoes/>
 
                 <section>
-                    <Link to='/edicao'>
+                    <Link className='volta' to='/edicao'>
                         <article>
                             <span className='a1'>
 
@@ -45,9 +45,7 @@ export default function HomeAdm() {
                     </article>
                 </section>
 
-                <div className="footer">
-                    
-                </div>              
+                <div className="footer"></div>              
             </main>
         </div>
     );

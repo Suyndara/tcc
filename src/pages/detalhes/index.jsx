@@ -145,6 +145,34 @@ export default function Detalhes(){
                 </section>
             </main>
 
+            <main className='s3'>
+                <article>
+                    <section>                
+                        <h1>Composição  </h1>
+                        <p>Escapulário Ouro Amarelo</p>
+                    </section>
+
+                    <p className='p-s3'>• Sugestão: para ela </p>
+                    <p className='p-s3'>• Material: ouro amarelo</p>
+                </article>
+
+                <article>
+                    <section>                        
+                        <h1>Detalhes </h1>
+                        <p>OURO AMARELO</p>
+                    </section>
+
+                    <p>
+                    A Joyeria Cristallo utiliza
+                    em suas joias ouro 18k,
+                    que é o mais indicado para
+                    o uso na joalheria em função
+                    de sua durabilidade e brilho.
+                    </p>
+                    
+                </article>
+            </main>
+
             <Rodape/>
         </div>
     )
