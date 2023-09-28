@@ -1,7 +1,9 @@
 .pagina-carrinho{
     background-color: #F0EFEF;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
 
 
     main{
@@ -11,7 +13,7 @@
     }
 
     .carrinho-produtos{
-
+        margin-right: 30px;
 
         > h1{
             font: 30px 'inter';
@@ -19,9 +21,15 @@
             margin-bottom: 25px;
         }
 
+        > h2{
+            font: 18px 'inter';
+            margin-bottom: 30px;
+            width: 360px;
+        }
+
         > p{
             font: 18px 'inter';
-            margin-bottom: 20px;
+            margin-bottom: 60px;
             width: 660px;
         }
     }
@@ -30,10 +38,11 @@
 
         > div{
             background-color: #000;
-            width: 400px;
+            width: 515px;
             height: 26px;
             display: flex;
             align-items: center;
+            margin-bottom: 50px;
         }
 
         a{
@@ -41,6 +50,7 @@
             padding: 10px 20px;
             text-decoration: none;
             font: 18px 'inder';
+            width: 100%;
         }
 
         > img{
@@ -50,10 +60,14 @@
         }
     }
 
+    .finalizamento{
+        margin-top: 115px;
+    }
+
     .produto{
         background-color: #D9D9D9;
         height: 200px;
-        width: 500px;
+        width: 550px;
         border-radius: 20px;
         display: flex;
         justify-content: center;
@@ -78,14 +92,15 @@
     .informacao{
         display: flex;
         flex-direction: column;
-        padding: 10px 0px;
-        border: 2px solid aqua;
+        padding: 10px 0px;  
         width: 240px;
+        align-items: center;
 
         > h1{
             width: 300px;
             font: 18px 'inter';
             margin-bottom: 20px;
+            text-align: center;
         }
 
         > p{
@@ -97,17 +112,50 @@
     
     .contador{
         background-color: #D9D9D9;
+        width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
 
         > div{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            background-color: #fff;
+            width: 94%;
+            height: 70%;
+            gap: 5px;
+            
             
             > img{
                 height: 20px;
                 width: 20px;
             }
+
+            > p{
+                font-size: 18px;
+            }
+        }   
+    }
+
+    .preco{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 160px;
+        margin-left: 20px;
+        padding: 10px 0px;
+        align-items: end;
+    
+        > img{
+            height: 25px;
+            cursor: pointer;
+        }
+
+        > p{
+            font: 16px 'inter'
         }
     }
 }

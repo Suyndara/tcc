@@ -23,7 +23,7 @@ export default function Carrinho(){
             <main>
                 <div className='carrinho-produtos'>
                     <h1>SEU CARRINHO</h1>
-                    <p>TOTAL (0 produto)  <b>R$ 0,00</b> </p>
+                    <h2>TOTAL (1 produto)  <b>R$ 2.600,00</b> </h2>
                     <p>Os itens do seu carrinho não estão reservados. Finalize a compra para torná-los seus itens pessoais.</p>
                 
                     <div className='produto'>
@@ -49,7 +49,7 @@ export default function Carrinho(){
                     </div>
                 </div>
                 
-                <div>
+                <div className='finalizamento'>
                 <div className='finalizar'>
                     <div>
                     <Link to='/entrega'>FINALIZAR</Link>
