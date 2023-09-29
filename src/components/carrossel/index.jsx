@@ -50,7 +50,7 @@ export default function Carrossel() {
       >
         {data.map( (item) => (
           <SwiperSlide key={item.id}>
-              <main className='main'>
+              <main className='slide'>
                 <img
                   src={item.image}
                   alt='sas'
