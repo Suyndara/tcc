@@ -51,7 +51,8 @@
     }
 
     .s2 > article:nth-child(1) > img:hover{
-        margin-left: 20px;    
+        animation: truck 2s linear infinite;
+        animation-delay: 2s;
     }
 
     .s2 > article:nth-child(2) > img:hover{
@@ -70,6 +71,17 @@
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-duration: .1s; 
+    }
+
+
+    @keyframes truck {
+        from{
+           transform: translatex(-10px) skew(20deg);
+        }
+        to{
+            transform: translatex(20px);
+            transform: skew(-40px);
+        }
     }
 
     @keyframes imgs {

@@ -42,13 +42,13 @@ export default function Home() {
 
             <main className='s2'>
                 <article>
-                    <img className='a' alt='truck' src="/assets/img/i-truck.png"/>
-                     <h1>COMPRA SEGURA, ENTREGA RÁPIDA</h1>
+                    <img alt='truck' src="/assets/img/i-truck.png"/>
+                    <h1>COMPRA SEGURA, ENTREGA RÁPIDA</h1>
                 </article>
 
                 <article>
                     <img alt='car' src="/assets/img/i-card.png"/>
-                     <h1>PAGAMENTO SIMPLES, FLEXÍVEL E SEGURO</h1>
+                    <h1>PAGAMENTO SIMPLES, FLEXÍVEL E SEGURO</h1>
                 </article>
 
                 <article>
