@@ -52,12 +52,14 @@
 
     .barra-pesquisa{
         display: flex;
-        flex-direction: row;
+
         justify-content: space-between;
         border: 1px solid #000;
         width: 700px;
+
         background-color: #E2E2E2;
         height: 40px;
+        
         border-radius: 15px;
     }
 
@@ -122,21 +124,5 @@
     .logo > img{
         height: 200px;
         width: 200px;
-    }
-}
-
- @media (max-width: 360px){
-    .comp-cabecalho{
-        height: 50px;
-        width: 360px;
-
-            img {
-            height:10%;
-            width: 10%;
-        }
-
-        .barra-pesquisa{
-            display: none;
-        }
     }
 }
