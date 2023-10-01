@@ -50,7 +50,7 @@
         }
     }
 
-    .s2 > article:nth-child(1) > img:hover{
+    .s2 > article:first-child > img:hover{
         animation: truck 2s linear infinite;
         animation-delay: 2s;
     }
@@ -66,7 +66,7 @@
         animation: spin infinite 1s linear;   
     }
 
-    .s2 > article:nth-child(4) > img:hover{
+    .s2 > article:last-child > img:hover{
         animation: lock linear;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
