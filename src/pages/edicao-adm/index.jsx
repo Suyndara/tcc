@@ -27,6 +27,7 @@ export default function Edicao(){
                             <input type="text" placeholder='Detalhes'/>
 
                             <button>ADICIONAR</button>
+                            
                         </section>
 
                         <aside>
