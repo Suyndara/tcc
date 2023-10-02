@@ -70,7 +70,7 @@
         animation-iteration-count: 1;
     }
 
-    .s2 article:first-child img{
+    .s2 article:first-child{
         width: 55px;
     }
 
@@ -114,7 +114,7 @@
     }
 
     @keyframes spin {
-        from{
+        from{   
             transform: rotate(0deg);
         }   
         to{
@@ -270,4 +270,150 @@
         }
     }
 }
+
+
+
+@media (max-width: 760px) {
+    .pagina-home{
+        
+        .comp-carrossele{
+            .slide{
+                height: 250px;
+
+                .bt-joia{
+                    right: 65%;
+                }
+
+                .slide-item{
+                    background: cover;
+                }
+            }
+        }
+
+        .s2{
+            height: 200px;
+        }
+
+        .s2 article:nth-child(1){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(2){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(3){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(4){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+
+        .s3{
+            height: 156px;
+        }
+
+        .s3 article:first-child{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:nth-child(2){
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:nth-child(3){
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:last-child{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s4{
+
+            height: 300px;
+
+            article{
+                height: 300px;
+
+                img{
+                    height: 250px;
+                }
+            }
+        }
+
+        .s5{
+            .slide{
+                height: 300px;
+
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
 
