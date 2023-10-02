@@ -37,18 +37,20 @@ export default function Home() {
 
     return(
         <div className='pagina-home'>
+            <div className='nav'></div>
+
             <Cabecalho/>
             <Carrossel/>
 
             <main className='s2'>
                 <article>
-                    <img className='a' alt='truck' src="/assets/img/i-truck.png"/>
-                     <h1>COMPRA SEGURA, ENTREGA RÁPIDA</h1>
+                    <img alt='truck' src="/assets/img/i-truck.png"/>
+                    <h1>COMPRA SEGURA, ENTREGA RÁPIDA</h1>
                 </article>
 
                 <article>
                     <img alt='car' src="/assets/img/i-card.png"/>
-                     <h1>PAGAMENTO SIMPLES, FLEXÍVEL E SEGURO</h1>
+                    <h1>PAGAMENTO SIMPLES, FLEXÍVEL E SEGURO</h1>
                 </article>
 
                 <article>
@@ -101,10 +103,10 @@ export default function Home() {
                 >
                     {data.map( (item) => (
                     <SwiperSlide key={item.id}>
-                        <main className='main'>
+                        <main className='slide'>
                             <img
                             src={item.image}
-                            alt='sas'
+                            alt='slider'
                             className='slide-item'
                             />
 

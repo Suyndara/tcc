@@ -36,7 +36,7 @@ export default function Edicao(){
 
                                <div className='bt-img'>
                                     <button>
-                                        <img src="/assets/img/plus.png" alt="" />
+                                        <img src="/assets/img/plus.png" alt="ms" />
                                     </button>
                                 </div> 
                             </article>

@@ -62,7 +62,7 @@ export default function Detalhes(){
                                             <p>R$ 20.350,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
 
@@ -76,7 +76,7 @@ export default function Detalhes(){
                                             <p>R$ 8.450,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
 
@@ -90,7 +90,7 @@ export default function Detalhes(){
                                             <p>R$ 3.350,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
                                 </label>
@@ -108,7 +108,7 @@ export default function Detalhes(){
                                             <p>R$ 850,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
 
@@ -122,7 +122,7 @@ export default function Detalhes(){
                                             <p>R$ 550,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
 
@@ -136,7 +136,7 @@ export default function Detalhes(){
                                             <p>R$ 4.150,00</p>
 
 
-                                            <a>ADICIONAR AO CARRINHO</a>
+                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                         </footer>
                                     </article>
                                 </label>

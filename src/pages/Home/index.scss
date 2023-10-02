@@ -6,6 +6,18 @@
 
     flex-direction: column;
 
+    .nav{
+        display: flex;
+
+        width: 100%;
+        height: 130px;
+    }
+
+    .comp-cabecalho{
+        position: fixed;
+        z-index: 3;
+    }
+
     .s1{
         display: flex;
 
@@ -26,7 +38,7 @@
             display: flex;
 
             height: auto;
-            width: auto;
+            width: 100px;
 
             flex-direction: column;
             align-items: center;
@@ -39,6 +51,7 @@
                 width: 50px;
 
                 transition: .3s;
+
             }
 
             h1{
@@ -50,39 +63,58 @@
         }
     }
 
-    .s2 > article:nth-child(1) > img:hover{
-        margin-left: 20px;    
+    .s2 > article:first-child > img:hover{
+        animation: truck;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        animation-iteration-count: 1;
     }
 
-    .s2 > article:nth-child(2) > img:hover{
-        animation: imgs linear;
+    .s2 article:first-child{
+        width: 55px;
+    }
+
+    .s2  article:nth-child(2)  img:hover{
+        animation: imgs alternate-reverse;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
         animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        animation-duration: .2s; 
     }
 
-    .s2 > article:nth-child(3) > img:hover{
+    .s2  article:nth-child(3)  img:hover{
         animation: spin infinite 1s linear;   
     }
 
-    .s2 > article:nth-child(4) > img:hover{
+    .s2 article:last-child  img:hover{
         animation: lock linear;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-duration: .1s; 
     }
 
-    @keyframes imgs {
+
+    @keyframes truck {
         from{
-            margin-left: 5px;
+            transform: skewX(20deg) translateX(-25px);
         }
         to{
-            margin-left: -5px;
+            transform: skewX(-15deg) calc(100% + 10px);
+        }
+    }
+
+    @keyframes imgs {
+        from{
+            transform: translateX(-10px);
+            rotate: (-20deg);
+        }
+        to{
+            rotate: (20deg);
+            transform: translateX(10px);
         }
     }
 
     @keyframes spin {
-        from{
+        from{   
             transform: rotate(0deg);
         }   
         to{
@@ -92,11 +124,11 @@
 
     @keyframes lock {
         from{
-            margin-left: 2px;
+           transform: translateX(2px);
         }   
         to{
-            margin-left: -2px;
-        }
+            transform: translateX(-1.5px);
+        }   
     }
 
     .s3{
@@ -220,7 +252,7 @@
             color: white;
         }
 
-        .main{
+        .slide{
             display: flex;
 
             position: relative;
@@ -238,4 +270,150 @@
         }
     }
 }
+
+
+
+@media (max-width: 760px) {
+    .pagina-home{
+        
+        .comp-carrossele{
+            .slide{
+                height: 250px;
+
+                .bt-joia{
+                    right: 65%;
+                }
+
+                .slide-item{
+                    background: cover;
+                }
+            }
+        }
+
+        .s2{
+            height: 200px;
+        }
+
+        .s2 article:nth-child(1){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(2){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(3){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .s2 article:nth-child(4){
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+            h1{
+                font-size: 14px;
+            }
+        }
+
+
+        .s3{
+            height: 156px;
+        }
+
+        .s3 article:first-child{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:nth-child(2){
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:nth-child(3){
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s3 article:last-child{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                height: 40px;
+            }
+        }
+
+        .s4{
+
+            height: 300px;
+
+            article{
+                height: 300px;
+
+                img{
+                    height: 250px;
+                }
+            }
+        }
+
+        .s5{
+            .slide{
+                height: 300px;
+
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
 

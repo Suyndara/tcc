@@ -36,7 +36,7 @@ export default function Cabecalho () {
                 </Link>
                 
                 <Link className='carrinho' to='/carrinho'>
-                    <img src={Carrinho} alt="" />
+                    <img alt="carru" src={Carrinho}/>
                 </Link>
             </article>
         </div>

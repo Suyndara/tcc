@@ -17,8 +17,12 @@
 
     .atributo {
         display: flex;
+
+        height: 100%;
+
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
     }
 
     .barra-pesquisa > input{
@@ -52,39 +56,80 @@
 
     .barra-pesquisa{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+
         border: 1px solid #000;
         width: 700px;
+
         background-color: #E2E2E2;
         height: 40px;
+        
         border-radius: 15px;
     }
 
     .navegacao{
         display: flex;
         
-        margin-top: 5px;
         justify-content: space-between;
         width: 550px;
 
         transition: .3s;
+
+        margin-bottom: 5px;
+
+        overflow: hidden;
+        position: relative;
+
+        &::after{
+            animation: revelar-texto 1s ease forwards;
+           
+            background-color: white;
+            
+            content: '';
+
+            display: block;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+            
+            padding-top: 20px;
+    
+            font-family: "fonte1";
+            font-weight: bolder;
+    
+            transition: 0.5s;
+    
+            animation: fade 1ms 0.3s forwards;
+            opacity: 0;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    } 
+
+    @keyframes revelar-texto {
+        from{
+            transform: translateX(-100%);
+        }
+
+        to{
+            transform: translateX(100%);
+        }
+    
     }
 
-    .navegacao > a{
-        text-decoration: none;
-        color: #000;
-        
-        padding-top: 20px;
-
-        font-family: "fonte1";
-        font-weight: bolder;
-
-        transition: 0.5s;
-    }
-
-    .navegacao > a:hover{
-        text-decoration: underline;
+    @keyframes fade {
+        to{
+            opacity: 1;
+        }
     }
 
     .icones{
@@ -125,18 +170,41 @@
     }
 }
 
- @media (max-width: 360px){
-    .comp-cabecalho{
-        height: 50px;
-        width: 360px;
 
-            img {
-            height:10%;
-            width: 10%;
+@media (max-width: 760px) {
+        
+    .comp-cabecalho{
+        width: 760px;
+
+        img:first-child{
+            width: 100px;
+            height: 100px;
+
         }
 
         .barra-pesquisa{
-            display: none;
+            width: 350px;
+        }
+
+        .navegacao{
+            width: 350px;
+
+            a{
+                font-size: 12px;
+            }
+        }
+
+        .icones{
+            height: auto;
+            width: 90px;
+
+            .login img, .carrinho img{
+                width: 25px;
+                height: 25px;
+
+                align-items: inherit;
+                justify-content: inherit;
+            }
         }
     }
 }

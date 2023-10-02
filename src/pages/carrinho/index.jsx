@@ -3,7 +3,6 @@ import Rodape from '../../components/rodape';
 import Resumo from '../../components/resumo'
 import './index.scss'
 import { Link } from 'react-router-dom';
-import Seta from '../../assets/img/arrow-right-long-solid.svg';
 import Lixo from '../../assets/img/trash.svg';
 import Mais from '../../assets/img/mais.svg';
 import Menos from '../../assets/img/menos.svg';
@@ -28,21 +27,21 @@ export default function Carrinho(){
                 
                     <div className='produto'>
                         <div className='informacao-produto'>
-                            <img src={Anel}/>
+                            <img src={Anel} alt='ringg'/>
                             <div className='informacao'>
                                 <h1><b>Anel solitário de ouro 18k</b></h1>
                                 <p>tamanho de aro: 9</p>
 
                                 <div className='contador'>
                                     <div>
-                                        <img src={Mais}/>
+                                        <img src={Mais} alt='s-mais'/>
                                         <p>1</p>
-                                        <img src={Menos}/>
+                                        <img src={Menos} alt='s-menos'/>
                                     </div>
                                 </div>
                             </div>
                             <div className='preco'>
-                                <img src={Lixo}/>
+                                <img src={Lixo} alt='trash-can'/>
                                 <p><b>R$ 2.600,00</b></p>
                             </div>
                         </div>
@@ -53,10 +52,8 @@ export default function Carrinho(){
                 <div className='finalizar'>
                     <div>
                     <Link to='/entrega'>FINALIZAR</Link>
-                    </div>
-                        <i className="fa-solid fa-arrow-right" style={{color: "#ffffff"}}></i>
-                    </div>
-                    
+                    </div>                    
+                </div>                 
                 <Resumo />
                 </div>
             </main>

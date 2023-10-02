@@ -87,7 +87,7 @@ export default function Filtro() {
                         <div className='produtos-row'>
                             <div className='relogio'>
                                 <div className='imagem'>
-                                    <img src={Relogio} />
+                                    <img src={Relogio} alt='clockk'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
@@ -96,7 +96,7 @@ export default function Filtro() {
 
                             <div className='relogio'>
                                 <div className='imagem'>
-                                    <img src={Escapulario} />
+                                    <img src={Escapulario} alt='escapulario'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
@@ -105,36 +105,7 @@ export default function Filtro() {
 
                             <div className='relogio'>
                                 <div className='imagem'>
-                                    <img src={Pulseira} />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-                        </div>
-
-                        <div className='produtos-row'>
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={PulseiraOuro} />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Pingente} />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} />
+                                    <img src={Pulseira} alt='puls'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
@@ -145,7 +116,7 @@ export default function Filtro() {
                         <div className='produtos-row'>
                             <div className='relogio'>
                                 <div className='imagem'>
-                                    <img src={Relogio} />
+                                    <img src={PulseiraOuro} alt='op'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
@@ -154,7 +125,7 @@ export default function Filtro() {
 
                             <div className='relogio'>
                                 <div className='imagem'>
-                                    <img src={Relogio} />
+                                    <img src={Pingente} alt='pingent'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
@@ -163,7 +134,36 @@ export default function Filtro() {
 
                             <div className='relogio'>
                                 <div className='imagem'>
-                                <img src={Relogio} />
+                                    <img src={Relogio} alt='clockk'/>
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+                        </div>
+
+                        <div className='produtos-row'>
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} alt='clock'/>
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                    <img src={Relogio} alt='clock'/>
+                                </div>
+                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
+                                <p><b>R$ 9.499,00</b></p>
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
+
+                            <div className='relogio'>
+                                <div className='imagem'>
+                                <img src={Relogio} alt='clock'/>
                                 </div>
                                 <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
                                 <p><b>R$ 9.499,00</b></p>
