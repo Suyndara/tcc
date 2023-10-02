@@ -26,7 +26,7 @@
             display: flex;
 
             height: auto;
-            width: auto;
+            width: 100px;
 
             flex-direction: column;
             align-items: center;
@@ -39,6 +39,7 @@
                 width: 50px;
 
                 transition: .3s;
+
             }
 
             h1{
@@ -51,22 +52,28 @@
     }
 
     .s2 > article:first-child > img:hover{
-        animation: truck 2s linear infinite;
-        animation-delay: 2s;
+        animation: truck;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        animation-iteration-count: 1;
     }
 
-    .s2 > article:nth-child(2) > img:hover{
-        animation: imgs linear;
+    .s2 article:first-child img{
+        width: 55px;
+    }
+
+    .s2  article:nth-child(2)  img:hover{
+        animation: imgs alternate-reverse;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
         animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        animation-duration: .2s; 
     }
 
-    .s2 > article:nth-child(3) > img:hover{
+    .s2  article:nth-child(3)  img:hover{
         animation: spin infinite 1s linear;   
     }
 
-    .s2 > article:last-child > img:hover{
+    .s2 article:last-child  img:hover{
         animation: lock linear;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -76,20 +83,21 @@
 
     @keyframes truck {
         from{
-           transform: translatex(-10px) skew(20deg);
+            transform: skewX(20deg) translateX(-25px);
         }
         to{
-            transform: translatex(20px);
-            transform: skew(-40px);
+            transform: skewX(-15deg) calc(100% + 10px);
         }
     }
 
     @keyframes imgs {
         from{
-            margin-left: 5px;
+            transform: translateX(-10px);
+            rotate: (-20deg);
         }
         to{
-            margin-left: -5px;
+            rotate: (20deg);
+            transform: translateX(10px);
         }
     }
 
@@ -104,11 +112,11 @@
 
     @keyframes lock {
         from{
-            margin-left: 2px;
+           transform: translateX(2px);
         }   
         to{
-            margin-left: -2px;
-        }
+            transform: translateX(-1.5px);
+        }   
     }
 
     .s3{
