@@ -165,3 +165,42 @@
         width: 200px;
     }
 }
+
+
+@media (max-width: 760px) {
+        
+    .comp-cabecalho{
+        width: 760px;
+
+        img:first-child{
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .barra-pesquisa{
+            width: 350px;
+        }
+
+        .navegacao{
+            width: 350px;
+
+            a{
+                font-size: 12px;
+            }
+        }
+
+        .icones{
+            height: auto;
+            width: 90px;
+
+            .login img, .carrinho img{
+                width: 25px;
+                height: 25px;
+
+                align-items: inherit;
+                justify-content: inherit;
+            }
+        }
+    }
+}
