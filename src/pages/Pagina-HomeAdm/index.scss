@@ -67,6 +67,7 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: 100%;
+
             }
 
             p{
@@ -101,5 +102,16 @@
 
     .volta{
         text-decoration: none;
+    }
+
+    .comp-lateral{
+
+        .rodape{
+            display: none;
+        }
+
+        .rodape2{
+            display: none;
+        }
     }
 }

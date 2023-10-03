@@ -36,13 +36,15 @@ export default function HomeAdm() {
                         <p>Adicionar</p>
                     </article>
 
-                    <article>
-                        <span className='a3'>
+                    <Link to='/login-adm' className='volta'>
+                        <article>
+                                <span className='a3'>
 
-                        </span>
+                                </span>
 
-                        <p>Sair</p>
-                    </article>
+                                <p>Sair</p>
+                        </article>
+                    </Link>
                 </section>
 
                 <div className="footer"></div>              
