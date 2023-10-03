@@ -52,12 +52,12 @@ export default function Carrinho(){
                 </div>
                 
                 <div className='finalizamento'>
-                <div className='finalizar'>
-                    <div>
-                    <Link to='/entrega'>FINALIZAR</Link>
-                    </div>                    
-                </div>                 
-                <Resumo />
+                    <div className='finalizar'>
+                        <div>
+                        <Link to='/entrega'>FINALIZAR</Link>
+                        </div>                    
+                    </div>                 
+                    <Resumo />
                 </div>
             </main>
 
