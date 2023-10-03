@@ -4,7 +4,7 @@ import Cabecalho from '../../components/cabecalho';
 import Rodape from '../../components/rodape';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import {  Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -49,6 +49,7 @@ export default function Detalhes(){
                     <Swiper
                         modules={[Navigation]}
                         navigation={true}
+                        loop={true}
                     >
                         <SwiperSlide>
                                 <label>

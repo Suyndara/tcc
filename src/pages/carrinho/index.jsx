@@ -68,6 +68,7 @@ export default function Carrinho(){
                     <Swiper
                         modules={[Navigation]}
                         navigation={true}
+                        loop={true}
                     >
                         <SwiperSlide>
                                 <label>
