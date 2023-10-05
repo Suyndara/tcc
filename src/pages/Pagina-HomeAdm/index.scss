@@ -1,22 +1,26 @@
 .Pagina-HomeAdm{
     display: flex;
 
-    height: 100vh;
+    height: auto;
     width: 100%;
 
-    main{
+    .analise{
         display: flex;
 
         height: auto;
         width: 100%;
 
         flex-direction: column;
+
+        .comp-opcoes{
+            height: 400px;
+        }
     }
 
     section{
         display: flex;
 
-        height: 20vh;
+        height: 60vh;
         width: 100%;
     
         align-items: center;
@@ -87,7 +91,7 @@
     .footer{
         display: flex;
 
-        height: 52%;
+        height: 100%;
         width: 100%;
 
         background-color: #EBEBEB;

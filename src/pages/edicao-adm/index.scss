@@ -159,6 +159,8 @@
                         align-self: flex-end;
                         justify-content: flex-end;
 
+                        transition: 2s;
+
                         button{
                             height: 50px;
                             width: 50px;    
@@ -166,6 +168,9 @@
                             background-color: transparent;
                             border: none;
                     
+                            border-top-left-radius: 0px;
+                            border-bottom-right-radius: 0px;
+
                             transition: .3s;
 
                             img{
@@ -173,15 +178,22 @@
                                 width: 30px;
                             }
                         }
+                
 
                         button:hover{
-                            border-top-left-radius: 20px;
-                            border-bottom-right-radius: 20px;
                             border: 1px solid black;
+                            animation: botante .3s ease-in-out forwards;
                         }
 
-                        button::before{
-                            transition: .3s ease-out;
+                        @keyframes botante {
+                            0%{
+                                border-top-left-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                            }
+                            100%{
+                                border-top-left-radius: 20px;
+                                border-bottom-right-radius: 20px;
+                            }
                         }
 
                    }

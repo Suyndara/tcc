@@ -12,11 +12,10 @@ export default function HomeAdm() {
         <div className="Pagina-HomeAdm">
            <Lateral/>
 
-            <main>
+            <main className='analise'>
                 <CabecalhoAdm/>
 
                 <Opcoes/>
-
                 <section>
                     <Link className='volta' to='/edicao'>
                         <article>

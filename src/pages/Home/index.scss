@@ -95,10 +95,10 @@
 
     @keyframes truck {
         from{
-            transform: skewX(20deg) translateX(-25px);
+            transform: skewX(20deg) translateX(-15px);
         }
         to{
-            transform: skewX(-15deg) calc(100% + 10px);
+            transform: skewX(-15deg) calc(100% + 20px);
         }
     }
 

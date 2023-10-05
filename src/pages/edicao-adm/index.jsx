@@ -1,4 +1,4 @@
-import './index.scss';
+    import './index.scss';
 import Lateral from '../../components/lateralAdm';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 
