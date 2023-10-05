@@ -7,10 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
-  const [Cliente, setCliente] = useState('')
   const [Email, setEmail] = useState ('');
   const [Senha, setSenha] = useState ('');
-  const [CadastroPessoaFisica, setCadastroPessoaFisica] = useState ('');
 
   const [ setErro] = useState('')
 
@@ -18,26 +16,23 @@ export default function Login() {
 
   async function Login() {
     try{
-      const resp = await axios.post('http://localhost:5000/usuario/login',{
-        cliente: Cliente,
+      const resp = await axios.post('http://localhost:5000/usuario/logar', {
         email: Email,
         senha: Senha,
-        cadastroPessoaFisica: CadastroPessoaFisica 
       });
 
       if(resp.status === 500){
         setErro(resp.data.erro)
       }
-
-      else(
         navigate('/')
-      )
 
     } 
 
     catch(error){
+      console.log(error);
+
       if(error.response.data === 500){
-        setErro (error.response.data.erro)
+        setErro(error.response.data.erro)
       }
     }
 
@@ -55,10 +50,8 @@ export default function Login() {
 
       <main>
         <article className='input'>
-          <input className='scs' type="text" placeholder='Nome' value={Cliente} onChange={e => setCliente (e.target.value)}/>
-          <input className='scs' type="text" placeholder='Email' value={Email} onChange={e => setEmail (e.target.value)}/>
+          <input className='scs' type="email" placeholder='Email' value={Email} onChange={e => setEmail (e.target.value)}/>
           <input className='scs' type="password" placeholder='Senha' value={Senha} onChange={e => setSenha (e.target.value)}/>
-          <input className='scs' type="text" placeholder='CPF' value={CadastroPessoaFisica} onChange={e => setCadastroPessoaFisica (e.target.value)}/>
         </article>
 
         <div className='bt-a'>
