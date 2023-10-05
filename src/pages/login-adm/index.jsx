@@ -1,5 +1,6 @@
 import './index.scss';
 import Joyeria from '../../assets/img/logo.svg';
+
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +13,7 @@ export default function LoginAdm(){
 
     const navigate = useNavigate()
 
-    async function Logar() {
+    async function LogarAdm() {
         try {
             
             const resp = await axios.post('http://localhost:5000/adm/login',{
@@ -50,7 +51,7 @@ export default function LoginAdm(){
             </article>
             </section>
 
-            <button onClick={Logar} >LOGAR</button>
+            <button onClick={LogarAdm} >LOGAR</button>
         </div>
     );
 }
