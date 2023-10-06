@@ -62,7 +62,7 @@ export default function Carrinho(){
             </main>
 
             <main className='s2'>
-                <p className='a'>AS NOSSAS RECOMENDAÇÕES</p>
+                <p className='s2-p'>AS NOSSAS RECOMENDAÇÕES</p>
                 
                 <section>
                     <Swiper
