@@ -8,4 +8,12 @@
         flex-direction: column;
         width: 100%;
     }
+
+    .comp-opcoes{
+        height: 200px;
+
+        article:first-child{
+            border: 1px solid black;
+        }
+    }
 }
