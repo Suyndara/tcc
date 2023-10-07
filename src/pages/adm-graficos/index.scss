@@ -1,0 +1,153 @@
+.graficos-adm{
+    display: flex;
+
+    height: auto;
+    width: 100%;
+
+    main{
+        display: flex;
+
+        height: auto;
+        width: 85%;
+
+        flex-direction: column;
+
+        .comp-opcoes{
+            height: 200px;
+
+            article:last-child{
+                outline: 1px solid #B3B3B3;
+            }
+
+            article:last-child:hover{
+                transform: inherit;
+            }
+
+            article:last-child:active{
+                border: inherit;
+            }
+        }
+
+        section{
+            display: flex;
+
+            height: 100vh;
+            width: 100%;
+
+            background-color: #EBEBEB;
+
+            margin-top: 5px;
+
+            justify-content: center;
+            align-items: flex-end;
+
+            article{
+                display: flex;
+
+                height: 92vh;
+                width: 94%;
+
+                background-color: #4C4C4C;
+
+                aside:first-child{
+                    display: flex;
+
+                    flex-direction: column;
+                    align-items: center;
+
+                    height: 100%;
+                    width: 50%;
+
+                    border-right: 1px solid black;
+
+                    justify-content: space-between;
+
+                    .as-porc{
+                        display: flex;
+
+                        height: 200px;
+                        width: 200px;
+
+                        background-color: transparent;
+
+                        border-radius: 50%;
+
+                        rotate: -45deg;
+
+                        border: 15px solid white;
+                        border-bottom:15px solid black;
+
+                        justify-content: center;
+                        align-items: center;
+
+                        h1{
+                            display: flex;
+
+                            font-size: 30px;
+                            color: white;
+
+                            font-family: 'lexend';
+
+                            rotate: 45deg;
+                        }
+                    }
+                }
+
+                aside > p:nth-child(1){
+                    font-family: 'lexend';
+                    font-size: 30px;
+
+                    color: white; 
+                }
+
+                .as-p{
+                    display: flex;
+
+                    height: auto;
+                    width: auto;
+
+                    flex-direction: column;
+
+                    p{
+                        font-family: 'lexend';
+                        font-size: 20px;
+
+                        color: white; 
+                    }
+                }
+
+                .as-g{
+                    height: 150px;
+                    width: 100%;
+
+                    background-image: url(../../../public/assets/img/graficos.png);
+                    background-size: 60% 100%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+
+                }
+
+                aside:last-child{
+                    display: flex;
+
+                    flex-direction: column;
+                    align-items: center;
+
+                    height: 100%;
+                    width: 50%;
+
+                    p:nth-child(2){
+                        color: white;
+                        font-family: 'lexend';
+                        font-size: 20px;
+
+                        margin-top: 10vh;
+                        margin-bottom: 10vh;
+
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

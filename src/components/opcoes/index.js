@@ -1,4 +1,5 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 export default function Opcoes() {
 
@@ -20,13 +21,15 @@ export default function Opcoes() {
                 <p>Estoques</p>
             </article>
 
-            <article>
-                <span className='a3'>
+            <Link to='/graficos-adm' className='graph'>
+                <article>
+                    <span className='a3'>
 
-                </span>
+                    </span>
 
-                <p>Gráficos</p>
-            </article>
+                    <p>Gráficos</p>
+                </article>
+            </Link>
         </div>
     )
 }
