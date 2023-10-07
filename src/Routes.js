@@ -12,6 +12,7 @@ import Filtro from './pages/filtro';
 import Carrinho from './pages/carrinho';
 import Detalhes from './pages/detalhes';
 import Conta from './pages/minha-conta';
+import Graficos from './pages/adm-graficos';
 
 
 export default function Rotas() {
@@ -25,10 +26,11 @@ export default function Rotas() {
                 <Route path='/entrega' element={< EntregaPagamento />} />
                 <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/detalhes' element={<Detalhes/>} />
-                <Route path='/login-adm' element={< LoginAdm />} />
-                <Route path='/home-adm' element={< HomeAdm />} />
                 <Route path='/filtro' element={< Filtro />} />
                 <Route path='/carrinho' element={< Carrinho />} />
+                <Route path='/login-adm' element={< LoginAdm />} />
+                <Route path='/home-adm' element={< HomeAdm />} />
+                <Route path='/graficos-adm' element={<Graficos/>} />
                 <Route path='/vendas-adm' element={< VendasADM />} />
             </Routes>
         </BrowserRouter>

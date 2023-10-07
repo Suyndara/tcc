@@ -4,7 +4,7 @@ export default function Graficos(){
 
     return(
         <div className='graficos-adm'>
-
+            
         </div>
     )
 }
