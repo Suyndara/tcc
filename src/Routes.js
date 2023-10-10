@@ -15,6 +15,7 @@ import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
+import StatusCliente from './pages/status-cliente';
 
 export default function Rotas() {
     return ( 
@@ -23,6 +24,7 @@ export default function Rotas() {
                 <Route path='/' element={<Home />} />
                 
                 <Route path='/login' element={<Login/>} />
+                <Route path='status-cliente' element={<StatusCliente />} />
                 <Route path='/minhaconta' element={<Conta/>} />
                 <Route path='/politicas' element={<Politica/>} />
                 <Route path='/cadastro' element={<Cadastro />} />

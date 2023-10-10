@@ -15,6 +15,8 @@ export default function StatusCliente(){
 
 
         <div className='pagina-status'>
+            <Cabecalho />
+            
             <div>
                 <h2>Código de Produto: T23YUY1TR3E43323</h2>
                 
