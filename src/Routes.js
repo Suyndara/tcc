@@ -13,6 +13,7 @@ import Detalhes from './pages/detalhes';
 import Conta from './pages/minha-conta';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
+import StatusCliente from './pages/status-cliente';
 
 
 export default function Rotas() {
@@ -33,6 +34,7 @@ export default function Rotas() {
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />
                 <Route path='/home-adm' element={<HomeAdm/>} />
+                
             </Routes>
         </BrowserRouter>
     )
