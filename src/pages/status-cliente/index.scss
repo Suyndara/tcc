@@ -1,0 +1,182 @@
+.pagina-status{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .codigo-status{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+
+        p{
+            display: flex;
+            align-self: flex-end;
+            font: 22px 'inria-sans';
+            font-weight: lighter;
+            margin-bottom: 40px;
+        }
+    }
+
+    .etapas{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-around;
+
+        p{
+            color: #FF0000;
+            display: flex;
+            align-self: center;
+            font-family: 'inria-sans';
+            font-size: 19px;
+            margin-top: 5px;
+        }
+
+        h3{
+            font: 24px 'inria-sans';
+        }
+    }
+
+    .comercio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+    }
+
+    
+
+    .imagem{
+        background-color: #000;
+        height: 150px;
+        width: 150px;
+        border-radius: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    
+        img{
+            width: 90px;
+        }
+
+        .money{
+            width: 120px;
+        }
+    }
+
+    .imagem2{
+        background-color: #fff;
+        height: 150px;
+        width: 150px;
+        border-radius: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 6px solid #000;
+        margin-bottom: 10px;
+
+        img{
+            width: 85px;
+        }
+
+        .especial{
+            width: 115px;
+        }
+}
+    .barra{
+        border: 5px solid black;
+        rotate: 90deg;
+        position: absolute;
+        bottom: 150px;
+        top: -195px;
+    }
+    
+    hr{
+        border: 2px solid #909090; 
+        width: 95%;
+    }
+
+    .fale-conosco{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 20px;
+        align-self: center;
+        height: 290px;
+
+        p{
+            width: 570px;
+            font: 21px 'inria-sans';
+            color: #131313;
+        }
+
+        button{
+            background-color: #000;
+            border: none;
+            color: #fff;
+            padding: 0px 10px;
+            width: 300px;
+            height: 70px;
+            border-radius: 8px;
+            font-family: 'fonte1';
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .cancelar{
+        display: flex;
+        width: 90%;
+        justify-content: flex-end;
+        height: 280px;
+        align-items: center;
+        padding: 0px 20px;
+
+        button{
+            background-color: #000;
+            border: none;
+            color: #fff;
+            padding: 0px 10px;
+            width: 300px;
+            height: 70px;
+            border-radius: 8px;
+            font-family: 'fonte1';
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .garantia{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        height: 280px;
+
+        p{
+            font: 24px 'inter';
+            width: 740px;
+            text-align: center;
+            display: flex;
+            align-self: center;
+        }
+
+        button{
+            background-color: #000;
+            border: none;
+            color: #fff;
+            padding: 0px 10px;
+            width: 700px;
+            height: 70px;
+            border-radius: 8px;
+            font-family: 'fonte1';
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+}
