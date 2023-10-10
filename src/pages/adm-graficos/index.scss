@@ -13,18 +13,19 @@
         flex-direction: column;
 
         .comp-opcoes{
-            height: 200px;
 
-            article:last-child{
-                outline: 1px solid #B3B3B3;
-            }
-
-            article:last-child:hover{
-                transform: inherit;
-            }
-
-            article:last-child:active{
-                border: inherit;
+            .graph{
+                article:last-child{
+                    outline: 1px solid #B3B3B3;
+                }
+    
+                article:last-child:hover{
+                    transform: inherit;
+                }
+    
+                article:last-child:active{
+                    border: inherit;
+                }
             }
         }
 

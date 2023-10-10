@@ -5,21 +5,26 @@ export default function Opcoes() {
 
     return(
         <div className='comp-opcoes'>
-            <article>
-                <span className='a1'>
 
-                </span>
-                
-                <p>Vendas</p>
-            </article>
+            <Link to='/vendas-adm' className='vendas'>
+                <article>
+                    <span className='a1'>
 
-            <article>
-                <span className='a2'>
+                    </span>
+                    
+                    <p>Vendas</p>
+                </article>
+            </Link>
 
-                </span>
+            <Link to='/estoque-adm' className='estoque'>
+                <article>
+                    <span className='a2'>
 
-                <p>Estoques</p>
-            </article>
+                    </span>
+
+                    <p>Estoques</p>
+                </article>
+            </Link>
 
             <Link to='/graficos-adm' className='graph'>
                 <article>

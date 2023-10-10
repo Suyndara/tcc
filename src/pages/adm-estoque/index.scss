@@ -1,0 +1,105 @@
+.pagina-estoqueAdm {
+  display: flex;
+
+  height: auto;
+  width: 100%;
+
+  .analise {
+    display: flex;
+
+    height: 100vh;
+    width: 85%;
+
+    flex-direction: column;
+
+    .comp-opcoes {
+      .estoque {
+        article:last-child {
+          outline: 1px solid #b3b3b3;
+        }
+
+        article:last-child:hover {
+          transform: inherit;
+        }
+
+        article:last-child:active {
+          border: inherit;
+        }
+      }
+    }
+
+    section {
+      display: flex;
+
+      height: 630px;
+      width: 100%;
+
+      margin-top: 5px;
+
+      background-color: #ebebeb;
+
+      align-items: flex-end;
+      justify-content: space-evenly ;
+
+      article:nth-child(1) {
+        display: flex;
+
+        height: 80%;
+        width: 150px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        background-color: white;
+
+        h1 {
+          font-size: 25px;
+          font-family: "inria-sans";
+        }
+
+        aside {
+          display: flex;
+
+          height: 60%;
+          width: auto;
+
+          flex-direction: column;
+          justify-content: space-between;
+
+
+          p {
+            font-size: 18px;
+            font-family: "inter";
+          }
+        }
+
+        button {
+          color: white;
+          background-color: black;
+          border-radius: 20px;
+
+          border: none;
+
+          height: 30px;
+          font-family: "fonte1";
+        }
+      }
+
+      .sas {
+        display: flex;
+
+        height: 80%;
+        width: 80%;
+
+        overflow-x: scroll;
+
+        flex-direction: column;
+
+        background-color: white;
+      }
+
+      
+    }
+  }
+}

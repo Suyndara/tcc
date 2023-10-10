@@ -54,4 +54,10 @@
         outline: 1px solid black;
         font-weight: bolder;
     }
+
+    button:active{
+        background-color: #000;
+        color: white;
+        font-weight: lighter;
+    }
 }

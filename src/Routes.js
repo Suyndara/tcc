@@ -16,6 +16,7 @@ import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
 import StatusCliente from './pages/status-cliente';
+import Estoque from './pages/adm-estoque';
 
 export default function Rotas() {
     return ( 
@@ -38,7 +39,7 @@ export default function Rotas() {
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />
                 <Route path='/home-adm' element={<HomeAdm/>} />
-                
+                <Route path='/estoque-adm' element={<Estoque/>} />                
             </Routes>
         </BrowserRouter>
     )
