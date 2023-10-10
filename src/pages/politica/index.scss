@@ -17,30 +17,33 @@
         flex-direction: column;
 
         p{
-            font-family: 'inria-sans';
-            margin-left: 30px;
+            font-family: 'baloothambi';
+            margin-left: 20px;
         }
 
         p:nth-child(1){
             font-weight: bolder;
             font-size: 18px;
-            
-            margin-top: 20px;
+
+            margin-top: 10px;
+            margin-left: 20px;
         }        
+
         p:nth-child(2){
             width: 90%;
         }
 
-        p:nth-child(4)
-        ,p:nth-child(6)
-         ,p:nth-child(1){
+        p:nth-child(4),
+            p:nth-child(6){
             font-weight: bolder;
         }
 
         .topico{
             font-family: 'baloothambi';
+            margin-left: 20px;
             margin-bottom: 10px;
         }
+
     }
 }
 

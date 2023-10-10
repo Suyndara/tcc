@@ -82,6 +82,11 @@
         border: 1px solid #616161;
     }
 
+    .botones:active{
+        color: white;
+        background-color: black;
+    }
+
     .input {
         display: flex;
 

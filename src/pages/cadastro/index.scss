@@ -95,29 +95,23 @@
             transition: .3s;
         }
 
+        button:active{
+            background-color: black;
+            color: white;
+        }
+
         input:focus-visible{
             outline: none;
         }
     }
 
     
-    .input > input:nth-child(1){
-        border-bottom: 1px solid black;
-    }
-
-    .input > input:nth-child(2){
-        border-bottom: 1px solid black;
-    }
-
-    .input > input:nth-child(3){
-        border-bottom: 1px solid black;
-    }
-
-    .input > input:nth-child(4){
-        border-bottom: 1px solid black;
-    }
-    
-    .input > input:nth-child(5){
+    .input > input:nth-child(1),
+     .input > input:nth-child(2),
+      .input > input:nth-child(3),
+       .input > input:nth-child(4),
+        .input > input:nth-child(5){
+        
         border-bottom: 1px solid black;
     }
 }
