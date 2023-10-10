@@ -11,9 +11,10 @@ import Carrinho from './pages/carrinho';
 import Cadastro from './pages/cadastro';
 import Detalhes from './pages/detalhes';
 import Conta from './pages/minha-conta';
+import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
-
+import Guia from './pages/guia';
 
 export default function Rotas() {
     return ( 
@@ -23,12 +24,14 @@ export default function Rotas() {
                 
                 <Route path='/login' element={<Login/>} />
                 <Route path='/minhaconta' element={<Conta/>} />
+                <Route path='/politicas' element={<Politica/>} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/detalhes' element={<Detalhes/>} />
                 <Route path='/carrinho' element={<Carrinho/>} />
                 <Route path='/entrega' element={<EntregaPagamento/>} />
                 <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/filtro' element={<Filtro/>} />
+                <Route path='/guia' element={<Guia/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />

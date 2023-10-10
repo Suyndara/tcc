@@ -1,0 +1,54 @@
+.pagina-guia{
+    display: flex;
+
+    height: auto;
+    width: 100%;
+
+    flex-direction: column;
+
+    main{
+        display: flex;
+
+        height: auto;
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        img:nth-child(6){
+            height: 300px;
+            width: 600px;
+        }
+
+        img:last-child{
+            height: 300px;
+            width: 500px;
+        }
+
+        h1,h2,p{ 
+            font-family: 'inria-sans';
+            text-align: center;
+        }
+
+        h1{
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        p:nth-child(3){
+            width: 70%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        p:nth-child(5){
+            width: 67%;
+        }
+
+        h2{
+            margin-bottom: 10px;
+        }
+    }
+}
