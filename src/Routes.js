@@ -14,7 +14,7 @@ import Conta from './pages/minha-conta';
 import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
-
+import Guia from './pages/guia';
 
 export default function Rotas() {
     return ( 
