@@ -92,14 +92,27 @@
         height: 80%;
         width: 80%;
 
-        overflow-x: scroll;
+        overflow-y: scroll;
 
         flex-direction: column;
 
         background-color: white;
-      }
 
-      
+        
+      }
+        .sas::-webkit-scrollbar{
+            width: 15px;
+        }
+
+        .sas::-webkit-scrollbar-track{
+            background: transparent;
+        }
+        .sas::-webkit-scrollbar-thumb{
+            background-color: blue;
+            height: 20px;
+            border-radius: 14px;
+
+        }
     }
   }
 }

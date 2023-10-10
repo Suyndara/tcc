@@ -37,19 +37,19 @@ export default function Estoque() {
                             <p>Correntes</p>
                             <p>Brincos</p>
                             <p>Colares</p>
-                            <p>Pedras</p><p>Joias</p>
+                            <p>Pedras</p>  <p>Joias</p>
                             <p>Aneis</p>
                             <p>Relogios</p>
                             <p>Correntes</p>
                             <p>Brincos</p>
                             <p>Colares</p>
-                            <p>Pedras</p><p>Joias</p>
+                            <p>Pedras</p>  <p>Joias</p>
                             <p>Aneis</p>
                             <p>Relogios</p>
                             <p>Correntes</p>
                             <p>Brincos</p>
                             <p>Colares</p>
-                            <p>Pedras</p><p>Joias</p>
+                            <p>Pedras</p>  <p>Joias</p>
                             <p>Aneis</p>
                             <p>Relogios</p>
                             <p>Correntes</p>
