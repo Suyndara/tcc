@@ -10,10 +10,18 @@
     }
 
     .comp-opcoes{
-        height: 200px;
+        .vendas{   
+            article:last-child{
+                outline: 1px solid #B3B3B3;
+            }
 
-        article:first-child{
-            border: 1px solid black;
+            article:last-child:hover{
+                transform: inherit;
+            }
+
+            article:last-child:active{
+                border: inherit;
+            }
         }
     }
 }
