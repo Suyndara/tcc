@@ -8,10 +8,18 @@
     background-color: #F2F2F2;
     width: 100%;
 
+
      img{
         height: 35%;
         margin-bottom: 20px;
-    }
+     }
+
+     .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
 
     .atributo{
         display: flex;
@@ -22,7 +30,7 @@
         background-color: #F2F2F2;
         height: 50px;
         border-radius: 30px;
-        margin: 25px;
+        margin: 15px;
     }
 
     .atributo > input{
@@ -46,6 +54,8 @@
         font-family: 'fonte1';
         letter-spacing: 2px;
         transition: .3s;
+
+        margin-top: 30px;
     }
 
     button:hover{
