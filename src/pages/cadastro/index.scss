@@ -4,10 +4,12 @@
     flex-direction: column;
     align-items: center;
 
-    height: 130vh;
+    height: 100vh;
     width: 100%;
 
     background-color: #F0EFEF;
+
+    overflow: hidden;
 
     .titulo {
         display: flex;
@@ -48,7 +50,8 @@
 
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        padding: 40px;
+        gap: 10px;
 
         height: 450px;
         width: 430px;
@@ -70,6 +73,8 @@
             padding-left: 20px;
 
             background-color: #ffffff8a;
+
+            font-family: 'inria-sans';
         }
 
         button {

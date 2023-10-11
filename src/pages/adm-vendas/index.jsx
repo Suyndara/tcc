@@ -17,6 +17,34 @@ export default function VendasADM(){
             <section>
                 <CabecalhoADM />
                 <Opcoes />
+                
+                <div className='gay'>
+                <div className='tabela'>
+                <table>
+                  <thead>
+                    <tr>
+                      <th> produto </th>
+                      <th> cliente </th>
+                      <th> parcelas </th>
+                      <th> status </th> 
+                    </tr>
+                  </thead>
+                  <tbody> 
+                      <tr>
+                        <td> </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>  
+                  </tbody>
+                </table>
+              </div>
+
+              <button>VERIFICAR</button>
+              </div>
             </section>
         </div>
     );

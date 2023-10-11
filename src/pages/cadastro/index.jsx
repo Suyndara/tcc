@@ -12,7 +12,6 @@ export default function Cadastro() {
     const [Email, setEmail] = useState ('');
     const [Senha, setSenha] = useState ('');
     const [Confirmar, setConfirmar] = useState('');
-    const [Cpf, setCpf] = useState ('');
     const [ setErro] = useState('')
 
     const navigate = useNavigate()
@@ -52,10 +51,10 @@ export default function Cadastro() {
             </article>
             
             <article className='input'>
-                <input type="text" placeholder='Nome completo' value={Nome} onChange={e => setNome (e.target.value)}/>
-                <input type="text" placeholder='Email' value={Email} onChange={e => setEmail (e.target.value)}/>
-                <input type="text" placeholder='Senha' value={Senha} onChange={e => setSenha (e.target.value)} />
-                <input type="text" placeholder='Confirmar senha' value={Confirmar} onChange={e => setConfirmar (e.target.value)}/>
+                <input type="text" placeholder='NOME COMPLETO' value={Nome} onChange={e => setNome (e.target.value)}/>
+                <input type="text" placeholder='EMAIL' value={Email} onChange={e => setEmail (e.target.value)}/>
+                <input type="text" placeholder='SENHA' value={Senha} onChange={e => setSenha (e.target.value)} />
+                <input type="text" placeholder='CONFIRMAR SENHA' value={Confirmar} onChange={e => setConfirmar (e.target.value)}/>
 
                 <button onClick={Cadastrar}> Registrar </button>
             </article>
