@@ -1,57 +1,78 @@
 import './index.scss';
-import Joyeria from '../../assets/img/logo.svg';
 
-import { useState } from 'react';
-import axios from 'axios';
+import Joyeria from '../../assets/img/logo.svg';
+import LoadingBar from 'react-top-loading-bar';
+import storage from 'local-storage'
+
+
+import { SingUpAdm } from '../../api/admApi.js';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginAdm(){
 
-    const [Email, setEmail] = useState ('');
-    const [Senha, setSenha] = useState ('');
-    const [ setErro] = useState ('')
+export default function LognAdm(){
 
-    const navigate = useNavigate()
+    const [ email, setEmail ] = useState('');
+    const [ senha, setSenha ] = useState('');
+    const [ erro, setErro ] = useState('');
+
+    const [ carregando, setCarregando ] = useState(false)
+
+
+    const navigate = useNavigate();
+    const ref = useRef();
+
+    useEffect(() => {
+        if (storage('adm-logado')) {
+            navigate('/home-adm')
+        }
+    }, [])
 
     async function LogarAdm() {
+        ref.current.continuousStart();
+        setCarregando(true);
+
         try {
-            
-            const resp = await axios.post('http://localhost:5000/adm/login',{
-                email: Email,
-                senha: Senha
-            });
+            const resp = await SingUpAdm(email, senha);
+            storage('adm-logado', resp)
 
-            if (resp.status === 500){
-                setErro(resp.data.erro)
-            }
-
-            else (
-                navigate('/home-adm')
-            ) 
+            setTimeout(() => {
+                navigate('/home-adm');
+            }, 3000)
 
         } catch (error) {
-            if (error.response.data === 500){
-                setErro (error.response.data.erro)
-             }
+            ref.current.complete();
+            setCarregando(false);
+            if ( error.response.status === 401 ) {
+                setErro(error.response.data.erro)
+            }
         }
     }
 
-    return(
+    return (
         
         <div className='pagina-loginAdm'>
+            <LoadingBar color='#ffc86d' ref={ref} />  
             <img src={Joyeria} alt='joyeria'/>
 
             <section className='inputs'>
-            <article className="atributo">
-                    <input type="text" placeholder='Administrador' value={Email} onChange={e => setEmail (e.target.value)} />      
-            </article>
 
-            <article className="atributo">
-                <input type='password' placeholder='Senha' value={Senha} onChange={e => setSenha (e.target.value)}/>
-            </article>
+                <article className="atributo">
+                    <input type="text" placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)} />      
+                </article>
+
+                <article className="atributo">
+                    <input type='password' placeholder='***' value={senha} onChange={e => setSenha(e.target.value)}/>
+                </article>
+
+                <div>
+                    { erro }   
+                </div>
+
             </section>
 
-            <button onClick={LogarAdm} >LOGAR</button>
+            <button onClick={LogarAdm} disabled={carregando}>LOGAR</button>
+     
         </div>
     );
 }

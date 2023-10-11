@@ -1,6 +1,19 @@
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './index.scss';
 
+import storage from 'local-storage';
+
 export default function CabecalhoAdm(){
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (!storage('adm-logado')) {
+            navigate('/login-adm')
+        }
+    }, [])
 
     return(
         <div className='comp-CabecalhoAdm'>   
