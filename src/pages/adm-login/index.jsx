@@ -2,13 +2,15 @@ import './index.scss';
 
 import Joyeria from '../../assets/img/logo.svg';
 import LoadingBar from 'react-top-loading-bar';
-import axios from 'axios';
+import storage from 'local-storage'
 
-import { useState, useRef } from 'react';
+
+import { SingUpAdm } from '../../api/admApi.js';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function LoginAdm(){
+export default function LognAdm(){
 
     const [ email, setEmail ] = useState('');
     const [ senha, setSenha ] = useState('');
@@ -20,17 +22,19 @@ export default function LoginAdm(){
     const navigate = useNavigate();
     const ref = useRef();
 
+    useEffect(() => {
+        if (storage('adm-logado')) {
+            navigate('/home-adm')
+        }
+    }, [])
 
     async function LogarAdm() {
         ref.current.continuousStart();
         setCarregando(true);
 
         try {
-            const resp = await axios.post('http://localhost:5000/adm/logar', {
-                email: email,
-                senha: senha
-            });
-                
+            const resp = await SingUpAdm(email, senha);
+            storage('adm-logado', resp)
 
             setTimeout(() => {
                 navigate('/home-adm');

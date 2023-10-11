@@ -1,11 +1,24 @@
 import './index.scss';
+
+
+import storage from 'local-storage';
 import Lateral from "../../components/lateralAdm";
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 import Opcoes from '../../components/opcoes';
 
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 export default function HomeAdm() {
+
+    const navigate = useNavigate();
+
+    function SairClick () {
+        storage.remove('adm-logado');
+        navigate('/login-adm')
+    }
     
 
     return (
@@ -36,7 +49,7 @@ export default function HomeAdm() {
                     </article>
 
                     <Link to='/login-adm' className='volta'>
-                        <article>
+                        <article onClick={SairClick}>
                                 <span className='a3'>
 
                                 </span>
