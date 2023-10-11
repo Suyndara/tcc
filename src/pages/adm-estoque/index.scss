@@ -7,12 +7,15 @@
   .analise {
     display: flex;
 
-    height: 100vh;
+    height: auto;
     width: 85%;
 
     flex-direction: column;
 
+
     .comp-opcoes {
+      height: 200px;
+
       .estoque {
         article:last-child {
           outline: 1px solid #b3b3b3;
@@ -82,7 +85,19 @@
           border: none;
 
           height: 30px;
+          width: 130px;
+
           font-family: "fonte1";
+
+          transition: .2s;
+        }
+
+        button:hover{
+          background-color: white;
+          color: black;
+
+          outline: 1px solid black;
+          font-weight: bolder;
         }
       }
 
@@ -96,22 +111,78 @@
 
         flex-direction: column;
 
-        background-color: white;
+        align-items: center;
 
-        
+        aside{
+          display: flex;
+
+          height: 150px;
+          width: 98%;
+
+          background-color: #BEBEBE;
+
+          justify-content: center;
+          align-items: center;
+
+          border-radius: 20px;
+
+          margin: 5px;
+
+          .itens{
+            display: flex;
+
+            height: 125px;
+            width: 97%;
+
+            background-color: white;
+
+            border-radius: 20px;
+
+            img{
+              height: 100px;
+              width: 100px;
+            }
+
+            .infos{
+              display: flex;
+
+              height: auto;
+              width: auto;
+
+              justify-content: center;
+
+              h1{
+                font-family: 'inter';
+
+                font-size: 20px;
+              }
+            }
+          }
+
+          .ifs{
+            display: flex;
+
+            height: auto;
+            width: auto;
+
+            align-self: center;
+
+            flex-direction: column;
+          }
+        }
+
       }
         .sas::-webkit-scrollbar{
-            width: 15px;
+            width: 10px;
         }
 
         .sas::-webkit-scrollbar-track{
             background: transparent;
+            width: 10px;
         }
         .sas::-webkit-scrollbar-thumb{
-            background-color: blue;
-            height: 20px;
+            background-color: grey;
             border-radius: 14px;
-
         }
     }
   }
