@@ -23,8 +23,7 @@ export default function Cadastro() {
                 nome: Nome,
                 email: Email,
                 senha: Senha,
-                confirmar: Confirmar,
-                cpf: Cpf
+                confirmar: Confirmar
             });
 
             if(resp.status === 500){
@@ -57,7 +56,6 @@ export default function Cadastro() {
                 <input type="text" placeholder='Email' value={Email} onChange={e => setEmail (e.target.value)}/>
                 <input type="text" placeholder='Senha' value={Senha} onChange={e => setSenha (e.target.value)} />
                 <input type="text" placeholder='Confirmar senha' value={Confirmar} onChange={e => setConfirmar (e.target.value)}/>
-                <input type="text" placeholder='CPF' value={Cpf} onChange={e => setCpf (e.target.value)}/>
 
                 <button onClick={Cadastrar}> Registrar </button>
             </article>
