@@ -22,11 +22,12 @@ export default function LognAdm(){
     const navigate = useNavigate();
     const ref = useRef();
 
+
     useEffect(() => {
         if (storage('adm-logado')) {
-            navigate('/home-adm')
+           navigate('/home-adm');
         }
-    }, [])
+    }, []);
 
     async function LogarAdm() {
         ref.current.continuousStart();
@@ -34,6 +35,7 @@ export default function LognAdm(){
 
         try {
             const resp = await SingUpAdm(email, senha);
+
             storage('adm-logado', resp)
 
             setTimeout(() => {
@@ -43,6 +45,7 @@ export default function LognAdm(){
         } catch (error) {
             ref.current.complete();
             setCarregando(false);
+
             if ( error.response.status === 401 ) {
                 setErro(error.response.data.erro)
             }
@@ -58,11 +61,11 @@ export default function LognAdm(){
             <section className='inputs'>
 
                 <article className="atributo">
-                    <input type="text" placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)} />      
+                    <input type="email" placeholder='Administrador' value={email} onChange={e => setEmail(e.target.value)} />      
                 </article>
 
                 <article className="atributo">
-                    <input type='password' placeholder='***' value={senha} onChange={e => setSenha(e.target.value)}/>
+                    <input type='password' placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)}/>
                 </article>
 
                 <div>
@@ -75,4 +78,4 @@ export default function LognAdm(){
      
         </div>
     );
-}
+};

@@ -1,9 +1,12 @@
+import './index.scss';
+
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './index.scss';
 
 import storage from 'local-storage';
+
+
 
 export default function CabecalhoAdm(){
 
@@ -24,6 +27,7 @@ export default function CabecalhoAdm(){
 
                 <img src="/assets/img/i-settings.png" alt="" />
                 <input type='text' placeholder='Procure o Pin'/>
+
             </nav>
         </div>
     )

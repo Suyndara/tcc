@@ -8,18 +8,18 @@ import Opcoes from '../../components/opcoes';
 
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 
 export default function HomeAdm() {
 
+
     const navigate = useNavigate();
 
-    function SairClick () {
+    function RemoverAdm() {
         storage.remove('adm-logado');
-        navigate('/login-adm')
+        navigate('/login-adm');
     }
-    
+
 
     return (
         <div className="Pagina-HomeAdm">
@@ -49,7 +49,7 @@ export default function HomeAdm() {
                     </article>
 
                     <Link to='/login-adm' className='volta'>
-                        <article onClick={SairClick}>
+                        <article onClick={ RemoverAdm }>
                                 <span className='a3'>
 
                                 </span>
