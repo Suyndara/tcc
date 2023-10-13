@@ -13,13 +13,13 @@ import { CadastrarJoia, AdicionarImg } from '../../api/admAdd.js'
 
 export default function Edicao(){
 
-    const [ nome, setNome ] = useState();
+    const [ nome, setNome ] = useState('');
     const [ preco, setPreco ] = useState();
     const [ categoria, setCategoria ] = useState();
     const [ subCategoria, setSubCategoria ] = useState();
     const [ estoque, setEstoque ] = useState();
-    const [ composicao, setComposicao ] = useState();
-    const [ detalhes, setDestalhes ] = useState();
+    const [ composicao, setComposicao ] = useState('');
+    const [ detalhes, setDestalhes ] = useState('');
     const [ disponivel, setDisponivel ] = useState(false);
 
     const [ imagem, setImg ] = useState();
@@ -31,10 +31,10 @@ export default function Edicao(){
             
             const resp = await CadastrarJoia( nome, preco, disponivel, estoque, composicao, detalhes, categoria, subCategoria );
 
-            toast('Filme Cadastrado')
+            toast.done('Filme Cadastrado');
 
         } catch (error) {
-            alert(error.message);
+            toast.error(error.message);
         }
     };
 
