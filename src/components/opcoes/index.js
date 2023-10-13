@@ -22,7 +22,7 @@ export default function Opcoes() {
 
                     </span>
 
-                    <p>Estoques</p>
+                    <p>Consultar</p>
                 </article>
             </Link>
 

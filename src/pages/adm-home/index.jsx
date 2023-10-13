@@ -11,14 +11,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function HomeAdm() {
-
-
     const navigate = useNavigate();
 
     function RemoverAdm() {
         storage.remove('adm-logado');
         navigate('/login-adm');
-    }
+    };
 
 
     return (
@@ -36,7 +34,7 @@ export default function HomeAdm() {
 
                             </span>
                             
-                            <p>Editor</p>
+                            <p>Editar</p>
                         </article>
                     </Link>
 
@@ -45,7 +43,7 @@ export default function HomeAdm() {
 
                         </span>
 
-                        <p>Adicionar</p>
+                        <p>Cadastrar</p>
                     </article>
 
                     <Link to='/login-adm' className='volta'>
