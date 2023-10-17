@@ -61,7 +61,7 @@ export default function Edicao(){
                             <textarea placeholder='Composição'value={composicao} onChange={e => setComposicao(e.target.value)} />
                             <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)}/>
 
-                            <div>
+                            <div>   
 
                                 <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
                                 <p> Disponivel </p>

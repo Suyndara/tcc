@@ -180,3 +180,19 @@
         }
     }
 }
+
+@media (max-width: 760px) {
+    .Rodape{
+        height: 200px;
+        
+        .Duvidas{
+            h1{
+                font-size: 15px;
+            }
+        
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}
