@@ -1,7 +1,7 @@
 .pagina-login {
     display: flex;
 
-    height: 130vh;
+    height: auto;
     width: 100%;
 
     flex-direction: column;
@@ -112,6 +112,37 @@
             color: #535353;
             text-align: center;
             font-family: 'inter';
+        }
+    }
+}
+
+@media  (max-width: 720px){
+    .pagina-login{
+
+        main{
+            height: 350px;
+
+            .input{
+                height: 160px;
+            }
+        }
+
+        .titulo{
+
+            h1{
+                font-size: 30px;
+            }
+        }
+
+        .input{
+            width: 100%;
+            align-items: center;
+
+            .scs{
+                width: 80%;
+                
+
+            }
         }
     }
 }

@@ -171,10 +171,10 @@
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: 720px) {
         
     .comp-cabecalho{
-        width: 760px;
+        width: 720px;
 
         img:first-child{
             width: 100px;
@@ -205,6 +205,58 @@
                 align-items: inherit;
                 justify-content: inherit;
                 
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+        
+    .comp-cabecalho{
+        width: auto;
+
+        .logo{
+            width: 40px;
+            height: 40px;
+        }
+
+        img:first-child{
+            width: 50px;
+            height: 50px;
+        }
+
+        .barra-pesquisa{
+            width: 220px;
+            height: 30px;
+
+            border-radius: 10px;
+        }
+
+        .atributo{
+            img{
+                height: 30px;
+                width: 33px;
+            }
+        }
+
+        .navegacao{
+            width: 250px;
+
+            a{
+                font-size: 10px;
+            }
+        }
+
+        .icones{
+            height: auto;
+            width: 50px;
+
+            .login img, .carrinho img{
+                width: 15px;
+                height: 15px;
+
+                align-items: inherit;
+                justify-content: inherit;
             }
         }
     }
