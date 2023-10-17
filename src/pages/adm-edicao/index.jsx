@@ -28,10 +28,10 @@ export default function Edicao(){
         try {
             
             const resp = await CadastrarJoia( nome, preco, disponivel, estoque, composicao, detalhes, categoria, subcategoria );
-            console.log(CadastrarJoia);
+            alert('Cadastrado Com Sucesso')
 
         } catch (error) {
-            toast.error(error.message);
+            alert(error.response.data.erro);
         }
     };
 
