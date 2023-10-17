@@ -43,7 +43,7 @@ export default function HomeAdm() {
 
                         </span>
 
-                        <p>Cadastrar</p>
+                        <p>Cadastrarr</p>
                     </article>
 
                     <Link to='/login-adm' className='volta'>
