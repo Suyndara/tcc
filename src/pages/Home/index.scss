@@ -292,6 +292,7 @@
 
         .s2{
             height: 200px;
+            width: auto;
         }
 
         .s2 article:nth-child(1),
@@ -315,8 +316,9 @@
         }
 
         .s3 article:first-child,
-         .s3 article:nth-child(3),
-          .s3 article:last-child{
+         .s3 article:nth-child(2),
+          .s3 article:nth-child(3),
+           .s3 article:last-child{
 
             img{
                 width: 100px;
