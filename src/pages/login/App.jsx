@@ -13,7 +13,7 @@ export default function Login() {
       <article className="titulo">
 
         <h1>FAÇA SEU</h1>
-        <h1> LOGIN</h1>
+        <h1>LOGIN</h1>
 
       </article>
 

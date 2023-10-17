@@ -124,8 +124,6 @@
 @media (max-width: 720px) {
     .pagina-cadastro{
 
-        
-
         .titulo{
             h1{
                 font-size: 25px;
@@ -152,14 +150,14 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 360px) {
     .pagina-cadastro{
-
         
+        width: auto;
 
         .titulo{
             h1{
-                font-size: 25px;
+                font-size: 50px;
             }
 
             h2{

@@ -217,7 +217,7 @@
 
         .logo{
             width: 40px;
-            height: 40px;
+            height: 20px;
         }
 
         img:first-child{
@@ -227,7 +227,7 @@
 
         .barra-pesquisa{
             width: 220px;
-            height: 30px;
+            height: 25px;
 
             border-radius: 10px;
         }
@@ -250,6 +250,8 @@
         .icones{
             height: auto;
             width: 50px;
+
+            padding-top: 30px;
 
             .login img, .carrinho img{
                 width: 15px;
