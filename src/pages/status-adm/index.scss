@@ -1,0 +1,29 @@
+.pagina-statusadm{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    section{
+        width: 100%;
+        background-color: #EBEBEB;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    main{
+        background-color: #fff;
+        margin-top: 5px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+        width: 600px;
+    }
+
+    .editor{
+        display: flex;
+        flex-direction: column;
+    }
+}
