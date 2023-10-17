@@ -50,6 +50,12 @@ export default function LognAdm(){
                 setErro(error.response.data.erro)
             }
         }
+
+    }
+
+    function teclaPressionada(e){
+        if(e.key === 'Enter')
+        LogarAdm();
     }
 
     return (
@@ -65,7 +71,7 @@ export default function LognAdm(){
                 </article>
 
                 <article className="atributo">
-                    <input type='password' placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)}/>
+                    <input type='password' placeholder='Senha' value={senha} onKeyUp={teclaPressionada} onChange={e => setSenha(e.target.value)}/>
                 </article>
 
                 <div>

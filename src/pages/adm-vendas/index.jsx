@@ -31,9 +31,6 @@ export default function VendasADM(){
                   </thead>
                   <tbody> 
                       <tr>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

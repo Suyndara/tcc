@@ -32,9 +32,9 @@ export default function Rotas() {
                 <Route path='/detalhes' element={<Detalhes/>} />
                 <Route path='/carrinho' element={<Carrinho/>} />
                 <Route path='/entrega' element={<EntregaPagamento/>} />
-                <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
+                <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />
