@@ -24,16 +24,16 @@ export async function cadastrarJoia(nome, preco, categoria, subcategoria, estoqu
 
 
 
-export async function AdicionarImg(imagem) {
-    const formData = new FormData();
-    formData.append('Produto', imagem)
 
 
-    const resp = await api.post('/produto/img', formData, {
-        headers: {
-            "Content-Type": "multipart/form-data"
-        },
-    });
+export async function ConsultarTodos() {
+    const resp = await api.get('/listar/produtos');
+    return resp.data;
+}
 
-    return resp.status;
-};
+
+
+export async function ConsultarPorNome(nome) {    
+    const resp = await api.get(`/buscar/produto?nome=${nome}`);
+    return resp.data;
+}

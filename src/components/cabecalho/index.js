@@ -1,20 +1,17 @@
 import './index.scss';
 
-import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 import Logo from '../../assets/img/logo.svg'
 import Lupa from '../../assets/img/lupa.png'
 import Pessoa from '../../assets/img/pessoinha.png'
 import Carrinho from '../../assets/img/carrinho.png'
-import storage from 'local-storage';
 
 
 
 export default function Cabecalho () {
-
-    const navigate = useNavigate();
 
     return(
         <div className='comp-cabecalho' > 

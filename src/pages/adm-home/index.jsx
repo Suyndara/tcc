@@ -38,13 +38,15 @@ export default function HomeAdm() {
                         </article>
                     </Link>
 
+                    <Link className='volta' to='/consultar-adm'>
                     <article>
                         <span className='a2'>
 
                         </span>
 
-                        <p>Cadastrar</p>
+                        <p>Produtos</p>
                     </article>
+                    </Link>
 
                     <Link to='/login-adm' className='volta'>
                         <article onClick={ RemoverAdm }>
