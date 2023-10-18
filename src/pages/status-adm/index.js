@@ -1,7 +1,7 @@
 import './index.scss';
 import Cabecalho from '../../components/cabecalhoAdm';
 import Lateral from '../../components/lateralAdm';
-
+import Anel from '../../assets/img/anel.svg'
 
 
 export default function StatusAdm(){
@@ -14,9 +14,10 @@ export default function StatusAdm(){
         <div className='pagina-statusadm'>
             <Lateral />
 
+            <div className='cabeca'>
+            <Cabecalho />
             <section>
-                <Cabecalho />
-
+                
                 <main>
                     <div className='editor'>
                         <h1>EDITOR DE STATUS</h1>
@@ -43,13 +44,14 @@ export default function StatusAdm(){
                             <h1>Produto:</h1>
 
                             <div className='produto-imagem'>
-                                <img src='' alt=''/>
+                                <img src={Anel} alt=''/>
                                 <p>Anel solitário de ouro 18k</p>
                             </div>
                         </div>
                     </div>
                 </main>
             </section>
+            </div>
         </div>
     );
 }
