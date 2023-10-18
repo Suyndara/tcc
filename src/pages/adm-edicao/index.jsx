@@ -8,7 +8,7 @@ import CabecalhoAdm from '../../components/cabecalhoAdm';
 
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
-import { cadastrarJoia, AdicionarImg } from '../../api/admAdd'
+import { cadastrarJoia } from '../../api/admAdd'
 
 
 export default function Edicao(){
@@ -22,30 +22,18 @@ export default function Edicao(){
     const [ detalhes, setDestalhes ] = useState();
     const [ disponivel, setDisponivel ] = useState(false);
 
-    const [ imagem, setImagem ] = useState()
-
-
 
     async function AdicionarProduto() {
         try {
             
             const resp = await cadastrarJoia( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
-            toast.success('Sucesso')
+            toast.success('Sucesso');
 
         } catch (error) {
             toast.error(error.response.data.erro);
         }
     };
 
-    async function AdicionarImg() {
-        try {
-            
-            const resp = await AdicionarImg(imagem);
-
-        } catch (error) {
-            toast.error(error.response.data.erro);
-        }
-    }
 
 
 
@@ -87,12 +75,6 @@ export default function Edicao(){
                         <aside>
                             <article >
                                 <h1>imagens.png</h1>
-
-                               <div className='bt-img'>
-                                    <button onClick={ AdicionarImg }>
-                                        <img src="/assets/img/plus.png" alt="ms" />
-                                    </button>
-                                </div> 
                             </article>
                         </aside>
                     </article>

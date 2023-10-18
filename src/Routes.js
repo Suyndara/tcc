@@ -18,6 +18,7 @@ import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
+import Produtos from './pages/adm-cadastrar';
 
 export default function Rotas() {
     return ( 
@@ -37,7 +38,7 @@ export default function Rotas() {
                 <Route path='/guia' element={<Guia/>} />
                 <Route path='/edicao' element={<Edicao/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
-                <Route path='/estoque-adm' element={<Estoque/>} />
+                <Route path='/consultar-adm' element={<Produtos />} />
                 <Route path='/estoque-adm' element={<Estoque/>} />
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/status-adm' element={<StatusAdm/>} />
