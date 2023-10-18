@@ -3,13 +3,23 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    background-color: #fff;
+    overflow: hidden;
 
     section{
         width: 100%;
         background-color: #EBEBEB;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 92vh;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cabeca{
+        width: 100%;
+        margin-left: 5px;
     }
 
     main{
@@ -19,11 +29,114 @@
         display: flex;
         flex-direction: column;
         padding: 10px 10px;
-        width: 600px;
+        width: 900px;
+        height: 600px;
+        border-radius: 8px;
+        padding: 20px 40px;
     }
 
     .editor{
         display: flex;
         flex-direction: column;
+        align-items: center;
+
+        h1{
+            justify-content: center;
+            display: flex;
+            font: 21px 'inria-sans';
+            margin-bottom: 25px;
+        }
+
+        input{
+            background-color: #EBEBEB;
+            border: none;
+            outline: none;
+            padding: 7px 10px;
+            width: 250px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+    }
+
+    .status-produto{
+        height: 340px;
+        display: flex;
+        align-items: flex-end;
+        width: 650px;
+        justify-content: space-between;
+    }
+
+    .status{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+
+        h1{
+            font: 21px 'inter';
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        select{
+            background-color: #EBEBEB;
+            padding: 5px 10px;
+            width: 150px;
+            border: none;
+            margin-bottom: 10px;
+            outline: none;
+            font-family: 'inter';
+            border-radius: 3px;
+            align-self: center;
+        }
+    }
+
+    .produto{
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            font: 21px 'inter';
+            font-weight: 600;
+            margin-bottom: 45px;
+        }
+    } 
+
+    .produto-imagem{
+        margin-bottom: 35px;
+        border: 1px solid #000;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 300px;
+
+        p{
+            font: 15px 'inter';
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        img{
+            width: 60px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+    }
+
+    button{
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 8px ;
+        cursor: pointer;
+        border-radius: 3px;
+        width: 110px;
+        transition: 0.3s;
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    button:hover{
+        background-color: #242424;
     }
 }
