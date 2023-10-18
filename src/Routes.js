@@ -18,7 +18,7 @@ import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
-import Produtos from './pages/adm-cadastrar';
+import Produtos from './pages/adm-consultar';
 
 export default function Rotas() {
     return ( 

@@ -46,7 +46,7 @@ export default function Produtos() {
 
                     <div>
 
-                        <input type="text" placeholder='Buscar' value={filtro} onChange={e => setFiltro(e.target.value)} />
+                        <input type="text" placeholder='Buscar produto por nome' value={filtro} onChange={e => setFiltro(e.target.value)} />
                         <img src={Lupa} alt="Busca"  onClick={filtrar}/>
 
                     </div>
@@ -73,7 +73,7 @@ export default function Produtos() {
                                         <td> {item.nome} </td>
                                         <td> {item.preco} </td>
                                         <td> {item.estoque} </td>
-                                        <td> {item.disponivel ? 'Sim' : 'Não'} </td>
+                                        <td> {item.disponivel ? 'Produto disponivel' : 'Produto Não disponivel'} </td>
                                         <td> {item.categoria} </td>
                                         <td> {item.categoriaSub} </td>
                                         {<td>
