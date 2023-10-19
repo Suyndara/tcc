@@ -24,18 +24,58 @@ export default function Edicao(){
     const [ disponivel, setDisponivel ] = useState(false);
 
 
+    const [ buscaCategoria, setBuscaCategoria ] = useState([]);
+    const [ buscaSubCategoria, setBuscaSubCategoria ] = useState([]);
+
+
     async function AdicionarProduto() {
         try {
             
             const resp = await cadastrarJoia( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
-            toast.success('Sucesso');
+            toast.success('Produto adicionado com sucesso');
 
-            console.log(resp);
         } catch (error) {
             toast.error(error.response.data.erro);
         }
     };
 
+
+
+
+    async function buscarCategorias(){
+        try {
+
+            const categorias = await BuscarCategoria()
+            setBuscaCategoria(categorias)
+        }
+        catch(error){
+            toast.error(error.response.data.erro)
+        }
+    }
+
+
+
+
+
+    async function buscarSubCategoria() {
+        try {
+            
+            const subcategoria = await BuscarSubCategoria()
+            setBuscaSubCategoria(subcategoria)
+
+        } catch (error) {
+            toast.error(error.response.data.errro)
+        }
+    }
+
+
+
+
+
+    useEffect(() => {
+        buscarCategorias()
+        buscarSubCategoria()
+    }, [])
 
 
 
@@ -60,9 +100,27 @@ export default function Edicao(){
 
                                 <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
                                 <input type="text" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)}/>
-                                <input type="text" placeholder='Categoria' value={categoria} onChange={e => setCategoria(e.target.value)}/>
-                                <input type="text" placeholder='Sub-Categoria' value={subcategoria} onChange={e => setSubCategoria(e.target.value)}/>
+
+                                <select onChange={e => setCategoria(e.target.value)}>
+                                    <option>Selecionar Categoria</option>
+                                    {buscaCategoria.map(item => {
+                                        return(
+                                            <option value={item.categoria_id} > {item.categoria}</option>
+                                        )
+                                    })}
+                                </select>
+
+                                <select onChange={e => setSubCategoria(e.target.value)}>
+                                    <option>Selecionar Sub-Categoria</option>
+                                    {buscaSubCategoria.map(item => {
+                                        return(
+                                            <option value={item.subCategoria_id} > {item.categoriaSub}</option>
+                                        )
+                                    })}
+                                </select>
+
                                 <input type="number" placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
+                                
                                 <div>   
                                     <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
                                     <label> Disponivel </label>
