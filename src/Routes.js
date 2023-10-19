@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Graficos from './pages/adm-graficos';
 import VendasADM from './pages/adm-vendas';
 import LoginAdm from './pages/adm-login';
-import Edicao from './pages/adm-edicao';
+import Adicionar from './pages/adm-adicionar';
 import HomeAdm from './pages/adm-home';
 import Home from './pages/Home';
 import EntregaPagamento from './pages/entrega-pagamento';
@@ -36,7 +36,7 @@ export default function Rotas() {
                 <Route path='/entrega' element={<EntregaPagamento/>} />
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
-                <Route path='/edicao' element={<Edicao/>} />
+                <Route path='/adicionar' element={<Adicionar/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
                 <Route path='/consultar-adm' element={<Produtos />} />
                 <Route path='/estoque-adm' element={<Estoque/>} />
