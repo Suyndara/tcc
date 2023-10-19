@@ -28,7 +28,7 @@ export default function HomeAdm() {
 
                 <Opcoes/>
                 <section>
-                    <Link className='volta' to='/edicao'>
+                    <Link className='volta' to='/adicionar'>
                         <article>
                             <span className='a1'>
 

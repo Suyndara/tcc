@@ -48,3 +48,20 @@ export async function DeletarProduto(id) {
     const resp = await api.delete(`/deletar/produto/${id}`);
     return resp.status;
 }
+
+
+
+export async function BuscarCategoria() {
+    const resp = await api.get(`/buscar/categoria`);
+    return resp.data;
+}
+
+
+
+
+
+
+export async function BuscarSubCategoria() {
+    const resp = await api.get(`/buscar/subCategoria`);
+    return resp.data;
+}
