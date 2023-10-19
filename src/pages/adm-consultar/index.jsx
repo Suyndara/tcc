@@ -1,16 +1,15 @@
 import './index.scss';
 
-
-
 import Lateral from '../../components/lateralAdm';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 import Editar from '../../assets/img/pen-solid.svg';
 import Exluir from '../../assets/img/185090_delete_garbage_icon 1.png'
 import Lupa from '../../assets/img/lupa.png'
 
-import { ConsultarPorNome, ConsultarTodos } from '../../api/admAdd'
+import { ConsultarPorNome, ConsultarTodos, DeletarProduto } from '../../api/admAdd'
 import { useState, useEffect } from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
+import { confirmAlert } from 'react-confirm-alert';
 
 
 export default function Produtos() {
@@ -19,10 +18,47 @@ export default function Produtos() {
     const [ filtro, setFiltro ] = useState('');
 
  
+
+    async function ExcluirProduto(produto_id, nome) {
+
+
+        confirmAlert({
+            title: 'Remover Produto',
+            message: `Quer mesmo remover o produto ${nome}`,
+            buttons: [
+              {
+                label: 'Sim',
+                onClick: async () => {
+                    const resp = await DeletarProduto(produto_id, nome);
+
+                    if (filtro === '') {
+                        ListarTodosFilmes()
+                    } else {
+                        filtrar()
+                    }
+            
+                    toast.success('Produto removido com sucesso');
+                }
+              },
+              {
+                label: 'Não'
+              }
+            ]
+          });
+
+
+    }
+
+
+
+
     async function ListarTodosFilmes() {
             const resp = await ConsultarTodos()
             setProdutos(resp)
     }
+
+
+
 
     async function filtrar() {
             const resp = await ConsultarPorNome(filtro)
@@ -40,6 +76,7 @@ export default function Produtos() {
     return (
         <section className='pagina-produtos'>
             <Lateral />
+            <ToastContainer />
 
                 <div className='main'>
                 <CabecalhoAdm />
@@ -66,23 +103,23 @@ export default function Produtos() {
                                 </tr>
                             </thead>
                             <tbody>
-                            {produtos.map(item => { 
-                                return (
-                                    <tr>
-                                        <td> # {item.produto_id} </td>
-                                        <td> {item.nome} </td>
-                                        <td> {item.preco} </td>
-                                        <td> {item.estoque} </td>
-                                        <td> {item.disponivel ? 'Produto disponivel' : 'Produto Não disponivel'} </td>
-                                        <td> {item.categoria} </td>
-                                        <td> {item.categoriaSub} </td>
-                                        {<td>
-                                            <img src={Editar}  alt="Caneta"/>
-                                            <img src={Exluir}  alt="Lixo" />
-                                        </td>}
-                                    </tr>   
-                                )
-                            })}
+                                {produtos.map(item => { 
+                                    return (
+                                        <tr>
+                                            <td> # {item.produto_id} </td>
+                                            <td> {item.nome} </td>
+                                            <td> {item.preco} </td>
+                                            <td> {item.estoque} </td>
+                                            <td> {item.disponivel ? 'Produto disponivel' : 'Produto Não disponivel'} </td>
+                                            <td> {item.categoria} </td>
+                                            <td> {item.categoriaSub} </td>
+                                            {<td>
+                                                <img src={Editar}  alt="Caneta"/>
+                                                <img src={Exluir}  alt="Lixo" onClick={() => ExcluirProduto(item.produto_id, item.nome)} />
+                                            </td>}
+                                        </tr>   
+                                    )
+                                })}
                             </tbody>
                         </table>
                     </div>

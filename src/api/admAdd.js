@@ -33,7 +33,18 @@ export async function ConsultarTodos() {
 
 
 
+
+
+
 export async function ConsultarPorNome(nome) {    
     const resp = await api.get(`/buscar/produto?nome=${nome}`);
     return resp.data;
+}
+
+
+
+
+export async function DeletarProduto(id) {
+    const resp = await api.delete(`/deletar/produto/${id}`);
+    return resp.status;
 }

@@ -34,7 +34,7 @@ export default function HomeAdm() {
 
                             </span>
                             
-                            <p>Editar</p>
+                            <p>Adicionar</p>
                         </article>
                     </Link>
 
