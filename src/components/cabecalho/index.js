@@ -2,8 +2,6 @@ import './index.scss';
 
 import { Link } from 'react-router-dom';
 
-
-
 import Logo from '../../assets/img/logo.svg'
 import Lupa from '../../assets/img/lupa.png'
 import Pessoa from '../../assets/img/pessoinha.png'
