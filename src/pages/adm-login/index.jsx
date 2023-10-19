@@ -27,7 +27,7 @@ export default function LognAdm(){
         if (storage('adm-logado')) {
            navigate('/home-adm');
         }
-    }, [    ]);
+    }, []);
 
     async function LogarAdm() {
         ref.current.continuousStart();
