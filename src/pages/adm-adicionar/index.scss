@@ -1,3 +1,192 @@
+.pagina-anexagem-produto {
+    display: flex;
+    
+    max-height: 100vh;
+    width: 100%;
+
+    .main-anexagem-produto {
+        display: flex;
+        flex-direction: column;
+
+        max-height: 100vh;
+        width: 100%;
+    }
+
+    .s1 {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 100vh;
+        width: 100%;
+
+        background-color:  #fff;
+
+        .cont-1 {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: #fff;
+
+            margin-bottom: 14px;
+
+            h1 {
+                text-align: center;
+                font-family: 'fonte1';
+            }
+        }
+
+        .cont-2 {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: #fff;
+
+            height: 70%;
+            width: 85%;
+
+            border: 1px solid #000;
+
+            section {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+                justify-content: space-between;
+
+                height: 400px;
+                width: 90%;
+
+
+                
+                .sep-1 {
+                    display: flex;
+                    flex-direction: row;
+
+                    flex-wrap: wrap;
+
+                    align-items: center;
+                    justify-content: space-around;
+
+
+                    height: 60%;
+                    width: 80%;
+
+                    input {
+                        height: 17%;
+                        width: 30%;
+
+                        border: 1px solid #000;
+                        border-radius: 12px;
+                    }
+
+                    div {
+                        display: flex;
+
+                        justify-content: center;
+                        align-items: center;
+
+                        height: 15%;
+                        width: 20%;
+
+                        input {
+                            height: 50%;
+                        }
+
+                        label {
+                            font-family: 'inder';
+                        }
+                    }
+                }
+
+                .sep-2 {
+                    display: flex;
+                    flex-direction: row;
+
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    height: 40%;
+                    width: 80%;
+
+                    textarea {
+                        border: 1px solid #000;
+                        border-radius: 3px;
+                        padding: .8em .8em;
+                        outline: none;
+                        resize: none;
+                        background-clip: padding-box;
+
+                        height: 100px;
+                    }
+
+
+
+                    article {
+                        display: flex;
+                        flex-direction: column;
+
+                        align-items: center;
+                        justify-content: center;
+
+                        background-color: #D9D9D9;
+
+                        height: 130px;
+                        width: 130px;
+
+                        img {
+                            height: 30%;
+                            width: 30%;
+                        }
+                    }
+                    
+                }
+
+                button{
+                    display: flex;
+
+                    height: 50px;
+                    width: 200px;
+
+                    margin-top: 10px;
+
+                    border-radius: 15px;
+                    border: none;
+
+                    background-color: black;
+                    color: white;
+
+                    transition: .3s;
+
+                    font-family: 'inter';
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                button:hover{
+                    background-color: white;
+                    color: black;
+                    border: 1px solid rgb(143, 143, 143);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*
+
 .pagina-edicao{
     display: flex;
 
@@ -95,32 +284,7 @@
                     flex-direction: row;
                 }
 
-                button{
-                    display: flex;
 
-                    height: 50px;
-                    width: 200px;
-
-                    align-self: flex-end;
-
-                    border-radius: 15px;
-                    border: none;
-
-                    background-color: black;
-                    color: white;
-
-                    transition: .3s;
-
-                    font-family: 'inter';
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                button:hover{
-                    background-color: white;
-                    color: black;
-                    border: 1px solid rgb(143, 143, 143);
-                }
             }
 
             aside{
@@ -207,4 +371,10 @@
         }
     }
 }
+
+
+
+*/
+
+
 
