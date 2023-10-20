@@ -5,7 +5,7 @@
     width: 100%;
     min-width: 360px;
 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0px 2px 5px #686868b0;
 
@@ -170,12 +170,25 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 858px) {
     .comp-cabecalho{
 
        
         .icones{
+            height: 100%;
+            width: 100%;
+
             flex-direction: column;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+
+            .login img,
+             .carrinho img{
+                height: 25px;
+                width: 25px;
+            }
         }
     }
 }
@@ -280,8 +293,6 @@
     .comp-cabecalho{
         width: 360px;
         height: 100px;
-
-        justify-content: center;
 
         .opcoes{
             display: block;
