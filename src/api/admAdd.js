@@ -25,9 +25,17 @@ export async function cadastrarJoia(nome, preco, categoria, subcategoria, estoqu
 
 
 
-export async function inserirImagem() {
-    
+export async function inserirImagem(imagem, id) {
+    let form = new FormData();
+    form.append('Produto', imagem);
+
+    const resp = await api.post(`/produto/${id}/img`, form, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    })
 }
+
 
 
 

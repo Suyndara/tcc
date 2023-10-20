@@ -9,7 +9,7 @@ import add from '../../assets/img/adicionar.png'
 
 import { ToastContainer, toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import { cadastrarJoia, BuscarCategoria, BuscarSubCategoria } from '../../api/admAdd';
+import { cadastrarJoia, BuscarCategoria, BuscarSubCategoria, inserirImagem } from '../../api/admAdd';
 
 
 export default function Edicao(){
@@ -23,20 +23,29 @@ export default function Edicao(){
     const [ detalhes, setDestalhes ] = useState();
     const [ disponivel, setDisponivel ] = useState(false);
 
+    const [ imagem, setImagem ] = useState();
+
 
     const [ buscaCategoria, setBuscaCategoria ] = useState([]);
     const [ buscaSubCategoria, setBuscaSubCategoria ] = useState([]);
 
 
     async function AdicionarProduto() {
-        try {
+        // try {
             
             const resp = await cadastrarJoia( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
             toast.success('Produto adicionado com sucesso');
 
-        } catch (error) {
-            toast.error(error.response.data.erro);
-        }
+            console.log('imagem>>');
+            console.log(imagem);
+            if (imagem != null) {
+                await inserirImagem(imagem, resp.id);
+            }
+
+
+        // } catch (error) {
+        //     toast.error(error.response.data.erro);
+        //}
     };
 
 
@@ -99,7 +108,7 @@ export default function Edicao(){
                             <div className="sep-1">
 
                                 <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
-                                <input type="text" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)}/>
+                                <label> R$ </label>  <input type="text" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
 
                                 <select onChange={e => setCategoria(e.target.value)}>
                                     <option>Selecionar Categoria</option>
@@ -136,6 +145,10 @@ export default function Edicao(){
                                     <article >
                                         <img src={add} alt="Adicionar +" />
                                     </article>
+                            </div>
+
+                            <div>
+                                <input type='file' onChange={e => setImagem(e.target.files[0])} />
                             </div>
 
                             <button onClick={ AdicionarProduto }> ADICIONAR </button>

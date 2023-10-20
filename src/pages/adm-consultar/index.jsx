@@ -33,7 +33,7 @@ export default function Produtos() {
                     const resp = await DeletarProduto(produto_id, nome);
 
                     if (filtro === '') {
-                        ListarTodosFilmes()
+                        ListarTodosProdutos()
                     } else {
                         filtrar()
                     }
@@ -53,7 +53,7 @@ export default function Produtos() {
 
 
 
-    async function ListarTodosFilmes() {
+    async function ListarTodosProdutos() {
             const resp = await ConsultarTodos()
             setProdutos(resp)
     }
@@ -69,7 +69,7 @@ export default function Produtos() {
 
 
     useEffect(() => {
-        ListarTodosFilmes()
+        ListarTodosProdutos()
     }, [])
 
 
@@ -108,7 +108,7 @@ export default function Produtos() {
                                         <tr>
                                             <td> # {item.produto_id} </td>
                                             <td> {item.nome} </td>
-                                            <td> {item.preco} </td>
+                                            <td> R$ {item.preco} </td>
                                             <td> {item.estoque} </td>
                                             <td> {item.disponivel ? 'Produto disponivel' : 'Produto Não disponivel'} </td>
                                             <td> {item.categoria} </td>
