@@ -25,6 +25,14 @@ export async function cadastrarJoia(nome, preco, categoria, subcategoria, estoqu
 
 
 
+export async function inserirImagem() {
+    
+}
+
+
+
+
+
 
 export async function ConsultarTodos() {
     const resp = await api.get('/listar/produtos');
