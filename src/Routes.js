@@ -36,7 +36,7 @@ export default function Rotas() {
                 <Route path='/entrega' element={<EntregaPagamento/>} />
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
-                <Route path='/adicionar' element={<Adicionar/>} />
+                <Route path='/adicionar-adm' element={<Adicionar/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
                 <Route path='/consultar-adm' element={<Produtos />} />
                 <Route path='/estoque-adm' element={<Estoque/>} />
