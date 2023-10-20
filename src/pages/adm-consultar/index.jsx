@@ -81,7 +81,7 @@ export default function Produtos() {
                 <div className='main'>
                 <CabecalhoAdm />
 
-                    <div>
+                    <div className='busca'>
 
                         <input type="text" placeholder='Buscar produto por nome' value={filtro} onChange={e => setFiltro(e.target.value)} />
                         <img src={Lupa} alt="Busca"  onClick={filtrar}/>
