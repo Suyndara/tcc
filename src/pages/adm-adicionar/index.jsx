@@ -9,7 +9,8 @@ import add from '../../assets/img/adicionar.png'
 
 import { ToastContainer, toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import { cadastrarJoia, BuscarCategoria, BuscarSubCategoria } from '../../api/admAdd'
+import { cadastrarJoia, BuscarCategoria, BuscarSubCategoria } from '../../api/admAdd';
+
 
 export default function Edicao(){
 
