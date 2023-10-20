@@ -16,6 +16,9 @@
         display: none;
     }
 
+    .opcoes-s2{
+        display: none;
+    }
 
     .atributo {
         display: flex;
@@ -31,23 +34,23 @@
         border: none;
         background-color: transparent;
         padding: 10px 10px;
-        width: 100%;
+        max-width: 100%;
     }
 
     .barra-pesquisa > input:focus-visible{
         outline: none;
     }
 
-    .barra-pesquisa > img{
+    .barra-pesquisa img{
         height: 40px;
         width: 50px;
         padding: 5px 10px;
 
         cursor: pointer;
-        position: relative;
+        position: absolute;
 
         bottom: 2px;
-        right: 2px;
+        left: 90%;
 
         transition: .3s;
     }
@@ -61,12 +64,14 @@
 
         border: 1px solid #000;
         width: 100%;
-        min-width: 250px;
+
 
         background-color: #E2E2E2;
         height: 40px;
         
         border-radius: 15px;
+
+        position: relative;
     }
 
     .navegacao{
@@ -74,9 +79,8 @@
         
         justify-content: space-between;
         width: 550px;
-        min-width: 30%;
+        max-width: 100%;
 
-        min-width: 150px;
 
         transition: .3s;
 
@@ -129,7 +133,6 @@
         to{
             transform: translateX(100%);
         }
-    
     }
 
     @keyframes fade {
@@ -171,9 +174,8 @@
 }
 
 @media (max-width: 858px) {
+    
     .comp-cabecalho{
-
-       
         .icones{
             height: 100%;
             width: 100%;
@@ -184,8 +186,7 @@
             align-items: center;
 
 
-            .login img,
-             .carrinho img{
+            .login img, .carrinho img{
                 height: 25px;
                 width: 25px;
             }
@@ -197,28 +198,32 @@
 @media (max-width: 760px) {
 
     .comp-cabecalho{
-        width: 100%;
         justify-content: space-evenly;
 
-        .opcoes{
+        .atributo{
+            width: 350px;
+        }
+
+        .opcoes-s2{
             display: block;
 
             height: auto;
-            width: auto;
+            width: 7%;
             
-           .barras{
+           .barras-s2{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
 
                 flex-direction: column;
 
-                height: 40px;
+                height: 70px;
 
                 text-decoration: none;
 
                 img{
-                    height: 15px;  
+                    height: 30px; 
+                    width: 30px; 
                     transition: .3s; 
                 }
 
@@ -226,7 +231,7 @@
                     transform: scale(1.1);
                 }
 
-                .displayers{
+                .displayers-s2  {
                     display: flex;
 
                     height: auto;
@@ -237,12 +242,11 @@
 
 
                     img{
-                        height: 10px;
-                        width: 10px;   
+                        height: 25px;
+                        width: 25px;   
 
                         transition: .3s;
                     }
-
                     
                     img:hover{
                         transform: scale(1.1);
@@ -253,19 +257,18 @@
 
 
         img:first-child{
-            width: 100px;
+            width: 90px;
             height: 100px;
-
         }
 
         .barra-pesquisa{
-            width: 60%;
+            img{
+                left: 78%;
+            }
         }
 
         .navegacao{
-
             width: 100%;
-
             a{
                 font-size: 12px;
             }
@@ -345,6 +348,10 @@
            }
         }
 
+        .opcoes-s2{
+            display: none;
+        }
+
 
         .logo{
             width: 40px;
@@ -358,14 +365,20 @@
             height: 50px;
         }
 
-        .barra-pesquisa{
-            width: 220px;
-            height: 25px;
-
-            border-radius: 10px;
-        }
+      
 
         .atributo{
+            .barra-pesquisa{
+                height: 25px;
+    
+                border-radius: 10px;
+
+                img{
+                    left: 88%;
+                    bottom: -3 px;
+                }            
+            }
+
             img{
                 height: 30px;
                 width: 33px;
