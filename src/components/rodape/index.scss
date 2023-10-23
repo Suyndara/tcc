@@ -298,7 +298,11 @@
              div:nth-child(3) > h2,
               div:nth-child(2) > h2{
               
-                font-size: 13px;
+                font-size: 8px;
+            }
+
+            div:nth-child(4){
+                width: 20px;
             }
         }
     }
