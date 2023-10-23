@@ -18,7 +18,7 @@ export default function VendasADM(){
                 <CabecalhoADM />
                 <Opcoes />
                 
-                <div className='gay'>
+                <div className='sas'>
                 <div className='tabela'>
                 <table>
                   <thead>
