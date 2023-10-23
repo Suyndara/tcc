@@ -358,4 +358,78 @@
     }
 }
 
+@media (max-width: 360px) {
+    .pagina-home{
+        .comp-carrossele{
+            .slide{
+                height: 200px;
+
+                .bt-joia{
+                    height: 40px;
+                    width: 60%;
+
+                    left: 2%;
+                }
+            }
+        }
+
+        .nav{
+            height: 100px;
+        }
+
+
+        .s2{
+            height: 600px;
+
+            flex-direction: column;
+
+            background: linear-gradient(45deg,
+                                         white 2%,
+                                         rgb(212, 212, 212) 30%,                           white);
+        }
+
+        .s3{
+            width: auto;
+            height: 640px;
+
+            flex-direction: column;
+
+            border-top: 2px dashed black;
+            border-bottom: 2px dashed black;
+        }
+
+        .s4{
+            height: 215px;
+             
+            article{
+                height: auto;
+
+                img{
+                    height: 140px;
+                }
+
+                p{
+                    font-size: 18px;
+                    padding-left: inherit;
+                }
+            }
+        }
+
+        .s5{
+            .slide{
+                height: 300px;
+
+                p{
+                    font-size: 23px;
+                    width: auto;
+
+                    text-align: center;
+
+                    left: 20%;
+                }
+            }
+        }
+    }
+}
+
 

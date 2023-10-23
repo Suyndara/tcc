@@ -127,16 +127,21 @@
         .titulo{
             h1{
                 font-size: 25px;
+                width: 90%;
+                text-align: center;
             }
 
             h2{
                 font-size: 20px;
-                width: 400px;
+                width: 70%;
+
+                text-align: center;
             }
         }
 
         .input{
             height: 400px;
+            width: 55%;
         }
 
         .input > input:nth-child(1),
@@ -157,17 +162,18 @@
 
         .titulo{
             h1{
-                font-size: 50px;
+                font-size: 15px;
             }
 
-            h2{
-                font-size: 20px;
-                width: 400px;
+            h2{ 
+                font-size: 15px;
+                width: 70%;
             }
         }
 
         .input{
             height: 400px;
+            width: 90%;
         }
 
         .input > input:nth-child(1),

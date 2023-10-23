@@ -208,7 +208,8 @@
             display: block;
 
             height: auto;
-            width: 7%;
+            width: auto;
+
             
            .barras-s2{
                 display: flex;
@@ -235,7 +236,7 @@
                     display: flex;
 
                     height: auto;
-                    width: 30px;
+                    width: auto;
 
                     align-items: center;
                     justify-content: space-evenly;
@@ -366,7 +367,6 @@
         }
 
       
-
         .atributo{
             .barra-pesquisa{
                 height: 25px;
