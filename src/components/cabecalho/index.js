@@ -67,12 +67,17 @@ export default function Cabecalho () {
             </article>
 
             <article className='opcoes-s2'>
-                    <div className='barras-s2'>                   
+                    <div className='barras-s2'>  
                         <img onClick={alternarMenu} src={Barras} alt="bars" />
 
                         <div className='displayers-s2' style={{display: aparecer}}>
-                            <img src={Pessoa} alt="person" />
-                            <img src={Carrinho} alt="car" />
+                            <Link className='login' to='/login'>                 
+                                <img src={Pessoa} alt="person" />
+                            </Link>
+
+                            <Link className='carrinho' to='/carrinho'>
+                                <img src={Carrinho} alt="car" />
+                            </Link>
                         </div>
                     </div>
             </article>
