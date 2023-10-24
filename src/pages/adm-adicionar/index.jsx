@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Lateral from '../../components/lateralAdm';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 import add from '../../assets/img/adicionar.png'
+import upload from '../../assets/img/upload.png'
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,7 +24,9 @@ export default function Edicao(){
     const [ detalhes, setDestalhes ] = useState();
     const [ disponivel, setDisponivel ] = useState(false);
 
-    const [ imagem, setImagem ] = useState();
+    const [ imagem1, setImagem1 ] = useState('');
+    const [ imagem2, setImagem2 ] = useState('');
+    const [ imagem3, setImagem3 ] = useState('');
 
 
     const [ buscaCategoria, setBuscaCategoria ] = useState([]);
@@ -36,10 +39,14 @@ export default function Edicao(){
             const resp = await cadastrarProduto( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
             toast.success('Produto adicionado com sucesso');
 
-            console.log('imagem>>');
-            console.log(imagem);
-            if (imagem != null) {
-                await inserirImagem(imagem, resp.id);
+            if (imagem1 != null) {
+                await inserirImagem(imagem1, resp.id);
+            }
+            if (imagem2 != null) {
+                await inserirImagem(imagem2, resp.id);
+            }
+            if (imagem3 != null) {
+                await inserirImagem(imagem3, resp.id);
             }
 
 
@@ -75,6 +82,31 @@ export default function Edicao(){
         } catch (error) {
             toast.error(error.response.data.errro)
         }
+    }
+
+
+    function escolherImg() {
+        document.getElementById('imagemCapa').click();
+    }
+
+    function escolherImg2() {
+        document.getElementById('imagemCapa2').click();
+    }
+
+    function escolherImg3() {
+        document.getElementById('imagemCapa3').click();
+    }
+
+    function mostrarImg() {
+        return URL.createObjectURL(imagem1); 
+    }
+
+    function mostrarImg2() {
+        return URL.createObjectURL(imagem2)   
+    }
+
+    function mostrarImg3() {
+        return URL.createObjectURL(imagem2)   
     }
 
 
@@ -145,23 +177,47 @@ export default function Edicao(){
                                     <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
                                     <label> Disponivel </label>
                                 </div> 
+                                
                             </div>
                             
                         </div>
 
                         <div className="sep-03">
-                            <div>
+                            <div onClick={escolherImg}>
+                                {imagem1
+                                 ?   <img src={mostrarImg()} alt="upload" />  
+                                 : <img src={upload} alt="upload" />   
+                                }
+                                
 
+                                <input id='imagemCapa'  type='file' onChange={e => setImagem1(e.target.files[0])} />
                             </div>
 
                             <section>
-                                <div></div>
-                                <div></div>
+                                <div onClick={escolherImg2}>
+                                    {imagem2 
+                                    ?   <img src={mostrarImg2()} alt="upload" />  
+                                    : <img src={upload} alt="upload" />   
+                                    }
+                                    
+
+                                    <input id='imagemCapa2'  type='file' onChange={e => setImagem2(e.target.files[0])} />
+                                </div>
+                                <div onClick={escolherImg3}>
+                                    {imagem3 
+                                    ?   <img src={mostrarImg3()} alt="upload" />  
+                                    : <img src={upload} alt="upload" />   
+                                    }
+                                    
+
+                                    <input id='imagemCapa3'  type='file' onChange={e => setImagem3(e.target.files[0])} />
+                                </div>
                             </section>
                         </div>
-
+                        <button onClick={ AdicionarProduto }> ADICIONAR </button>
                     </article>
                 </div>
+                
             </main>
 
         </div>
