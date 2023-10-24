@@ -12,9 +12,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function LognAdm(){
 
-    const [ email, setEmail ] = useState('');
-    const [ senha, setSenha ] = useState('');
-    const [ erro, setErro ] = useState('');
+    const [ email, setEmail ] = useState()
+    const [ senha, setSenha ] = useState();
+    const [ erro, setErro ] = useState();
 
     const [ carregando, setCarregando ] = useState(false)
 
@@ -67,7 +67,7 @@ export default function LognAdm(){
             <section className='inputs'>
 
                 <article className="atributo">
-                    <input type="email" placeholder='Administrador' value={email} onChange={e => setEmail(e.target.value)} />      
+                    <input type="e-mail" placeholder='Administrador' value={email} onChange={e => setEmail(e.target.value)} />      
                 </article>
 
                 <article className="atributo">
