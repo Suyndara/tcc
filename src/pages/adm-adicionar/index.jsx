@@ -223,38 +223,3 @@ export default function Edicao(){
         </div>
     );
 };
-
-
-/*
-                        <section>
-
-                            <div className="sep-1">
-
-                                
-                                
-
-
-
-
-
-                
-
-                            </div>
-
-                            <div className="sep-2">
-
-                                
-                                
-
-                                    <article >
-                                        <img src={add} alt="Adicionar +" />
-                                    </article>
-                            </div>
-
-                            <div>
-                                <input type='file' onChange={e => setImagem(e.target.files[0])} />
-                            </div>
-
-                            <button onClick={ AdicionarProduto }> ADICIONAR </button>
-
-*/
