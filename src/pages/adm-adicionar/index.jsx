@@ -145,6 +145,7 @@ export default function Edicao(){
                                     <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
                                     <label> Disponivel </label>
                                 </div> 
+                                <button onClick={ AdicionarProduto }> ADICIONAR </button>
                             </div>
                             
                         </div>
@@ -162,6 +163,7 @@ export default function Edicao(){
 
                     </article>
                 </div>
+                
             </main>
 
         </div>
@@ -199,6 +201,6 @@ export default function Edicao(){
                                 <input type='file' onChange={e => setImagem(e.target.files[0])} />
                             </div>
 
-                            <button onClick={ AdicionarProduto }> ADICIONAR </button>
+                            
 
 */
