@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
 
-            justify-content: center;
+            
             align-items: center;
 
         }
@@ -49,11 +49,9 @@
 
     table {
         width: 100%;
-        min-width: 900px;
         border-collapse: separate;
         border-spacing: 0px 10px;
         font-size: 18px;
-        border: 2px solid aqua;
         padding: 30px;
         
         img{
@@ -64,10 +62,8 @@
   
     .tabelas{
       height: 750px;
-      border: 2px solid aqua;
       overflow: auto;
       width: 91%;
-      padding-top: 80px;
   
       img{
         width: 25px;
@@ -77,10 +73,12 @@
   
     .tabelas::-webkit-scrollbar{
       width: 10px;
+   
     }
   
     .tabelas::-webkit-scrollbar-track{
       background-color: transparent;
+      height: 10px;
     }
   
     .tabelas::-webkit-scrollbar-thumb{
