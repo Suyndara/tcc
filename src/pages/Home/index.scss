@@ -219,6 +219,11 @@
             background-image: url(../../../public/assets/img/componente.png);
             background-repeat: no-repeat;
             background-size: 50% 100%; 
+
+            img{
+                width: 50%;
+                height: 100%;
+            }
         }
 
         p{
