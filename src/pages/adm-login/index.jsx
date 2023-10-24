@@ -40,7 +40,7 @@ export default function LognAdm(){
 
             setTimeout(() => {
                 navigate('/home-adm');
-            }, 3000)
+            }, 2000)
 
         } catch (error) {
             ref.current.complete();

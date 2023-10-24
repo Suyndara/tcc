@@ -256,6 +256,5 @@ export default function Edicao(){
                             </div>
 
                             <button onClick={ AdicionarProduto }> ADICIONAR </button>
-                            <button onClick={ AdicionarProduto }> ADICIONAR </button>
 
 */
