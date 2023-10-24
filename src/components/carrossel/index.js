@@ -57,7 +57,7 @@ export default function Carrossel() {
                   className='slide-item'
                 />
 
-                <Link to='/filtro'>
+                <Link to='/filtro' className='filtr'>
                   <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
                 </Link>
               </main>
