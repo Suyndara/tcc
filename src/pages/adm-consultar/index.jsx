@@ -110,7 +110,7 @@ export default function Produtos() {
                                             <td> {item.nome} </td>
                                             <td> R$ {item.preco} </td>
                                             <td> {item.estoque} </td>
-                                            <td> {item.disponivel ? 'Produto disponivel' : 'Produto Não disponivel'} </td>
+                                            <td> {item.disponivel ? 'Disponivel' : 'Indisponivel'} </td>
                                             <td> {item.categoria} </td>
                                             <td> {item.categoriaSub} </td>
                                             {<td>

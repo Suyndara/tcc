@@ -48,7 +48,7 @@
     }
 
     table {
-      width: 100%;
+        width: 100%;
         min-width: 900px;
         border-collapse: separate;
         border-spacing: 0px 10px;
@@ -63,10 +63,11 @@
   }
   
     .tabelas{
-      height: 520px;
+      height: 750px;
+      border: 2px solid aqua;
       overflow: auto;
       width: 91%;
-      padding: 0px 0px;
+      padding-top: 80px;
   
       img{
         width: 25px;
