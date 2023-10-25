@@ -66,6 +66,19 @@ export default function Edicao(){
         catch(error){
             toast.error(error.response.data.erro)
         }
+    };
+
+
+
+
+
+    function MaiorQueZero() {
+        if(estoque < 0 ){
+
+        }
+        else{
+            setEstoque(estoque + 1)
+        }
     }
 
 
@@ -140,7 +153,7 @@ export default function Edicao(){
                             <h1>Descrição dos Produtos</h1>
 
                             <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
-                            <input type="number" placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
+                            <input type="number" placeholder='Estoque' value={estoque} onChange={e => MaiorQueZero(e.target.value)}/>
 
                                 <div>      
                                     <select onChange={e => setCategoria(e.target.value)}>
