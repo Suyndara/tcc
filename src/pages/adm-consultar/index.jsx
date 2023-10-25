@@ -25,7 +25,7 @@ export default function Produtos() {
 
         confirmAlert({
             title: 'Remover Produto',
-            message: `Quer mesmo remover o produto ${nome}`,
+            message: `Quer mesmo remover o produto:  ${nome}`,
             buttons: [
               {
                 label: 'Sim',

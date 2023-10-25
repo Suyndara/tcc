@@ -37,7 +37,6 @@ export default function Edicao(){
         try {
             
             const resp = await cadastrarProduto( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
-            toast.success('Produto adicionado com sucesso');
 
             if (imagem1 != null) {
                 await inserirImagem(imagem1, resp.id);
@@ -49,7 +48,7 @@ export default function Edicao(){
                 await inserirImagem(imagem3, resp.id);
             }
 
-
+            toast.success('Produto adicionado com sucesso');
         } catch (error) {
              toast.error(error.response.data.erro);
         }
@@ -160,7 +159,7 @@ export default function Edicao(){
                         <div className="sep-02">
                             <div> 
                                 <label> R$ </label>  
-                                <input type="text" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
+                                <input type="number" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
                             </div>
                             <div>
                                 <select onChange={e => setSubCategoria(e.target.value)}>
