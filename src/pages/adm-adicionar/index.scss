@@ -8,25 +8,134 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: #EBEBEB;
         margin-left: 5px;
 
     }
 
     .conteudo{
-        margin-top: 10px;
+        margin-top: 5px;
         align-items: center;
         justify-content: center;
         display: flex;
-        border: 2px solid aqua;
+        background-color: #EBEBEB;
+        height: 100%;
     }
 
     .s1{
         background-color: #fff;
-        height: 600px;
-        width: 60%;
-        border: 2px solid aqua;
+        height: 650px;
+        width: 80%;
         border-radius: 15px;
+        padding: 0px 60px;
+    }
+
+    .cont-1{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+
+        h1{
+            font-family: 'baloothambi';
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .cont-2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sep-01{
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+
+        h1{
+            width: 250px;
+            font-family: 'inria-sans';
+            font-weight: lighter;
+            margin-bottom: 20px;
+        }
+
+        input{
+            border: 1px solid #000;
+            height: 28px;
+            border-radius: 5px;
+            margin-bottom: 22px;
+            font-family: 'inria-sans';
+        }
+
+        div{
+
+
+            select{
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid #000;
+                font-family: 'inria-sans';
+                width: 250px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
+        }
+
+        textarea{
+            height: 70px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-family: 'inria-sans';
+            margin-top: 10px;
+        }
+
+        button{
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: 'inria-sans';  
+            font-size: 20px;   
+            width: 230px;      
+            margin-top: 40px; 
+        }
+    }
+
+    .sep-02{
+        border: 2px solid aqua;
+        display: flex;
+        flex-direction: column;
+        padding: 45px 0px;
+
+        > input{
+            border: 1px solid #000;
+            height: 38px;
+            border-radius: 5px;
+            margin-bottom: 22px;
+            font-family: 'inria-sans';
+        }
+    }
+
+    .disponivel{
+        margin-bottom: 40px;
+
+        label{
+            font-family: 'inria-sans';
+        }
+    }
+
+    .subcategoria{
+        
+
+        select{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            font-family: 'inria-sans';
+            width: 250px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
     }
 
     #imagemCapa {
