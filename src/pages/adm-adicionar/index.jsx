@@ -37,7 +37,6 @@ export default function Edicao(){
         try {
             
             const resp = await cadastrarProduto( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
-            toast.success('Produto adicionado com sucesso');
 
             if (imagem1 != null) {
                 await inserirImagem(imagem1, resp.id);
@@ -49,7 +48,7 @@ export default function Edicao(){
                 await inserirImagem(imagem3, resp.id);
             }
 
-
+            toast.success('Produto adicionado com sucesso');
         } catch (error) {
              toast.error(error.response.data.erro);
         }
@@ -128,22 +127,24 @@ export default function Edicao(){
             <main className='main-anexagem-produto'>
                 <CabecalhoAdm/>
 
+                <div className='conteudo'>
                 <div className='s1'>
 
                     <article className='cont-1'>
-                        <h1>ANEXAGEM DOS PRODUTOS NO BANCO DE DADOS</h1>
+                        <h1>anexagem dos produtos no banco de dados</h1>
                     </article>
 
                     <article className='cont-2'>
 
                         <div className="sep-01"> 
-                            <h1>Detalhes dos produtos</h1>
+                            <h1>Descrição dos Produtos</h1>
 
                             <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
+                            <input type="number" placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
 
                                 <div>      
                                     <select onChange={e => setCategoria(e.target.value)}>
-                                            <option>Selecionar Categoria</option>
+                                            <option>Categoria</option>
                                             {buscaCategoria.map(item => {
                                                 return(
                                                     <option value={item.categoria_id} > {item.categoria} </option>
@@ -153,15 +154,20 @@ export default function Edicao(){
                                 </div>
 
                             <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)} />
-                            <input type="number" placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
+                            
+                            <button onClick={ AdicionarProduto }> Adicionar </button>
                         </div>
 
                         <div className="sep-02">
-                            <div> 
-                                <label> R$ </label>  
-                                <input type="text" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
-                            </div>
-                            <div>
+
+                                <input type="number" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
+
+                                <div className='disponivel'>   
+                                    <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
+                                    <label> Disponivel </label>
+                                </div> 
+
+                            <div className='subcategoria'>
                                 <select onChange={e => setSubCategoria(e.target.value)}>
                                         <option>Selecionar Sub-Categoria</option>
                                         {buscaSubCategoria.map(item => {
@@ -173,10 +179,7 @@ export default function Edicao(){
 
                                 <textarea placeholder='Composição'value={composicao} onChange={e => setComposicao(e.target.value)} />
 
-                                <div>   
-                                    <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
-                                    <label> Disponivel </label>
-                                </div> 
+                                
                                 
                             </div>
                             
@@ -214,8 +217,9 @@ export default function Edicao(){
                                 </div>
                             </section>
                         </div>
-                        <button onClick={ AdicionarProduto }> ADICIONAR </button>
+                        
                     </article>
+                </div>
                 </div>
                 
             </main>
