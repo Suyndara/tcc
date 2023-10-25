@@ -102,7 +102,6 @@
     }
 
     .sep-02{
-        border: 2px solid aqua;
         display: flex;
         flex-direction: column;
         padding: 45px 0px;
@@ -117,7 +116,7 @@
     }
 
     .disponivel{
-        margin-bottom: 40px;
+        margin-bottom: 39px;
 
         label{
             font-family: 'inria-sans';
@@ -125,7 +124,8 @@
     }
 
     .subcategoria{
-        
+        display: flex;
+        flex-direction: column;
 
         select{
             height: 30px;
@@ -133,10 +133,50 @@
             border: 1px solid #000;
             font-family: 'inria-sans';
             width: 250px;
-            margin-top: 15px;
             margin-bottom: 30px;
         }
+
+        textarea{
+            height: 70px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-family: 'inria-sans';
+            margin-top: 10px;
+            width: 250px;
+        }
     }
+
+    .sep-03{
+        border: 2px solid aqua;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            font-family: 'inria-sans';
+        }
+
+        > div{
+            border: 1px solid #000;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        > div img{
+            width: 60px;
+        }
+
+        section{
+            display: flex;
+            flex-direction: row;
+
+            img{
+                width: 60px;
+            }
+        }
+    }
+    
 
     #imagemCapa {
         visibility: hidden;
@@ -152,5 +192,6 @@
         visibility: hidden;
         position: absolute;
     }
+
 }
 

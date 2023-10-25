@@ -186,6 +186,8 @@ export default function Edicao(){
                         </div>
 
                         <div className="sep-03">
+                            <h1>Adicionar Imagens</h1>
+
                             <div onClick={escolherImg}>
                                 {imagem1
                                  ?   <img src={mostrarImg()} alt="upload" />  
