@@ -1,5 +1,33 @@
 .pagina-anexagem-produto {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    height: 100vh;
 
+    .main-anexagem-produto{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #EBEBEB;
+        margin-left: 5px;
+
+    }
+
+    .conteudo{
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border: 2px solid aqua;
+    }
+
+    .s1{
+        background-color: #fff;
+        height: 600px;
+        width: 60%;
+        border: 2px solid aqua;
+        border-radius: 15px;
+    }
 
     #imagemCapa {
         visibility: hidden;

@@ -128,6 +128,7 @@ export default function Edicao(){
             <main className='main-anexagem-produto'>
                 <CabecalhoAdm/>
 
+                <div className='conteudo'>
                 <div className='s1'>
 
                     <article className='cont-1'>
@@ -216,6 +217,7 @@ export default function Edicao(){
                         </div>
                         <button onClick={ AdicionarProduto }> ADICIONAR </button>
                     </article>
+                </div>
                 </div>
                 
             </main>
