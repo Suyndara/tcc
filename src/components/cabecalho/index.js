@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/img/logo.svg'
 import Lupa from '../../assets/img/lupa.png'
-import Pessoa from '../../assets/img/pessoinha.png'
+import Pessoa from '../../assets/img/pessoinha.png';
 import Carrinho from '../../assets/img/carrinho.png'
 import Barras from '../../assets/img/i-bars.svg';
+import Casa from '../../assets/img/i-casa.png';
 import { useState } from 'react';
 
 
@@ -77,6 +78,10 @@ export default function Cabecalho () {
 
                             <Link className='carrinho' to='/carrinho'>
                                 <img src={Carrinho} alt="car" />
+                            </Link>
+
+                            <Link className='Homer' to='/'>
+                                <img src={Casa} alt="home" />
                             </Link>
                         </div>
                     </div>
