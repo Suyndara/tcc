@@ -87,7 +87,9 @@
             border-radius: 5px;
             font-family: 'inria-sans';
             margin-top: 10px;
+            resize: none;
         }
+
 
         button{
             background-color: #000;
@@ -145,6 +147,7 @@
             font-family: 'inria-sans';
             margin-top: 10px;
             width: 250px;
+            resize: none;
         }
     }
 
