@@ -72,17 +72,6 @@ export default function Edicao(){
 
 
 
-    function MaiorQueZero() {
-        if(estoque < 0 ){
-
-        }
-        else{
-            setEstoque(estoque + 1)
-        }
-    }
-
-
-
 
 
     async function buscarSubCategoria() {
@@ -153,7 +142,7 @@ export default function Edicao(){
                             <h1>Descrição dos Produtos</h1>
 
                             <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
-                            <input type="number" placeholder='Estoque' value={estoque} onChange={e => MaiorQueZero(e.target.value)}/>
+                            <input type="number" min={0} placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
 
                                 <div>      
                                     <select onChange={e => setCategoria(e.target.value)}>
@@ -173,7 +162,7 @@ export default function Edicao(){
 
                         <div className="sep-02">
 
-                                <input type="number" placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
+                                <input type="number" min={0} placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
 
                                 <div className='disponivel'>   
                                     <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
@@ -182,7 +171,7 @@ export default function Edicao(){
 
                             <div className='subcategoria'>
                                 <select onChange={e => setSubCategoria(e.target.value)}>
-                                        <option>Selecionar Sub-Categoria</option>
+                                        <option>Sub-Categoria</option>
                                         {buscaSubCategoria.map(item => {
                                             return(
                                                 <option value={item.subCategoria_id} > {item.categoriaSub}</option>
@@ -214,7 +203,7 @@ export default function Edicao(){
                             <section>
                                 <div onClick={escolherImg2}>
                                     {imagem2 
-                                    ?   <img src={mostrarImg2()} alt="upload" />  
+                                    ? <img src={mostrarImg2()} alt="upload" />  
                                     : <img src={upload} alt="upload" />   
                                     }
                                     
@@ -242,38 +231,3 @@ export default function Edicao(){
         </div>
     );
 };
-
-
-/*
-                        <section>
-
-                            <div className="sep-1">
-
-                                
-                                
-
-
-
-
-
-                
-
-                            </div>
-
-                            <div className="sep-2">
-
-                                
-                                
-
-                                    <article >
-                                        <img src={add} alt="Adicionar +" />
-                                    </article>
-                            </div>
-
-                            <div>
-                                <input type='file' onChange={e => setImagem(e.target.files[0])} />
-                            </div>
-
-                            <button onClick={ AdicionarProduto }> ADICIONAR </button>
-
-*/
