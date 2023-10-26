@@ -3,6 +3,7 @@
     flex-direction: row;
     background-color: #fff;
     height: 100vh;
+    width: 100%;
 
     .main-anexagem-produto{
         display: flex;
@@ -24,7 +25,7 @@
     .s1{
         background-color: #fff;
         height: 650px;
-        width: 80%;
+        width: 75%;
         border-radius: 15px;
         padding: 0px 60px;
     }
@@ -49,7 +50,7 @@
     .sep-01{
         display: flex;
         flex-direction: column;
-        margin-right: 30px;
+        margin-right: 40px;
 
         h1{
             width: 250px;
@@ -105,6 +106,7 @@
         display: flex;
         flex-direction: column;
         padding: 45px 0px;
+        margin-right: 40px;
 
         > input{
             border: 1px solid #000;
@@ -147,20 +149,27 @@
     }
 
     .sep-03{
-        border: 2px solid aqua;
         display: flex;
         flex-direction: column;
+        width: 250px;
+        height: 330px;
+        display: flex;
+        align-items: center;
 
         h1{
             font-family: 'inria-sans';
+            margin-bottom: 15px;
         }
 
         > div{
             border: 1px solid #000;
-            height: 160px;
+            height: 220px;
+            width: 210px;
             display: flex;
+            border-radius: 5px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 15px;
         }
 
         > div img{
@@ -170,9 +179,21 @@
         section{
             display: flex;
             flex-direction: row;
+            width: 88%;
+            height: 100px;
+            justify-content: space-between;
+
+        > div{
+            width: 90px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
 
             img{
-                width: 60px;
+                width: 30px;
             }
         }
     }
