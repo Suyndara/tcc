@@ -21,7 +21,7 @@ export default function Produtos() {
  
 
     async function ExcluirProduto(produto_id, nome) {
-        console.log( produto_id + "-" + nome );
+
             confirmAlert({
                 title: 'Remover Produto',
                 message: `Quer mesmo remover o produto:  ${nome}`,
