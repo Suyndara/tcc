@@ -212,8 +212,8 @@ export default function Edicao(){
                                 </div>
                                 <div onClick={escolherImg3}>
                                     {imagem3 
-                                    ?   <img src={mostrarImg3()} alt="upload" />  
-                                    : <img src={upload} alt="upload" />   
+                                    ?  <img src={mostrarImg3()} alt="upload" />  
+                                    : <img  src={upload} alt="upload" />   
                                     }
                                     
 
