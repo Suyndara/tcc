@@ -87,6 +87,6 @@ export async function BuscarSubCategoria() {
 
 
 export async function BuscarProdutoPorId(id) {
-    const resp = await api.get(`/buscar/produtos/${id}`);
+    const resp = await api.get(`/buscar/produto/${id}`);
     return resp.data;
 }
