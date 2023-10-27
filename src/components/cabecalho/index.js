@@ -38,8 +38,13 @@ export default function Cabecalho () {
                         <img onClick={alternarMenu} src={Barras} alt="bars" />
 
                         <div className='displayers' style={{display: aparecer}}>
-                            <img src={Pessoa} alt="person" />
-                            <img src={Carrinho} alt="car" />
+                            <Link to='/login'>
+                                <img src={Pessoa} alt="person" />
+                            </Link>
+
+                            <Link to='/carrinho'>
+                                <img src={Carrinho} alt="car" />
+                            </Link>
                         </div>
                     </div>
                 </article>
