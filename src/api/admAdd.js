@@ -4,6 +4,11 @@ const api = axios.create({
 }); 
 
 
+// const api = axios.create({
+//     baseURL: 'http:// :5000'
+// });
+
+
 
 
 export async function cadastrarProduto(nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel) {
@@ -34,6 +39,15 @@ export async function inserirImagem(imagem, id) {
             'Content-Type': 'multipart/form-data'
         }
     })
+};
+
+
+
+
+
+export async function deletarImg(imagem_produto_id) {
+    const resp = await api.delete(`/deletar/img/${imagem_produto_id}`);
+    return resp.status;
 }
 
 

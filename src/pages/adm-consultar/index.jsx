@@ -7,7 +7,7 @@ import Editar from '../../assets/img/pen-solid.svg';
 import Exluir from '../../assets/img/185090_delete_garbage_icon 1.png'
 import Lupa from '../../assets/img/lupa.png'
 
-import { ConsultarPorNome, ConsultarTodos, DeletarProduto } from '../../api/admAdd'
+import { ConsultarPorNome, ConsultarTodos, DeletarProduto, deletarImg } from '../../api/admAdd'
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
@@ -20,7 +20,7 @@ export default function Produtos() {
 
  
 
-    async function ExcluirProduto(produto_id, nome) {
+    async function ExcluirProduto(produto_id, nome, imagem_produto_id, imagem) {
 
             confirmAlert({
                 title: 'Remover Produto',
@@ -30,6 +30,7 @@ export default function Produtos() {
                     label: 'Sim',
                     onClick: async () => {
                         const resp = await DeletarProduto(produto_id, nome);
+                        const respImg = await deletarImg(imagem_produto_id, imagem);
     
                         if (filtro === '') {
                             ListarTodosProdutos()
