@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Lateral from '../../components/lateralAdm';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
-import add from '../../assets/img/adicionar.png'
 import upload from '../../assets/img/upload.png'
 
 
