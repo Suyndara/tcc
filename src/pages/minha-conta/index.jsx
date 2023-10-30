@@ -34,6 +34,7 @@ export default function Conta(){
                         </section>
                 </article>
 
+
                 <aside>
                     <span>
                         <input type="text" placeholder='Nome completo'/>
