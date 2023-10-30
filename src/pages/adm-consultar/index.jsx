@@ -29,8 +29,8 @@ export default function Produtos() {
                   {
                     label: 'Sim',
                     onClick: async () => {
+                        const respImg = await deletarImg(produto_id, imagem);
                         const resp = await DeletarProduto(produto_id, nome);
-                        const respImg = await deletarImg(imagem_produto_id, imagem);
     
                         if (filtro === '') {
                             ListarTodosProdutos()
