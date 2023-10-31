@@ -20,7 +20,7 @@ export default function Produtos() {
 
  
 
-    async function ExcluirProduto(produto_id, nome, imagem_produto_id, imagem) {
+    async function ExcluirProduto(produto_id, nome, imagem) {
 
             confirmAlert({
                 title: 'Remover Produto',

@@ -8,6 +8,7 @@ import upload from '../../assets/img/upload.png'
 
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem } from '../../api/admAdd';
 
@@ -20,6 +21,7 @@ export default function Edicao(){
     const [ subcategoria, setSubCategoria ] = useState();
     const [ estoque, setEstoque ] = useState();
     const [ composicao, setComposicao ] = useState();
+    // const [ tamanho, setTamanho ] = useState();
     const [ detalhes, setDestalhes ] = useState();
     const [ disponivel, setDisponivel ] = useState(false);
 
@@ -30,6 +32,18 @@ export default function Edicao(){
 
     const [ buscaCategoria, setBuscaCategoria ] = useState([]);
     const [ buscaSubCategoria, setBuscaSubCategoria ] = useState([]);
+
+
+    const { produto_id } = useParams()
+
+    useEffect(() => {
+
+    }, []);
+
+
+    // async function CarregarProduto() {
+    //     const responsta = await 
+    // }
 
 
     async function AdicionarProduto() {
