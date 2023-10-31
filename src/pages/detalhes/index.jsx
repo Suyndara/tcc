@@ -157,6 +157,7 @@ export default function Detalhes(){
                     <p className='p-s3'>• Material: ouro amarelo</p>
                 </article>
 
+                
                 <article>
                     <section>                        
                         <h1>Detalhes </h1>
