@@ -13,4 +13,4 @@ export async function SingUpAdm(email, senha) {
     });
 
     return resp.data
-};  
+};

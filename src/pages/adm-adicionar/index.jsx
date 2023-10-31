@@ -86,9 +86,9 @@ export default function Edicao(){
             toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
             if (error.response) 
-                toast.error(error.response.data.erro);
+                alert(error.response.data.erro);
             else 
-                toast.error(error.message);
+                alert(error.message);
         }
     };
 

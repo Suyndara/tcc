@@ -1,15 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Produtos from './pages/adm-consultar';
 import Graficos from './pages/adm-graficos';
 import VendasADM from './pages/adm-vendas';
 import LoginAdm from './pages/adm-login';
 import Adicionar from './pages/adm-adicionar';
+import Estoque from './pages/adm-estoque';
 import HomeAdm from './pages/adm-home';
 import Home from './pages/Home';
 import EntregaPagamento from './pages/entrega-pagamento';
 import StatusCliente from './pages/status-cliente';
 import StatusAdm from './pages/status-adm';
-import Estoque from './pages/adm-estoque';
 import Carrinho from './pages/carrinho';
 import Cadastro from './pages/cadastro';
 import Detalhes from './pages/detalhes';
@@ -18,7 +19,7 @@ import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
-import Produtos from './pages/adm-consultar';
+
 
 export default function Rotas() {
     return ( 

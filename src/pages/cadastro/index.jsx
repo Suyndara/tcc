@@ -1,49 +1,50 @@
 import './index.scss';
+
 import Cabecalho from '../../components/cabecalho';
 
-import { useState } from 'react';
 
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import { LoginUsuario } from '../../api/UsuarioApi';
+
 
 export default function Cadastro() {
 
-    const [Nome, setNome] = useState('')
-    const [Email, setEmail] = useState ('');
-    const [Senha, setSenha] = useState ('');
-    const [Confirmar, setConfirmar] = useState('');
-    const [ setErro] = useState('')
 
-    const navigate = useNavigate()
+    const [ nome, setNome ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ senha, setSenha ] = useState('');
+    const [ confirmPwd, setConfirmPwd ] = useState('');
 
-    async function Cadastrar(){
-        try{
-            const resp = await axios.post('http://localhost:5000/usuario/login',{
-                nome: Nome,
-                email: Email,
-                senha: Senha,
-                confirmar: Confirmar
-            });
 
-            if(resp.status === 500){
-                setErro(resp.data.erro)
+
+    async function UsuarioCriado() {
+
+        try {
+
+            if (senha !== confirmPwd) {
+                toast.error('As senhas não coincidem');
+            } 
+            
+            else {
+                const resp = await LoginUsuario( nome, email, senha );
+                console.log(resp);
+
+                toast.info('Cliente criado com sucesso');
             }
 
-            else(
-                navigate('/login')
-            )
+        } catch (error) {
+            toast.error(error.response.data.erro);
         }
+    };
 
-        catch(error){
-            if(error.reponse.data === 500)
-            setErro (error.response.data.erro)
-        }
-    }
+
 
     return (
 
         <div className='pagina-cadastro'>
-            <Cabecalho/>
+            <ToastContainer />
+            <Cabecalho />
 
             <article className='titulo'>
                 <h1>FAÇA SEU CADASTRO</h1>
@@ -51,12 +52,12 @@ export default function Cadastro() {
             </article>
             
             <article className='input'>
-                <input type="text" placeholder='NOME COMPLETO' value={Nome} onChange={e => setNome (e.target.value)}/>
-                <input type="text" placeholder='EMAIL' value={Email} onChange={e => setEmail (e.target.value)}/>
-                <input type="text" placeholder='SENHA' value={Senha} onChange={e => setSenha (e.target.value)} />
-                <input type="text" placeholder='CONFIRMAR SENHA' value={Confirmar} onChange={e => setConfirmar (e.target.value)}/>
+                <input type="text" placeholder='NOME COMPLETO' value={nome} onChange={e => setNome(e.target.value)} />
+                <input type="email" placeholder='EMAIL' value={email} onChange={e => setEmail(e.target.value)} />
+                <input type="password" placeholder='SENHA' value={senha} onChange={e => setSenha(e.target.value)} />
+                <input type="password" placeholder='CONFIRMAR SENHA' value={confirmPwd} onChange={e => setConfirmPwd(e.target.value)} />
 
-                <button onClick={Cadastrar}> Registrar </button>
+                <button onClick={ UsuarioCriado }> Registrar </button>
             </article>
 
         </div>

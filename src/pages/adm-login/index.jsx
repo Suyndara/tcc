@@ -25,7 +25,7 @@ export default function LognAdm(){
 
     useEffect(() => {
         if (storage('adm-logado')) {
-           navigate('/home-adm');
+           navigate('/home-adm');   
         }
     }, []);
 
