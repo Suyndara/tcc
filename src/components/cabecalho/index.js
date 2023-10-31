@@ -12,13 +12,13 @@ import { useState } from 'react';
 
 
 
-export default function Cabecalho () {
+export default function Cabecalho() {
 
 
     const [aparecer, setDisplay] = useState('none');
 
     function alternarMenu() {
-        if(aparecer === 'none') {
+        if (aparecer === 'none') {
             setDisplay('flex')
 
         } else {
@@ -26,18 +26,18 @@ export default function Cabecalho () {
         }
     }
 
-    return(
-        <div className='comp-cabecalho' > 
+    return (
+        <div className='comp-cabecalho' >
             <Link className='logo' to='/'>
                 <img alt='a-logo' src={Logo} />
             </Link>
 
             <article className="atributo">
                 <article className='opcoes'>
-                    <div className='barras'>                   
+                    <div className='barras'>
                         <img onClick={alternarMenu} src={Barras} alt="bars" />
 
-                        <div className='displayers' style={{display: aparecer}}>
+                        <div className='displayers' style={{ display: aparecer }}>
                             <Link to='/login'>
                                 <img src={Pessoa} alt="person" />
                             </Link>
@@ -64,32 +64,32 @@ export default function Cabecalho () {
 
             <article className='icones'>
                 <Link className='login' to='/login'>
-                    <img alt='icone-pessoa' src={Pessoa}/>
+                    <img alt='icone-pessoa' src={Pessoa} />
                 </Link>
-                
+
                 <Link className='carrinho' to='/carrinho'>
-                    <img alt="carru" src={Carrinho}/>
+                    <img alt="carru" src={Carrinho} />
                 </Link>
             </article>
 
             <article className='opcoes-s2'>
-                    <div className='barras-s2'>  
-                        <img onClick={alternarMenu} src={Barras} alt="bars" />
+                <div className='barras-s2'>
+                    <img onClick={alternarMenu} src={Barras} alt="bars" />
 
-                        <div className='displayers-s2' style={{display: aparecer}}>
-                            <Link className='login' to='/login'>                 
-                                <img src={Pessoa} alt="person" />
-                            </Link>
+                    <div className='displayers-s2' style={{ display: aparecer }}>
+                        <Link className='login' to='/login'>
+                            <img src={Pessoa} alt="person" />
+                        </Link>
 
-                            <Link className='carrinho' to='/carrinho'>
-                                <img src={Carrinho} alt="car" />
-                            </Link>
+                        <Link className='carrinho' to='/carrinho'>
+                            <img src={Carrinho} alt="car" />
+                        </Link>
 
-                            <Link className='Homer' to='/'>
-                                <img src={Casa} alt="home" />
-                            </Link>
-                        </div>
+                        <Link className='Homer' to='/'>
+                            <img src={Casa} alt="home" />
+                        </Link>
                     </div>
+                </div>
             </article>
         </div>
     )

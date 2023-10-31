@@ -57,22 +57,22 @@ export default function Rodape() {
       </main>
 
       <div className="Atendimento-2">
-          <h1> ATENDIMENTO </h1>
+        <h1> ATENDIMENTO </h1>
 
-          <div>
-            <h2> +55 11 912345678 </h2>
-            <img src={Biriri} alt="biriri" />
-          </div>
-          <div>
-            <h2>+55 5922-0635 </h2>
-            <img src={Telefone} alt="telefone" />
-          </div>
-
-          <div>
-            <h2> concierge@joyeriacristallo.com.br </h2>
-            <img src={Email} alt="email" />
-          </div>
+        <div>
+          <h2> +55 11 912345678 </h2>
+          <img src={Biriri} alt="biriri" />
         </div>
+        <div>
+          <h2>+55 5922-0635 </h2>
+          <img src={Telefone} alt="telefone" />
+        </div>
+
+        <div>
+          <h2> concierge@joyeriacristallo.com.br </h2>
+          <img src={Email} alt="email" />
+        </div>
+      </div>
     </section>
   );
 }

@@ -1,9 +1,9 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 
-export default function Lateral(){
-    
-    return(
+export default function Lateral() {
+
+    return (
         <div className='comp-lateral'>
             <nav>
                 <img src="/assets/img/i-pessoinha.png" alt="pes" />
@@ -11,7 +11,7 @@ export default function Lateral(){
 
             <footer>
 
-                <div className='rodape'> 
+                <div className='rodape'>
                     <Link to='/login-adm' className='voltas'>
                         <img src="/assets/img/i-exit.png" alt="sair" />
 

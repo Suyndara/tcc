@@ -10,13 +10,13 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function LognAdm(){
+export default function LognAdm() {
 
-    const [ email, setEmail ] = useState()
-    const [ senha, setSenha ] = useState();
-    const [ erro, setErro ] = useState();
+    const [email, setEmail] = useState()
+    const [senha, setSenha] = useState();
+    const [erro, setErro] = useState();
 
-    const [ carregando, setCarregando ] = useState(false)
+    const [carregando, setCarregando] = useState(false)
 
 
     const navigate = useNavigate();
@@ -25,7 +25,7 @@ export default function LognAdm(){
 
     useEffect(() => {
         if (storage('adm-logado')) {
-           navigate('/home-adm');   
+            navigate('/home-adm');
         }
     }, []);
 
@@ -46,42 +46,42 @@ export default function LognAdm(){
             ref.current.complete();
             setCarregando(false);
 
-            if ( error.response.status === 401 ) {
+            if (error.response.status === 401) {
                 setErro(error.response.data.erro)
             }
         }
 
     }
 
-    function teclaPressionada(e){
-        if(e.key === 'Enter')
-        LogarAdm();
+    function teclaPressionada(e) {
+        if (e.key === 'Enter')
+            LogarAdm();
     }
 
     return (
-        
+
         <div className='pagina-loginAdm'>
-            <LoadingBar color='#ffc86d' ref={ref} />  
-            <img src={Joyeria} alt='joyeria'/>
+            <LoadingBar color='#ffc86d' ref={ref} />
+            <img src={Joyeria} alt='joyeria' />
 
             <section className='inputs'>
 
                 <article className="atributo">
-                    <input type="e-mail" placeholder='Administrador' value={email} onChange={e => setEmail(e.target.value)} />      
+                    <input type="e-mail" placeholder='Administrador' value={email} onChange={e => setEmail(e.target.value)} />
                 </article>
 
                 <article className="atributo">
-                    <input type='password' placeholder='Senha' value={senha} onKeyUp={teclaPressionada} onChange={e => setSenha(e.target.value)}/>
+                    <input type='password' placeholder='Senha' value={senha} onKeyUp={teclaPressionada} onChange={e => setSenha(e.target.value)} />
                 </article>
 
                 <div>
-                    { erro }   
+                    {erro}
                 </div>
 
             </section>
 
             <button onClick={LogarAdm} disabled={carregando}>LOGAR</button>
-     
+
         </div>
     );
 };

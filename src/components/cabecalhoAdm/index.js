@@ -8,7 +8,7 @@ import storage from 'local-storage';
 
 
 
-export default function CabecalhoAdm(){
+export default function CabecalhoAdm() {
 
     const navigate = useNavigate()
 
@@ -18,15 +18,15 @@ export default function CabecalhoAdm(){
         }
     }, [])
 
-    return(
-        <div className='comp-CabecalhoAdm'>   
+    return (
+        <div className='comp-CabecalhoAdm'>
             <nav>
                 <span>
-                
+
                 </span>
 
                 <img src="/assets/img/i-settings.png" alt="" />
-                <input type='text' placeholder='Procure o Pin'/>
+                <input type='text' placeholder='Procure o Pin' />
 
             </nav>
         </div>

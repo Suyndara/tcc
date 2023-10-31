@@ -4,14 +4,14 @@ import Opcoes from '../../components/opcoes';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
 import Anel from '../../assets/img/anelouro.png';
 export default function Estoque() {
-    
-    return(
+
+    return (
         <div className='pagina-estoqueAdm'>
-            <Lateral/>
+            <Lateral />
 
             <main className='analise'>
-                <CabecalhoAdm/>
-                <Opcoes/>   
+                <CabecalhoAdm />
+                <Opcoes />
 
                 <section>
                     <article>
@@ -42,13 +42,13 @@ export default function Estoque() {
                                         <p>Contem no estoque:</p>
                                         <p>QTD no estoque:</p>
                                         <p>Promoção:</p>
-                                    </div>     
+                                    </div>
 
                                     <div className='ifs'>
                                         <p>Ok</p>
                                         <p>5</p>
                                         <p>X</p>
-                                    </div>            
+                                    </div>
                                 </div>
                             </div>
                         </aside>

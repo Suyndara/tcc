@@ -18,16 +18,16 @@ register();
 export default function Carrossel() {
   const [slidePerView, setSlidePerView] = useState(1)
   const data = [
-    {id: '1', image: '/assets/img/banner1.png'},
-    {id: '2', image: '/assets/img/banner2.png'},
-    {id: '3', image: 'assets/img/banner3.jpg'},
-    {id: '4', image: '/assets/img/banner4.png'},
+    { id: '1', image: '/assets/img/banner1.png' },
+    { id: '2', image: '/assets/img/banner2.png' },
+    { id: '3', image: 'assets/img/banner3.jpg' },
+    { id: '4', image: '/assets/img/banner4.png' },
   ]
 
   useEffect(() => {
 
     function handleResize() {
-      if(window.innerWidth > 2200) {
+      if (window.innerWidth > 2200) {
         setSlidePerView(1);
       }
       else {
@@ -39,28 +39,28 @@ export default function Carrossel() {
 
   }, [])
 
-  return(
-    <div className='comp-carrossele'>  
+  return (
+    <div className='comp-carrossele'>
       <Swiper
         modules={[Navigation, Autoplay]}
         slidesPerView={slidePerView}
-        autoplay={{delay: 3000}}
+        autoplay={{ delay: 3000 }}
         loop={true}
         navigation={true}
       >
-        {data.map( (item) => (
+        {data.map((item) => (
           <SwiperSlide key={item.id}>
-              <main className='slide'>
-                <img
-                  src={item.image}
-                  alt='sas'
-                  className='slide-item'
-                />
+            <main className='slide'>
+              <img
+                src={item.image}
+                alt='sas'
+                className='slide-item'
+              />
 
-                <Link to='/filtro' className='filtr'>
-                  <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
-                </Link>
-              </main>
+              <Link to='/filtro' className='filtr'>
+                <button className='bt-joia' href=''>CONFIRA NOSSAS JOIAS</button>
+              </Link>
+            </main>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -15,15 +15,15 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function Login() {
 
 
-  const [ email, setEmail ] = useState()
-  const [ senha, setSenha ] = useState();
+  const [email, setEmail] = useState()
+  const [senha, setSenha] = useState();
 
 
   const navigate = useNavigate();
 
   async function LogarUsuario() {
     try {
-      
+
       const resp = await SingUpUsuario(email, senha);
       console.log(resp);
 
@@ -41,7 +41,7 @@ export default function Login() {
       <Cabecalho />
 
       <article className="titulo">
-          <h1>FAÇA SEU LOGIN</h1>
+        <h1>FAÇA SEU LOGIN</h1>
       </article>
 
       <main>
@@ -54,7 +54,7 @@ export default function Login() {
 
         <div className="bt-a">
 
-          <button className="botones" onClick={ LogarUsuario }>
+          <button className="botones" onClick={LogarUsuario}>
             Entrar
           </button>
 

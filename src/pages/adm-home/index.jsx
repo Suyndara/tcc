@@ -21,45 +21,45 @@ export default function HomeAdm() {
 
     return (
         <div className="Pagina-HomeAdm">
-           <Lateral/>
+            <Lateral />
 
             <main className='analise'>
-                <CabecalhoAdm/>
+                <CabecalhoAdm />
 
-                <Opcoes/>
+                <Opcoes />
                 <section>
                     <Link className='volta' to='/adicionar-adm'>
                         <article>
                             <span className='a1'>
 
                             </span>
-                            
+
                             <p>Adicionar</p>
                         </article>
                     </Link>
 
                     <Link className='volta' to='/consultar-adm'>
-                    <article>
-                        <span className='a2'>
+                        <article>
+                            <span className='a2'>
 
-                        </span>
+                            </span>
 
-                        <p>Produtos</p>
-                    </article>
+                            <p>Produtos</p>
+                        </article>
                     </Link>
 
                     <Link to='/login-adm' className='volta'>
-                        <article onClick={ RemoverAdm }>
-                                <span className='a3'>
+                        <article onClick={RemoverAdm}>
+                            <span className='a3'>
 
-                                </span>
+                            </span>
 
-                                <p>Sair</p>
+                            <p>Sair</p>
                         </article>
                     </Link>
                 </section>
 
-                <div className="footer"></div>              
+                <div className="footer"></div>
             </main>
         </div>
     );

@@ -3,17 +3,17 @@ import Lateral from "../../components/lateralAdm";
 import Cabecalho from '../../components/cabecalhoAdm';
 import Opcoes from '../../components/opcoes';
 
-export default function Graficos(){
+export default function Graficos() {
 
-    return(
+    return (
         <div className='graficos-adm'>
-            <Lateral/>
+            <Lateral />
 
             <main>
-                <Cabecalho/>
+                <Cabecalho />
 
                 <nav>
-                    <Opcoes/>
+                    <Opcoes />
                 </nav>
 
                 <section>
@@ -34,12 +34,12 @@ export default function Graficos(){
 
                             </div>
                         </aside>
-                        
-                        <aside>
-                                <p>Ações Empresariais</p>
-                                <p>Como nossa empresas esta oraganizada de acordo com nossos lucros:</p>
 
-                                <img src="/assets/img/grupo3.png" alt="grupo3" />
+                        <aside>
+                            <p>Ações Empresariais</p>
+                            <p>Como nossa empresas esta oraganizada de acordo com nossos lucros:</p>
+
+                            <img src="/assets/img/grupo3.png" alt="grupo3" />
                         </aside>
                     </article>
                 </section>

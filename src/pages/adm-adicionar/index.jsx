@@ -14,40 +14,40 @@ import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem, a
 
 
 
-export default function Edicao(){
+export default function Edicao() {
 
-    const [ nome, setNome ] = useState();
-    const [ preco, setPreco ] = useState();
-    const [ categoria, setCategoria ] = useState();
-    const [ subcategoria, setSubCategoria ] = useState();
-    const [ estoque, setEstoque ] = useState();
-    const [ composicao, setComposicao ] = useState();
+    const [nome, setNome] = useState();
+    const [preco, setPreco] = useState();
+    const [categoria, setCategoria] = useState();
+    const [subcategoria, setSubCategoria] = useState();
+    const [estoque, setEstoque] = useState();
+    const [composicao, setComposicao] = useState();
     // const [ tamanho, setTamanho ] = useState();
-    const [ detalhes, setDestalhes ] = useState();
-    const [ disponivel, setDisponivel ] = useState(false);
-    const [ id, setId ] = useState(0);
+    const [detalhes, setDestalhes] = useState();
+    const [disponivel, setDisponivel] = useState(false);
+    const [id, setId] = useState(0);
 
 
 
-    const [ imagem1, setImagem1 ] = useState('');
-    const [ imagem2, setImagem2 ] = useState('');
-    const [ imagem3, setImagem3 ] = useState('');
+    const [imagem1, setImagem1] = useState('');
+    const [imagem2, setImagem2] = useState('');
+    const [imagem3, setImagem3] = useState('');
 
 
-    
-    const [ URLimagem1, setURLImagem1 ] = useState('');
-    const [ URLimagem2, setURLImagem2 ] = useState('');
-    const [ URLimagem3, setURLImagem3 ] = useState('');
+
+    const [URLimagem1, setURLImagem1] = useState('');
+    const [URLimagem2, setURLImagem2] = useState('');
+    const [URLimagem3, setURLImagem3] = useState('');
 
 
-    const [ buscaCategoria, setBuscaCategoria ] = useState([]);
-    const [ buscaSubCategoria, setBuscaSubCategoria ] = useState([]);
+    const [buscaCategoria, setBuscaCategoria] = useState([]);
+    const [buscaSubCategoria, setBuscaSubCategoria] = useState([]);
 
 
     const { produto_id } = useParams();
 
     useEffect(() => {
-        if(produto_id) {
+        if (produto_id) {
             CarregarProduto();
         }
     }, []);
@@ -63,7 +63,7 @@ export default function Edicao(){
         setComposicao(resposta.composicao);
         setDestalhes(resposta.detalhes);
         setDisponivel(resposta.disponivel);
-        
+
         setId(resposta.id);
     }
 
@@ -71,9 +71,9 @@ export default function Edicao(){
     async function AdicionarProduto() {
         try {
 
-            if ( id === 0) {
+            if (id === 0) {
 
-                const resp = await cadastrarProduto(nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
+                const resp = await cadastrarProduto(nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel);
 
                 if (imagem1 != null) {
                     await inserirImagem(imagem1, resp.id);
@@ -88,15 +88,15 @@ export default function Edicao(){
                 setId(resp.id);
 
             } else {
-                await alterarProduto(id, nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
+                await alterarProduto(id, nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel);
             }
-        
+
 
             toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
-            if (error.response) 
+            if (error.response)
                 toast.error(error.response.data.erro);
-            else 
+            else
                 toast.error(error.message);
         }
     };
@@ -116,13 +116,13 @@ export default function Edicao(){
 
 
 
-    async function buscarCategorias(){
+    async function buscarCategorias() {
         try {
 
             const categorias = await BuscarCategoria()
             setBuscaCategoria(categorias)
         }
-        catch(error){
+        catch (error) {
             toast.error(error.response.data.erro)
         }
     };
@@ -135,7 +135,7 @@ export default function Edicao(){
 
     async function buscarSubCategoria() {
         try {
-            
+
             const subcategoria = await BuscarSubCategoria()
             setBuscaSubCategoria(subcategoria)
 
@@ -158,24 +158,24 @@ export default function Edicao(){
     }
 
     function mostrarImg() {
-        if ( typeof (imagem1) == 'object' ){
-            return URL.createObjectURL(imagem1); 
+        if (typeof (imagem1) == 'object') {
+            return URL.createObjectURL(imagem1);
         } else {
             return BuscarImagem(imagem1);
         }
     }
 
     function mostrarImg2() {
-        if ( typeof (imagem2) == 'object' ){
-            return URL.createObjectURL(imagem2); 
+        if (typeof (imagem2) == 'object') {
+            return URL.createObjectURL(imagem2);
         } else {
             return BuscarImagem(imagem2);
         }
     }
 
     function mostrarImg3() {
-        if ( typeof (imagem3) == 'object' ){
-            return URL.createObjectURL(imagem3); 
+        if (typeof (imagem3) == 'object') {
+            return URL.createObjectURL(imagem3);
         } else {
             return BuscarImagem(imagem3);
         }
@@ -192,113 +192,113 @@ export default function Edicao(){
 
 
 
-    return(
+    return (
         <div className='pagina-anexagem-produto'>
             <ToastContainer />
-            <Lateral/>
+            <Lateral />
 
             <main className='main-anexagem-produto'>
-                <CabecalhoAdm/>
+                <CabecalhoAdm />
 
                 <div className='conteudo'>
-                <div className='s1'>
+                    <div className='s1'>
 
-                    <article className='cont-1'>
-                        <h1>anexagem dos produtos no banco de dados</h1>
-                    </article>
+                        <article className='cont-1'>
+                            <h1>anexagem dos produtos no banco de dados</h1>
+                        </article>
 
-                    <article className='cont-2'>
+                        <article className='cont-2'>
 
-                        <div className="sep-01"> 
-                            <h1>Descrição dos Produtos</h1>
+                            <div className="sep-01">
+                                <h1>Descrição dos Produtos</h1>
 
-                            <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
-                            <input type="number" min={0} placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)}/>
+                                <input type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
+                                <input type="number" min={0} placeholder='Estoque' value={estoque} onChange={e => setEstoque(e.target.value)} />
 
-                                <div>      
+                                <div>
                                     <select onChange={e => setCategoria(e.target.value)}>
-                                            <option>Categoria</option>
-                                            {buscaCategoria.map(item => {
-                                                return(
-                                                    <option value={item.categoria_id} > {item.categoria} </option>
-                                                )
-                                            })}
+                                        <option>Categoria</option>
+                                        {buscaCategoria.map(item => {
+                                            return (
+                                                <option value={item.categoria_id} > {item.categoria} </option>
+                                            )
+                                        })}
                                     </select>
                                 </div>
 
-                            <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)} />
-                            
-                            <button onClick={ AdicionarProduto }> { id === 0 ? 'Salvar' : 'Alterar' } </button>
-                        </div>
+                                <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)} />
 
-                        <div className="sep-02">
+                                <button onClick={AdicionarProduto}> {id === 0 ? 'Salvar' : 'Alterar'} </button>
+                            </div>
+
+                            <div className="sep-02">
 
                                 <input type="number" min={0} placeholder='Valor' value={preco} onChange={e => setPreco(e.target.value)} />
 
-                                <div className='disponivel'>   
-                                    <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)}/>
+                                <div className='disponivel'>
+                                    <input type="checkbox" checked={disponivel} onChange={e => setDisponivel(e.target.checked)} />
                                     <label> Disponivel </label>
-                                </div> 
+                                </div>
 
-                            <div className='subcategoria'>
-                                <select onChange={e => setSubCategoria(e.target.value)}>
+                                <div className='subcategoria'>
+                                    <select onChange={e => setSubCategoria(e.target.value)}>
                                         <option>Sub-Categoria</option>
                                         {buscaSubCategoria.map(item => {
-                                            return(
+                                            return (
                                                 <option value={item.subCategoria_id} > {item.categoriaSub}</option>
                                             )
                                         })}
-                                </select>
+                                    </select>
 
-                                <textarea placeholder='Composição'value={composicao} onChange={e => setComposicao(e.target.value)} />
+                                    <textarea placeholder='Composição' value={composicao} onChange={e => setComposicao(e.target.value)} />
 
-                                <button onClick={ NovoProduto }> Novo </button>
-                                
-                            </div>
-                            
-                        </div>
+                                    <button onClick={NovoProduto}> Novo </button>
 
-                        <div className="sep-03">
-                            <h1>Adicionar Imagens</h1>
+                                </div>
 
-                            <div onClick={escolherImg}>
-                                {imagem1
-                                 ? <img src={mostrarImg()} alt="upload" />  
-                                 : URLimagem1 && <img src={URLimagem1} alt="upload" />
-                                }
-
-
-                                
-
-                                <input id='imagemCapa'  type='file' onChange={e => setImagem1(e.target.files[0])} />
                             </div>
 
-                            <section>
-                                <div onClick={escolherImg2}>
-                                    {imagem2 
-                                    ? <img src={mostrarImg2()} alt="upload" />  
-                                    : <img src={upload} alt="upload" />   
-                                    }
-                                    
+                            <div className="sep-03">
+                                <h1>Adicionar Imagens</h1>
 
-                                    <input id='imagemCapa2'  type='file' onChange={e => setImagem2(e.target.files[0])} />
-                                </div>
-                                <div onClick={escolherImg3}>
-                                    {imagem3 
-                                    ?  <img src={mostrarImg3()} alt="upload" />  
-                                    : <img  src={upload} alt="upload" />   
+                                <div onClick={escolherImg}>
+                                    {imagem1
+                                        ? <img src={mostrarImg()} alt="upload" />
+                                        : URLimagem1 && <img src={URLimagem1} alt="upload" />
                                     }
-                                    
 
-                                    <input id='imagemCapa3'  type='file' onChange={e => setImagem3(e.target.files[0])} />
+
+
+
+                                    <input id='imagemCapa' type='file' onChange={e => setImagem1(e.target.files[0])} />
                                 </div>
-                            </section>
-                        </div>
-                        
-                    </article>
+
+                                <section>
+                                    <div onClick={escolherImg2}>
+                                        {imagem2
+                                            ? <img src={mostrarImg2()} alt="upload" />
+                                            : <img src={upload} alt="upload" />
+                                        }
+
+
+                                        <input id='imagemCapa2' type='file' onChange={e => setImagem2(e.target.files[0])} />
+                                    </div>
+                                    <div onClick={escolherImg3}>
+                                        {imagem3
+                                            ? <img src={mostrarImg3()} alt="upload" />
+                                            : <img src={upload} alt="upload" />
+                                        }
+
+
+                                        <input id='imagemCapa3' type='file' onChange={e => setImagem3(e.target.files[0])} />
+                                    </div>
+                                </section>
+                            </div>
+
+                        </article>
+                    </div>
                 </div>
-                </div>
-                
+
             </main>
 
         </div>

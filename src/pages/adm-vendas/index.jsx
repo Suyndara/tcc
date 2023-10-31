@@ -5,44 +5,44 @@ import Opcoes from '../../components/opcoes';
 
 
 
-export default function VendasADM(){
+export default function VendasADM() {
 
 
 
-    return(
+  return (
 
 
-        <div className='pagina-vendasADM'>
-            <LateralADM />
-            <section>
-                <CabecalhoADM />
-                <Opcoes />
-                
-                <div className='sas'>
-                <div className='tabela'>
-                <table>
-                  <thead>
-                    <tr>
-                      <th> produto </th>
-                      <th> cliente </th>
-                      <th> parcelas </th>
-                      <th> status </th> 
-                    </tr>
-                  </thead>
-                  <tbody> 
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>  
-                  </tbody>
-                </table>
-              </div>
+    <div className='pagina-vendasADM'>
+      <LateralADM />
+      <section>
+        <CabecalhoADM />
+        <Opcoes />
 
-              <button>VERIFICAR</button>
-              </div>
-            </section>
+        <div className='sas'>
+          <div className='tabela'>
+            <table>
+              <thead>
+                <tr>
+                  <th> produto </th>
+                  <th> cliente </th>
+                  <th> parcelas </th>
+                  <th> status </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button>VERIFICAR</button>
         </div>
-    );
+      </section>
+    </div>
+  );
 }

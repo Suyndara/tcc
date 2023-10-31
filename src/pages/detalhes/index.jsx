@@ -4,17 +4,17 @@ import Cabecalho from '../../components/cabecalho';
 import Rodape from '../../components/rodape';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {  Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export default function Detalhes(){
+export default function Detalhes() {
 
 
-    return(
+    return (
         <div className='pagina-detalhes'>
-            <Cabecalho/>
+            <Cabecalho />
 
             <main className='s1'>
                 <article>
@@ -34,7 +34,7 @@ export default function Detalhes(){
                         <p>CONSULTE O ESTOQUE DA LOJA</p>
                         <p>Calcular o frete da entrega</p>
                         <label>
-                            <input type="text" placeholder='Digite o CEP'/>
+                            <input type="text" placeholder='Digite o CEP' />
                             <button>OK</button>
                         </label>
                         <p>Não sei meu CEP</p>
@@ -44,7 +44,7 @@ export default function Detalhes(){
 
             <main className='s2'>
                 <p className='a'>Relacionados</p>
-                
+
                 <section>
                     <Swiper
                         modules={[Navigation]}
@@ -52,95 +52,95 @@ export default function Detalhes(){
                         loop={true}
                     >
                         <SwiperSlide>
-                                <label>
-                                    <article>
-                                        <footer className='f1'>
+                            <label>
+                                <article>
+                                    <footer className='f1'>
 
-                                        </footer>
+                                    </footer>
 
-                                        <footer>
-                                            <p>Brinco Ouro Rodolita E Diamantes</p>
-                                            <p>R$ 20.350,00</p>
-
-
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
-
-                                    <article>
-                                        <footer className='f2'>
-
-                                        </footer>
-
-                                        <footer>
-                                            <p>Anel Ouro Branco E Diamantes Grandes</p>
-                                            <p>R$ 8.450,00</p>
+                                    <footer>
+                                        <p>Brinco Ouro Rodolita E Diamantes</p>
+                                        <p>R$ 20.350,00</p>
 
 
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
 
-                                    <article>
-                                        <footer className='f3'>
+                                <article>
+                                    <footer className='f2'>
 
-                                        </footer>
+                                    </footer>
 
-                                        <footer>
-                                            <p>Escapulário Ouro Amarelo</p>
-                                            <p>R$ 3.350,00</p>
+                                    <footer>
+                                        <p>Anel Ouro Branco E Diamantes Grandes</p>
+                                        <p>R$ 8.450,00</p>
 
 
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
-                                </label>
-                        </SwiperSlide>        
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
+
+                                <article>
+                                    <footer className='f3'>
+
+                                    </footer>
+
+                                    <footer>
+                                        <p>Escapulário Ouro Amarelo</p>
+                                        <p>R$ 3.350,00</p>
+
+
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
+                            </label>
+                        </SwiperSlide>
 
                         <SwiperSlide>
-                                <label>
-                                    <article>
-                                        <footer className='f4'>
+                            <label>
+                                <article>
+                                    <footer className='f4'>
 
-                                        </footer>
+                                    </footer>
 
-                                        <footer>
-                                            <p>Escapulario de Prata 60cm</p>
-                                            <p>R$ 850,00</p>
-
-
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
-
-                                    <article>
-                                        <footer className='f5'>
-
-                                        </footer>
-
-                                        <footer>
-                                            <p>Colar Life Unique Prata e Ágata Verde</p>
-                                            <p>R$ 550,00</p>
+                                    <footer>
+                                        <p>Escapulario de Prata 60cm</p>
+                                        <p>R$ 850,00</p>
 
 
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
 
-                                    <article>
-                                        <footer className='f6'>
+                                <article>
+                                    <footer className='f5'>
 
-                                        </footer>
+                                    </footer>
 
-                                        <footer>
-                                            <p>Escapulario Ouro Branco</p>
-                                            <p>R$ 4.150,00</p>
+                                    <footer>
+                                        <p>Colar Life Unique Prata e Ágata Verde</p>
+                                        <p>R$ 550,00</p>
 
 
-                                            <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
-                                        </footer>
-                                    </article>
-                                </label>
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
+
+                                <article>
+                                    <footer className='f6'>
+
+                                    </footer>
+
+                                    <footer>
+                                        <p>Escapulario Ouro Branco</p>
+                                        <p>R$ 4.150,00</p>
+
+
+                                        <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
+                                    </footer>
+                                </article>
+                            </label>
                         </SwiperSlide>
                     </Swiper>
                 </section>
@@ -148,7 +148,7 @@ export default function Detalhes(){
 
             <main className='s3'>
                 <article>
-                    <section>                
+                    <section>
                         <h1>Composição  </h1>
                         <p>Escapulário Ouro Amarelo</p>
                     </section>
@@ -157,25 +157,25 @@ export default function Detalhes(){
                     <p className='p-s3'>• Material: ouro amarelo</p>
                 </article>
 
-                
+
                 <article>
-                    <section>                        
+                    <section>
                         <h1>Detalhes </h1>
                         <p>OURO AMARELO</p>
                     </section>
 
                     <p>
-                    A Joyeria Cristallo utiliza
-                    em suas joias ouro 18k,
-                    que é o mais indicado para
-                    o uso na joalheria em função
-                    de sua durabilidade e brilho.
+                        A Joyeria Cristallo utiliza
+                        em suas joias ouro 18k,
+                        que é o mais indicado para
+                        o uso na joalheria em função
+                        de sua durabilidade e brilho.
                     </p>
-                    
+
                 </article>
             </main>
 
-            <Rodape/>
+            <Rodape />
         </div>
     )
 }

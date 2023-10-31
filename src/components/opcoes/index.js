@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Opcoes() {
 
-    return(
+    return (
         <div className='comp-opcoes'>
 
             <Link to='/vendas-adm' className='vendas'>
@@ -11,7 +11,7 @@ export default function Opcoes() {
                     <span className='a1'>
 
                     </span>
-                    
+
                     <p>Vendas</p>
                 </article>
             </Link>

@@ -3,10 +3,10 @@ import Cabecalho from '../../components/cabecalho';
 import Rodape from '../../components/rodape';
 
 export default function Guia() {
-    
-    return(
+
+    return (
         <div className='pagina-guia'>
-            <Cabecalho/>
+            <Cabecalho />
 
             <main>
                 <h1>Guia de Diamantes</h1>
@@ -24,11 +24,11 @@ export default function Guia() {
                 <h2>Cor</h2>
 
                 <p>A cor é a segunda característica mais importante dos 4Cs, porque a classificação da cor afeta diretamente a aparência da pedra. Diamantes com classificação de cor ruim podem parecer ligeiramente amarelos em vez de apresentarem o desejado branco brilhante.</p>
-            
+
                 <img src="/assets/img/cordima.png" alt="cord" />
             </main>
 
-            <Rodape/>
+            <Rodape />
         </div>
     )
 }

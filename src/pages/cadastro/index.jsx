@@ -11,10 +11,10 @@ import { LoginUsuario } from '../../api/UsuarioApi';
 export default function Cadastro() {
 
 
-    const [ nome, setNome ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ senha, setSenha ] = useState('');
-    const [ confirmPwd, setConfirmPwd ] = useState('');
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [confirmPwd, setConfirmPwd] = useState('');
 
 
 
@@ -24,10 +24,10 @@ export default function Cadastro() {
 
             if (senha !== confirmPwd) {
                 toast.error('As senhas não coincidem');
-            } 
-            
+            }
+
             else {
-                const resp = await LoginUsuario( nome, email, senha );
+                const resp = await LoginUsuario(nome, email, senha);
                 console.log(resp);
 
                 toast.info('Cliente criado com sucesso');
@@ -50,14 +50,14 @@ export default function Cadastro() {
                 <h1>FAÇA SEU CADASTRO</h1>
                 <h2>COMPRE NOSSOS MELHORES PRODUTOS</h2>
             </article>
-            
+
             <article className='input'>
                 <input type="text" placeholder='NOME COMPLETO' value={nome} onChange={e => setNome(e.target.value)} />
                 <input type="email" placeholder='EMAIL' value={email} onChange={e => setEmail(e.target.value)} />
                 <input type="password" placeholder='SENHA' value={senha} onChange={e => setSenha(e.target.value)} />
                 <input type="password" placeholder='CONFIRMAR SENHA' value={confirmPwd} onChange={e => setConfirmPwd(e.target.value)} />
 
-                <button onClick={ UsuarioCriado }> Registrar </button>
+                <button onClick={UsuarioCriado}> Registrar </button>
             </article>
 
         </div>

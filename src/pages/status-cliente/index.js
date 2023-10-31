@@ -7,11 +7,11 @@ import Home from '../../assets/img/home.svg';
 import Star from '../../assets/img/star.svg';
 
 
-export default function StatusCliente(){
+export default function StatusCliente() {
 
 
 
-    return(
+    return (
 
 
         <div className='pagina-status'>
@@ -19,13 +19,13 @@ export default function StatusCliente(){
 
             <div className='codigo-status'>
                 <p>Código de Produto: T23YUY1TR3E43323</p>
-                
+
                 <div className='etapas'>
                     <div className='barra'></div>
 
                     <div className='comercio'>
                         <div className='imagem'>
-                            <img src={Comercio} alt='' />               
+                            <img src={Comercio} alt='' />
                         </div>
                         <h3>Pedido feito</h3>
                         <p>23/03/22</p>
@@ -33,7 +33,7 @@ export default function StatusCliente(){
 
                     <div className='comercio'>
                         <div className='imagem'>
-                            <img src={Money} alt='' className='money'/>
+                            <img src={Money} alt='' className='money' />
                         </div>
                         <h3>Pagamento</h3>
                         <p>Realizado</p>
@@ -55,25 +55,25 @@ export default function StatusCliente(){
 
                     <div className='comercio'>
                         <div className='imagem2'>
-                            <img src={Star} alt='' className='especial'/>
+                            <img src={Star} alt='' className='especial' />
                         </div>
                         <h3>Avaliação</h3>
                     </div>
                 </div>
-                <hr/>
+                <hr />
 
                 <div className='fale-conosco'>
                     <p>Estamos no aguardo do pagamento para o evio do produto.
-                    Estimamos que se o valor for pago corretamente o produto chegara nos dias 28 á 31 de junho.</p>
-                
+                        Estimamos que se o valor for pago corretamente o produto chegara nos dias 28 á 31 de junho.</p>
+
                     <button>FALE COM O VENDEDOR</button>
                 </div>
-                <hr/>
+                <hr />
 
                 <div className='cancelar'>
                     <button>CANCELAR O PEDIDO</button>
                 </div>
-                <hr/>
+                <hr />
 
                 <div className='garantia'>
                     <p>Caso o vendedor não envie no tempo eperado, voce pode fazer a extenção de sua garantia aqui.</p>
