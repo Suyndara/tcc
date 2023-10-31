@@ -16,4 +16,19 @@ export async function LoginUsuario(cliente, email, senha) {
     });
     
     return resp.data;
+};
+
+
+
+
+
+
+
+export async function SingUpUsuario(email, senha) {
+    const resp = await api.post('/usuario/logar', {
+        email: email,
+        senha: senha
+    });
+
+    return resp.data;
 }

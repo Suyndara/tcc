@@ -27,9 +27,17 @@ export default function Edicao(){
     const [ disponivel, setDisponivel ] = useState(false);
     const [ id, setId ] = useState(0);
 
+
+
     const [ imagem1, setImagem1 ] = useState('');
     const [ imagem2, setImagem2 ] = useState('');
     const [ imagem3, setImagem3 ] = useState('');
+
+
+    
+    const [ URLimagem1, setURLImagem1 ] = useState('');
+    const [ URLimagem2, setURLImagem2 ] = useState('');
+    const [ URLimagem3, setURLImagem3 ] = useState('');
 
 
     const [ buscaCategoria, setBuscaCategoria ] = useState([]);
@@ -55,6 +63,7 @@ export default function Edicao(){
         setComposicao(resposta.composicao);
         setDestalhes(resposta.detalhes);
         setDisponivel(resposta.disponivel);
+        
         setId(resposta.id);
     }
 
@@ -86,9 +95,9 @@ export default function Edicao(){
             toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
             if (error.response) 
-                alert(error.response.data.erro);
+                toast.error(error.response.data.erro);
             else 
-                alert(error.message);
+                toast.error(error.message);
         }
     };
 
@@ -220,7 +229,6 @@ export default function Edicao(){
                             <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)} />
                             
                             <button onClick={ AdicionarProduto }> { id === 0 ? 'Salvar' : 'Alterar' } </button>
-                            <button onClick={ NovoProduto }> Novo </button>
                         </div>
 
                         <div className="sep-02">
@@ -244,7 +252,7 @@ export default function Edicao(){
 
                                 <textarea placeholder='Composição'value={composicao} onChange={e => setComposicao(e.target.value)} />
 
-                                
+                                <button onClick={ NovoProduto }> Novo </button>
                                 
                             </div>
                             
@@ -256,8 +264,10 @@ export default function Edicao(){
                             <div onClick={escolherImg}>
                                 {imagem1
                                  ? <img src={mostrarImg()} alt="upload" />  
-                                 : <img src={upload} alt="upload" />   
+                                 : URLimagem1 && <img src={URLimagem1} alt="upload" />
                                 }
+
+
                                 
 
                                 <input id='imagemCapa'  type='file' onChange={e => setImagem1(e.target.files[0])} />
