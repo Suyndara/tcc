@@ -11,6 +11,7 @@ import { ConsultarPorNome, ConsultarTodos, DeletarProduto, deletarImg } from '..
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Produtos() {
@@ -18,9 +19,14 @@ export default function Produtos() {
     const [ produtos, setProdutos ] = useState([]);
     const [ filtro, setFiltro ] = useState('');
 
- 
+    const navigate = useNavigate();
 
-    async function ExcluirProduto(produto_id, nome, imagem_produto_id, imagem) {
+ 
+    function EditarProduto(id) {
+        navigate(`/alterar-adm/${id}`)
+    }
+
+    async function ExcluirProduto(produto_id, nome, imagem) {
 
             confirmAlert({
                 title: 'Remover Produto',
@@ -29,8 +35,8 @@ export default function Produtos() {
                   {
                     label: 'Sim',
                     onClick: async () => {
+                        const respImg = await deletarImg(produto_id, imagem);
                         const resp = await DeletarProduto(produto_id, nome);
-                        const respImg = await deletarImg(imagem_produto_id, imagem);
     
                         if (filtro === '') {
                             ListarTodosProdutos()
@@ -113,7 +119,7 @@ export default function Produtos() {
                                             <td> {item.categoria} </td>
                                             <td> {item.categoriaSub} </td>
                                             {<td>
-                                                <img src={Editar}  alt="Caneta"/>
+                                                <img src={Editar}  alt="Caneta" onClick={() => EditarProduto(item.produto_id)}/>
                                                 <img src={Exluir}  alt="Lixo" onClick={() => ExcluirProduto(item.produto_id, item.nome)} />
                                             </td>}
                                         </tr>   
