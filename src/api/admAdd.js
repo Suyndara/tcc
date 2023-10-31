@@ -38,10 +38,10 @@ export async function inserirImagem(imagem, id) {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
-    })
+    });
+
+    return resp.status;
 };
-
-
 
 
 
@@ -109,3 +109,27 @@ export async function BuscarProdutoPorId(id) {
 
 
 
+
+
+export async function alterarProduto(id, nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel) {
+    const resp = await api.put(`/alterar/produto/${id}`, {
+        nome: nome,
+        preco: preco,
+        categoria: categoria,
+        subcategoria: subcategoria,
+        estoque: estoque,
+        composicao: composicao,
+        detalhes: detalhes,         
+        disponivel: disponivel
+    });
+
+    return resp.data;
+};
+
+
+
+
+
+export async function BuscarImagem(imagem) {
+    return `${api.getUri()}/${imagem}`
+}

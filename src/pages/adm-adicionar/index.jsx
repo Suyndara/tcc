@@ -10,7 +10,8 @@ import upload from '../../assets/img/upload.png'
 import { ToastContainer, toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem } from '../../api/admAdd';
+import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem, alterarProduto, BuscarProdutoPorId, BuscarImagem } from '../../api/admAdd';
+
 
 
 export default function Edicao(){
@@ -24,6 +25,7 @@ export default function Edicao(){
     // const [ tamanho, setTamanho ] = useState();
     const [ detalhes, setDestalhes ] = useState();
     const [ disponivel, setDisponivel ] = useState(false);
+    const [ id, setId ] = useState(0);
 
     const [ imagem1, setImagem1 ] = useState('');
     const [ imagem2, setImagem2 ] = useState('');
@@ -34,38 +36,73 @@ export default function Edicao(){
     const [ buscaSubCategoria, setBuscaSubCategoria ] = useState([]);
 
 
-    const { produto_id } = useParams()
+    const { produto_id } = useParams();
 
     useEffect(() => {
-
+        if(produto_id) {
+            CarregarProduto();
+        }
     }, []);
 
 
-    // async function CarregarProduto() {
-    //     const responsta = await 
-    // }
+    async function CarregarProduto() {
+        const resposta = await BuscarProdutoPorId(produto_id);
+        setNome(resposta.nome);
+        setPreco(resposta.preco);
+        setCategoria(resposta.categoria);
+        setSubCategoria(resposta.subcategoria);
+        setEstoque(resposta.estoque);
+        setComposicao(resposta.composicao);
+        setDestalhes(resposta.detalhes);
+        setDisponivel(resposta.disponivel);
+        setId(resposta.id);
+    }
 
 
     async function AdicionarProduto() {
         try {
-            
-            const resp = await cadastrarProduto( nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
 
-            if (imagem1 != null) {
-                await inserirImagem(imagem1, resp.id);
-            }
-            if (imagem2 != null) {
-                await inserirImagem(imagem2, resp.id);
-            }
-            if (imagem3 != null) {
-                await inserirImagem(imagem3, resp.id);
-            }
+            if ( id === 0) {
 
-            toast.success('Produto adicionado com sucesso');
+                const resp = await cadastrarProduto(nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
+
+                if (imagem1 != null) {
+                    await inserirImagem(imagem1, resp.id);
+                };
+                if (imagem2 != null) {
+                    await inserirImagem(imagem2, resp.id);
+                };
+                if (imagem3 != null) {
+                    await inserirImagem(imagem3, resp.id);
+                };
+
+                setId(resp.id);
+
+            } else {
+                await alterarProduto(id, nome, preco, categoria, subcategoria, estoque, composicao, detalhes, disponivel );
+            }
+        
+
+            toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
-             toast.error(error.response.data.erro);
+            if (error.response) 
+                toast.error(error.response.data.erro);
+            else 
+                toast.error(error.message);
         }
     };
+
+
+
+    async function NovoProduto() {
+        setId(0);
+        setNome('');
+        setPreco('');
+        setEstoque('');
+        setComposicao('');
+        setDestalhes('');
+        setDisponivel('');
+    }
 
 
 
@@ -112,15 +149,27 @@ export default function Edicao(){
     }
 
     function mostrarImg() {
-        return URL.createObjectURL(imagem1); 
+        if ( typeof (imagem1) == 'object' ){
+            return URL.createObjectURL(imagem1); 
+        } else {
+            return BuscarImagem(imagem1);
+        }
     }
 
     function mostrarImg2() {
-        return URL.createObjectURL(imagem2)   
+        if ( typeof (imagem2) == 'object' ){
+            return URL.createObjectURL(imagem2); 
+        } else {
+            return BuscarImagem(imagem2);
+        }
     }
 
     function mostrarImg3() {
-        return URL.createObjectURL(imagem2)   
+        if ( typeof (imagem3) == 'object' ){
+            return URL.createObjectURL(imagem3); 
+        } else {
+            return BuscarImagem(imagem3);
+        }
     }
 
 
@@ -170,7 +219,8 @@ export default function Edicao(){
 
                             <textarea placeholder='Detalhes' value={detalhes} onChange={e => setDestalhes(e.target.value)} />
                             
-                            <button onClick={ AdicionarProduto }> Adicionar </button>
+                            <button onClick={ AdicionarProduto }> { id === 0 ? 'Salvar' : 'Alterar' } </button>
+                            <button onClick={ NovoProduto }> Novo </button>
                         </div>
 
                         <div className="sep-02">
@@ -205,7 +255,7 @@ export default function Edicao(){
 
                             <div onClick={escolherImg}>
                                 {imagem1
-                                 ?   <img src={mostrarImg()} alt="upload" />  
+                                 ? <img src={mostrarImg()} alt="upload" />  
                                  : <img src={upload} alt="upload" />   
                                 }
                                 
