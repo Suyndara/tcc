@@ -208,8 +208,7 @@
 
             height: auto;
             width: auto;
-
-            
+   
            .barras-s2{
                 display: flex;
                 justify-content: space-evenly;
@@ -254,7 +253,6 @@
                 }
            }
         }
-
 
         img:first-child{
             width: 90px;
@@ -400,7 +398,6 @@
 
 @media (max-width: 334px) {
     .comp-cabecalho{
-
         justify-content: space-evenly;
 
         .logo{
@@ -470,7 +467,6 @@
         .opcoes{
             display: none;
         }
-        
     }
 }
 
