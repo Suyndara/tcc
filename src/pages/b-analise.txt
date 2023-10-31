@@ -4,13 +4,13 @@ adm-adicionar
 adm-consultar
 adm-estoque
 adm-graficos
-adm-home
+adm-home / componentes
 adm-login
 adm-vendas
 
-Detalhes
 entrega-pagamento
 filtro
 guia
 politica
-status-admstatus-cliente
+status-adm
+status-cliente
