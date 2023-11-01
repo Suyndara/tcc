@@ -57,14 +57,14 @@ export default function Edicao() {
         const resposta = await BuscarProdutoPorId(produto_id);
         setNome(resposta.nome);
         setPreco(resposta.preco);
-        setCategoria(resposta.categoria);
-        setSubCategoria(resposta.subcategoria);
+        setCategoria(resposta.categoria_id);
+        setSubCategoria(resposta.subCategoria_id);
         setEstoque(resposta.estoque);
         setComposicao(resposta.composicao);
         setDestalhes(resposta.detalhes);
         setDisponivel(resposta.disponivel);
 
-        setId(resposta.id);
+        setId(resposta.produto_id);
     }
 
 
@@ -95,9 +95,9 @@ export default function Edicao() {
             toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
             if (error.response)
-                toast.error(error.response.data.erro);
+                alert(error.response.data.erro);
             else
-                toast.error(error.message);
+                alert(error.message);
         }
     };
 
@@ -138,7 +138,7 @@ export default function Edicao() {
 
             const subcategoria = await BuscarSubCategoria()
             setBuscaSubCategoria(subcategoria)
-
+ 
         } catch (error) {
             toast.error(error.response.data.errro)
         }
@@ -262,12 +262,14 @@ export default function Edicao() {
                                 <h1>Adicionar Imagens</h1>
 
                                 <div onClick={escolherImg}>
-                                    {imagem1
-                                        ? <img src={mostrarImg()} alt="upload" />
-                                        : URLimagem1 && <img src={URLimagem1} alt="upload" />
+
+                                    {!imagem1 &&    
+                                        <img src={upload} alt="upload" />
                                     }
 
-
+                                    {imagem1 &&    
+                                        <img  className='imagemCapa1' src={mostrarImg()} alt="upload" />
+                                    }
 
 
                                     <input id='imagemCapa' type='file' onChange={e => setImagem1(e.target.files[0])} />
@@ -275,18 +277,24 @@ export default function Edicao() {
 
                                 <section>
                                     <div onClick={escolherImg2}>
-                                        {imagem2
-                                            ? <img src={mostrarImg2()} alt="upload" />
-                                            : <img src={upload} alt="upload" />
-                                        }
+                                    {!imagem2 &&    
+                                        <img src={upload} alt="upload" />
+                                    }
+
+                                    {imagem2 &&    
+                                        <img  className='imagemCapa1' src={mostrarImg2()} alt="upload" />
+                                    }
 
 
                                         <input id='imagemCapa2' type='file' onChange={e => setImagem2(e.target.files[0])} />
                                     </div>
                                     <div onClick={escolherImg3}>
-                                        {imagem3
-                                            ? <img src={mostrarImg3()} alt="upload" />
-                                            : <img src={upload} alt="upload" />
+                                        {!imagem3 &&    
+                                            <img src={upload} alt="upload" />
+                                        }
+
+                                        {imagem3 &&    
+                                            <img  className='imagemCapa1' src={mostrarImg3()} alt="upload" />
                                         }
 
 
