@@ -57,8 +57,8 @@ export default function Edicao() {
         const resposta = await BuscarProdutoPorId(produto_id);
         setNome(resposta.nome);
         setPreco(resposta.preco);
-        setCategoria(resposta.categoria_id);
-        setSubCategoria(resposta.subCategoria_id);
+        setCategoria(resposta.categoria);
+        setSubCategoria(resposta.subCategoria);
         setEstoque(resposta.estoque);
         setComposicao(resposta.composicao);
         setDestalhes(resposta.detalhes);
