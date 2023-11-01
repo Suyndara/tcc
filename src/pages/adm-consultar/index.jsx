@@ -38,11 +38,8 @@ export default function Produtos() {
                         const respImg = await deletarImg(produto_id, imagem);
                         const resp = await DeletarProduto(produto_id, nome);
 
-                        console.log(respImg);
-                        console.log(resp);
-
                         if (filtro === '') {
-                            ListarTodosProdutos()
+                            ListarTodosProdutos();
                         } else {
                             filtrar()
                         }

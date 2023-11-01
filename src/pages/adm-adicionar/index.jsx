@@ -95,9 +95,9 @@ export default function Edicao() {
             toast.success(id === 0 ? 'Produto adicionado com sucesso' : 'Produto alterado com sucesso');
         } catch (error) {
             if (error.response)
-                alert(error.response.data.erro);
+                toast.error(error.response.data.erro);
             else
-                alert(error.message);
+                toast.error(error.message);
         }
     };
 
@@ -119,8 +119,8 @@ export default function Edicao() {
     async function buscarCategorias() {
         try {
 
-            const categorias = await BuscarCategoria()
-            setBuscaCategoria(categorias)
+            const categorias = await BuscarCategoria();
+            setBuscaCategoria(categorias);
         }
         catch (error) {
             toast.error(error.response.data.erro)
