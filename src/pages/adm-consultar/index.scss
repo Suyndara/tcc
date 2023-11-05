@@ -1,7 +1,7 @@
 .pagina-produtos {
     display: flex;
 
-    min-height: 100vh;
+    max-height: 100vh;
     width: 100%;
 
     .main {
@@ -9,7 +9,7 @@
         flex-direction: column;
     
 
-        min-height: 100vh;
+        max-height: 100vh;
         width: 85%;
 
         align-items: center;

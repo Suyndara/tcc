@@ -44,7 +44,7 @@ export default function Produtos() {
                             filtrar()
                         }
 
-                        toast.success('Produto removido com sucesso');
+                        toast.info('Produto removido com sucesso');
                     }
                 },
                 {
