@@ -1,10 +1,26 @@
 import './index.scss';
+
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape';
+
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 export default function Conta() {
+
+
+    const [ nome, setNome ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ telefone, setTelefone ] = useState('');
+    const [ senha, setSenha ] = useState('');
+    const [ cpf, setCpf ] = useState('');
+    const [ data, setData ] = useState();
+
+
+
+    const [ cliente, setCliente ] = useState([]);
 
     return (
         <div className='pagina-minhaconta'>
@@ -34,22 +50,23 @@ export default function Conta() {
                     </section>
                 </article>
 
+                {cliente.map(item => {
+                    return (
+                        <span>
+                            <input type="text" placeholder='Nome completo' value={item.nome}/>
+                            <input type="text" placeholder='Email' />
+                            <input type="text" placeholder='Número de telefone' />
+                            <input type="password" placeholder='Senha' />
+    
+                            <section>
+                                <input type="text" placeholder='cpf' />
+                                <input type="date" placeholder='Data de nascimento' />
+                            </section>
+    
+                        </span>
+                    );
+                })}
 
-                <aside>
-                    <span>
-                        <input type="text" placeholder='Nome completo' />
-                        <input type="text" placeholder='Email' />
-                        <input type="text" placeholder='Número de telefone' />
-                        <input type="text" placeholder='Endereço' />
-
-                        <section>
-                            <input type="text" placeholder='Cidade' />
-                            <input type="text" placeholder='Estado' />
-                        </section>
-
-                        <input type="text" placeholder='Senha' />
-                    </span>
-                </aside>
             </main>
 
             <Rodape />

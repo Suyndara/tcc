@@ -31,4 +31,4 @@ export async function SingUpUsuario(email, senha) {
     });
 
     return resp.data;
-}
+};

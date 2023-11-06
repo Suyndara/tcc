@@ -84,6 +84,10 @@ export default function Login() {
 
           <a href="/">Esqueceu sua senha ?</a>
 
+          <a href="/minhaconta">
+            <strong> Minha conta </strong>
+          </a>
+
         </div>
 
       </main>
