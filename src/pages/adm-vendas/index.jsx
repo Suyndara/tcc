@@ -20,6 +20,7 @@ export default function VendasADM() {
 
         <div className='sas'>
           <div className='tabela'>
+            
             <table>
               <thead>
                 <tr>

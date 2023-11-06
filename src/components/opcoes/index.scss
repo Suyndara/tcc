@@ -31,30 +31,21 @@
         transition: .1s;
         
         .a1{
-            height: 100px;
-            width: 100px;
-
             background-image: url(../../assets/img/i-money.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: 100%;
         }
 
         .a2{
-            height: 100px;
-            width: 100px;
-
             background-image: url(../../assets/img/i-graph.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: 100%;
         }
 
         .a3{
+            background-image: url(../../assets/img/i-graph2.png);
+        }
+
+        .a1, .a2, .a3{
             height: 100px;
             width: 100px;
 
-            background-image: url(../../assets/img/i-graph2.png);
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: 100%;
@@ -71,5 +62,32 @@
 
     article:active{
         border: 0.5px solid black;
+    }
+}
+
+@media (max-width: 720px){
+    .comp-opcoes{
+        article{
+
+            justify-content: space-around;
+
+            height: 130px;
+            width: 100%;
+            
+            background-color: purple;
+
+            .a1{
+                height: 100px;
+                width: 100px;
+            }
+
+            .a2{
+                height: 100px;
+            }
+
+            .a3{
+
+            }
+        }
     }
 }

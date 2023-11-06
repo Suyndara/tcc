@@ -44,9 +44,6 @@
             transition: .1s;
             
             .a1{
-                height: 100px;
-                width: 100px;
-
                 background-image: url(../../../public/assets/img/edit.png);
                 background-repeat: no-repeat;
                 background-size: 100%;
@@ -54,9 +51,6 @@
             }
 
             .a2{
-                height: 100px;
-                width: 100px;
-
                 background-image: url(../../../public/assets/img/i-plus.png);
                 background-repeat: no-repeat;
                 background-size: 100%;
@@ -64,14 +58,18 @@
             }
 
             .a3{
-                height: 100px;
-                width: 100px;
-
                 background-image: url(../../../public/assets/img/i-sair.png);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: 100%;
+            }
 
+            .a1,
+             .a2, 
+              .a3{
+
+                height: 100px;
+                width: 40%;
             }
 
             p{
@@ -116,6 +114,34 @@
 
         .rodape2{
             display: none;
+        }
+    }
+}
+
+@media (max-width: 888px) {
+    .Pagina-HomeAdm{
+
+        .comp-lateral{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .Pagina-HomeAdm{
+        section{
+            article{
+                height: 130px;
+                width: 200px;
+                
+                .a1,
+                 .a2, 
+                  .a3{
+   
+                   height: 100px;
+                   width: 40%;
+               }
+            }
         }
     }
 }
