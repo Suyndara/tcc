@@ -65,6 +65,24 @@
     }
 }
 
+@media (max-width: 760px){
+    .comp-opcoes{
+        article{
+
+            justify-content: space-around;
+
+            height: 130px;
+            width: 100%;
+
+            min-width: 50px;
+            
+            .a1, .a2, .a3{
+                min-width: 100px;
+            }
+        }
+    }
+}
+
 @media (max-width: 720px){
     .comp-opcoes{
         article{
@@ -74,19 +92,8 @@
             height: 130px;
             width: 100%;
             
-            background-color: purple;
-
-            .a1{
-                height: 100px;
-                width: 100px;
-            }
-
-            .a2{
-                height: 100px;
-            }
-
-            .a3{
-
+            .a1, .a2, .a3{
+                min-width: 50px;
             }
         }
     }
