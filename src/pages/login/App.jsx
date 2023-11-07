@@ -32,8 +32,6 @@ export default function Login() {
     try {
 
       const resp = await SingUpUsuario(email, senha);
-      console.log(resp)
-
       storage('usuario-logado', resp);  
 
       setTimeout(() => {
