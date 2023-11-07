@@ -1,7 +1,7 @@
 .pagina-estoqueAdm {
   display: flex;
 
-  height: auto;
+  height: 100vh;
   width: 100%;
 
   .analise {
@@ -14,7 +14,7 @@
 
 
     .comp-opcoes {
-      height: 200px;
+      height: 300px;  
 
       .estoque {
         article:last-child {
@@ -34,7 +34,7 @@
     section {
       display: flex;
 
-      height: 630px;
+      height: 100%;
       width: 100%;
 
       margin-top: 5px;

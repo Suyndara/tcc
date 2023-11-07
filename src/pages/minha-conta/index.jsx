@@ -1,10 +1,23 @@
 import './index.scss';
+
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape';
+
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 export default function Conta() {
+
+
+    const [ cliente, setCliente ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ telefone, setTelefone ] = useState('');
+    const [ senha, setSenha ] = useState('');
+    const [ cpf, setCpf ] = useState('');
+    const [ nascimento, setNascimento ] = useState();
+
 
     return (
         <div className='pagina-minhaconta'>
@@ -33,23 +46,22 @@ export default function Conta() {
                         </Link>
                     </section>
                 </article>
-
-
                 <aside>
                     <span>
-                        <input type="text" placeholder='Nome completo' />
-                        <input type="text" placeholder='Email' />
-                        <input type="text" placeholder='Número de telefone' />
-                        <input type="text" placeholder='Endereço' />
+                        <input type="text" placeholder='Nome completo' value={cliente} onChange={e => setCliente(e.target.value)} />
+                        <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)}/>
+                        <input type="text" placeholder='Número de telefone' value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                        <input type="password" placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)} />
 
-                        <section>
-                            <input type="text" placeholder='Cidade' />
-                            <input type="text" placeholder='Estado' />
+                        <section> 
+                            <input type="text" placeholder='cpf' value={cpf} onChange={e => setCpf(e.target.value)} />
+                            <input type="date" placeholder='Data de nascimento' value={nascimento} onChange={e => setNascimento(e.target.value)}/>
                         </section>
 
-                        <input type="text" placeholder='Senha' />
+                    <button> Salvar </button>
                     </span>
-                </aside>
+                 </aside>
+
             </main>
 
             <Rodape />
