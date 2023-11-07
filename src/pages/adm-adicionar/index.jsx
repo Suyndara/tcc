@@ -10,7 +10,7 @@ import upload from '../../assets/img/upload.png'
 import { ToastContainer, toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem, alterarProduto, BuscarProdutoPorId, BuscarImagem } from '../../api/admAdd';
+import { cadastrarProduto, BuscarCategoria, BuscarSubCategoria, inserirImagem, alterarProduto, BuscarProdutoPorId, BuscarImagem, buscarTodasImagensProduto } from '../../api/admAdd';
 
 
 
@@ -29,7 +29,7 @@ export default function Edicao() {
 
 
 
-    const [imagem1, setImagem1] = useState('');
+    const [imagem1, setImagem1] = useState();
     const [imagem2, setImagem2] = useState('');
     const [imagem3, setImagem3] = useState('');
 
@@ -55,6 +55,14 @@ export default function Edicao() {
 
     async function CarregarProduto() {
         const resposta = await BuscarProdutoPorId(produto_id);
+        const imagens = await buscarTodasImagensProduto(produto_id)
+        console.log(imagens);
+
+        
+        setImagem1(imagens[0].imagem)
+        setImagem2(imagens[1].imagem)
+        setImagem3(imagens[2].imagem)    
+
         setNome(resposta.nome);
         setPreco(resposta.preco);
         setCategoria(resposta.categoria);
@@ -157,11 +165,16 @@ export default function Edicao() {
         document.getElementById('imagemCapa3').click();
     }
 
-    function mostrarImg() {
+    async function mostrarImg() {
+
         if (typeof (imagem1) == 'object') {
             return URL.createObjectURL(imagem1);
-        } else {
-            return BuscarImagem(imagem1);
+        } else if(imagem1){
+            console.log('oi');
+            return await BuscarImagem(imagem1) 
+            // console.log(imagemm);
+            // setImagem1(imagemm)
+            // return `${imagemm}`
         }
     }
 
@@ -264,11 +277,11 @@ export default function Edicao() {
                                 <div onClick={escolherImg}>
 
                                     {!imagem1 &&    
-                                        <img src={upload} alt="upload" />
+                                        <img src={upload} alt="upload1" />
                                     }
 
                                     {imagem1 &&    
-                                        <img  className='imagemCapa1' src={mostrarImg()} alt="upload" />
+                                        <img  className='imagemCapa1' src={mostrarImg()} alt="upload1" />
                                     }
 
 

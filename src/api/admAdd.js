@@ -128,7 +128,11 @@ export async function alterarProduto(id, nome, preco, categoria, subcategoria, e
 
 
 
+export async function buscarTodasImagensProduto(id){
+    const resp = await api.get(`/buscar/img/${id}`)
 
+    return resp.data
+}
 
 export async function BuscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
