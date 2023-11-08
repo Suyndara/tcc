@@ -1,10 +1,10 @@
-.Pagina-HomeAdm{
+.Pagina-HomeAdm {
     display: flex;
 
     height: 100vh;
     width: 100%;
 
-    .analise{
+    .analise {
         display: flex;
 
         height: auto;
@@ -12,23 +12,23 @@
 
         flex-direction: column;
 
-        .comp-opcoes{
+        .comp-opcoes {
             height: 400px;
         }
     }
 
-    section{
+    section {
         display: flex;
 
         height: 60vh;
         width: 100%;
-    
+
         align-items: center;
         justify-content: space-evenly;
-    
+
         background-color: #EBEBEB;
 
-        article{
+        article {
             display: flex;
 
             height: 150px;
@@ -42,51 +42,46 @@
             background-color: white;
 
             transition: .1s;
-            
-            .a1{
+
+            .a1 {
                 background-image: url(../../../public/assets/img/edit.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: 100%;
             }
 
-            .a2{
+            .a2 {
                 background-image: url(../../../public/assets/img/i-plus.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: 100%;
             }
 
-            .a3{
+            .a3 {
                 background-image: url(../../../public/assets/img/i-sair.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: 100%;
             }
 
             .a1,
-             .a2, 
-              .a3{
+            .a2,
+            .a3 {
 
                 height: 100px;
-                width: 40%;
+                width: 100px;
+
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 100%;
             }
 
-            p{
+            p {
                 font-size: 20px;
             }
         }
 
-        article:hover{
+        article:hover {
             transform: scale(1.1);
         }
 
-        article:active{
+        article:active {
             border: 0.5px solid black;
         }
     }
 
-    .footer{
+    .footer {
         display: flex;
 
         height: 100%;
@@ -102,45 +97,108 @@
         background-size: 60%;
     }
 
-    .volta{
+    .volta {
         text-decoration: none;
     }
 
-    .comp-lateral{
+    .comp-lateral {
 
-        .rodape{
+        .rodape {
             display: none;
         }
 
-        .rodape2{
+        .rodape2 {
             display: none;
         }
     }
 }
 
 @media (max-width: 888px) {
-    .Pagina-HomeAdm{
+    .Pagina-HomeAdm {
 
-        .comp-lateral{
+        .comp-lateral {
             display: none;
         }
     }
 }
 
-@media (max-width: 720px) {
-    .Pagina-HomeAdm{
-        section{
-            article{
+@media (max-width: 760px) {
+    .Pagina-HomeAdm {
+        section {
+            article {
+
+                width: 12rem;
                 height: 130px;
-                width: 200px;
-                
+
+                justify-content: space-evenly;
+
                 .a1,
-                 .a2, 
-                  .a3{
-   
-                   height: 100px;
-                   width: 40%;
-               }
+                .a2,
+                .a3 {
+                    width: 6rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .Pagina-HomeAdm {
+        section {
+            article {
+
+                width: 10rem;
+
+                .a1,
+                .a2,
+                .a3 {
+                    width: 4.0rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 486px) {
+    .Pagina-HomeAdm {
+        section {
+            height: 300px;
+
+            article {
+
+                height: 100px;
+                width: 7rem;
+
+                .a1,
+                .a2,
+                .a3 {
+                    width: 2.0rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .Pagina-HomeAdm{
+
+        .analise{
+            .comp-opcoes{
+                height: 200px;
+            }
+        }
+
+        section{
+            height: 230px;
+
+            article{
+
+                height: 80px;
+                width: 5.5rem;
+                
+                p{
+                    font-size: 15px;
+                }
             }
         }
     }
