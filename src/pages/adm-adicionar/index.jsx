@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Lateral from '../../components/lateralAdm';
 import CabecalhoAdm from '../../components/cabecalhoAdm';
-import upload from '../../assets/img/upload.png'
+import upload from '../../assets/img/upload.png';
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -27,18 +27,9 @@ export default function Edicao() {
     const [disponivel, setDisponivel] = useState(false);
     const [id, setId] = useState(0);
 
-
-
     const [imagem1, setImagem1] = useState();
     const [imagem2, setImagem2] = useState('');
     const [imagem3, setImagem3] = useState('');
-
-
-
-    const [URLimagem1, setURLImagem1] = useState('');
-    const [URLimagem2, setURLImagem2] = useState('');
-    const [URLimagem3, setURLImagem3] = useState('');
-
 
     const [buscaCategoria, setBuscaCategoria] = useState([]);
     const [buscaSubCategoria, setBuscaSubCategoria] = useState([]);
@@ -52,27 +43,28 @@ export default function Edicao() {
         }
     }, []);
 
-
     async function CarregarProduto() {
         const resposta = await BuscarProdutoPorId(produto_id);
-        const imagens = await buscarTodasImagensProduto(produto_id)
-        console.log(imagens);
+        const imagens = await buscarTodasImagensProduto(produto_id);
 
         
-        setImagem1(imagens[0].imagem)
-        setImagem2(imagens[1].imagem)
-        setImagem3(imagens[2].imagem)    
+        setImagem1(imagens[0].imagem);
+        setImagem2(imagens[1].imagem);
+        setImagem3(imagens[2].imagem);    
 
         setNome(resposta.nome);
         setPreco(resposta.preco);
         setCategoria(resposta.categoria);
-        setSubCategoria(resposta.subCategoria);
+        setSubCategoria(resposta.categoriaSub);
         setEstoque(resposta.estoque);
         setComposicao(resposta.composicao);
         setDestalhes(resposta.detalhes);
         setDisponivel(resposta.disponivel);
 
         setId(resposta.produto_id);
+
+        
+        console.log(resposta);
     }
 
 
@@ -104,8 +96,6 @@ export default function Edicao() {
         } catch (error) {
             if (error.response)
                 toast.error(error.response.data.erro);
-            else
-                toast.error(error.message);
         }
     };
 
@@ -119,6 +109,9 @@ export default function Edicao() {
         setComposicao('');
         setDestalhes('');
         setDisponivel('');
+        setImagem1('');
+        setImagem2('');
+        setImagem3('');
     }
 
 
@@ -165,18 +158,15 @@ export default function Edicao() {
         document.getElementById('imagemCapa3').click();
     }
 
-    async function mostrarImg() {
+    function mostrarImg() {
 
         if (typeof (imagem1) == 'object') {
             return URL.createObjectURL(imagem1);
-        } else if(imagem1){
-            console.log('oi');
-            return await BuscarImagem(imagem1) 
-            // console.log(imagemm);
-            // setImagem1(imagemm)
-            // return `${imagemm}`
+        } else {
+            return BuscarImagem(imagem1) 
         }
     }
+
 
     function mostrarImg2() {
         if (typeof (imagem2) == 'object') {
@@ -196,12 +186,10 @@ export default function Edicao() {
 
 
 
-
-
     useEffect(() => {
         buscarCategorias()
         buscarSubCategoria()
-    }, [])
+    }, []);
 
 
 
@@ -281,10 +269,10 @@ export default function Edicao() {
                                     }
 
                                     {imagem1 &&    
-                                        <img  className='imagemCapa1' src={mostrarImg()} alt="upload1" />
+                                        <img  className='imagemCapa1' src={mostrarImg()} alt="upload" />
                                     }
 
-
+    
                                     <input id='imagemCapa' type='file' onChange={e => setImagem1(e.target.files[0])} />
                                 </div>
 

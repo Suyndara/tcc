@@ -1,12 +1,12 @@
 import axios from 'axios'
-const api = axios.create({
-    baseURL: 'http://localhost:5000'
-}); 
-
-
 // const api = axios.create({
-//     baseURL: 'http://129.148.42.252:5000'
-// });
+//     baseURL: 'http://localhost:5000'
+// }); 
+
+
+const api = axios.create({
+     baseURL: 'http://129.148.42.252:5040'
+});
 
 
 
@@ -134,6 +134,6 @@ export async function buscarTodasImagensProduto(id){
     return resp.data
 }
 
-export async function BuscarImagem(imagem) {
+export function BuscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
 }

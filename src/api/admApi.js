@@ -1,9 +1,12 @@
 import axios from 'axios'
+// const api = axios.create({
+//     baseURL: 'http://localhost:5000'
+// }); 
+
+
 const api = axios.create({
-    baseURL: 'http://localhost:5000'
-}); 
-
-
+    baseURL: 'http://129.148.42.252:5040'
+});
 
 
 export async function SingUpAdm(email, senha) {

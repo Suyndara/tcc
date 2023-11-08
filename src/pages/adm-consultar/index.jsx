@@ -69,7 +69,7 @@ export default function Produtos() {
     async function filtrar() {
         const resp = await ConsultarPorNome(filtro)
         setProdutos([resp])
-    }
+    };
 
 
 

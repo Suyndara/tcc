@@ -2,6 +2,8 @@ import './index.scss';
 
 import { Link } from 'react-router-dom';
 
+import storage from 'local-storage';
+
 import Logo from '../../assets/img/logo.svg'
 import Lupa from '../../assets/img/lupa.png'
 import Pessoa from '../../assets/img/pessoinha.png';
@@ -16,6 +18,8 @@ export default function Cabecalho() {
 
 
     const [aparecer, setDisplay] = useState('none');
+
+    // const idUsuario = storage('usuario-logado').cliente_id;
 
     function alternarMenu() {
         if (aparecer === 'none') {
@@ -63,8 +67,8 @@ export default function Cabecalho() {
             </article>
 
             <article className='icones'>
-                <Link className='login' to='/login'>
-                    <img alt='icone-pessoa' src={Pessoa} />
+                <Link className='login' to="/login">
+                    <img src="/assets/img/pessoinha.png" alt="pessoa" />        
                 </Link>
 
                 <Link className='carrinho' to='/carrinho'>

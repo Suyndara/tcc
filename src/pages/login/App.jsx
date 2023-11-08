@@ -37,7 +37,7 @@ export default function Login() {
       storage('usuario-logado', resp);  
 
       setTimeout(() => {
-        navigate('/');
+        navigate('/minhaconta');
       }, 1000);
 
     } catch (error) {
@@ -81,8 +81,6 @@ export default function Login() {
           <a href="/cadastro">
             <strong>Não tem cadastro ?</strong>
           </a>
-
-          <a href="/">Esqueceu sua senha ?</a>
 
           <a href="/minhaconta">
             <strong> Minha conta </strong>
