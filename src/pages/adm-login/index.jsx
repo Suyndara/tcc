@@ -46,7 +46,7 @@ export default function LognAdm() {
             ref.current.complete();
             setCarregando(false);
 
-            if (error.response.status === 401) {
+            if (error.response) {
                 setErro(error.response.data.erro)
             }
         }

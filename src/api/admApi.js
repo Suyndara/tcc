@@ -5,7 +5,7 @@ import axios from 'axios'
 
 
 const api = axios.create({
-    baseURL: 'http://129.148.42.252:5040'
+    baseURL: 'http://129.148.42.252:5038'
 });
 
 
@@ -17,3 +17,4 @@ export async function SingUpAdm(email, senha) {
 
     return resp.data
 };
+
