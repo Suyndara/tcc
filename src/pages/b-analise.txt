@@ -4,7 +4,6 @@ adm-adicionar
 adm-consultar
 adm-estoque
 adm-graficos
-adm-home / componentes
 adm-login
 adm-vendas
 

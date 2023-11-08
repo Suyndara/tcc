@@ -67,7 +67,7 @@
 
     .s2 > article:first-child > img:hover{
         animation: truck;
-        animation-duration: 1s;
+        animation-duration: .8s;
         animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
         animation-iteration-count: 1;
     }
@@ -78,7 +78,7 @@
 
     .s2  article:nth-child(2)  img:hover{
         animation: imgs alternate-reverse;
-        animation-duration: 1s;
+        animation-duration: .8s;
         animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
         animation-iteration-count: infinite;
     }
@@ -403,6 +403,8 @@
         }
     }
 }
+
+
 
 @media (max-width: 360px) {
     .pagina-home{
