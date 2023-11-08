@@ -11,16 +11,13 @@ import { useState } from 'react';
 export default function Conta() {
 
 
-    const [ nome, setNome ] = useState('');
+    const [ cliente, setCliente ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ telefone, setTelefone ] = useState('');
     const [ senha, setSenha ] = useState('');
     const [ cpf, setCpf ] = useState('');
-    const [ data, setData ] = useState();
+    const [ nascimento, setNascimento ] = useState();
 
-
-
-    const [ cliente, setCliente ] = useState([]);
 
     return (
         <div className='pagina-minhaconta'>
@@ -49,23 +46,21 @@ export default function Conta() {
                         </Link>
                     </section>
                 </article>
+                <aside>
+                    <span>
+                        <input type="text" placeholder='Nome completo' value={cliente} onChange={e => setCliente(e.target.value)} />
+                        <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)}/>
+                        <input type="text" placeholder='Número de telefone' value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                        <input type="password" placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)} />
 
-                {cliente.map(item => {
-                    return (
-                        <span>
-                            <input type="text" placeholder='Nome completo' value={item.nome}/>
-                            <input type="text" placeholder='Email' />
-                            <input type="text" placeholder='Número de telefone' />
-                            <input type="password" placeholder='Senha' />
-    
-                            <section>
-                                <input type="text" placeholder='cpf' />
-                                <input type="date" placeholder='Data de nascimento' />
-                            </section>
-    
-                        </span>
-                    );
-                })}
+                        <section> 
+                            <input type="text" placeholder='cpf' value={cpf} onChange={e => setCpf(e.target.value)} />
+                            <input type="date" placeholder='Data de nascimento' value={nascimento} onChange={e => setNascimento(e.target.value)}/>
+                        </section>
+
+                    <button> Salvar </button>
+                    </span>
+                 </aside>
 
             </main>
 
