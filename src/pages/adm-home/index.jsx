@@ -9,9 +9,9 @@ import Opcoes from '../../components/opcoes';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function HomeAdm() {
     const navigate = useNavigate();
+
 
     function RemoverAdm() {
         storage.remove('adm-logado');
