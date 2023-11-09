@@ -58,7 +58,7 @@ export default function Conta() {
                             <input type="date" placeholder='Data de nascimento' value={nascimento} onChange={e => setNascimento(e.target.value)}/>
                         </section>
 
-                    <button> Salvar </button>
+                        <button> Salvar </button>
                     </span>
                  </aside>
 
