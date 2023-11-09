@@ -9,13 +9,9 @@
         height: 45px;
         width: 45px;
 
-        background-image: url(../../assets/img/barras.png);
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: 140% 100%;
-        margin-right: 40px;
-
         transition: .1s;
+
+        margin-right: 20px;
     }
 
     span:hover{
@@ -30,7 +26,6 @@
 
         align-items: center;
 
-
         background-color: #EBEBEB;
 
         img{
@@ -44,6 +39,19 @@
             transform: scale(1.1);
         }
 
+        article{
+            display: flex;
+            width: 20%;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+            img:nth-child(1){
+                height: 40px;
+                width: 35px;
+            }
+        }
+
         input{
             color: #7D7878;
             font-family: 'inter';
@@ -53,6 +61,44 @@
             outline: none;
             margin-left: 10px;
             height: 100%;
+        }
+    }
+}
+
+@media (max-width: 888px) {
+    .comp-CabecalhoAdm{
+        nav{
+
+            img:nth-child(3){
+                display: flex;
+
+                height: 50px;
+                margin-right: 20px;
+            }
+
+            article{
+                display: flex;
+        
+                height: 100%;
+                width: 25%;
+                
+                justify-content: space-evenly;
+                align-items: center;
+
+                img:nth-child(1){
+                    height: 30px;
+                    width: 30px;
+                }
+
+                img:nth-child(2){
+                    height: 40px;
+                    width: 35px;
+                }
+             }
+
+            span{
+                display: none;
+            }
         }
     }
 }

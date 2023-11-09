@@ -39,7 +39,7 @@ export default function Cabecalho() {
             <article className="atributo">
                 <article className='opcoes'>
                     <div className='barras'>
-                        <img onClick={alternarMenu} src={Barras} alt="bars" />
+                        <img onClick={alternarMenu} src={Barras} alt="bars"/>
 
                         <div className='displayers' style={{ display: aparecer }}>
                             <Link to='/login'>
