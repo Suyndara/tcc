@@ -6,6 +6,10 @@ import Rodape from '../../components/rodape';
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { AlterarPerfilUsuario, BuscarUsuarioPorId } from '../../api/UsuarioAdd';
+import { useEffect } from 'react';
+
+import storage from 'local-storage';
 
 
 export default function Conta() {
@@ -17,6 +21,41 @@ export default function Conta() {
     const [ senha, setSenha ] = useState('');
     const [ cpf, setCpf ] = useState('');
     const [ nascimento, setNascimento ] = useState();
+
+    // const [infoInicial, setInfoInicial] = useState({});
+
+    // const id = localStorage('usuario-logado').id;
+
+    async function SalvarClick() {
+        try {
+
+                await AlterarPerfilUsuario( cliente, email, telefone, senha, cpf, nascimento)
+
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    async function buscarInfoUser() {
+        try {
+
+            let info = await BuscarUsuarioPorId()
+            
+            setCliente(info.cliente);
+            setEmail(info.email);
+            setTelefone(info.telefone);
+            setSenha(info.senha);
+            setCpf(info.CadastroPessoa);
+            setNascimento(info.nascimento);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        buscarInfoUser();
+    }, [])
 
 
     return (
@@ -58,7 +97,7 @@ export default function Conta() {
                             <input type="date" placeholder='Data de nascimento' value={nascimento} onChange={e => setNascimento(e.target.value)}/>
                         </section>
 
-                        <button> Salvar </button>
+                        <button onClick={SalvarClick}> Salvar </button>
                     </span>
                  </aside>
 
