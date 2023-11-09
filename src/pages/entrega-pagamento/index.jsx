@@ -15,9 +15,10 @@ export default function EntregaPagamento() {
 
             <main>
                 <div className='entrega'>
-                    <h1>INFORMAÇÕES DA ENTREGA</h1>
+                <h1>INFORMAÇÕES DA ENTREGA</h1>
 
                     <div className="informacoes">
+                    
                         <input type="text" placeholder='Nome Completo' />
                         <input type="text" placeholder='Endereço' />
 
@@ -46,10 +47,10 @@ export default function EntregaPagamento() {
                 </div>
 
                 <div className='pagamento'>
-                    <h1>PAGAMENTO</h1>
+                <h1>PAGAMENTO</h1>
 
                     <Resumo />
-
+                    
                     <div>
                         <div className='head-cartao'>
                             <div className='credito'>
