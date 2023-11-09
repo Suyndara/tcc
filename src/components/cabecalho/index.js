@@ -68,7 +68,7 @@ export default function Cabecalho() {
 
             <article className='icones'>
                 <Link className='login' to="/login">
-                    <img src="/assets/img/pessoinha.png" alt="pessoa" />        
+                    <img src={Pessoa    } alt="pessoa" />        
                 </Link>
 
                 <Link className='carrinho' to='/carrinho'>

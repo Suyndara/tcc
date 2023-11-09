@@ -1,4 +1,5 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -40,8 +41,13 @@ export default function CabecalhoAdm() {
                 <img onClick={alternarMenu} src={Barras} alt="" />
 
                 <article style={{ display: aparecer}}>
-                    <img src={Home} alt="casa" />
-                    <img src={Exit} alt="sair" />
+                    <Link to='/home-adm'>
+                        <img src={Home} alt="casa" />
+                    </Link>
+
+                    <Link to='/login-adm'>
+                         <img src={Exit} alt="sair" />
+                    </Link>
                 </article>
 
                 <img src="/assets/img/i-settings.png" alt="" />
