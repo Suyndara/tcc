@@ -10,8 +10,9 @@
         display: flex;
         flex-direction: row;
         width: 100%;
+        margin-bottom: 40px;
 
-        height: 100vh;
+        padding: 50px 0px;
 
         justify-content: space-evenly;
         align-items: center;
@@ -37,6 +38,7 @@
     .entrega > h1{
         font-family: 'inder';
         margin-bottom: 60px;
+        width: 60%;
     }
 
     .informacoes{
@@ -96,17 +98,20 @@
     .contato > h1{
         font-family: 'inder';
         margin-bottom: 60px;
+        width: 60%;
     }
 
     .pagamento{
         display: flex;
         flex-direction: column;
+        width: 35%;
     }
 
     .pagamento > h1{
         font-family: 'inder';
         text-align: center;
         margin-bottom: 55px;
+        width: 100%;
     }
 
     .cartao-informacao{
@@ -115,6 +120,7 @@
         background-color: #fff;
         padding: 10px 25px;
         margin-bottom: 20px;
+        width: 100%;
     }
 
     .head-cartao{
@@ -122,17 +128,19 @@
         flex-direction: row;
         justify-content: space-between;
         height: 40px;
+        width: 100%;
     }
 
     .credito{
         background-color: #fff;
         padding: 10px 20px;
-        width: 190px;
+        width: 40%;
     }
 
     .credito > p{
         font-family: "inder";
         font-weight: bold;
+        width: 100%;
     }
     
     .boleto{
@@ -140,7 +148,7 @@
         align-items: center;
         justify-content: center;
         border: 1px solid #000;
-        width: 170px;
+        width: 37%;
         border-radius: 3px;
         border-bottom: none;
 
@@ -152,7 +160,7 @@
 
     .debito{
         border: 1px solid #000000;
-        width: 155px;
+        width: 35%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,11 +176,13 @@
     .credito-informacao{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .credito-input{
         display: flex;
         flex-direction: column;
+        width: 100%;
         
         h2{
             font: 15px 'inder';
@@ -194,10 +204,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 
     .validade{
-
+        width: 100%;
 
         h2{
             font: 15px 'inder';
@@ -212,11 +223,12 @@
             border-radius: 10px;
             outline: none;
             margin-bottom: 10px;
+            width: 98%;
         }
     }
 
     .cvv{
-
+        width: 100%;
 
         h2{
             font: 15px 'inder';
@@ -231,6 +243,7 @@
             border-radius: 10px;
             outline: none;
             margin-bottom: 10px;
+            width: 98%;
         }
     }
 
@@ -240,11 +253,6 @@
     }
 }
 
-@media (max-width: 1145px){
-    .pagina-entrega{
+@media (max-width: 1342px){
 
-        > main{
-            padding: 0px 30px;
-        }
-    }
 }
