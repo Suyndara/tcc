@@ -69,10 +69,28 @@
     }
 }
 
-@media (max-width: 760px) {
+
+
+@media (max-width: 888px) {
     .comp-opcoes {
         article {
+            justify-content: space-around;
 
+            height: 140px;
+            width: 14rem;
+
+            .a1,
+            .a2,
+            .a3 {
+                width: 6rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 804px) {
+    .comp-opcoes {
+        article {
             justify-content: space-around;
 
             height: 130px;
@@ -105,7 +123,7 @@
     }
 }
 
-@media (max-width: 486px) {
+@media (max-width: 576px) {
     .comp-opcoes {
         article {
             height: 100px;
@@ -120,6 +138,7 @@
     }
 }
 
+ 
 @media (max-width: 360px) {
     .comp-opcoes{
         article{

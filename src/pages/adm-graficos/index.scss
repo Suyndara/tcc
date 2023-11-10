@@ -137,6 +137,10 @@
                     height: 100%;
                     width: 50%;
 
+                    img{
+                        width: 80%;
+                    }
+
                     p:nth-child(2){
                         color: white;
                         font-family: 'lexend';
@@ -146,6 +150,28 @@
                         margin-bottom: 10vh;
 
                         padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 720px) {
+    .graficos-adm{
+        main{
+            section{
+                article{
+                    aside > p:first-child{
+                        font-size: 25px;
+                    }
+
+
+                    aside:last-child{
+                        img{
+                            width: 100%;
+                        }
                     }
                 }
             }

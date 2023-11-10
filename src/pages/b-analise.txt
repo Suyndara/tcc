@@ -13,3 +13,9 @@ guia
 politica
 status-adm
 status-cliente
+
+
+Conexões Pendentes:
+
+Consulta
+carrinho = adicionar

@@ -117,9 +117,29 @@
     .comp-lateral {
         display: none;
     }
+
+.Pagina-HomeAdm{
+    section {
+        article {
+
+            width: 14rem;
+            height: 140px;
+
+            justify-content: space-evenly;
+
+            .a1,
+            .a2,
+            .a3 {
+                width: 6rem;
+            }
+        }
+    }
 }
 
-@media (max-width: 760px) {
+
+}
+
+@media (max-width: 804px) {
     .Pagina-HomeAdm {
         section {
             article {
@@ -156,7 +176,7 @@
     }
 }
 
-@media (max-width: 486px) {
+@media (max-width: 576px) {
     .Pagina-HomeAdm {
         section {
             height: 300px;
