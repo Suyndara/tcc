@@ -20,6 +20,7 @@ export default function Cabecalho() {
     const [aparecer, setDisplay] = useState('none');
 
     // const idUsuario = storage('usuario-logado').cliente_id;
+    // const id = storage('usuario-logado').cliente_id;
 
     function alternarMenu() {
         if (aparecer === 'none') {
@@ -68,7 +69,7 @@ export default function Cabecalho() {
 
             <article className='icones'>
                 <Link className='login' to="/login">
-                    <img src={Pessoa    } alt="pessoa" />        
+                    <img src={Pessoa} alt="pessoa" />        
                 </Link>
 
                 <Link className='carrinho' to='/carrinho'>
@@ -81,7 +82,7 @@ export default function Cabecalho() {
                     <img onClick={alternarMenu} src={Barras} alt="bars" />
 
                     <div className='displayers-s2' style={{ display: aparecer }}>
-                        <Link className='login' to='/login'>
+                        <Link className='login' to="/login">
                             <img src={Pessoa} alt="person" />
                         </Link>
 

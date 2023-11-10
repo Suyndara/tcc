@@ -4,12 +4,13 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape';
 
 
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { AlterarPerfilUsuario, BuscarUsuarioPorId } from '../../api/UsuarioAdd';
+import { AlterarPerfilUsuario, BuscarUsuarioPorId, ExcluirUsuario } from '../../api/UsuarioAdd';
 import { useEffect } from 'react';
 
 import storage from 'local-storage';
+import { toast, ToastContainer } from 'react-toastify';
+import { confirmAlert } from 'react-confirm-alert';
 
 
 export default function Conta() {
@@ -22,31 +23,59 @@ export default function Conta() {
     const [ cpf, setCpf ] = useState('');
     const [ nascimento, setNascimento ] = useState();
 
-    // const [infoInicial, setInfoInicial] = useState({});
-
-    // const id = localStorage('usuario-logado').id;
+    const id = storage('usuario-logado').cliente_id;
 
     async function SalvarClick() {
         try {
 
-                await AlterarPerfilUsuario( cliente, email, telefone, senha, cpf, nascimento)
+
+            // const dados = localStorage.getItem('usuario-logado').cliente
+
+            await AlterarPerfilUsuario(id, cliente, email, telefone, senha, cpf, nascimento);
+            toast.info('Informações adicionadas');
 
         } catch (error) {
-            alert(error.message)
+            alert(error.response.data.erro)
         }
+    };
+
+
+
+    async function RemoverUsuario(id, cliente) {
+
+        confirmAlert({
+            title: 'Remover usuario',
+            message: `Deseja excluir o login de ${cliente}?`,
+            buttons: [
+              {
+                label: 'Sim',
+                onClick: async () => {
+                    const resp = await ExcluirUsuario(id, cliente); 
+                    localStorage.removeItem('usuario-logado');
+                }
+              },
+              {
+                label: 'Não'
+              }
+            ]
+          });
+
     }
+
+
+
 
     async function buscarInfoUser() {
         try {
 
-            let info = await BuscarUsuarioPorId()
-            
+            let info = await BuscarUsuarioPorId(id)
+
             setCliente(info.cliente);
             setEmail(info.email);
             setTelefone(info.telefone);
             setSenha(info.senha);
             setCpf(info.CadastroPessoa);
-            setNascimento(info.nascimento);
+            setNascimento(info.nascimento.substr(0, 10));
 
         } catch (error) {
             console.log(error);
@@ -60,11 +89,12 @@ export default function Conta() {
 
     return (
         <div className='pagina-minhaconta'>
+            <ToastContainer />
             <Cabecalho />
 
             <nav>
                 <article>
-                    <img src="/assets/img/pencil.png" alt="lapis" />
+                    
                 </article>
             </nav>
 
@@ -78,18 +108,15 @@ export default function Conta() {
                     <p>Meus Endereços</p>
                     <p>Atualizar Senha</p>
 
-                    <section>
-                        <h1>Sair</h1>
-                        <Link to='/'>
-                            <img src="/assets/img/icone-de-sair.png" alt="i-exit" />
-                        </Link>
+                    <section onClick={() => RemoverUsuario(id, cliente)}>
+                        <h1>Sair</h1> <img src="/assets/img/icone-de-sair.png" alt="i-exit" />
                     </section>
                 </article>
                 <aside>
                     <span>
                         <input type="text" placeholder='Nome completo' value={cliente} onChange={e => setCliente(e.target.value)} />
-                        <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)}/>
-                        <input type="text" placeholder='Número de telefone' value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                        <input type="text" placeholder='Telefone' value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                        <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
                         <input type="password" placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)} />
 
                         <section> 

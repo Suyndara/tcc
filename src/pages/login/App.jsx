@@ -10,6 +10,7 @@ import { useState, useRef } from "react";
 import { SingUpUsuario } from "../../api/UsuarioApi";
 import { useNavigate } from "react-router-dom";
 
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Login() {
 
@@ -18,7 +19,7 @@ export default function Login() {
   const [senha, setSenha] = useState('');
 
 
-  const [ erro, setErro ] = useState();
+  // const [ erro, setErro ] = useState();
   const [ carregando, setCarregando ] = useState(false);
 
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ export default function Login() {
       setCarregando(false);
 
       if (error.response.status === 401) {
-        setErro(error.response.data.erro)
+      toast.error(error.response.data.erro)
     }
     }
   };
@@ -53,6 +54,7 @@ export default function Login() {
     <div className="pagina-login">
       <LoadingBar color='#ffc86d' ref={ref} />
       <Cabecalho />
+      <ToastContainer />
 
       <article className="titulo">
         <h1>FAÇA SEU LOGIN</h1>
@@ -71,10 +73,10 @@ export default function Login() {
           <button className="botones" onClick={LogarUsuario} disabled={ carregando }>
             Entrar
           </button>
-
+{/* 
           <div>
             { erro }
-          </div>
+          </div> */}
 
           <a href="/cadastro">
             <strong>Não tem cadastro ?</strong>
