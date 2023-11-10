@@ -82,9 +82,9 @@ export default function Login() {
             <strong>Não tem cadastro ?</strong>
           </a>
 
-          <a href="/minhaconta">
+          {/* <a href="/minhaconta">
             <strong> Minha conta </strong>
-          </a>
+          </a> */}
 
         </div>
 
