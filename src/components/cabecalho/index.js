@@ -1,8 +1,7 @@
 import './index.scss';
 
-import { Link } from 'react-router-dom';
-
-import storage from 'local-storage';
+import { useNavigate, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 import Logo from '../../assets/img/logo.svg'
 import Lupa from '../../assets/img/lupa.png'
@@ -10,13 +9,12 @@ import Pessoa from '../../assets/img/pessoinha.png';
 import Carrinho from '../../assets/img/carrinho.png'
 import Barras from '../../assets/img/i-bars.svg';
 import Casa from '../../assets/img/i-casa.png';
-import { useState } from 'react';
+import storage from 'local-storage';
 
 
 
 export default function Cabecalho() {
-
-
+    const navigate = useNavigate();
     const [aparecer, setDisplay] = useState('none');
 
     // const idUsuario = storage('usuario-logado').cliente_id;
@@ -31,6 +29,14 @@ export default function Cabecalho() {
         }
     }
 
+
+    
+    // useEffect(() => {
+    //     if (!storage('usuario-logado')) {
+    //         navigate('/cadastro');  
+    //     }
+    // }, []);
+
     return (
         <div className='comp-cabecalho' >
             <Link className='logo' to='/'>
@@ -43,7 +49,7 @@ export default function Cabecalho() {
                         <img onClick={alternarMenu} src={Barras} alt="bars"/>
 
                         <div className='displayers' style={{ display: aparecer }}>
-                            <Link to='/login'>
+                            <Link to={storage('usuario-logado') == null ? "/login" : "/minhaconta"}>
                                 <img src={Pessoa} alt="person" />
                             </Link>
 
@@ -68,7 +74,7 @@ export default function Cabecalho() {
             </article>
 
             <article className='icones'>
-                <Link className='login' to="/login">
+                <Link className='login' to={storage('usuario-logado') == null ? "/login" : "/minhaconta"}>
                     <img src={Pessoa} alt="pessoa" />        
                 </Link>
 
@@ -82,7 +88,7 @@ export default function Cabecalho() {
                     <img onClick={alternarMenu} src={Barras} alt="bars" />
 
                     <div className='displayers-s2' style={{ display: aparecer }}>
-                        <Link className='login' to="/login">
+                        <Link className='login' to={storage('usuario-logado') == null ? "/login" : "/minhaconta"}>
                             <img src={Pessoa} alt="person" />
                         </Link>
 

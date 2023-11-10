@@ -4,9 +4,9 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape';
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AlterarPerfilUsuario, BuscarUsuarioPorId, ExcluirUsuario } from '../../api/UsuarioAdd';
-import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import storage from 'local-storage';
 import { toast, ToastContainer } from 'react-toastify';
@@ -15,6 +15,7 @@ import { confirmAlert } from 'react-confirm-alert';
 
 export default function Conta() {
 
+    const [ usuario, setUsuario ] = useState('');
 
     const [ cliente, setCliente ] = useState('');
     const [ email, setEmail ] = useState('');
@@ -24,6 +25,7 @@ export default function Conta() {
     const [ nascimento, setNascimento ] = useState();
 
     const id = storage('usuario-logado').cliente_id;
+    const navigate = useNavigate();
 
     async function SalvarClick() {
         try {
@@ -45,13 +47,14 @@ export default function Conta() {
 
         confirmAlert({
             title: 'Remover usuario',
-            message: `Deseja excluir o login de ${cliente}?`,
+            message: `Deseja sair do login de:${cliente}?`,
             buttons: [
               {
                 label: 'Sim',
                 onClick: async () => {
-                    const resp = await ExcluirUsuario(id, cliente); 
+                    // const resp = await ExcluirUsuario(id, cliente); 
                     localStorage.removeItem('usuario-logado');
+                    navigate('/')
                 }
               },
               {
@@ -59,7 +62,6 @@ export default function Conta() {
               }
             ]
           });
-
     }
 
 
@@ -87,6 +89,17 @@ export default function Conta() {
     }, [])
 
 
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+            navigate('/');  
+        } else {
+            const usuarioLogado = storage('usuario-logado');
+            setUsuario(usuarioLogado.cliente)
+        }
+    }, []);
+
+
     return (
         <div className='pagina-minhaconta'>
             <ToastContainer />
@@ -94,7 +107,7 @@ export default function Conta() {
 
             <nav>
                 <article>
-                    
+                    {usuario[0]}
                 </article>
             </nav>
 
