@@ -1,19 +1,16 @@
 Reponsivdades pendentes:
 
-adm-adicionar
+adm-adicionar...
 adm-consultar
 adm-estoque
-adm-graficos...
 adm-login
 adm-vendas
 
-entrega-pagamento
 filtro
-guia
+guia: arrumar rodapé
 politica
 status-adm
 status-cliente
-
 
 Conexões Pendentes:
 

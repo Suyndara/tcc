@@ -160,6 +160,8 @@
 @media (max-width: 1200px) {
     .graficos-adm{
         main{
+
+            width: 100%;
             section{
                 article{
                     aside > p:first-child{
@@ -232,6 +234,37 @@
                     aside:last-child{
                         p:nth-child(2){
                             font-size: 15px;
+                        }
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .graficos-adm{
+        main{
+            section{
+                article{
+                    aside > p:first-child{
+                        font-size: 20px;
+                    }
+
+                    aside:first-child{
+                        .as-g{
+                            height: 50px;
+                        }
+                    }
+
+
+                    aside:last-child{
+                        p:nth-child(2){
+                            font-size: 13px;
                         }
 
                         img{

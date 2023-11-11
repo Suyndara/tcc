@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     background-color: #fff;
-    height: 100vh;
+    height: auto;
     width: 100%;
 
     .main-anexagem-produto{
@@ -10,7 +10,6 @@
         flex-direction: column;
         width: 100%;
         margin-left: 5px;
-
     }
 
     .conteudo{
@@ -19,12 +18,12 @@
         justify-content: center;
         display: flex;
         background-color: #EBEBEB;
-        height: 100%;
+        height: 100vh;
     }
 
     .s1{
         background-color: #fff;
-        height: 650px;
+        height: 80%;
         width: 83%;
         border-radius: 15px;
         padding: 0px 60px;
