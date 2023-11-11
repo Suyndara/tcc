@@ -217,6 +217,9 @@
                             h1{
                                 font-size: 25px;
                             }
+
+                            border: 4.5px solid white;
+                            border-bottom:4.5px solid black;
                         }
 
                         .as-p{
@@ -257,10 +260,18 @@
 
                     aside:first-child{
                         .as-g{
-                            height: 50px;
+                            height: 40px;
+                        }
+
+                        .as-porc{
+                            height: 90px;
+                            width: 90px;
+
+                            h1{
+                                font-size: 15px;
+                            }
                         }
                     }
-
 
                     aside:last-child{
                         p:nth-child(2){
