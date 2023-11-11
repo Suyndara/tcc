@@ -5,11 +5,11 @@ adm-consultar
 adm-estoque
 adm-login
 adm-vendas
+status-adm
 
 filtro
 guia: arrumar rodapé
-politica...
-status-adm
+
 status-cliente
 
 Conexões Pendentes:
