@@ -1,6 +1,6 @@
 Reponsivdades pendentes:
 
-adm-adicionar...
+adm-adicionar
 adm-consultar
 adm-estoque
 adm-login
@@ -8,7 +8,7 @@ adm-vendas
 
 filtro
 guia: arrumar rodapé
-politica
+politica...
 status-adm
 status-cliente
 

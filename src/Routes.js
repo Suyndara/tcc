@@ -31,7 +31,7 @@ export default function Rotas() {
                 <Route path='status-cliente' element={<StatusCliente />} />
                 <Route path='/minhaconta' element={<Conta/>} />
                 <Route path='/alterar-minhaconta/:cliente' element={ < Conta/> } />
-                <Route path='/politicas' element={<Politica/>} />
+                <Route path='/politica' element={<Politica/>} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/detalhes' element={<Detalhes/>} />
                 <Route path='/carrinho' element={<Carrinho/>} />
