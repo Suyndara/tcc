@@ -254,94 +254,102 @@
 }
 
 @media (max-width: 1342px){
-    .head-cartao{
+    .pagina-entrega{
+            .head-cartao{
 
        >div{
         >p{
-                font-size: 13px !important;
+            font-size: 13px !important;
         }
        }
+    }
     }
 }
 
 @media (max-width: 992px){
-    .cartao-informacao{
-        h2{
-            font-size: 13px !important;
+    .pagina-entrega{
+        .cartao-informacao{
+            h2{
+                font-size: 13px !important;
+            }
         }
     }
 }
 
 @media (max-width: 768px){
-    .pagamento{
-        width: 100% !important;
-        max-width: 350px !important;
-    }
-
-    main{
-        padding: 50px 20px !important;
-
-        >div{
-            >h1{
-            font-size: 25px;
-            margin-bottom: 30px !important;
+    .pagina-entrega{
+        .pagamento{
+            width: 100% !important;
+            max-width: 350px !important;
         }
-    }
-    }
-
-    .contato{
-        h1{
-            margin-bottom: 30px !important;
-            font-size: 25px !important;
-        }
-    }
     
-    .informacoes{
-        > input{
-        width: 100% !important;
-        max-width: 263px;
-    }
-    }
-
-    .contato{
-        > input{
+        main{
+            padding: 50px 20px !important;
+    
+            >div{
+                >h1{
+                font-size: 25px;
+                margin-bottom: 30px !important;
+            }
+        }
+        }
+    
+        .contato{
+            h1{
+                margin-bottom: 30px !important;
+                font-size: 25px !important;
+            }
+        }
+        
+        .informacoes{
+            > input{
             width: 100% !important;
             max-width: 263px;
+        }
+        }
+    
+        .contato{
+            > input{
+                width: 100% !important;
+                max-width: 263px;
+            }
         }
     }
 }
 
 @media (max-width: 666px){
-     main{
-        flex-direction: column !important;
-        
-    }
-
-    .entrega{
-        width: 100% !important; 
-        align-items: center !important;       
-    }
-
-    .informacoes{
-        align-items: center !important;
-
-        > input{
-            max-width: 465px !important;
+    .pagina-entrega{
+        main{
+            flex-direction: column !important;
+            
         }
-    }
-
-    .cep{
-        display: flex;
-        justify-content: center
-    }
-
-    .bairro{
-        display: flex;
-        justify-content: center
-    }
-
-    .cidade{
-        display: flex;
-        justify-content: center
+    
+        .entrega{
+            width: 100% !important; 
+            align-items: center !important;       
+        }
+    
+        .informacoes{
+            align-items: center !important;
+    
+            > input{
+                max-width: 465px !important;
+            }
+        }
+    
+        .cep{
+            display: flex;
+            justify-content: center
+        }
+    
+        .bairro{
+            display: flex;
+            justify-content: center
+        }
+    
+        .cidade{
+            display: flex;
+            justify-content: center
+        }
     }
 }
