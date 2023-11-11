@@ -223,13 +223,18 @@
             background-repeat: no-repeat;
             background-size: 50% 100%; 
 
+            gap: 12%;
+
             img{
                 width: 50%;
+                max-width: 500px;
                 height: 100%;
             }
         }
 
         p{
+            display: flex;
+
             font-family: "fonte1";
             font-size: 30px;
 
@@ -237,9 +242,6 @@
 
             height: 160px;
             width: 420px;
-
-            padding-left: 20px;
-
         }
     }
 
