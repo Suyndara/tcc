@@ -75,7 +75,7 @@ export default function Produtos() {
 
     useEffect(() => {
         ListarTodosProdutos()
-    }, [])
+    }, []);
 
 
     return (

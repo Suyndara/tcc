@@ -5,7 +5,7 @@ import Rodape from '../../components/rodape';
 
 
 import { useState, useEffect } from 'react';
-import { AlterarPerfilUsuario, BuscarUsuarioPorId, ExcluirUsuario } from '../../api/UsuarioAdd';
+import { AlterarPerfilUsuario, BuscarUsuarioPorId } from '../../api/UsuarioAdd';
 import { useNavigate } from 'react-router-dom';
 
 import storage from 'local-storage';

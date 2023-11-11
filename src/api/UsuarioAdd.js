@@ -37,7 +37,7 @@ export async function AlterarPerfilUsuario(id, cliente, email, telefone, senha, 
 
 
 
-export async function ExcluirUsuario(id) {
-    const resp = await api.delete(`/deletar/usuario/${id}`);
-    return resp.status;
-}
+// export async function ExcluirUsuario(id) {
+//     const resp = await api.delete(`/deletar/usuario/${id}`);
+//     return resp.status;
+// }

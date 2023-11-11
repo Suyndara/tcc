@@ -1,14 +1,36 @@
 import './index.scss';
+
 import Cabecalho from '../../components/cabecalho';
 import Rodape from '../../components/rodape';
-import Relogio from '../../assets/img/shopping (1) 1.svg';
-import Escapulario from '../../assets/img/CO00020832 1.svg';
-import Pulseira from '../../assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg';
-import PulseiraOuro from '../../assets/img/Pulseira-Ouro-Amarelo-3171_set 1.svg';
-import Pingente from '../../assets/img/Pingente-Ouro-Rose-Ametista-e-Diamante-9514_set 1.svg';
+// import Relogio from '../../assets/img/shopping (1) 1.svg';
+
+import { useState, useEffect } from 'react';
+import { ConsultarTodos, BuscarImagem } from '../../api/admAdd';
+// import Escapulario from '../../assets/img/CO00020832 1.svg';
+// import Pulseira from '../../assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg';
+// import PulseiraOuro from '../../assets/img/Pulseira-Ouro-Amarelo-3171_set 1.svg';
+// import Pingente from '../../assets/img/Pingente-Ouro-Rose-Ametista-e-Diamante-9514_set 1.svg';
+
 
 
 export default function Filtro() {
+
+
+    const [ produto, setProdutos ] = useState([]);
+
+
+    async function ListarTodosProdutos() {
+        const resp = await ConsultarTodos()
+        setProdutos(resp)
+    };
+
+
+
+
+    useEffect(() => {
+        ListarTodosProdutos()
+    }, []);
+
 
 
     return (
@@ -84,92 +106,20 @@ export default function Filtro() {
                     </div>
 
                     <div className='produtos'>
-                        <div className='produtos-row'>
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} alt='clockk' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
 
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Escapulario} alt='escapulario' />
+                        {produto.map(item => 
+                            <div className='produtos-row'>
+                                <div className='relogio'>
+                                    <div className='imagem'>
+                                        <img src="/assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg" alt='clockk' />
+                                    </div>
+                                    <p>{item.nome}</p>
+                                    <p><b>R${item.preco}</b></p>
+                                    <button>ADICIONAR AO CARRINHO</button>
                                 </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
+                        )}
 
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Pulseira} alt='puls' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-                        </div>
-
-                        <div className='produtos-row'>
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={PulseiraOuro} alt='op' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Pingente} alt='pingent' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} alt='clockk' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-                        </div>
-
-                        <div className='produtos-row'>
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} alt='clock' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} alt='clock' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-
-                            <div className='relogio'>
-                                <div className='imagem'>
-                                    <img src={Relogio} alt='clock' />
-                                </div>
-                                <p>Relógio masculino Rolex Oyster - Modelo Yellow</p>
-                                <p><b>R$ 9.499,00</b></p>
-                                <button>ADICIONAR AO CARRINHO</button>
-                            </div>
-                        </div>
                     </div>
                 </main>
             </section>
