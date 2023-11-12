@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Adicionar from './pages/adm-adicionar';
 import Produtos from './pages/adm-consultar';
 import Graficos from './pages/adm-graficos';
+import StatusAdm from './pages/adm-status';
 import VendasADM from './pages/adm-vendas';
-import LoginAdm from './pages/adm-login';
-import Adicionar from './pages/adm-adicionar';
 import Estoque from './pages/adm-estoque';
+import LoginAdm from './pages/adm-login';
 import HomeAdm from './pages/adm-home';
 import Home from './pages/Home';
 import EntregaPagamento from './pages/entrega-pagamento';
 import StatusCliente from './pages/status-cliente';
-import StatusAdm from './pages/status-adm';
 import Carrinho from './pages/carrinho';
 import Cadastro from './pages/cadastro';
 import Detalhes from './pages/detalhes';
@@ -38,8 +38,6 @@ export default function Rotas() {
                 <Route path='/entrega' element={<EntregaPagamento/>} />
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
-
-
                 <Route path='/adicionar-adm' element={<Adicionar/>} />
                 <Route path='/alterar-adm/:produto_id' element={<Adicionar/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
