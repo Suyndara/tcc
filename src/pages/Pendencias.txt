@@ -16,3 +16,4 @@ Conexões Pendentes:
 Consulta
 carrinho = adicionar
 status-adm
+detalhes-usuario
