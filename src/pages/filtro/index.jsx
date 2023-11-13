@@ -21,10 +21,14 @@ export default function Filtro() {
 
     async function ListarTodosProdutos() {
         const resp = await ConsultarTodos()
+        console.log(resp);
         setProdutos(resp)
     };
 
-
+    function  chamarImg(imagem){
+        console.log(imagem);
+        return BuscarImagem(imagem)
+    }
 
 
     useEffect(() => {
@@ -111,7 +115,7 @@ export default function Filtro() {
                             <div className='produtos-row'>
                                 <div className='relogio'>
                                     <div className='imagem'>
-                                        <img src="/assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg" alt='clockk' />
+                                        <img src={chamarImg(item.imagem)} alt='clockk' />
                                     </div>
                                     <p>{item.nome}</p>
                                     <p><b>R${item.preco}</b></p>
