@@ -136,4 +136,4 @@ export async function buscarTodasImagensProduto(id){
 
 export function BuscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
-}
+}   
