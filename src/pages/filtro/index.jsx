@@ -28,7 +28,7 @@ export default function Filtro() {
         setProdutos(resp)
     };
 
-    function  chamarImg(imagem){
+    function chamarImg(imagem){
         console.log(imagem);
         return BuscarImagem(imagem)
     }

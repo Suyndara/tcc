@@ -16,7 +16,6 @@ import Anel from '../../assets/img/anel.svg';
 
 export default function Carrinho() {
 
-
     return (
 
         <div className='pagina-carrinho'>

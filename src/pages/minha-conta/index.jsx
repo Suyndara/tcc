@@ -30,9 +30,6 @@ export default function Conta() {
     async function SalvarClick() {
         try {
 
-
-            // const dados = localStorage.getItem('usuario-logado').cliente
-
             await AlterarPerfilUsuario(id, cliente, email, telefone, senha, cpf, nascimento);
             toast.info('Informações adicionadas');
 
@@ -43,7 +40,7 @@ export default function Conta() {
 
 
 
-    async function RemoverUsuario(id, cliente) {
+    async function RemoverUsuario(cliente) {
 
         confirmAlert({
             title: 'Remover usuario',
@@ -52,7 +49,6 @@ export default function Conta() {
               {
                 label: 'Sim',
                 onClick: async () => {
-                    // const resp = await ExcluirUsuario(id, cliente); 
                     localStorage.removeItem('usuario-logado');
                     navigate('/')
                 }
