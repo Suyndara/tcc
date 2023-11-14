@@ -14,7 +14,20 @@ export default function Estoque() {
                 <Opcoes />
 
                 <section>
-                    <article>
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    {/* <article>
                         <h1>Estoque</h1>
 
                         <aside>
@@ -52,7 +65,7 @@ export default function Estoque() {
                                 </div>
                             </div>
                         </aside>
-                    </article>
+                    </article> */}
                 </section>
             </main>
         </div>
