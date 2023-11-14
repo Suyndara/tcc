@@ -3,12 +3,10 @@ Reponsivdades pendentes:
 adm-adicionar
 adm-consultar
 adm-estoque
-adm-login...
 adm-vendas
 status-adm
 
 filtro
-guia: arrumar rodapé
 status-cliente
 
 Conexões Pendentes:

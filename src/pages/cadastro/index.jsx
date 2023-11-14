@@ -1,7 +1,7 @@
 import './index.scss';
 
 import Cabecalho from '../../components/cabecalho';
-
+import storage from 'local-storage'
 
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
@@ -29,7 +29,7 @@ export default function Cadastro() {
             else {
                 const resp = await LoginUsuario(nome, email, senha);
                 console.log(resp);
-
+                storage('usuario-pedido', { carrinho: []} )
                 toast.info('Cliente criado com sucesso');
             }
 

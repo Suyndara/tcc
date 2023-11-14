@@ -34,7 +34,7 @@ export default function Login() {
 
       const resp = await SingUpUsuario(email, senha);
       storage('usuario-logado', resp);  
-
+      storage('usuario-pedido', { carrinho: []} )
       setTimeout(() => {
         navigate('/minhaconta');
       }, 1000);

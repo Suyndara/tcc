@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Adicionar from './pages/adm-adicionar';
-import Produtos from './pages/adm-consultar';
+import Produtos from './pages/adm-produtos';
 import Graficos from './pages/adm-graficos';
 import StatusAdm from './pages/adm-status';
 import VendasADM from './pages/adm-vendas';
-import Estoque from './pages/adm-estoque';
+import Estoque from './pages/adm-consultar-usuario';
 import LoginAdm from './pages/adm-login';
 import HomeAdm from './pages/adm-home';
 import Home from './pages/Home';
@@ -39,12 +39,11 @@ export default function Rotas() {
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
 
-
+                <Route path='/consultar-usuario-adm' element={<Estoque/>} />
                 <Route path='/adicionar-adm' element={<Adicionar/>} />
                 <Route path='/alterar-adm/:produto_id' element={<Adicionar/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />
-                <Route path='/consultar-adm' element={<Produtos />} />
-                <Route path='/estoque-adm' element={<Estoque/>} />
+                <Route path='/produtos-adm' element={<Produtos />} />
                 <Route path='/vendas-adm' element={<VendasADM/>} />
                 <Route path='/status-adm' element={<StatusAdm/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />

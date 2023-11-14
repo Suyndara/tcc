@@ -1,14 +1,25 @@
 import './index.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { BuscarImagem } from '../../api/admAdd';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import storage from 'local-storage';
 
 export default function Detalhes(props) {
+
+
+    function adicionarCarrinho(infoProduto){
+        let pedido = storage('usuario-pedido')
+        pedido.carrinho = [...pedido.carrinho, infoProduto]
+        storage('usuario-pedido', pedido)
+        console.log(pedido);
+    }
+
+
 
 
     return (
@@ -16,7 +27,7 @@ export default function Detalhes(props) {
 
             <main className='s1'>
                 <article>
-                    <img src={BuscarImagem(props.produto)} alt="esca" />
+                    <img src={BuscarImagem(props.produto.imagem)} alt="esca" />
                 </article>
 
                 <aside>
@@ -34,10 +45,10 @@ export default function Detalhes(props) {
                             <p> {props.produto.disponivel ? 'Disponivel' : 'Indisponivel'} </p>
                         </section>
 
-                        <button>ADICIONAR AO CARRINHO</button>
+                        <button  onClick={() => adicionarCarrinho(props.produto)}>ADICIONAR AO CARRINHO</button>
                     </section>
 
-                    <section className='et'>
+                    {/* <section className='et'>
                         <p>EM ESTOQUE: {props.produto.estoque} </p>
                         <p>Calcular o frete da entrega</p>
                         <label>
@@ -45,7 +56,7 @@ export default function Detalhes(props) {
                             <button>OK</button>
                         </label>
                         <p>Não sei meu CEP</p>
-                    </section>
+                    </section> */}
                 </aside>
             </main>
 

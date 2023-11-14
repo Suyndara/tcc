@@ -27,7 +27,7 @@ export default function Guia() {
 
                 <img src="/assets/img/cordima.png" alt="cord" />
             </main>
-
+            
             <Rodape />
         </div>
     )

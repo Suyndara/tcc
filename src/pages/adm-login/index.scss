@@ -71,3 +71,33 @@
         font-weight: lighter;
     }
 }
+
+@media (max-width: 720px) {
+    .pagina-loginAdm{
+        img{
+            width: 60%;
+        }
+
+        section{
+            width: 100%;
+
+            .atributo{
+                width: 50%;
+    
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px){
+    .pagina-loginAdm{
+        button{
+            padding: inherit;
+            width: 50%;
+            height: 45px;
+        }
+    }
+}
