@@ -1,26 +1,36 @@
 .pagina-produtos {
     display: flex;
 
-    max-height: 100vh;
+    max-height: auto;
+
+    height: auto;
     width: 100%;
 
     .main {
         display: flex;
         flex-direction: column;
-    
 
-        max-height: 100vh;
+        background-color: #EBEBEB;
+
         width: 85%;
 
+        height: 100vh;
+
+        margin-left: 5px;
         align-items: center;
 
         .tabelas {
             display: flex;
             flex-direction: column;
 
-            
             align-items: center;
+        }
 
+        span{
+          height: 5px; 
+          width: 100%;
+
+          background-color: white;
         }
     }
 
@@ -58,13 +68,16 @@
           height: 20px;
           margin-left: 10px;
         }
-  }
+    }
   
     .tabelas{
       height: 750px;
       overflow: auto;
       width: 91%;
   
+      background-color: white;
+      border-radius: 20px;
+
       img{
         width: 25px;
         cursor: pointer;
@@ -90,6 +103,21 @@
       color: #000000;
       font-family: 'inter';
       font-size: 15px;
+
+      tr{
+        th{
+          height: 60px;
+          border: 1px solid black;
+        }
+
+        th:first-child{
+          border-top-left-radius: 20px;
+        }
+
+        th:last-child{
+          border-top-right-radius: 20px;
+        }
+      }
     }
   
     tbody{  
