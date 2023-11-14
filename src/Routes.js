@@ -13,7 +13,7 @@ import EntregaPagamento from './pages/entrega-pagamento';
 import StatusCliente from './pages/status-cliente';
 import Carrinho from './pages/carrinho';
 import Cadastro from './pages/cadastro';
-import Detalhes from './pages/detalhes';
+import DetalhesProduto from './pages/detalhes';
 import Conta from './pages/minha-conta';
 import Politica from './pages/politica';
 import Login from './pages/login/App';
@@ -33,11 +33,13 @@ export default function Rotas() {
                 <Route path='/alterar-minhaconta/:cliente' element={ < Conta/> } />
                 <Route path='/politica' element={<Politica/>} />
                 <Route path='/cadastro' element={<Cadastro />} />
-                <Route path='/detalhes' element={<Detalhes/>} />
+                <Route path='/detalhes/:idParam' element={<DetalhesProduto/>} />
                 <Route path='/carrinho' element={<Carrinho/>} />
                 <Route path='/entrega' element={<EntregaPagamento/>} />
                 <Route path='/filtro' element={<Filtro/>} />
                 <Route path='/guia' element={<Guia/>} />
+
+
                 <Route path='/adicionar-adm' element={<Adicionar/>} />
                 <Route path='/alterar-adm/:produto_id' element={<Adicionar/>} />
                 <Route path='/graficos-adm' element={<Graficos/>} />

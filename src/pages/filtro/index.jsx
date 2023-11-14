@@ -6,6 +6,7 @@ import Rodape from '../../components/rodape';
 
 import { useState, useEffect } from 'react';
 import { ConsultarTodos, BuscarImagem } from '../../api/admAdd';
+import { useNavigate } from 'react-router-dom';
 // import Escapulario from '../../assets/img/CO00020832 1.svg';
 // import Pulseira from '../../assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg';
 // import PulseiraOuro from '../../assets/img/Pulseira-Ouro-Amarelo-3171_set 1.svg';
@@ -18,6 +19,8 @@ export default function Filtro() {
 
     const [ produto, setProdutos ] = useState([]);
 
+
+    const navigate = useNavigate()
 
     async function ListarTodosProdutos() {
         const resp = await ConsultarTodos()
@@ -34,6 +37,12 @@ export default function Filtro() {
     useEffect(() => {
         ListarTodosProdutos()
     }, []);
+
+
+
+    function AbrirDetalhes(produto_id) {
+        navigate(`/detalhes/${produto_id}`)
+    }
 
 
 
@@ -112,7 +121,7 @@ export default function Filtro() {
                     <div className='produtos'>
 
                         {produto.map(item => 
-                            <div className='produtos-row'>
+                            <div className='produtos-row' onClick={() => AbrirDetalhes(item.produto_id)}>
                                 <div className='relogio'>
                                     <div className='imagem'>
                                         <img src={chamarImg(item.imagem)} alt='clockk' />

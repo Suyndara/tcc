@@ -134,6 +134,10 @@ export async function buscarTodasImagensProduto(id){
     return resp.data
 }
 
+
+
+
+
 export function BuscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
 }   
