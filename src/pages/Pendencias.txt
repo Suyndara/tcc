@@ -3,7 +3,6 @@ Reponsivdades pendentes:
 adm-adicionar
 adm-consultar
 adm-estoque
-adm-login...
 adm-vendas
 status-adm
 
