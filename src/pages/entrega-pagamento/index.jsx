@@ -79,7 +79,7 @@ export default function EntregaPagamento() {
                             <div className='date-verificacao'>
                                 <div className='validade'>
                                     <h2>Validade</h2>
-                                    <input type='text' placeholder='DD/MM/YY' />
+                                    <input type='date' placeholder='DD/MM/YY' />
                                 </div>
                                 <div className='cvv'>
                                     <h2>Código de verificação</h2>

@@ -128,7 +128,8 @@ export default function Filtro() {
                                     </div>
                                     <p>{item.nome}</p>
                                     <p><b>R${item.preco}</b></p>
-                                    <button>ADICIONAR AO CARRINHO</button>
+                                    <p> {item.disponivel ? 'Disponivel' : 'Indisponivel'} </p>
+                                    <p> {item.categoria} </p>
                                 </div>
                             </div>
                         )}
