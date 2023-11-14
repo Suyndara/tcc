@@ -7,7 +7,6 @@ adm-vendas
 status-adm
 
 filtro
-guia: arrumar rodapé
 status-cliente
 
 Conexões Pendentes:

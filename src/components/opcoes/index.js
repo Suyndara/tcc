@@ -16,7 +16,7 @@ export default function Opcoes() {
                 </article>
             </Link>
 
-            <Link to='/estoque-adm' className='estoque'>
+            <Link to='/consultar-usuario-adm' className='estoque'>
                 <article>
                     <span className='a2'>
 

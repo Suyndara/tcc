@@ -38,7 +38,7 @@ export default function HomeAdm() {
                         </article>
                     </Link>
 
-                    <Link className='volta' to='/consultar-adm'>
+                    <Link className='volta' to='/produtos-adm'>
                         <article>
                             <span className='a2'>
 
