@@ -7,7 +7,16 @@
     flex-direction: column;
 
     .Rodape{
-        height: auto;
+        .rdp{
+            height: 300px;
+            .Atendimento, .Newsletter{
+                div{
+                    img{
+                        margin-bottom: inherit;
+                    }
+                }
+            }
+        }
     }
 
     main{
@@ -67,6 +76,49 @@
         p:nth-child(8){
             width: 70%;
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 720px){
+    .pagina-guia{
+        main{
+
+            h1, h2{
+                font-size: 18px;
+            }
+
+            p{
+                font-size: 13px;    
+            }
+
+            img:nth-child(6){
+                width: 300px;
+                height: 200px;
+            }
+
+            img:last-child{
+                width: 300px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .pagina-guia{
+        main{
+            img:nth-child(6){
+                width: 150px;
+                height: 100px;
+            }
+
+            img:last-child{
+                width: 150px;
+                height: 100px;
+
+                margin-bottom: 1vh;
+            }
         }
     }
 }
