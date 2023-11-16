@@ -1,8 +1,8 @@
 Reponsivdades pendentes:
 
 adm-adicionar
-adm-consultar
-adm-estoque
+adm-produtos
+adm-consultar-usuário
 adm-vendas
 status-adm
 
