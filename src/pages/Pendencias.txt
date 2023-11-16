@@ -1,7 +1,6 @@
 Reponsivdades pendentes:
 
 adm-adicionar
-adm-consultar-usuário
 adm-vendas
 status-adm
 
