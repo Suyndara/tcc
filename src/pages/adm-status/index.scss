@@ -88,6 +88,10 @@
             border-radius: 3px;
             align-self: center;
         }
+
+        button{
+            border-radius: 15px;
+        }
     }
 
     .produto{
@@ -127,6 +131,9 @@
         background-color: #000;
         color: #fff;
         border: none;
+
+        border-radius: 20px;
+
         padding: 8px ;
         cursor: pointer;
         border-radius: 3px;
@@ -137,6 +144,57 @@
     }
 
     button:hover{
-        background-color: #242424;
+        background-color: white;
+        color: black;
+        outline: 1px solid black;
+    }
+}
+
+@media (max-width: 720px){
+    .pagina-statusadm{
+        .cabeca{
+            main{
+                .editor{
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+
+                .status-produto{
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    height: 100%;
+
+                    gap: 30px;
+                    width: 100%;
+
+                    align-items: center;
+
+                    .status{
+                        width: 50%;
+
+                        h1{
+                            font-size: 17px;
+                        }
+
+                        select{
+                            width: 100%;
+                        }
+
+                        button{
+                            width: 70%;
+
+                            border-radius: 15px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .produto-imagem{
+                        width: 110%;
+                    }
+                }
+            }
+        }
     }
 }

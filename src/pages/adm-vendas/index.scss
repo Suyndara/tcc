@@ -40,21 +40,26 @@
         align-items: center;
     }
 
-    table {
+    .tabela{
+        display: flex;
+        justify-content: center;
+
         width: 100%;
-        width: 800px;
+    }
+
+    table {
+        width: 80%;
         border-collapse: separate;
         border-spacing: 0px 10px;
         font-size: 18px; 
 
         thead{
-
             th{
-        background-color: #fff;
-        border-right: 2px solid #ebebeb;
-        border-bottom: 2px solid #ebebeb;
-        padding: 12px 12px;
-        text-align: left;
+                background-color: #fff;
+                border-right: 2px solid #ebebeb;
+                border-bottom: 2px solid #ebebeb;
+                padding: 12px 12px;
+                text-align: left;
         }
 
         tr th:last-child{
@@ -83,5 +88,28 @@
     button:hover{
         background-color: #393939;
     }
+}
 
+@media (max-width: 888px) {
+    .pagina-vendasADM{
+        section{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .pagina-vendasADM{
+        section{
+            .sas{
+                .tabela{
+                    
+                }
+
+                button{
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
