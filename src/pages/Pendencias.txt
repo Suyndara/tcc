@@ -7,8 +7,8 @@ status-cliente...
 
 Conexões Pendentes:
 
-Consulta
-carrinho = adicionar
-status-adm
+Consulta-cliente
 detalhes-usuario
+detalhes-carrinho
+status-adm
 vendas-adm
