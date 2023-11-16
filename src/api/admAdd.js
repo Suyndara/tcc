@@ -62,8 +62,10 @@ export async function ConsultarTodos() {
 };
 
 
-
-
+export async function ConsultarUsuarios()  {
+    const resp = await api.get('/user/buscar');
+    return resp.data;
+}
 
 
 export async function ConsultarPorNome(nome) {    

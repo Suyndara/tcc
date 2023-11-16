@@ -89,7 +89,7 @@ export default function Estoque() {
                 <section>
                     <div className='busca'>
 
-                        <input type="text" placeholder='Buscar produto por nome' value={filtro} onChange={e => setFiltro(e.target.value)} />
+                        <input type="text" placeholder='Buscar usuário por nome' value={filtro} onChange={e => setFiltro(e.target.value)} />
                         <img src={Lupa} alt="Busca" onClick={filtrar} />
 
                     </div>
