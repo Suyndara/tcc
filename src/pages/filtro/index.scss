@@ -216,3 +216,47 @@
         }
     }
 }
+
+@media (max-width: 360px) {
+    .pagina-filtro{
+        .conteudo{
+            .texto{
+                h1{
+                    font-size: 28px;
+                }
+
+                h2{
+                    font-size: 14px;
+                }
+            }
+
+            .filtros-produtos{
+                .filtros{
+                    margin-right: 50px;
+
+                    h1{
+                        font-size: 20px;
+                    }
+
+                    h2{
+                        font-size: 13px;
+                    }
+
+                    .input{
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+
+                    .preco{
+                        div{
+                            p{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
