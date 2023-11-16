@@ -21,7 +21,7 @@ export default function StatusCliente() {
                 <p>Código de Produto: T23YUY1TR3E43323</p>
 
                 <div className='etapas'>
-                    <div className='barra'></div>
+                    
 
                     <div className='comercio'>
                         <div className='imagem'>
@@ -63,8 +63,10 @@ export default function StatusCliente() {
                 <hr />
 
                 <div className='fale-conosco'>
+                    <div className='texto'>
                     <p>Estamos no aguardo do pagamento para o evio do produto.
                         Estimamos que se o valor for pago corretamente o produto chegara nos dias 28 á 31 de junho.</p>
+                    </div>
 
                     <button>FALE COM O VENDEDOR</button>
                 </div>
