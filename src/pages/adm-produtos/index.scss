@@ -6,13 +6,17 @@
     height: auto;
     width: 100%;
 
+    .comp-lateral{
+      width: 13%;
+    }
+
     .main {
         display: flex;
         flex-direction: column;
 
         background-color: #EBEBEB;
 
-        width: 85%;
+        width: 87%;
 
         height: 100vh;
 
