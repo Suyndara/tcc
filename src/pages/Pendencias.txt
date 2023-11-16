@@ -2,7 +2,7 @@ Reponsivdades pendentes:
 
 adm-adicionar
 adm-vendas
-status-adm
+status-adm...
 
 filtro...
 status-cliente
