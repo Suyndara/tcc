@@ -4,11 +4,15 @@
   height: auto;
   width: 100%;
 
+  .comp-lateral{
+    width: 13%;
+  }
+
   .analise {
     display: flex;
 
     height: auto;
-    width: 85%;
+    width: 87%;
 
     flex-direction: column;
 
@@ -78,7 +82,6 @@
     
       .tabelas::-webkit-scrollbar{
         width: 10px;
-     
       }
     
       .tabelas::-webkit-scrollbar-track{
@@ -170,5 +173,46 @@
       align-items: flex-end;
       justify-content: space-evenly ;
       }
+  }
+}
+
+@media (max-width: 888px) {
+  .pagina-consultar{
+    .analise{
+      width: 100%;
+
+      .busca{
+        min-width: 180px;
+        margin-left: 20px;
+      }
+
+      .tabelas{
+        thead{
+          tr{
+            th{
+              font-size: 12px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 442px) {
+  .pagina-consultar{
+    .analise{
+      .tabelas{
+        thead{
+          tr{
+            th{
+              font-size: 9px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
   }
 }

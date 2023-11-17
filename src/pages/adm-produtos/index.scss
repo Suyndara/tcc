@@ -6,13 +6,17 @@
     height: auto;
     width: 100%;
 
+    .comp-lateral{
+      width: 13%;
+    }
+
     .main {
         display: flex;
         flex-direction: column;
 
         background-color: #EBEBEB;
 
-        width: 85%;
+        width: 87%;
 
         height: 100vh;
 
@@ -144,5 +148,46 @@
       border-right: 1px solid #000000;
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
+  }
+}
+
+@media (max-width: 888px) {
+  .pagina-produtos{
+    .main{
+      width: 100%;
+
+      .busca{
+        min-width: 180px;
+        margin-left: 20px;
+      }
+
+      .tabelas{
+        thead{
+          tr{
+            th{
+              font-size: 12px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 442px) {
+  .pagina-produtos{
+    .main{
+      .tabelas{
+        thead{
+          tr{
+            th{
+              font-size: 8px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
   }
 }

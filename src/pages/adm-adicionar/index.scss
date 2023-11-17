@@ -18,12 +18,13 @@
         justify-content: center;
         display: flex;
         background-color: #EBEBEB;
-        height: 100vh;
+        height: 110vh
     }
 
     .s1{
         background-color: #fff;
-        height: 80%;
+
+        height: auto;
         width: 83%;
         border-radius: 15px;
         padding: 0px 60px;
@@ -50,9 +51,11 @@
         display: flex;
         flex-direction: column;
         margin-right: 40px;
+        gap: 15px;
 
         h1{
-            width: 250px;
+            width: 90%;
+            max-width: 250px;
             font-family: 'inria-sans';
             font-weight: lighter;
             margin-bottom: 20px;
@@ -67,7 +70,12 @@
         }
 
         div{
+            display: flex;
 
+            align-items: center;
+            justify-content: center;
+
+            background-color: purple;
 
             select{
                 height: 30px;
@@ -75,8 +83,6 @@
                 border: 1px solid #000;
                 font-family: 'inria-sans';
                 width: 250px;
-                margin-top: 15px;
-                margin-bottom: 30px;
             }
         }
 
@@ -106,14 +112,16 @@
     .sep-02{
         display: flex;
         flex-direction: column;
-        padding: 45px 0px;
+        gap: 45px;
         margin-right: 40px;
+        margin-top: 10vh;
+
+        justify-content: flex-end;
 
         > input{
             border: 1px solid #000;
             height: 38px;
             border-radius: 5px;
-            margin-bottom: 22px;
             font-family: 'inria-sans';
         }
 
@@ -126,14 +134,12 @@
             border-radius: 8px;
             font-family: 'inria-sans';  
             font-size: 20px;   
-            width: 230px;      
-            margin-top: 40px; 
+            width: 230px;   
+            margin-top: 11vh;   
         }
     }
 
     .disponivel{
-        margin-bottom: 39px;
-
         label{
             font-family: 'inria-sans';
         }
@@ -149,7 +155,6 @@
             border: 1px solid #000;
             font-family: 'inria-sans';
             width: 250px;
-            margin-bottom: 30px;
         }
 
         textarea{
@@ -157,7 +162,6 @@
             border: 1px solid #000;
             border-radius: 5px;
             font-family: 'inria-sans';
-            margin-top: 10px;
             width: 250px;
             resize: none;
         }
@@ -249,3 +253,55 @@
 
 }
 
+@media (max-width: 1185px){
+    .pagina-anexagem-produto{
+        .main-anexagem-produto{
+            .conteudo{
+                height: auto;
+                .s1{
+                    height: auto;
+
+                    .cont-1{
+                        h1{
+                            text-align: center;
+                        }
+                    }
+
+                    .cont-2{
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        .sep-01{
+                            margin: inherit;
+                            text-align: center;
+
+                            button{
+                                align-self: center;
+                            }
+                        }
+
+                        .sep-02{
+                            margin: inherit;
+                            gap: 15px;
+                            
+                            height: 300px;
+
+                            button{
+                                align-self: center;
+                                margin: inherit;
+                            }
+
+                            .subcategoria{
+                                display: flex;
+                                justify-content: space-evenly;
+
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+}

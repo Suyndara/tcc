@@ -1,17 +1,13 @@
 Reponsivdades pendentes:
 
-adm-adicionar
-adm-consultar
-adm-estoque
-adm-vendas
-status-adm
+adm-adicionar...
 
-filtro
-status-cliente
+filtro...
 
 Conexões Pendentes:
 
-Consulta
-carrinho = adicionar
-status-adm
+Consulta-cliente
 detalhes-usuario
+detalhes-carrinho
+status-adm
+vendas-adm
