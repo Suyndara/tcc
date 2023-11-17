@@ -6,6 +6,7 @@ import storage from 'local-storage'
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { LoginUsuario } from '../../api/UsuarioApi';
+import { useNavigate } from "react-router-dom";
 
 
 export default function Cadastro() {
@@ -16,6 +17,8 @@ export default function Cadastro() {
     const [senha, setSenha] = useState('');
     const [confirmPwd, setConfirmPwd] = useState('');
 
+
+    const navigate = useNavigate();
 
 
     async function UsuarioCriado() {
@@ -31,6 +34,8 @@ export default function Cadastro() {
                 console.log(resp);
                 storage('usuario-pedido', { carrinho: []} )
                 toast.info('Cliente criado com sucesso');
+
+                navigate('/login');
             }
 
         } catch (error) {
