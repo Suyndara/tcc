@@ -3,7 +3,6 @@ Reponsivdades pendentes:
 adm-adicionar
 
 filtro...
-status-cliente...
 
 Conexões Pendentes:
 
