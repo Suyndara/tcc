@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
 import { Link } from 'react-router-dom';
-import Lixo from '../../assets/img/trash.svg';
+// import Lixo from '../../assets/img/trash.svg';
 import Mais from '../../assets/img/mais.svg';
 import Menos from '../../assets/img/menos.svg'; 
 import { useState } from 'react';
@@ -33,9 +33,9 @@ export default function Carrinho() {
     };
 
 
-    function removerProduto() {
-        localStorage.removeItem('usuario-pedido');
-    }
+    // function removerProduto() {
+    //     localStorage.removeItem('usuario-pedido');
+    // }
 
 
     useEffect(() => {
@@ -73,7 +73,7 @@ export default function Carrinho() {
                                         </div>
                                     </div>
                                     <div className='preco'>
-                                        <img src={Lixo} onClick={removerProduto}  alt='trash-can' />
+                                        {/* <img src={Lixo} onClick={removerProduto}  alt='trash-can' /> */}
                                         <p><b>R$ {item.preco}</b></p>
                                     </div>
                                 </div>
