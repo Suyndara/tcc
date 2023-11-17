@@ -1,7 +1,5 @@
 Reponsivdades pendentes:
 
-adm-adicionar...
-
 filtro...
 
 Conexões Pendentes:
