@@ -526,78 +526,80 @@
         .contato{
             h1{
                 font-size: 16px !important;
+            }
         }
-    }
 
-    .pagamento{
-        h1{
-            font-size: 16px !important;
+        .pagamento{
+            h1{
+                font-size: 16px !important;
+            }
         }
-    }
 
-    .entrega{
-        h1{
-            font-size: 16px !important;
+        .entrega{
+            h1{
+                font-size: 16px !important;
+            }
         }
-    }
-    }
+    
 
-    .informacoes{
+        .informacoes{
 
-        > input{
-            max-width: 390px !important;
-            padding: 10px 10px !important;
+            > input{
+                max-width: 390px !important;
+                padding: 10px 10px !important;
+            }
         }
-    }
 
-    .cep{
-        width: 100%;
-        max-width: 390px;
+        .cep{
+            width: 100%;
+            max-width: 390px;
 
-        > input{
-            width: 100% !important;
-            max-width: 158px !important;
-            margin-right: inherit;
-            padding: 8px 10px !important;
+            > input{
+                width: 100% !important;
+                max-width: 158px !important;
+                margin-right: inherit;
+                padding: 8px 10px !important;
+            }
         }
-    }
 
-    .bairro{
-        width: 100%;
-        max-width: 390px;
+        .bairro{
+            width: 100%;
+            max-width: 390px;
 
-        > input{
-            width: 100% !important;
-            max-width: 158px !important;
-            margin-right: inherit;
-            padding: 8px 10px !important;
+            > input{
+                width: 100% !important;
+                max-width: 158px !important;
+                margin-right: inherit;
+                padding: 8px 10px !important;
+            }
         }
-    }
 
-    .cidade{
-        width: 100%;
-        max-width: 390px;
+        .cidade{
+            width: 100%;
+            max-width: 390px;
 
-        > input{
-            width: 100% !important;
-            max-width: 158px !important;
-            margin-right: inherit;
-            padding: 8px 10px !important;
+            > input{
+                width: 100% !important;
+                max-width: 158px !important;
+                margin-right: inherit;
+                padding: 8px 10px !important;
+            }
         }
-    }
 
-    .contato{
-        align-items: center;
+        .contato{
+            align-items: center;
 
-        > input{
-            max-width: 390px !important;
-            padding: 10px 10px !important;
+            > input{
+                max-width: 390px !important;
+                padding: 10px 10px !important;
+            }
         }
-    }
 
-    .pagamento{
-        width: 100%;
-        max-width: 385px !important;
+        .pagamento{
+            width: 100%;
+            max-width: 385px !important;
+        }
+
     }
 }
 
