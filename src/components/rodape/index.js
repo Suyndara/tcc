@@ -15,7 +15,7 @@ export default function Rodape() {
         <div className="Duvidas">
           <h1> DÚVIDAS </h1>
 
-          <p> Onde esta meu pedido </p>
+          <a href="/status-cliente"> Onde esta meu pedido </a>
           <a href='/guia'> Guia de diamantes </a>
           <p> Guia de tamanho de aro </p>
           <p> Gerenciamento de dados pessoais </p>
