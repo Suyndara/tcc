@@ -183,6 +183,7 @@
 }
 
 @media (max-width: 974px){
+    .pagina-status{
     .imagem{
         height: 120px !important;
         width: 120px !important;
@@ -225,6 +226,7 @@
         }
     }
 }
+}
 
 @media (max-width: 885px){
     .pagina-status{
@@ -236,6 +238,7 @@
 
                 p{
                     width: 100%;
+                    text-align: center;
                 }
             }
 
@@ -267,7 +270,8 @@
     }
 }
 
-@media (max-width: 781px){
+@media (max-width: 780px){
+    .pagina-status{
     .imagem{
         height: 100px !important;
         width: 100px !important;
@@ -293,11 +297,229 @@
             width: 80px !important;
         }
     }
+
+    .etapas{
+        background-position: 50% 4%;
+    }
+}
 }
 
-@media (width: 720px){
+@media (max-width: 720px){
+    .pagina-status{
     .fale-conosco{
         display: flex;
         flex-direction: column !important;
+
+        button{
+            width: 100%;
+            max-width: 320px;
+            padding: 15px 0px;
+        }
+    }
+
+    .etapas{
+        width: 95% !important;
+    }
+}
+}
+
+@media (max-width: 620px){
+    .pagina-status{
+
+        p{
+        font-size: 18px !important;
+        }
+
+        .imagem{
+            height: 80px !important;
+            width: 80px !important;
+    
+            img{
+                width: 40px !important;
+            }
+    
+            .money{
+                width: 70px !important;
+            }
+        }
+    
+        .imagem2{
+            height: 80px !important;
+            width: 80px !important;
+    
+            img{
+                width: 50px !important;
+            }
+            
+            .especial{
+                width: 70px !important;
+            }
+        }
+
+        .etapas{
+            background-position: 50% -2%;
+        }
+
+        .fale-conosco{
+            button{
+                max-width: 290px !important;
+            }
+        }
+
+        .cancelar{
+
+            button{
+                height: 50px !important;
+                font-size: 13px !important;
+            }
+
+            p{
+                font-size: 15px !important;
+            }
+        }
+
+        .garantia{
+
+            button{
+                max-width: 290px !important;
+                font-size: 16px !important;
+            }
+        }
+
+        .texto{
+            p{
+                font-size: 14px !important;
+            }
+        }
+
+        h3{
+            font-size: 14px !important;
+        }
+
+    }
+}
+
+@media (max-width: 510px){
+    .pagina-status{
+
+        p{
+            font-size: 14px !important;
+        }
+        
+        .imagem{
+            height: 60px !important;
+            width: 60px !important;
+
+            img{
+                width: 33px !important;
+            }
+    
+            .money{
+                width: 50px !important;
+            }
+        }
+    
+        .imagem2{
+            height: 60px !important;
+            width: 60px !important;
+    
+            img{
+                width: 33px !important;
+            }
+            
+            .especial{
+                width: 50px !important;
+            }
+        }
+
+        .comercio{
+            p{
+                font-size: 13px !important;
+            }
+        }
+
+        h3{
+            font-size: 13px !important;
+        }
+
+        .cancelar{
+            justify-content: center !important;
+        }
+
+        .fale-conosco{
+            button{
+                max-width: 200px !important;
+                height: 45px !important;
+                padding: 3px 0px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        .cancelar{
+            button{
+                max-width: 190px;
+                font-size: 12px !important;
+            }
+        }
+
+        .garantia{
+            button{
+                max-width: 200px !important;
+                font-size: 12px !important;
+                height: 45px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .pagina-status{
+        .imagem{
+            height: 50px !important;
+            width: 50px !important;
+
+            img{
+                width: 28px !important;
+            }
+    
+            .money{
+                width: 40px !important;
+            }
+        }
+    
+        .imagem2{
+            height: 50px !important;
+            width: 50px !important;
+    
+            img{
+                width: 28px !important;
+            }
+            
+            .especial{
+                width: 40px !important;
+            }
+        }
+
+        .comercio{
+            align-content: center;
+            align-items: center;
+            text-align: center;
+
+            h3{
+                width: 100%;
+            }
+
+            p{
+                font-size: 12px !important;
+            }
+        }
+
+        .etapas{
+            background-position: 50% -8%;
+        }
+
+        h3{
+            font-size: 11px !important;
+        }
     }
 }
