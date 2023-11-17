@@ -57,7 +57,7 @@ export default function Conta() {
                 label: 'Não'
               }
             ]
-          });
+          });   
     }
 
 

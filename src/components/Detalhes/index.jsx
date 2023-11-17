@@ -13,10 +13,10 @@ export default function Detalhes(props) {
 
 
     function adicionarCarrinho(infoProduto){
+        infoProduto.qtd = 1 
         let pedido = storage('usuario-pedido')
         pedido.carrinho = [...pedido.carrinho, infoProduto]
-        storage('usuario-pedido', pedido)
-        console.log(pedido);
+        storage('usuario-pedido', pedido) 
     }
 
 

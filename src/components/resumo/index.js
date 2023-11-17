@@ -1,8 +1,29 @@
+import { useEffect } from 'react';
 import './index.scss';
 
 
+import storage from 'local-storage';
+import { useState } from 'react';
 
-export default function Resumo() {
+
+export default function Resumo() {   
+    const [ total, setTotal ] = useState(0);
+
+
+    function puxarProdutos() {
+        const produtoBuscado = storage('usuario-pedido').carrinho;
+        let totalCalc = 0;
+        for(let cont = 0; cont < produtoBuscado.length; cont++){
+            totalCalc = totalCalc + (produtoBuscado[cont].preco * produtoBuscado[cont].qtd)
+        }
+        setTotal(totalCalc);
+    }   
+
+
+
+    useEffect(() => {
+        puxarProdutos()
+    }, [])
 
 
     return (
@@ -13,7 +34,7 @@ export default function Resumo() {
 
             <div className='produto-valor'>
                 <p>1 produto</p>
-                <p>R$ 2.600,00</p>
+                <p>R$ {total}</p>
             </div>
 
             <div className='entrega-frete'>
@@ -23,7 +44,7 @@ export default function Resumo() {
 
             <div className='total'>
                 <h2>TOTAL</h2>
-                <h2>R$ 2.600,00</h2>
+                <h2>R$ {total}</h2>
             </div>
 
             <div className='cupom'>

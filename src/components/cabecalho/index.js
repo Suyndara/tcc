@@ -66,7 +66,7 @@ export default function Cabecalho() {
                 </section>
 
                 <section className="navegacao">
-                    <Link to='/'> NOIVADO </Link>
+                    <Link to='/'> RELÓGIO </Link>
                     <Link to='/filtro'> JOIAS </Link>
                     <Link to='/'> PRESENTES </Link>
                     <Link to='/'> ESPECIAIS </Link>

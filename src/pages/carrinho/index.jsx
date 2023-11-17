@@ -9,12 +9,40 @@ import { Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import Lixo from '../../assets/img/trash.svg';
 import Mais from '../../assets/img/mais.svg';
-import Menos from '../../assets/img/menos.svg';
-import Anel from '../../assets/img/anel.svg';
-
+import Menos from '../../assets/img/menos.svg'; 
+import { useState } from 'react';
+import storage from 'local-storage'
+import { useEffect } from 'react';
+import { BuscarImagem } from '../../api/admAdd';
 
 
 export default function Carrinho() {
+    const [produtos, setProdutos] = useState([])
+    const [total, setTotal] = useState()
+
+    function puxarProdutos() {
+        const produtosBuscando = storage('usuario-pedido').carrinho
+        let totalCalc = 0
+            for(let cont = 0; cont < produtosBuscando.length; cont++){
+                totalCalc = totalCalc + (produtosBuscando[cont].preco * produtosBuscando[cont].qtd)
+            }
+            setTotal(totalCalc)
+
+        console.log(produtosBuscando);
+        setProdutos(produtosBuscando)
+    };
+
+
+    function removerProduto() {
+        localStorage.removeItem('usuario-pedido');
+    }
+
+
+    useEffect(() => {
+        puxarProdutos();
+    }, [])
+
+
 
     return (
 
@@ -24,30 +52,34 @@ export default function Carrinho() {
             <main className='s1'>
                 <div className='carrinho-produtos'>
                     <h1>SEU CARRINHO</h1>
-                    <h2>TOTAL (1 produto)  <b>R$ 2.600,00</b> </h2>
+                    <h2>TOTAL (1 produto)  <b>R$ {total}</b> </h2>
                     <p>Os itens do seu carrinho não estão reservados. Finalize a compra para torná-los seus itens pessoais.</p>
+                    
+                    {produtos.map((item, index) => {
+                        return(
+                            <div className='produto'>
+                                <div className='informacao-produto'>
+                                    <img src={BuscarImagem(item.imagem)} alt='ringg' />
+                                    <div className='informacao'>
+                                        <h1><b>{item.nome}</b></h1>
+                                        <p>tamanho de aro: 9</p>
 
-                    <div className='produto'>
-                        <div className='informacao-produto'>
-                            <img src={Anel} alt='ringg' />
-                            <div className='informacao'>
-                                <h1><b>Anel solitário de ouro 18k</b></h1>
-                                <p>tamanho de aro: 9</p>
-
-                                <div className='contador'>
-                                    <div>
-                                        <img src={Mais} alt='s-mais' />
-                                        <p>1</p>
-                                        <img src={Menos} alt='s-menos' />
+                                        <div className='contador'>
+                                            <div>
+                                                <img src={Mais} alt='s-mais' />
+                                                <p>1</p>
+                                                <img src={Menos} alt='s-menos' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='preco'>
+                                        <img src={Lixo} onClick={removerProduto}  alt='trash-can' />
+                                        <p><b>R$ {item.preco}</b></p>
                                     </div>
                                 </div>
                             </div>
-                            <div className='preco'>
-                                <img src={Lixo} alt='trash-can' />
-                                <p><b>R$ 2.600,00</b></p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
 
                 <div className='finalizamento'>
