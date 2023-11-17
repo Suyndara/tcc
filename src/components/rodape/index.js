@@ -18,7 +18,7 @@ export default function Rodape() {
           <a href="/status-cliente"> Onde esta meu pedido </a>
           <a href='/guia'> Guia de diamantes </a>
           <p> Guia de tamanho de aro </p>
-          <p> Gerenciamento de dados pessoais </p>
+          <a href="/minhaconta"> Gerenciamento de dados pessoais </a>
           <p> Garantias, trocas e devoluções </p>
         </div>
         <div className="Newsletter">
