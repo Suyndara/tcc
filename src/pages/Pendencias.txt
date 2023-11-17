@@ -1,6 +1,6 @@
 Reponsivdades pendentes:
 
-adm-adicionar
+adm-adicionar...
 
 filtro...
 
