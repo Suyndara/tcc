@@ -55,3 +55,22 @@ export async function BuscarCategoriaEscapulario() {
     const resp = await api.get('/buscar/categoria/escapulario');
     return resp.data;
 }
+
+
+
+
+
+export async function BuscarCategoriaAlianca() {
+    const resp = await api.get('/buscar/categoria/alianca');
+    return resp.data;
+}
+
+
+
+
+
+
+export async function BuscarCategoriaCorrente() {
+    const resp = await api.get('/buscar/categoria/corrente');
+    return resp.data;
+}
