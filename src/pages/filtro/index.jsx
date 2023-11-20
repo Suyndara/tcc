@@ -7,6 +7,7 @@ import Rodape from '../../components/rodape';
 import { useState, useEffect } from 'react';
 import { ConsultarTodos, BuscarImagem } from '../../api/admAdd';
 import { useNavigate } from 'react-router-dom';
+import { BuscarCategoriaEscapulario, BuscarCategoriaRelogio } from '../../api/UsuarioAdd';
 // import Escapulario from '../../assets/img/CO00020832 1.svg';
 // import Pulseira from '../../assets/img/Pulseira-Life-Royal-Prata-Cristal-Azul-69469_set 1.svg';
 // import PulseiraOuro from '../../assets/img/Pulseira-Ouro-Amarelo-3171_set 1.svg';
@@ -24,9 +25,21 @@ export default function Filtro() {
 
     async function ListarTodosProdutos() {
         const resp = await ConsultarTodos()
-        console.log(resp);
         setProdutos(resp)
     };
+
+
+    async function ListarCategoriaRelogio() {
+        const resp = await BuscarCategoriaRelogio();
+        setProdutos(resp);
+    }
+
+
+    async function ListarCategoriaEscapulario() {
+        const resp = await BuscarCategoriaEscapulario();
+        setProdutos(resp);
+    }
+
 
     function chamarImg(imagem){
         console.log(imagem);
@@ -35,7 +48,9 @@ export default function Filtro() {
 
 
     useEffect(() => {
-        ListarTodosProdutos()
+        ListarTodosProdutos();
+        ListarCategoriaRelogio();
+        ListarCategoriaEscapulario();
     }, []);
 
 
@@ -69,13 +84,11 @@ export default function Filtro() {
                         <h2>Acessórios</h2>
 
                         <div className='input'>
-                            <input type="checkbox" />
-                            <p>Pulseiras</p>
+                            <button onClick={ListarCategoriaRelogio}> <p>Relógio</p> </button>
                         </div>
 
                         <div className='input'>
-                            <input type="checkbox" />
-                            <p>Anéis</p>
+                            <button onClick={ListarCategoriaEscapulario}> <p>Escapulário</p> </button>
                         </div>
 
                         <div className='input'>

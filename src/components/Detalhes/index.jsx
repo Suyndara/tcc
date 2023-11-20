@@ -8,6 +8,7 @@ import { Navigation } from 'swiper/modules';
 import { BuscarImagem } from '../../api/admAdd';
 
 import storage from 'local-storage';
+import { toast, ToastContainer } from 'react-toastify';
 
 export default function Detalhes(props) {
 
@@ -16,7 +17,10 @@ export default function Detalhes(props) {
         infoProduto.qtd = 1 
         let pedido = storage('usuario-pedido')
         pedido.carrinho = [...pedido.carrinho, infoProduto]
-        storage('usuario-pedido', pedido) 
+        storage('usuario-pedido', pedido);
+
+
+        toast.info('Produto Adicionado ao carrinho');
     }
 
 
@@ -24,6 +28,7 @@ export default function Detalhes(props) {
 
     return (
         <div className='pagina-detalhes'>
+            <ToastContainer />
 
             <main className='s1'>
                 <article>

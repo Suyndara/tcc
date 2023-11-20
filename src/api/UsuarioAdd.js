@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-// const api = axios.create({
-//     baseURL: 'http://localhost:5000'
-// }); 
-
-
 const api = axios.create({
-    baseURL: 'http://129.148.42.252:5035'
-});
+    baseURL: 'http://localhost:5000'
+}); 
+
+
+// const api = axios.create({
+//     baseURL: 'http://129.148.42.252:5035'
+// });
 
 
 
@@ -38,7 +38,20 @@ export async function AlterarPerfilUsuario(id, cliente, email, telefone, senha, 
 
 
 
-// export async function ExcluirUsuario(id) {
-//     const resp = await api.delete(`/deletar/usuario/${id}`);
-//     return resp.status;
-// }
+
+
+export async function BuscarCategoriaRelogio() {
+    const resp = await api.get('/buscar/categoria/relogio');
+    return resp.data;
+}
+
+
+
+
+
+
+
+export async function BuscarCategoriaEscapulario() {
+    const resp = await api.get('/buscar/categoria/escapulario');
+    return resp.data;
+}

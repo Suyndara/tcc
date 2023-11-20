@@ -34,8 +34,6 @@ export default function Cadastro() {
                 console.log(resp);
                 storage('usuario-pedido', { carrinho: []} )
                 toast.info('Cliente criado com sucesso');
-
-                navigate('/login');
             }
 
         } catch (error) {
