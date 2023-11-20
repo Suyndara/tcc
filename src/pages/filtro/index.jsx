@@ -6,7 +6,9 @@ import Rodape from '../../components/rodape';
 import { useState, useEffect } from 'react';
 import { ConsultarTodos, BuscarImagem } from '../../api/admAdd';
 import { useNavigate } from 'react-router-dom';
-import { BuscarCategoriaAlianca, BuscarCategoriaBrinco, BuscarCategoriaCorrente, BuscarCategoriaEscapulario, BuscarCategoriaPingente, BuscarCategoriaPulseira, BuscarCategoriaRelogio } from '../../api/UsuarioAdd';
+import { BuscarCategoriaAlianca, BuscarCategoriaBrinco, BuscarCategoriaCorrente,
+         BuscarCategoriaEscapulario, BuscarCategoriaPingente, BuscarCategoriaPulseira,
+          BuscarCategoriaRelogio } from '../../api/UsuarioAdd';
 
 
 export default function Filtro() {
