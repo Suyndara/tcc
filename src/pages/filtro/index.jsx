@@ -6,7 +6,7 @@ import Rodape from '../../components/rodape';
 import { useState, useEffect } from 'react';
 import { ConsultarTodos, BuscarImagem } from '../../api/admAdd';
 import { useNavigate } from 'react-router-dom';
-import { BuscarCategoriaAlianca, BuscarCategoriaCorrente, BuscarCategoriaEscapulario, BuscarCategoriaRelogio } from '../../api/UsuarioAdd';
+import { BuscarCategoriaAlianca, BuscarCategoriaBrinco, BuscarCategoriaCorrente, BuscarCategoriaEscapulario, BuscarCategoriaPingente, BuscarCategoriaPulseira, BuscarCategoriaRelogio } from '../../api/UsuarioAdd';
 
 
 export default function Filtro() {
@@ -46,6 +46,24 @@ export default function Filtro() {
     async function ListarCategoriaCorrente() {
         const resp = await BuscarCategoriaCorrente();
         setProdutos(resp);
+    };
+
+
+    async function ListarCategoriaPulseira() {
+        const resp = await BuscarCategoriaPulseira();
+        setProdutos(resp);
+    };
+
+
+    async function ListarCategoriaBrinco() {
+        const resp = await BuscarCategoriaBrinco();
+        setProdutos(resp);
+    }
+
+
+    async function ListarCategoriaPingente() {
+        const resp = await BuscarCategoriaPingente();
+        setProdutos(resp);
     }
 
 
@@ -72,14 +90,6 @@ export default function Filtro() {
         ListarTodosProdutos();
     }, []);
 
-
-
-    useEffect(() => {
-        ListarCategoriaRelogio();
-        ListarCategoriaEscapulario();
-        ListarCategoriaAlianca();
-        ListarCategoriaCorrente();
-    }, []);
 
 
 
@@ -120,17 +130,17 @@ export default function Filtro() {
                         </div>
 
                         <div className='input'>
-                            <input type="checkbox" />
+                            <input type="checkbox" onClick={ListarCategoriaPulseira}/>
                             <p>Pulseiras</p>
                         </div>
 
                         <div className='input'>
-                            <input type="checkbox" />
+                            <input type="checkbox" onClick={ListarCategoriaBrinco}/>
                             <p>Brincos</p>
                         </div>
 
                         <div className='input'>
-                            <input type="checkbox" />
+                            <input type="checkbox" onClick={ListarCategoriaPingente}/>
                             <p>Pingentes</p>
                         </div>
 

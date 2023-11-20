@@ -74,3 +74,28 @@ export async function BuscarCategoriaCorrente() {
     const resp = await api.get('/buscar/categoria/corrente');
     return resp.data;
 }
+
+
+
+
+export async function BuscarCategoriaPulseira() {
+    const resp = await api.get('/buscar/categoria/pulseira');
+    return resp.data;
+}
+
+
+
+
+export async function BuscarCategoriaBrinco() {
+    const resp = await api.get('/buscar/categoria/brinco');
+    return resp.data;
+}
+
+
+
+
+
+export async function BuscarCategoriaPingente() {
+    const resp = await api.get('/buscar/categoria/pingente');
+    return resp.data;
+}
