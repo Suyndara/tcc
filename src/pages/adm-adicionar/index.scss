@@ -5,6 +5,7 @@
     height: auto;
     width: 100%;
 
+
     .main-anexagem-produto{
         display: flex;
         flex-direction: column;
@@ -22,6 +23,12 @@
     }
 
     .s1{
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
         background-color: #fff;
 
         height: auto;
@@ -63,7 +70,7 @@
 
         input{
             border: 1px solid #000;
-            height: 28px;
+            height: 38px;
             border-radius: 5px;
             margin-bottom: 22px;
             font-family: 'inria-sans';
@@ -74,8 +81,6 @@
 
             align-items: center;
             justify-content: center;
-
-            background-color: purple;
 
             select{
                 height: 30px;
@@ -121,9 +126,6 @@
         display: flex;
         flex-direction: column;
         gap: 45px;
-        margin-right: 40px;
-        margin-top: 10vh;
-
         justify-content: flex-end;
 
         > input{
@@ -143,9 +145,9 @@
             font-family: 'inria-sans';  
             font-size: 20px;   
             width: 230px;   
-            margin-top: 11vh;   
-
             transition: .3s;
+
+            margin-top: 2vh;
         }
 
         button:hover{
@@ -164,6 +166,8 @@
     .subcategoria{
         display: flex;
         flex-direction: column;
+
+        gap: 25px;
 
         select{
             height: 30px;
@@ -190,6 +194,7 @@
         height: 330px;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         h1{
             font-family: 'inria-sans';

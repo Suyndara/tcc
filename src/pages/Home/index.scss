@@ -1,8 +1,12 @@
+*{
+    max-width: 1920px;
+}
+
 .pagina-home{
     display: flex;
 
     height: auto;
-    max-width: 100%;
+    width: 100%;
 
     flex-direction: column;
 
@@ -296,7 +300,6 @@
 }
 
 
-
 @media (max-width: 720px) {
     .pagina-home{
         .comp-carrossele{
@@ -406,8 +409,6 @@
     }
 }
 
-
-
 @media (max-width: 360px) {
     .pagina-home{
         .comp-carrossele{
@@ -490,3 +491,43 @@
 }
 
 
+// responsividade do espaçamento ,s4 
+@media (max-width: 1920px) {
+    .pagina-home{
+        .s4{
+            article{
+                gap: 35%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .pagina-home{
+        .s4{
+            article{
+                gap: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .pagina-home{
+        .s4{
+            article{
+                gap: 15%;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .pagina-home{
+        .s4{
+            article{
+                gap: 1%;
+            }
+        }
+    }
+}
