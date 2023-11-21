@@ -99,3 +99,29 @@ export async function BuscarCategoriaPingente() {
     const resp = await api.get('/buscar/categoria/pingente');
     return resp.data;
 }
+
+
+
+export async function concluirPedido(pedido) {
+    const resp = await api.post('/pedido', {
+        cliente: pedido.cliente,
+        total: pedido.total
+    })
+
+    return resp.data
+}
+
+export async function inserirItensPedido(itens, idPedido){
+    let respItens = []
+    // console.log(itens);
+
+    for(let cont = 0; cont < itens.length; cont++){
+        const resp = await api.post('/pedido/item', {
+            pedido: idPedido,
+            produto: itens[cont].produto_id,
+            quantidade: itens[cont].qtd
+        })
+        respItens[cont] = resp.data
+    }
+    console.log(respItens);
+}

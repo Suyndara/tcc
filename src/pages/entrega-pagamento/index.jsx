@@ -2,10 +2,38 @@ import './index.scss';
 import Cabecalho from '../../components/cabecalho';
 import Rodape from '../../components/rodape';
 import Resumo from '../../components/resumo';
-
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { toast } from 'react-toastify'
+import storage from 'local-storage'
+import { concluirPedido, inserirItensPedido } from '../../api/UsuarioAdd';
 
 export default function EntregaPagamento() {
+    const [pedido, setPedido] = useState({})
 
+
+    useEffect(() => {
+        setPedido(storage('usuario-pedido'))
+
+        // eslint-disable-next-line
+    }, [])
+
+
+    async function finalizarPedido() {
+        try{
+            console.log('oi');
+            const id = storage('usuario-logado').cliente_id
+            const resp = await concluirPedido({cliente: id, total: storage('usuario-pedido').total})
+            const respItens = await inserirItensPedido(storage('usuario-pedido').carrinho, resp.id)
+            alert('Pedido finalizado')
+        }
+        catch(err){
+            if(err.response)
+                toast.error(err.response.data.erro)
+            else
+                toast.error(err.message)
+        }
+    }
 
     return (
 
@@ -89,7 +117,7 @@ export default function EntregaPagamento() {
                         </div>
                     </div>
                     <div className='botao'>
-                        <button>EFETUAR PAGAMENTO</button>
+                        <button onClick={finalizarPedido}>EFETUAR PAGAMENTO</button>
                     </div>
                 </div>
             </main>

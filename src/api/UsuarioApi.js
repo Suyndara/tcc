@@ -14,10 +14,11 @@ const api = axios.create({
 
 
 
-export async function LoginUsuario(cliente, email) {
+export async function LoginUsuario(cliente, email, senha) {
     const resp = await api.post('/usuario/login', {
         cliente: cliente,
-        email: email
+        email: email,
+        senha: senha
     });
     
     return resp.data;

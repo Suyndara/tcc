@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 export default function Resumo() {   
     const [ total, setTotal ] = useState(0);
+    const [pedido, setPedido] = useState({carrinho: []})
 
 
     function puxarProdutos() {
@@ -16,13 +17,21 @@ export default function Resumo() {
         for(let cont = 0; cont < produtoBuscado.length; cont++){
             totalCalc = totalCalc + (produtoBuscado[cont].preco * produtoBuscado[cont].qtd)
         }
+        let pedido = storage('usuario-pedido')
+        pedido.total = totalCalc
+        storage('usuario-pedido', pedido)
         setTotal(totalCalc);
     }   
 
 
 
+ 
+    
     useEffect(() => {
+        setPedido(storage('usuario-pedido'))
         puxarProdutos()
+        
+        // eslint-disable-next-line
     }, [])
 
 
@@ -33,7 +42,7 @@ export default function Resumo() {
             <h2>RESUMO DO PEDIDO</h2>
 
             <div className='produto-valor'>
-                <p>1 produto</p>
+                <p>{pedido.carrinho.length} produto</p>
                 <p>R$ {total}</p>
             </div>
 
