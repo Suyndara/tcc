@@ -6,7 +6,6 @@ import storage from 'local-storage'
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { LoginUsuario } from '../../api/UsuarioApi';
-import { useNavigate } from "react-router-dom";
 
 
 export default function Cadastro() {
@@ -16,9 +15,6 @@ export default function Cadastro() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmPwd, setConfirmPwd] = useState('');
-
-
-    const navigate = useNavigate();
 
 
     async function UsuarioCriado() {

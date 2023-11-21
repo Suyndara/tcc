@@ -20,6 +20,9 @@ export default function Carrinho() {
     const [produtos, setProdutos] = useState([])
     const [total, setTotal] = useState()
 
+    const [ qtd, setQtd ] = useState();
+
+
     function puxarProdutos() {
         const produtosBuscando = storage('usuario-pedido').carrinho
         let totalCalc = 0
@@ -41,6 +44,30 @@ export default function Carrinho() {
     useEffect(() => {
         puxarProdutos();
     }, [])
+
+
+
+
+    function aumentar(index) {
+        let novosProdutos = [...produtos]
+
+        novosProdutos[index].qtd = ++novosProdutos[index].qtd
+        storage('usuario-pedido', {carrinho: novosProdutos})
+        setProdutos(novosProdutos)
+    }
+
+    function diminuir(index) {
+        let novosProdutos = [...produtos]
+        if(novosProdutos[index].qtd > 1){
+            novosProdutos[index].qtd = --novosProdutos[index].qtd
+            storage('usuario-pedido', novosProdutos)
+        }
+        else if(novosProdutos[index].qtd === 1){
+            novosProdutos = novosProdutos.filter(item => item.id !== novosProdutos[index].id)
+            storage('usuario-pedido',   { carrinho: []})
+        }
+        setProdutos(novosProdutos)
+    }
 
 
 
@@ -66,9 +93,9 @@ export default function Carrinho() {
 
                                         <div className='contador'>
                                             <div>
-                                                <img src={Mais} alt='s-mais' />
-                                                <p>1</p>
-                                                <img src={Menos} alt='s-menos' />
+                                                <img src={Mais} onClick={() => aumentar(index)} alt='s-mais' />
+                                                <p> {item.qtd}</p>
+                                                <img src={Menos} onClick={() => diminuir(index)} alt='s-menos' />
                                             </div>
                                         </div>
                                     </div>
