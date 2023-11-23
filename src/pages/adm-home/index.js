@@ -18,7 +18,6 @@ export default function HomeAdm() {
         navigate('/login-adm');
     };
 
-
     return (
         <div className="Pagina-HomeAdm">
             <Lateral />

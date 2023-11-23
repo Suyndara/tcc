@@ -6,6 +6,7 @@ import './index.scss';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -34,6 +35,13 @@ export default function Home() {
         handleResize();
 
     }, [])
+
+    const navigate = useNavigate();
+
+    function Filtro() {
+        navigate('/filtro');
+    }
+
 
     return (
         <div className='pagina-home'>
@@ -67,22 +75,22 @@ export default function Home() {
             <main className='s3'>
                 <article>
                     <img alt='ring' src="/assets/img/anel.png" />
-                    <button>ANÉIS</button>
+                    <button onClick={Filtro}>ANÉIS</button>
                 </article>
 
                 <article>
                     <img alt='necklace' src="/assets/img/colar.png" />
-                    <button>COLARES</button>
+                    <button onClick={Filtro}>COLARES</button>
                 </article>
 
                 <article>
                     <img alt='brink' src="/assets/img/brinco.png" />
-                    <button>BRINCOS</button>
+                    <button onClick={Filtro}>BRINCOS</button>
                 </article>
 
                 <article>
                     <img alt='kid' src="/assets/img/infantil.png" />
-                    <button>INFANTIL</button>
+                    <button onClick={Filtro}>INFANTIL</button>
                 </article>
             </main>
 
