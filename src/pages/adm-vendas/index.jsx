@@ -26,7 +26,7 @@ export default function VendasADM() {
                 <tr>
                   <th> produto </th>
                   <th> cliente </th>
-                  <th> parcelas </th>
+                  <th> total </th>
                   <th> status </th>
                 </tr>
               </thead>
