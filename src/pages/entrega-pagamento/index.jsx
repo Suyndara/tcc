@@ -57,12 +57,12 @@ export default function EntregaPagamento() {
             navigate('/')
             storage.remove('usuario-pedido');
 
-            alert('Pedido finalizado');
+            toast.done('Pedido finalizado');
         }
         catch(err){
             alert(err)
-            const id = storage('usuario-logado').cliente_id
             console.log(id)
+            const id = storage('usuario-logado').resp.id;
             
             if(err.response)
                 toast.error(err.response.data.erro)

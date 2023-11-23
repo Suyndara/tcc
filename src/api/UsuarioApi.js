@@ -13,7 +13,7 @@ const api = axios.create({
 
 
 
-
+// CADASTRO USUARIO
 export async function LoginUsuario(cliente, email, senha) {
     const resp = await api.post('/usuario/login', {
         cliente: cliente,
@@ -28,7 +28,7 @@ export async function LoginUsuario(cliente, email, senha) {
 
 
 
-
+// LOGIN USUARIO
 
 export async function SingUpUsuario(email, senha) {
     const resp = await api.post('/usuario/logar', {

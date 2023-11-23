@@ -2,13 +2,13 @@ import './index.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-
+import { toast, ToastContainer } from 'react-toastify';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { BuscarImagem } from '../../api/admAdd';
 
 import storage from 'local-storage';
-import { toast, ToastContainer } from 'react-toastify';
+
 
 export default function Detalhes(props) {
 
@@ -16,15 +16,17 @@ export default function Detalhes(props) {
     function adicionarCarrinho(infoProduto){
         infoProduto.qtd = 1 
         let pedido = storage('usuario-pedido')
+
+        if(!pedido) {
+            
+        }
+
         pedido.carrinho = [...pedido.carrinho, infoProduto]
         storage('usuario-pedido', pedido);
 
 
         toast.info('Produto Adicionado ao carrinho');
     }
-
-
-
 
     return (
         <div className='pagina-detalhes'>
@@ -54,16 +56,6 @@ export default function Detalhes(props) {
 
                         <button  onClick={() => adicionarCarrinho(props.produto)}>ADICIONAR AO CARRINHO</button>
                     </section>
-
-                    {/* <section className='et'>
-                        <p>EM ESTOQUE: {props.produto.estoque} </p>
-                        <p>Calcular o frete da entrega</p>
-                        <label>
-                            <input type="text" placeholder='Digite o CEP' />
-                            <button>OK</button>
-                        </label>
-                        <p>Não sei meu CEP</p>
-                    </section> */}
                 </aside>
             </main>
 
@@ -178,8 +170,6 @@ export default function Detalhes(props) {
                     </section>
                 </article>
 
-
-                {/* nth-child(2) v */}
                 <article>
                     <section>
                         <h1>Detalhes </h1>

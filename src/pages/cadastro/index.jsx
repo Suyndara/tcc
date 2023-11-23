@@ -28,7 +28,9 @@ export default function Cadastro() {
             else {
                 const resp = await LoginUsuario(nome, email, senha);
                 console.log(resp);
-                storage('usuario-pedido', { carrinho: []} )
+
+                storage('usuario-pedido', {carrinho: []});
+                storage('usuario-logado', resp)
                 toast.info('Cliente criado com sucesso');
             }
 
