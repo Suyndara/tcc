@@ -181,15 +181,13 @@ export default function Detalhes(props) {
                 </article>
 
 
+                {/* nth-child(2) v */}
                 <article>
-
-
                     <section>
                         <h1>Detalhes </h1>
                     </section>
 
                     <p> {props.produto.detalhes} </p>
-
                 </article>
             </main>
 

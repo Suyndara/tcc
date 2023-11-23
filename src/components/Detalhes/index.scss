@@ -414,8 +414,9 @@
         article:nth-child(2){
             display: flex;
 
-            height: 200px;
+            height: auto;
             width: 50%;
+
 
             flex-direction: column;
             justify-content: space-evenly;
