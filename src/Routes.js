@@ -19,7 +19,7 @@ import Politica from './pages/politica';
 import Login from './pages/login/App';
 import Filtro from './pages/filtro';
 import Guia from './pages/guia';
-
+import NotFound from './pages/404';
 
 export default function Rotas() {
     return ( 
@@ -48,6 +48,8 @@ export default function Rotas() {
                 <Route path='/status-adm' element={<StatusAdm/>} />
                 <Route path='/login-adm' element={<LoginAdm/>} />
                 <Route path='/home-adm' element={<HomeAdm/>} />
+
+                <Route path='/*' element={<NotFound/>} />
             </Routes>
         </BrowserRouter>
     )
