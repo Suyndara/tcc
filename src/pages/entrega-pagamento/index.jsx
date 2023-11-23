@@ -91,6 +91,9 @@ export default function EntregaPagamento() {
                             <input type='text' placeholder='Cidade'  value={cidade} onChange={e => setCidade(e.target.value)}/>
                             <input type='text' placeholder='Estado' value={estado} onChange={e => setEstado(e.target.value)} />
                         </div>
+
+                        <button onClick={adicaoEndereco}> Sla </button>
+
                     </div>
 
                     <div className='contato'>
