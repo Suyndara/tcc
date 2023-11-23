@@ -44,7 +44,7 @@
             transition: .1s;
 
             .a1 {
-                background-image: url(../../../public/assets/img/edit.png);
+                background-image: url(../../../public/assets/img/adicionar.png);
             }
 
             .a2 {
@@ -52,7 +52,7 @@
             }
 
             .a3 {
-                background-image: url(../../../public/assets/img/i-sair.png);
+                background-image: url(../../assets/img/i-exitB.png);
             }
 
             .a1,
@@ -69,6 +69,9 @@
 
             p {
                 font-size: 20px;
+                font-family: "fonte1";
+                font-weight: bolder;
+                color: black;
             }
         }
 
