@@ -108,7 +108,7 @@ export default function Estoque() {
                                             <th> imagem </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> 
                                         {produtos.map(item => {
                                             return (
                                                 <tr>
