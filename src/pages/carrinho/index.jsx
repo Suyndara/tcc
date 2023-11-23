@@ -79,7 +79,7 @@ export default function Carrinho() {
             <main className='s1'>
                 <div className='carrinho-produtos'>
                     <h1>SEU CARRINHO</h1>
-                    <h2>TOTAL (1 produto)  <b>R$ {total}</b> </h2>
+                    <h2>TOTAL <b>R$ {total}</b> </h2>
                     <p>Os itens do seu carrinho não estão reservados. Finalize a compra para torná-los seus itens pessoais.</p>
                     
                     {produtos.map((item, index) => {
@@ -89,8 +89,7 @@ export default function Carrinho() {
                                     <img src={BuscarImagem(item.imagem)} alt='ringg' />
                                     <div className='informacao'>
                                         <h1><b>{item.nome}</b></h1>
-                                        <p>tamanho de aro: 9</p>
-
+                                        <h1> {item.categoria}</h1>
                                         <div className='contador'>
                                             <div>
                                                 <img src={Mais} onClick={() => aumentar(index)} alt='s-mais' />

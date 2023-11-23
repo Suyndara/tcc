@@ -6,6 +6,7 @@ import Rodape from '../../components/rodape';
 import Resumo from '../../components/resumo';
 import storage from 'local-storage'
 
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify'
 import { concluirPedido, inserirItensPedido, InserirEndereco } from '../../api/UsuarioAdd';
@@ -22,6 +23,8 @@ export default function EntregaPagamento() {
     const [ bairro, setBairro ] = useState();
     const [ cidade, setCidade ] = useState();
     const [ estado, setEstado ] = useState();
+
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -46,15 +49,21 @@ export default function EntregaPagamento() {
 
     async function finalizarPedido() {
         try{
-            adicaoEndereco();
             const id = storage('usuario-logado').cliente_id
 
+            const resp = await concluirPedido({cliente: id, total: storage('usuario-pedido').total});
+            const respItens = await inserirItensPedido(storage('usuario-pedido').carrinho, resp.id);
+            
+            navigate('/')
+            storage.remove('usuario-pedido');
 
-            const resp = await concluirPedido({cliente: id, total: storage('usuario-pedido').total})
-            const respItens = await inserirItensPedido(storage('usuario-pedido').carrinho, resp.id)
-            toast.done('Pedido finalizado');
+            alert('Pedido finalizado');
         }
         catch(err){
+            alert(err)
+            const id = storage('usuario-logado').cliente_id
+            console.log(id)
+            
             if(err.response)
                 toast.error(err.response.data.erro)
             else
