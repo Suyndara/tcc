@@ -124,4 +124,28 @@ export async function inserirItensPedido(itens, idPedido){
         respItens[cont] = resp.data
     }
     console.log(respItens);
+};
+
+
+
+
+
+
+
+
+
+
+export async function InserirEndereco(nome, enderecoRua, cep, numeroCasa, complemento, bairro, cidade, estado) {
+    const resp = api.post('/usuario/endereco', {
+        nome: nome,
+        enderecoRua: enderecoRua,
+        cep: cep,
+        numeroCasa: numeroCasa,
+        complemento: complemento,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado
+    });
+
+    return resp.data;
 }
