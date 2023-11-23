@@ -175,9 +175,6 @@ export default function Detalhes(props) {
                         <h1>Composição  </h1>
                         <p>{props.produto.composicao}</p>
                     </section>
-
-                    <p className='p-s3'>• Sugestão: Para ela ou ele </p>
-                    <p className='p-s3'>• Material: Ouro amarelo</p>
                 </article>
 
 
