@@ -3,8 +3,8 @@ import './index.scss';
 import { useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import Logo from '../../assets/img/logo.svg'
-import Lupa from '../../assets/img/lupa.png'
+import Logo from '../../assets/img/logo3.png';
+import Lupa from '../../assets/img/lupa.png';
 import Pessoa from '../../assets/img/pessoinha.png';
 import Carrinho from '../../assets/img/carrinho.png'
 import Barras from '../../assets/img/i-bars.svg';

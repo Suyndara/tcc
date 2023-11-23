@@ -1,6 +1,6 @@
 import './index.scss';
 
-import Joyeria from '../../assets/img/logo.svg';
+import Joyeria from '../../assets/img/logo3.png';
 import LoadingBar from 'react-top-loading-bar';
 import storage from 'local-storage'
 
