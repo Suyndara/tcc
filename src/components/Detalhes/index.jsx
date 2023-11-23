@@ -37,8 +37,10 @@ export default function Detalhes(props) {
 
                 <aside>
                     <section className='tb'>
-                        <h1> {props.produto.nome} </h1>
-                        <p> R$ {props.produto.preco} </p>
+                        <section>
+                            <h1> {props.produto.nome} </h1>
+                            <p> R$ {props.produto.preco} </p>
+                        </section>
 
                         <section>
                             <h1> Categoria </h1>
@@ -84,7 +86,6 @@ export default function Detalhes(props) {
                                     <footer>
                                         <p>Brinco Ouro Rodolita E Diamantes</p>
                                         <p>R$ 20.350,00</p>
-
 
                                         <a href='/carrinho'>ADICIONAR AO CARRINHO</a>
                                     </footer>
