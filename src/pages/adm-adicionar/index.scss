@@ -274,15 +274,17 @@
 
 }
 
-@media (max-width: 1185px){
+@media (max-width: 1100px){
     .pagina-anexagem-produto{
         .main-anexagem-produto{
             height: 90%;
-
             .conteudo{
-                height: 145vh;
+                height: auto;
+                
                 .s1{
                     height: auto;
+                    margin-top: 15px;
+
 
                     .cont-1{
                         h1{
