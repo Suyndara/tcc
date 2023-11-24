@@ -7,7 +7,7 @@ import Editar from '../../assets/img/pen-solid.svg';
 import Exluir from '../../assets/img/185090_delete_garbage_icon 1.png'
 import Lupa from '../../assets/img/lupa.png'
 
-import { ConsultarPorNome, ConsultarUsuarios, DeletarProduto, deletarImg } from '../../api/admAdd'
+import { ConsultarPorNome, ConsultarTodos, DeletarProduto, deletarImg } from '../../api/admAdd'
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
@@ -58,10 +58,17 @@ export default function Estoque() {
 
 
     async function ListarTodosProdutos() {
-        const resp = await ConsultarUsuarios()
+        const resp = await ConsultarTodos()
         setProdutos(resp)
     }
 
+
+
+
+    async function filtrar() {
+        const resp = await ConsultarPorNome(filtro)
+        setProdutos([resp])
+    };
 
 
 
@@ -105,13 +112,17 @@ export default function Estoque() {
                                         {produtos.map(item => {
                                             return (
                                                 <tr>
-                                                    <td> # {item.cliente_id} </td>
-                                                    <td> {item.cliente} </td>
-                                                    <td> R$ {item.email} </td>
-                                                    <td> {item.senha} </td>
-                                                    <td> {item.CadastroPessoa} </td>
-                                                    <td> {item.telefone} </td>
-                                                    <td> {item.nascimento} </td>
+                                                    <td> # {item.produto_id} </td>
+                                                    <td> {item.nome} </td>
+                                                    <td> R$ {item.preco} </td>
+                                                    <td> {item.estoque} </td>
+                                                    <td> {item.disponivel ? 'Disponivel' : 'Indisponivel'} </td>
+                                                    <td> {item.categoria} </td>
+                                                    <td> {item.categoriaSub} </td>
+                                                    {<td>
+                                                        <img src={Editar} alt="Caneta" onClick={() => EditarProduto(item.produto_id)} />
+                                                        <img src={Exluir} alt="Lixo" onClick={() => ExcluirProduto(item.produto_id, item.nome)} />
+                                                    </td>}
                                                 </tr>
                                             )
                                         })}
