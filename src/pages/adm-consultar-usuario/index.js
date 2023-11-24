@@ -64,7 +64,6 @@ export default function Estoque() {
 
 
 
-
     async function filtrar() {
         const resp = await ConsultarPorNome(filtro)
         setProdutos([resp])
