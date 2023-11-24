@@ -81,6 +81,7 @@ export default function Estoque() {
     return (
         <div className='pagina-consultar'>
             <Lateral />
+            <ToastContainer />
 
             <main className='analise'>
                 <CabecalhoAdm />
