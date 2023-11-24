@@ -40,24 +40,9 @@ export default function Conta() {
 
 
 
-    async function RemoverUsuario(cliente) {
-
-        confirmAlert({
-            title: 'Remover usuario',
-            message: `Deseja sair do login de:${cliente}?`,
-            buttons: [
-              {
-                label: 'Sim',
-                onClick: async () => {
-                    localStorage.removeItem('usuario-logado');
-                    navigate('/')
-                }
-              },
-              {
-                label: 'Não'
-              }
-            ]
-          });   
+    async function RemoverUsuario() {
+        localStorage.removeItem('usuario-logado');
+        navigate('/');
     }
 
 

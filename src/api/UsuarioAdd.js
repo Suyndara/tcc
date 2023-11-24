@@ -123,7 +123,7 @@ export async function inserirItensPedido(itens, idPedido){
         })
         respItens[cont] = resp.data
     }
-    console.log(respItens);
+    // console.log(respItens);
 };
 
 

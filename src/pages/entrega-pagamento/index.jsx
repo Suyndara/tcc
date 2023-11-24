@@ -8,7 +8,7 @@ import storage from 'local-storage'
 
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import { concluirPedido, inserirItensPedido, InserirEndereco } from '../../api/UsuarioAdd';
 
 export default function EntregaPagamento() {
@@ -33,37 +33,40 @@ export default function EntregaPagamento() {
         // eslint-disable-next-line
     }, []);
 
-
-
-    async function adicaoEndereco() {
-        try {
-            
-            const resp = InserirEndereco(nome, enderecoRua, cep, numeroCasa, complemento, bairro, cidade, estado)
-
-        } catch (error) {
-            if (error.response)
-            toast.error(error.response.data.erro);
-        }
-    }
-
-
     async function finalizarPedido() {
         try{
-            const id = storage('usuario-logado').cliente_id
-
-            const resp = await concluirPedido({cliente: id, total: storage('usuario-pedido').total});
-            const respItens = await inserirItensPedido(storage('usuario-pedido').carrinho, resp.id);
+            if(!nome)
+                throw new Error('Nome não inserido')
+            if(!enderecoRua)
+                throw new Error('Rua não inserida')
+            if(!cep)
+                throw new Error('Cep não inserido')
+            if(!numeroCasa)
+                throw new Error('Numero da casa não inserida')
+            if(!complemento)
+                throw new Error('Complemento não inserido')
+            if(!bairro)
+                throw new Error('Bairro não inserido')
+            if(!cidade)
+                throw new Error('cidade não inserida')
+            if(!estado)
+                throw new Error('Estado não inserido')
             
-            navigate('/')
-            storage.remove('usuario-pedido');
+            else {
+                const id = storage('usuario-logado').cliente_id
 
-            toast.done('Pedido finalizado');
+                const resp = await concluirPedido({cliente: id, total: storage('usuario-pedido').total});
+                const respItens = await inserirItensPedido(storage('usuario-pedido').carrinho, resp.id);
+                
+                navigate('/')
+                storage('usuario-pedido', {carrinho: []});
+    
+                toast.info('Pedido finalizado');
+            }
+
         }
         catch(err){
-            alert(err)
-            console.log(id)
-            const id = storage('usuario-logado').resp.id;
-            
+            alert(err.response.data.erro)
             if(err.response)
                 toast.error(err.response.data.erro)
             else
@@ -76,7 +79,7 @@ export default function EntregaPagamento() {
 
         <div className='pagina-entrega'>
             <Cabecalho />
-
+            <ToastContainer />
             <main>
                 <div className='entrega'>
                 <h1>INFORMAÇÕES DA ENTREGA</h1>
@@ -100,8 +103,6 @@ export default function EntregaPagamento() {
                             <input type='text' placeholder='Cidade'  value={cidade} onChange={e => setCidade(e.target.value)}/>
                             <input type='text' placeholder='Estado' value={estado} onChange={e => setEstado(e.target.value)} />
                         </div>
-
-                        <button onClick={adicaoEndereco}> Sla </button>
 
                     </div>
 
