@@ -1,11 +1,1 @@
-Reponsivdades pendentes:
-
-filtro...
-
-Conexões Pendentes:
-
-Consulta-cliente
-detalhes-usuario
-detalhes-carrinho
-status-adm
-vendas-adm
+Tcc finalizado...
